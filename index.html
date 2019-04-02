@@ -1,5 +1,38 @@
 <html lang="en">
-  <body>
-    yo
-  </body>
+	<head>
+		<meta charset="UTF-8">
+		<!-- the name of the page -->
+		<title>Diaspora</title>
+		<!-- link rhw css stylesheet -->
+		<link rel="stylesheet" href="css/index.css">
+		<script src="css/index.js"></script>
+
+	</head>
+	<body>
+		<button id="diebutton" onclick="diemenutoggle()">20-Sided Die</button>
+		<div id="diedropdown">
+			<button id="roller" onclick="roll();">Roll!</button>
+			<input type="text" id="dieout1"> +
+			Modifier:
+			<input type="text" id="diemod"> =
+			<input type="text" id="dieoutf">
+		</div>
+		<h1 id="pagetitle"> Jeff Quattrociocchi </h1>
+		<div id="inner">
+			<section id="sidebar">
+				<iframe id="frame" src="about_me.html"></iframe>
+			</section>
+			<section id="leftbar">
+				<p>Home</p>
+				<button onclick="gothere('about_me.html')">About Me</button>
+				<button onclick="gothere('work_experience.html')">Work Experience</button>
+				<p>Projects</p>
+				<button onclick="changemenu('school')">Schoolwork</button>
+				<button onclick="changemenu('game')">Games</button>
+				<button onclick="gothere('ship_map.html')">&lt;3</button>
+
+			</section>
+		<!-- section for assignments -->
+		</div>
+	</body>
 </html>
