@@ -54,7 +54,10 @@ function changemenu(kind) {
 			np.appendChild(node);
 			bar.appendChild(np);
 
-			names = ["the spinward marches", "https://jequatot.github.io/diaspora/", "Action Castle", "https://jequatot.github.io/diaspora/thing/thing.html"];
+			names = [
+				"the spinward marches <br/><span class='subtitle'>Fall 2018</span>", "games/diaspora.html", 
+				"Action Castle <br/><span class='subtitle'>Fall 2018</span>", "games/action_castle.html"
+			];
 		}
 	}
 
@@ -66,8 +69,7 @@ function changemenu(kind) {
 function makebutton(name, action) {
 	var bar = document.getElementById("leftbar");
 	var nb = document.createElement("button");
-	var node = document.createTextNode(name);
-	nb.appendChild(node);
+	nb.innerHTML = name;
 	nb.setAttribute( "onClick", "javascript: " + action + ";");
 	bar.appendChild(nb);
 }
