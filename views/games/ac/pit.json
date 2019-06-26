@@ -1,0 +1,603 @@
+{
+  "dictionary" : [
+    {
+	  "name" : "help",
+	  "type" : "command",
+	  "used_on_command" : "TRUE",
+	  "used_on_inv_obj" : "TRUE",
+	  "used_on_room_obj" : "TRUE",
+	  "synonym" : [
+		"h",
+		"hlp",
+		"command",
+		"?"
+	  ],
+	  "desc" : "get a list of commands, or use with a specific command to learn its use and synonyms (ie 'HELP LOOK')"
+	},
+    {
+	  "name" : "score",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"rank",
+		"ranking"
+	  ],
+	  "desc" : "display your score and ranking"
+	},
+    {
+	  "name" : "health",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"diagnostic",
+		"hp",
+		"self"
+	  ],
+	  "desc" : "display your current physical status"
+	},
+    {
+	  "name" : "clear",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"c",
+		"clr",
+		"cls",
+		"clearscreen"
+	  ],
+	  "desc" : "clear previous commands"
+	},
+    {
+	  "name" : "look",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "TRUE",
+	  "used_on_room_obj" : "TRUE",
+	  "synonym" : [
+		"l",
+		"examine",
+		"consider",
+		"read",
+		"dir",
+		"ls"
+	  ],
+	  "desc" : "examine surroundings, or examine a particular object (ie '<span>LOOK AT LANTERN</span>')"
+	},
+    {
+	  "name" : "take",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "TRUE",
+	  "synonym" : [
+		"get",
+		"grab",
+		"acquire",
+		"pick up"
+	  ],
+	  "desc" : "put an item in your inventory, or put everything in a room in your inventory with '<span>take all</span>'"
+	},
+    {
+	  "name" : "drop",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "TRUE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"place",
+		"put down",
+		"put",
+		"leave"
+	  ],
+	  "desc" : "remove an item from your inventory and put it in the current room"
+	},
+    {
+	  "name" : "inventory",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"i",
+		"knapsack",
+		"belongings",
+		"things"
+	  ],
+	  "desc" : "list everything you have picked up"
+	},
+    {
+	  "name" : "use",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "TRUE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"give",
+		"eat",
+		"smell",
+		"sniff",
+		"taste",
+		"lick"
+	  ],
+	  "desc" : "make use of or give away an item; how this is done is based on context"
+	},
+    {
+	  "name" : "go",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"move",
+		"walk",
+		"run",
+		"travel",
+		"wasd",
+		"g",
+		"climb"
+	  ],
+	  "desc" : "use with a direction or location to travel there (ie 'GO WEST'); you can also do this by entering the direction (ie 'WEST') or sometimes just the first letter (ie 'W')"
+	},
+    {
+	  "name" : "save",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"sav"
+	  ],
+	  "desc" : "CURRENTLY NONFUNCTIONAL. save your progress under your name, using browser cookies"
+	},
+    {
+	  "name" : "load",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"lod"
+	  ],
+	  "desc" : "CURRENTLY NONFUNCTIONAL. load the progress under a given name, using browser cookies"
+	},
+    {
+	  "name" : "talk",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "TRUE",
+	  "synonym" : [
+		"speak",
+		"tell",
+		"listen",
+		"hi",
+		"hello",
+		"greet"
+	  ],
+	  "desc" : "use with an intelligent character to hear what they have to say (ie 'TALK TO THE GUARD' or just 'TALK GUARD')"
+	},
+    {
+	  "name" : "sit",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "TRUE",
+	  "synonym" : [
+		"sit down"
+	  ],
+	  "desc" : "sit upon a sittable object"
+	},
+    {
+	  "name" : "all",
+	  "type" : "abstract",
+	  "synonym" : [
+		"everything"
+	  ],
+	  "desc" : "all of the objects, items, and characters in the given area"
+	},
+    {
+	  "name" : "verbose",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+	  ],
+	  "desc" : "room descriptions will always display automatically when you enter a room"
+	},
+    {
+	  "name" : "brief",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+	  ],
+	  "desc" : "room descriptions will only display automatically the first time you enter a room"
+	},
+    {
+	  "name" : "superbrief",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+	  ],
+	  "desc" : "room descriptions will never display automatically"
+	},
+    {
+	  "name" : "north",
+	  "type" : "direction",
+	  "synonym" : [
+		"n",
+		"northward"
+	  ],
+	  "desc" : "the direction of the arctic pole"
+	},
+    {
+	  "name" : "south",
+	  "type" : "direction",
+	  "synonym" : [
+		"s",
+		"southward"
+	  ],
+	  "desc" : "the direction towards the antarctic pole"
+	},
+    {
+	  "name" : "east",
+	  "type" : "direction",
+	  "synonym" : [
+		"e",
+		"eastward"
+	  ],
+	  "desc" : "the direction towards the rising sun"
+	},
+    {
+	  "name" : "west",
+	  "type" : "direction",
+	  "synonym" : [
+		"w",
+		"westward"
+	  ],
+	  "desc" : "the direction towards the setting sun"
+	},
+    {
+	  "name" : "northwest",
+	  "type" : "direction",
+	  "synonym" : [
+		"nw",
+		"northwestward"
+	  ],
+	  "desc" : "the fusion of north and west"
+	},
+    {
+	  "name" : "southeast",
+	  "type" : "direction",
+	  "synonym" : [
+		"se",
+		"southeastward"
+	  ],
+	  "desc" : "the fusion of south and east"
+	},
+    {
+	  "name" : "southwest",
+	  "type" : "direction",
+	  "synonym" : [
+		"sw",
+		"southwestward"
+	  ],
+	  "desc" : "the fusion of south and west"
+	},
+    {
+	  "name" : "northeast",
+	  "type" : "direction",
+	  "synonym" : [
+		"ne",
+		"northeastward"
+	  ],
+	  "desc" : "the fusion of north and east"
+	},
+    {
+	  "name" : "up",
+	  "type" : "direction",
+	  "synonym" : [
+		"u",
+		"upward",
+		"upstairs"
+	  ],
+	  "desc" : "the direction towards the midday sun"
+	},
+    {
+	  "name" : "down",
+	  "type" : "direction",
+	  "synonym" : [
+		"d",
+		"downward",
+		"downstairs"
+	  ],
+	  "desc" : "the direction towards the midnight sun"
+	},
+    {
+	  "name" : "out",
+	  "type" : "direction",
+	  "synonym" : [
+		"outside",
+		"leave"
+	  ],
+	  "desc" : "the direction of the not inside"
+	},
+    {
+	  "name" : "enter",
+	  "type" : "direction",
+	  "synonym" : [
+		"inside"
+	  ],
+	  "desc" : "the direction of the not outside"
+	},
+	{
+		"name" : "===============================================================================================================",
+		"type" : "===============================================================================================================",
+	    "synonym" : []
+	},
+    {
+	  "rid" : "r00",
+	  "name" : "pit",
+	  "type" : "room",
+	  "synonym" : [
+	  ],
+	  "desc" : "sunlight leaks down",
+	  "exit" : [
+		{
+			"dir" : "north",
+			"dest" : "r01",
+			"locked" : 0,
+			"desc" : "an unlit crawlspace, most likely not intended for humans"
+		},
+		{
+			"dir" : "south",
+			"dest" : "r02",
+			"locked" : 0,
+			"desc" : "a dark passage, comparatively very spacious"
+		}
+	  ],
+	  "item" : [
+		"i01"
+	  ],
+	  "coord" : {
+	    "x" : "4",
+	    "y" : "4"
+	  }
+	},
+    {
+	  "rid" : "r01",
+	  "name" : "damp hole",
+	  "type" : "room",
+	  "synonym" : [
+	  ],
+	  "desc" : "what shapes you see can only be made out faintly in the scant sunlight which makes its way down here. the muddy floor dirties your clothes, and assaults you nose with the strong smell of earth",
+	  "exit" : [
+		{
+			"dir" : "south",
+			"dest" : "r00",
+			"locked" : 0,
+			"desc" : "an unlit crawlspace, through which sunlight can be faintly seen"
+		}
+	  ],
+	  "item" : [
+		"i02"
+	  ],
+	  "coord" : {
+	    "x" : "4",
+	    "y" : "3"
+	  }
+	},
+    {
+	  "rid" : "r02",
+	  "name" : "chainlink fence",
+	  "type" : "room",
+	  "synonym" : [
+	  ],
+	  "desc" : "",
+	  "exit" : [
+		{
+			"dir" : "north",
+			"dest" : "r00",
+			"locked" : 0,
+			"desc" : "an open, sunlit passageway"
+		}
+	  ],
+	  "item" : [
+		"i04",
+		"i05",
+		"i06",
+		"i07"
+	  ],
+	  "coord" : {
+	    "x" : "4",
+	    "y" : "5"
+	  }
+	},
+	{
+	  "iid" : "i00",
+	  "name" : "candle",
+	  "type" : "object",
+	  "subtype" : "tool",
+	  "synonym" : [
+	    "weird candle",
+	    "strange candle"
+	  ],
+	  "desc" : "its greenish wax emits an odor that can only really be described as weird",
+	  "use" : [
+	    {
+	      "target" : "i14",
+	      "msg" : "the $i14 retracts, apparently frightened of the simple act of lighting a candle- he disappates, leaving only his crown",
+		  "unlock" : "-1",
+		  "drop" : "i10",
+		  "consumes_item" : "0",
+		  "destroys_target" : "1"
+	    }
+	  ],
+	  "dialogue" : [
+	  ],
+	  "fail_msg" : "a weird odor pervades the area"
+	},
+	{
+	  "iid" : "i01",
+	  "name" : "rockpile",
+	  "type" : "object",
+	  "subtype" : "container",
+	  "synonym" : [
+	    "pile",
+	    "rocks",
+	    "stones",
+	    "stonepile"
+	  ],
+	  "desc" : "a pile of smooth, grey stones",
+	  "glance_desc" : "a $i01 sits in the corner",
+	  "contents" : [
+	    "i03",
+	    "i03",
+	    "i03",
+	    "i08",
+	    "i03"
+	  ],
+	  "fail_msg" : "maybe one at a time..."
+	},
+	{
+	  "iid" : "i02",
+	  "name" : "egg",
+	  "type" : "object",
+	  "subtype" : "tool",
+	  "synonym" : [
+	  ],
+	  "glance_desc" : "an $i02 lays in the mud, its blue and white markings are difficult to make out as such given the grime which layers it",
+	  "desc" : "the $i02 was not placed in a nest of any kind- it seems to have just been dropped here haphazardly in the mud<br/>it is cold to the touch",
+	  "use" : [
+	  ],
+	  "fail_msg" : "it is cold to the touch"
+	},
+	{
+	  "iid" : "i03",
+	  "name" : "rock",
+	  "type" : "object",
+	  "subtype" : "tool",
+	  "synonym" : [
+	    "stone"
+	  ],
+	  "glance_desc" : "there is a $i03",
+	  "desc" : "a smooth grey stone, weighs about 1lb",
+	  "use" : [
+	  ],
+	  "fail_msg" : "you test it with your teeth- yup, still hard"
+	},
+	{
+	  "iid" : "i04",
+	  "name" : "fence",
+	  "type" : "object",
+	  "subtype" : "static",
+	  "synonym" : [
+	    "chainlink"
+	  ],
+	  "glance_desc" : "there is a chainlink $i04, its silver metal brightly reflecting what little light there is",
+	  "desc" : "the $i04 goes across the room and blocks your path <span>south</span>; it stretches from floor to ceiling too",
+	  "fail_msg" : "the $i04 runs through the dirt walls; you pull and pull but that $i04 is not going anywhere"
+	},
+	{
+	  "iid" : "i05",
+	  "name" : "gate",
+	  "type" : "object",
+	  "subtype" : "static",
+	  "synonym" : [
+	    "door"
+	  ],
+	  "glance_desc" : "in the chainlink $i04 is a $i05, kept shut by a $i06",
+	  "desc" : "a human-sized chainlink $i05; which would swing open if not for the $i06 on the handle",
+	  "fail_msg" : "while the $i06 might be rusted, the $i05's hinges are not- that door is not going anywhere"
+	},
+	{
+	  "iid" : "i06",
+	  "name" : "padlock",
+	  "type" : "object",
+	  "subtype" : "static",
+	  "synonym" : [
+	    "lock"
+	  ],
+	  "glance_desc" : "",
+	  "desc" : "a rusted $i06- some force stronger than you could probably break this",
+	  "fail_msg" : "you pull and you punch but the only thing you risk damaging at this rate is yourself"
+	},
+	{
+	  "iid" : "i07",
+	  "name" : "woodbundle",
+	  "type" : "object",
+	  "subtype" : "tool",
+	  "synonym" : [
+	    "wood",
+	    "bundle"
+	  ],
+	  "glance_desc" : "there is a $i07 in the dirt",
+	  "desc" : "fairly bright and brittle, smells like fir, dry",
+	  "use" : [],
+	  "fail_msg" : "you test it with your teeth- yup, still wood"
+	},
+	{
+	  "iid" : "i08",
+	  "name" : "flint",
+	  "type" : "object",
+	  "subtype" : "tool",
+	  "synonym" : [
+	  ],
+	  "glance_desc" : "there is a piece of $i08 in the dirt",
+	  "desc" : "black and shiny, might strike a fire",
+	  "use" : [
+	    {
+	      "target" : "i07",
+	      "msg" : "you strike the wood a few times and start up a fire; light and warmth fill the cave",
+		  "unlock" : "-1",
+		  "drop" : "i09",
+		  "consumes_item" : "0",
+		  "destroys_target" : "1"
+	    }
+	  ],
+	  "fail_msg" : "you test it with your teeth- yup, still black?"
+	},
+	{
+	  "iid" : "i09",
+	  "name" : "fire",
+	  "type" : "object",
+	  "subtype" : "container",
+	  "synonym" : [
+	    "campfire"
+	  ],
+	  "glance_desc" : "there is a $i09 casting light and warmth into the area",
+	  "desc" : "it burns brightly and casts fun shadows onto the cave walls",
+	  "contents" : [
+	  ],
+	  "capacity" : 1,
+	  "fail_msg" : "youd best not pick up fire with your bare hands"
+	}
+  ],
+  "ignorables" : [
+	"the", 
+	"a", 
+	"to", 
+	"fuckin",
+	"fucking",
+	"on", 
+	"with", 
+	"for", 
+	"small", 
+	"about", 
+	"it", 
+	"from", 
+	"in", 
+	"at"
+  ],
+  "intro_text" : "you wake up"
+}

@@ -1,0 +1,65 @@
+save		Save state to a file
+restore		Restores a saved state
+restart		Restarts the game
+quit	q 	Quit game
+g		last common
+hi/hello		say hello...
+Jump		Random Comment e.g. : Are you proud of yourself?
+throw (item) at (location)		Throws the item at something
+open (container)		Opens the container, whether it is in the room or your inventory
+open (exit)		Opens the exit for travel
+close [Door]		Closes door
+read (item)		Reads what is written on readable item
+turn (control) with (item)		Attempts to operate the control with the item
+turn on (item)		Turns on the item
+turn off (item)		Turns the item off
+move (object)		Moves a large object that cannot be picked up
+attack/kill/cut (object or self) with (item)		Attacks creature with the item
+eat		Eats item (specifically food)
+shout		Aaaarrrrgggghhhh!
+tie (item) to (object)		ties item to object
+break (item) with (item)		Breaks item
+pray		when you are in temples...
+drink 		drink an item
+smell		smell an item
+listen (target)		Listens to a creature or item.
+
+Wand Comands (only if the wand is in your possesion)
+
+fall makes the target fall when they move
+
+float makes an object float
+
+freeze makes target unable to move
+
+fence makes target unable to leave the room
+
+fierce makes the target angry
+
+ferment makes target drunk
+
+fear makes target afraid and run from the room
+
+feeble makes target weak and unable to carry much or fight
+
+fumble reduces target's carrying capacity and ocasionaly makes them drop items
+
+filch steals from the target
+
+fantasize makes target hallucinate
+
+fireproof makes the target fireproof
+
+fry destroys target
+
+fudge "a strong odor of chocolate permeates the room"
+
+fluoresce makes an object glow with light
+
+free frees the target; the genie uses this if you give him the chance
+
+frobizz
+
+frobozzle
+
+frobnoid

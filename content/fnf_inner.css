@@ -1,0 +1,154 @@
+/*
+	Jeffrey Quattrociocchi
+	jeffreyquattro@gmail.com
+	UMass Lowell
+	91.61 GUI Programming I
+	Created: 09-11-18
+
+	CSS file for index.html
+*/
+
+/*this will be the default for the page*/
+body {
+	color: white;
+	background-color: #020002;
+	font-family: Palatino;
+}
+
+h1 {
+	font-style: italic;
+	font-family: georgia;
+	color: #effea9;
+	border-bottom: solid;
+	margin: 0;
+	margin-left: 1em;
+	text-indent: -1em;
+}
+
+.h1_stat, .h1_input {
+	border-bottom: none;
+	text-align: right;
+	text-indent: 0em;
+	font-size: 1.5em;
+}
+
+h2 {
+	font-family: georgia;
+	font-size: 1em;
+	color: #effea9;
+}
+
+span {
+	font-weight: bold;
+	font-family: Palatino;
+	font-size: 1.4em;
+}
+
+tr {
+	padding: 0;
+	border: none;
+	min-height: 1em;
+}
+
+td {
+	/* border: 1px solid #404080; */
+	border: none;
+	min-width: 1em;
+	text-align: right;
+	vertical-align: bottom;
+}
+
+.td_table_container {
+	vertical-align: top;
+	text-align: left;
+}
+
+.div_input, .h1_input, .p_input {
+	background-color: #404040;
+	min-width: 5em;
+	max-width: 15em;
+	margin-left: 1em;
+	margin-top: 1em;
+	padding-right: .5em;
+	font-size: 1.5em;
+	text-align: left;
+}
+
+.h1_input {
+	text-align: left;
+	color: white;
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+}
+
+.p_input {
+	font-size: 1em;
+	max-width: 22.5em;
+	min-height: 1em;
+	margin: 0;
+	padding: 0;
+}
+
+input, select {
+	font-family: Palatino;
+	font-size: 1.4em;
+	background-color: #404040;
+	color: white;
+	border: none;
+}
+
+.input_stat {
+	width: 1.2em;
+	font-size: 3em;
+	margin-left: .2em;
+	padding: 0;
+}
+
+#iname {
+	font-size: 1em;
+	background-image: linear-gradient(to right, #404040, #000000);
+	color: white;
+	padding: .1em;
+	border: 0;
+	width: 100%;
+}
+
+#iname:valid {
+	background-image: linear-gradient(to right, black, #000000);
+}
+
+button {
+	background-color: #2f2f2f;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	text-transform: capitalize;
+}
+
+button:hover {
+    background-color: darkslategrey;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.button_incr {
+	width: 1.5em;
+	height: 1.5em;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+}

@@ -10,11 +10,37 @@ var MAP_XMAX = -25565;
 var MAP_YMIN = 25565;
 var MAP_YMAX = -25565;
 	
-const IGNORABLES = ["the", "a", "to", "fucking", "on", "with", "for", "small", "about", "it"];
 var inventory = [];
 var explored = {};
 var touched = [];
 var places_gone = [];
+
+//var requestURL = 'https://jequatot.github.io/home/views/games/ac/ac.json';
+var requestURL = 'pit.json';
+
+var parsed = [];
+
+var kingship = false;
+
+var state = 0;
+
+var here = 0;
+
+var score = 0;
+var max_score = 0;
+
+var name = "player";
+
+var verboseness = "brief";
+
+window.onload = init;
+
+var db;
+var request;
+
+var map_loaded = false;
+var inv_loaded = false;
+var music_loaded = false;
 
 class exp_token {
 	constructor(val) {
@@ -30,28 +56,6 @@ class exp_token {
 		}
 	}
 }
-
-var parsed = [];
-
-var kingship = false;
-
-var state = 0;
-
-var here = 0;
-
-var score = 0;
-var max_score = 0;
-
-var name = "player";
-
-window.onload = init;
-
-var db;
-var request;
-
-var map_loaded = false;
-var inv_loaded = false;
-var music_loaded = false;
 
 function init() {
 	clear();
@@ -69,7 +73,6 @@ function init() {
 	document.getElementById("map_button").disabled = true;
 	document.getElementById("inv_button").disabled = true;
 	
-	var requestURL = 'ac.json';
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
     request.responseType = 'json';
@@ -93,7 +96,7 @@ function enter() {
 	
 	print("> " + val);
 	
-	if(state == 17 && !val.toLowerCase().includes("help")) {
+	if(state == 17 && !val.toLowerCase().includes("help") && !dbSearch("command", "help").synonym.includes(val.toLowerCase())) {
 		if(dbSearch("command", val) != -1) {
 			print("please enter a " + span("NAME") + " before you try to " + span(val));
 			print("please enter a " + span("NAME") + " that is not already a command- i get confused easily");
@@ -112,16 +115,19 @@ function enter() {
 		document.getElementById("scr").innerHTML = "SCORE: " + score + "/" + max_score;
 		
 		inventory.push(dbSearch("object", "i00"));
+		print(db.intro_text + "<br/><br/>");
 		go("r00");
 		state = 0;
 		document.getElementById("map_button").disabled = false;
 		document.getElementById("inv_button").disabled = false;
+		
+		print("<br/>what do you do?")
 		return;
 	}
 	
+	if(parse(val.split(" ")) == 1)
+		parse2();
 	try {
-		if(parse(val.split(" ")) == 1)
-			parse2();
 	} catch(e) {
 		print("sorry, i lack the intelligence to understand your refined way of speaking- please speak more simply")
 	}
@@ -194,13 +200,13 @@ function parse(inp) {
 			}
 			
 			if(parsed.length <= count) {
-				for(j = 0; j < IGNORABLES.length; j++) {
-					if(inp[i].toLowerCase() == IGNORABLES[j]) {
-						j = IGNORABLES.length + 20;
+				for(j = 0; j < db.ignorables.length; j++) {
+					if(inp[i].toLowerCase() == db.ignorables[j]) {
+						j = db.ignorables.length + 20;
 						count--;
 					}
 				}
-				if(j <= IGNORABLES.length) {
+				if(j <= db.ignorables.length) {
 					print("I don't know \"" + inp[i] + "\".");
 					return 0;
 				}
@@ -209,7 +215,6 @@ function parse(inp) {
 		}
 	}
 	parsed.push("#");
-	
 	return 1;
 }
 
@@ -228,7 +233,9 @@ function parse2() {
 			look(parsed[1]);
 	} else if(t1.name == "take") {
 			state = 0;
-			take(parsed[1]);
+			if(parsed[1] == '#')
+				drop('#', '#');
+			else take(parsed[1], parsed[2]);
 	} else if(t1.name == "inventory") {
 			state = 0;
 			if(inventory.length == 0)
@@ -241,7 +248,9 @@ function parse2() {
 			}
 	} else if(t1.name == "drop") {
 			state = 0;
-			drop(parsed[1]);
+			if(parsed[1] == '#')
+				drop('#', '#');
+			else drop(parsed[1], parsed[2]);
 	} else if(t1.name == "use") {
 			state = 0;
 			use(parsed[1]);
@@ -267,11 +276,18 @@ function parse2() {
 		if(parsed[1] == '#')
 			talk('#', '#');
 		else talk(parsed[1], parsed[2]);
+	} else if(["verbose", "brief", "superbrief"].includes(t1.name)) {
+		verboseness = t1.name;
+		print(t1.desc);
+	} else if(t1.name == "score") {
+		scored();
+	} else if(t1.name == "health") {
+		diagnostic();
 	} else {
 		if(state == 1)
-			take(parsed[0]);
+			take(parsed[0], "#");
 		else if(state == 2)
-			drop(parsed[0]);
+			drop(parsed[0], "#");
 		else if(state == 3)
 			use(parsed[0]);
 		else if(state == 4)
@@ -315,6 +331,7 @@ function help(val) {
 	else {
 		help(dbSearch("command", "help"));
 		print("COMMANDS:");
+		var commlist = []
 		for(var i = 0; i < db.dictionary.length; i++) {
 			if(db.dictionary[i].type == "command")
 				print(span(db.dictionary[i].name));
@@ -327,9 +344,6 @@ function clear() {
 	while(bar.hasChildNodes()) {
 		bar.removeChild(bar.lastChild);
 	}
-	print("<br>");
-	print("<br>");
-	print("<br>");
 }
 
 function look(val) {
@@ -339,14 +353,47 @@ function look(val) {
 				look(explored[here.rid].item[i]);
 			return;
 		}
+		if(val.name == "health") {
+			diagnostic();
+			return;
+		}
 		if(val.type == "object" && (inventory.includes(val) || explored[here.rid].item.includes(val))) {
 			print(val.desc);
-		} else print("you can't see that right now");
+			if(val.subtype == "container") {
+				if(val.contents.length == 0) {
+					print("it is currently empty");
+				} else {
+					print("contents:");
+					for(var i = 0; i < val.contents.length; i++) {
+						print(span(dbSearch("object", val.contents[i]).name));
+					}
+					/* if(val.capacity == val.contents.length)
+						print("it is stuffed to the brim")
+					else
+						print("it looks like it could fit " + (val.capacity - val.contents.length) + " more things"); */
+				}
+			}
+		} else {
+			for(var i = 0; i < explored[here.rid].item.length; i++)
+				if(explored[here.rid].item[i].subtype == "container"){
+					if(explored[here.rid].item[i].contents.includes(val.iid)) {
+						print(val.desc);
+						state = 0;
+						return;
+					}
+				}
+			print("you can't see that right now");
+		}
 	} else {
 		print("you are in the " + span(here.name));
 		print(here.desc);
-		for(var i = 0; i < explored[here.rid].item.length; i++)
-			print("there is a " + span(explored[here.rid].item[i].synonym[0]));
+		for(var i = 0; i < explored[here.rid].item.length; i++) {
+			try{
+				print(explored[here.rid].item[i].glance_desc);
+			} catch(e) {
+				print("there is a " + span(explored[here.rid].item[i].synonym[0]));
+			}
+		}
 		print("exits: ");
 		for(var i = 0; i < here.exit.length; i++)
 			if(explored[here.rid].lock[here.exit[i].dir] == 0)
@@ -354,28 +401,78 @@ function look(val) {
 	}
 }
 
-function take(val) {
+function take(val, container) {
 	if(val != "#") {
-		if(val.name == "all") {
-			for(var i = explored[here.rid].item.length - 1; i >= 0; i--)
-				take(explored[here.rid].item[i]);
-			return;
-		}
-		if(explored[here.rid].item.includes(val)) {
-			if(val.can_be_picked_up == 1) {
-				print("you got the " + span(val.name) + "!");
-				inventory.push(val);
-				explored[here.rid].item.splice(explored[here.rid].item.indexOf(val), 1);
-				if(!touched.includes(val.iid)) {
-					score += NEWITEMSCORE;
-					touched.push(val.iid);
+		if(container != "#") {
+			if(container.subtype != "container") {
+				print("the " + span(container.name) + " taken from; it is not a container");
+				state = 0;
+				return;
+			}
+			if(val.name == "all") {
+				for(var i = container.contents.length - 1; i >= 0; i--)
+					take(dbSearch("object", container.contents[i]), container);
+				state = 0;
+				return;
+			}
+			if(container.contents.includes(val.iid)) {
+				if(val.subtype == "tool") {
+					print("you got the " + span(val.name) + "!");
+					inventory.push(val);
+					container.contents.splice(container.contents.indexOf(val.iid), 1);
+					if(!touched.includes(val.iid)) {
+						score += NEWITEMSCORE;
+						touched.push(val.iid);
+					}
+				} else {
+					print("the " + span(val.name) + " is too big to take<br/>" + 
+					val.fail_msg);
+				}
+			} else
+				print("there is no " + span(val.name) + " here");
+		} else {
+			if(val.name == "all") {
+				for(var i = explored[here.rid].item.length - 1; i >= 0; i--)
+					take(explored[here.rid].item[i], "#");
+				return;
+			}
+			if(explored[here.rid].item.includes(val)) {
+				if(val.subtype == "tool") {
+					print("you got the " + span(val.name) + "!");
+					inventory.push(val);
+					explored[here.rid].item.splice(explored[here.rid].item.indexOf(val), 1);
+					if(!touched.includes(val.iid)) {
+						score += NEWITEMSCORE;
+						touched.push(val.iid);
+					}
+				} else {
+					print("the " + span(val.name) + " is too big to take<br/>" + 
+					val.fail_msg);
 				}
 			} else {
-				print("the " + span(val.name) + " is too big to take<br/>" + 
-				val.fail_msg);
+				for(var i = 0; i < explored[here.rid].item.length; i++)
+					if(explored[here.rid].item[i].subtype == "container"){
+						if(explored[here.rid].item[i].contents.includes(val.iid)) {
+							if(val.subtype == "tool") {
+								print("you got the " + span(val.name) + " from inside the " + span(explored[here.rid].item[i].name) + "!");
+								inventory.push(val);
+								explored[here.rid].item[i].contents.splice(explored[here.rid].item.indexOf(val), 1);
+								if(!touched.includes(val.iid)) {
+									score += NEWITEMSCORE;
+									touched.push(val.iid);
+								}
+							} else {
+								print("the " + span(val.name) + " is too big to take<br/>" + 
+								val.fail_msg);
+							}
+							state = 0;
+							return;
+						}
+					}
+				print("there is no " + span(val.name) + " here");
 			}
-		} else
-			print("there is no " + span(val.name) + " here");
+		}
+		
 		state = 0;
 	} else {
 		print("what would you like to take?");
@@ -384,19 +481,44 @@ function take(val) {
 	inv_loaded = false;
 }
 
-function drop(val) {
+function drop(val, container) {
 	if(val != "#") {
-		if(val.name == "all") {
-			for(var i = inventory.length - 1; i >= 0; i--)
-				drop(inventory[i]);
-			return;
+		var c = -1;
+		if(container != "#") {
+			if(container.subtype == "container") {
+				if(val.name == "all") {
+					for(var i = inventory.length - 1; i >= 0; i--)
+						drop(inventory[i], container);
+					return;
+				} else {
+					if(inventory.includes(val)) {
+						if(container.capacity <= container.contents.length) {
+							print("the " + span(container.name) + " is full- your " + span(val.name) + " has no chance of fitting");
+						} else {
+							print("you put the " + span(val.name) + " inside of the " + span(container.name));
+							inventory.splice(inventory.indexOf(val), 1);
+							container.contents.push(val.iid);
+						}
+					} else
+						print("you don't have a " + span(val.name));
+				}
+			} else {
+				print("the " + span(val.name) + " does not fit in the " + span(container.name) + "; it is not a container");
+			}
+		} else {
+			if(val.name == "all") {
+				for(var i = inventory.length - 1; i >= 0; i--)
+					drop(inventory[i], "#");
+				return;
+			} else {
+				if(inventory.includes(val)) {
+					print("you lost the " + span(val.name));
+					inventory.splice(inventory.indexOf(val), 1);
+					explored[here.rid].item.push(val);
+				} else
+					print("you don't have a " + span(val.name));
+			}
 		}
-		if(inventory.includes(val)) {
-			print("you lost the " + span(val.name) + "!");
-			inventory.splice(inventory.indexOf(val), 1);
-			explored[here.rid].item.push(val);
-		} else
-			print("you don't have a " + span(val.name));
 		state = 0;
 	} else {
 		print("what would you like to drop?");
@@ -412,35 +534,40 @@ function use(val) {
 			return;
 		}
 		if(inventory.includes(val)) {
-			for(var i = 0; i < val.use.length; i++) {
-				target = dbSearch("object", val.use[i].target);
-				if(explored[here.rid].item.includes(target)) {
-					room = explored[here.rid];
-					print(val.use[i].msg);
-					if(val.use[i].destroys_target == 1)
-						room.item.splice(room.item.indexOf(target));
-					if(val.use[i].unlock == "kingship") {
-						kingship = true;
-						print("you are granted KINGSHIP!");
-					} else if(val.use[i].unlock != -1) {
-						room.lock[val.use[i].unlock] = 0;
-						print("the way " + span(val.use[i].unlock) + " is now open");
+			if(val.subtype != "tool") {
+				print("you dont know how to use a " + span(val.name));
+			} else {
+				for(var i = 0; i < val.use.length; i++) {
+					target = dbSearch("object", val.use[i].target);
+					if(explored[here.rid].item.includes(target)) {
+						room = explored[here.rid];
+						print(val.use[i].msg);
+						if(val.use[i].destroys_target == 1)
+							room.item.splice(room.item.indexOf(target));
+						if(val.use[i].unlock == "kingship") {
+							kingship = true;
+							print("you are granted KINGSHIP!");
+						} else if(val.use[i].unlock != -1) {
+							room.lock[val.use[i].unlock] = 0;
+							print("the way " + span(val.use[i].unlock) + " is now open");
+						}
+						if(val.use[i].drop != -1) {
+							var drop = dbSearch("object", val.use[i].drop);
+							room.item.push(drop);
+							print("there is now a " + span(drop.name) + " before you");
+							score += ITEMDROPSCORE;
+						}
+						if(val.use[i].consumes_item == 1) {
+							inventory.splice(inventory.indexOf(val), 1);
+							print("but your " + span(val.name) + " was lost");
+							score += ITEMLOSSSCORE;
+						}
+						state = 0;
+						return;
 					}
-					if(val.use[i].drop != -1) {
-						var drop = dbSearch("object", val.use[i].drop);
-						room.item.push(drop);
-						print("there is now a " + span(drop.name) + " before you");
-						score += ITEMDROPSCORE;
-					}
-					if(val.use[i].consumes_item == 1) {
-						inventory.splice(inventory.indexOf(val), 1);
-						print("but your " + span(val.name) + " was lost");
-						score += ITEMLOSSSCORE;
-					}
-					return;
 				}
+				print("it's no use<br/>" + val.fail_msg);
 			}
-			print("it's no use<br/>" + val.fail_msg);
 		} else
 			print("you don't have a " + span(val.name));
 		state = 0;
@@ -479,14 +606,22 @@ function go(val) {
 		if(temp != -1) {
 			document.getElementById("loc").innerHTML = here.name;
 			try {
+				// you have been here before
 				explored[here.rid].times_entered++;
-				print("you are at the " + span(here.name));
+				if(verboseness != "verbose")
+					print("you are at the " + span(here.name));
 			} catch(e) {
+				// you have NOT been here before
 				places_gone.push(here.rid);
 				explored[here.rid] = new exp_token(here);
 				if(here.rid != "r00") score += NEWROOMSCORE;
-				look("#");
+				if(verboseness == "brief")
+					look("#");
+				if(verboseness == "superbrief")
+					print("you are at the " + span(here.name));
 			}
+			if(verboseness == "verbose")
+					look("#");
 			
 		} else {
 			print("there is no exit " + span(val.name));
@@ -522,15 +657,31 @@ function load() {
 function talk(to, about) {
 	if(to != '#') {
 		if(explored[here.rid].item.includes(to)) {
-			if(to.dialogue.length > 0) {
+			if(to.subtype == "npc") {
 				print(to.dialogue[Math.floor(Math.random() * to.dialogue.length)]);
 			}
-			else print("they dont seem up for conversation");
+			else print("the " + span(to.name) + " doesnt really seem up for conversation");
 		} else print("they can't hear you right now");
 	} else {
 		print("to whom are you talking?");
 		state = 5;
 	}
+}
+
+function scored() {
+	var ranks = ["Serf", "Page", "Knight", "Baron", "Count", "Duke", "Monarch", "Emperor"];
+	print("your current score is " + score + " out of " + max_score);
+	for(var i = ranks.length; i >= 0; i--) {
+		if(score >= max_score*(i)/(ranks.length - 1)) {
+			print("your rank is: " + span(ranks[i]));
+			console.log(max_score*(i)/(ranks.length - 1));
+			return;
+		}
+	}
+}
+
+function diagnostic() {
+	print("you feel alright");
 }
 
 function deleteAllCookies() {
@@ -580,13 +731,14 @@ function getMaxScore() {
 				MAP_YMAX = term.coord.y;
 		}
 		if(term.type == "object") {
-			if(term.can_be_picked_up == 1)
+			if(term.subtype == "tool") {
 				max_score += NEWITEMSCORE;
-			if(term.use.length > 0) {
-				if(term.use[0].drop != -1)
-					max_score += ITEMDROPSCORE;
-				if(term.use[0].consumes_item == 1)
-					max_score += ITEMLOSSSCORE;
+				if(term.use.length > 0) {
+					if(term.use[0].drop != -1)
+						max_score += ITEMDROPSCORE;
+					if(term.use[0].consumes_item == 1)
+						max_score += ITEMLOSSSCORE;
+				}
 			}
 		}
 	}
@@ -621,7 +773,6 @@ function menutoggle(menu) {
 					document.getElementById("map_" + explored[places_gone[i]].coord).className = "maploc";
 				else
 					document.getElementById("map_" + explored[places_gone[i]].coord).className = "visited";
-				
 			}
 			map_loaded = true;
 		}
@@ -643,7 +794,9 @@ function menutoggle(menu) {
 		document.getElementById("music_dropdown").style.display = "none";
 	} else if(menu == "music_dropdown") {
 		if(!music_loaded) {
-			x.innerHTML = '<iframe style="border: 0; width: 170px; height: 170px;" src="https://bandcamp.com/EmbeddedPlayer/album=517238578/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://chillhop.bandcamp.com/album/chillhop-essentials-summer-2019">Chillhop Essentials Summer 2019 by Chillhop Music</a></iframe><br/><iframe style="border: 0; width: 170px; height: 170px;" src="https://bandcamp.com/EmbeddedPlayer/album=2322633469/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://maxoisnuts.bandcamp.com/album/fakebit-2010">FAKEBIT 2010 by Maxo</a></iframe>';
+			x.innerHTML = '<iframe style="border: 0; width: 170px; height: 170px;" src="https://bandcamp.com/EmbeddedPlayer/album=517238578/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://chillhop.bandcamp.com/album/chillhop-essentials-summer-2019">Chillhop Essentials Summer 2019 by Chillhop Music</a></iframe><br/>\
+			<iframe style="border: 0; width: 170px; height: 170px;" src="https://bandcamp.com/EmbeddedPlayer/album=4065251593/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://michaelklein.bandcamp.com/album/over-the-waves">Over the Waves by Mike Klein</a></iframe><br/>\
+			<iframe style="border: 0; width: 170px; height: 170px;" src="https://bandcamp.com/EmbeddedPlayer/album=3869938552/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://tubaskinny.bandcamp.com/album/some-kind-a-shake">Some Kind-a-Shake by Tuba Skinny</a></iframe>';
 			music_loaded = true;
 		}
 		document.getElementById("map_dropdown").style.display = "none";

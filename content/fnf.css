@@ -1,53 +1,58 @@
-:root {
-	--yellow: #effea9;
-}
-
 .header {
-	height: 3em;
-	background-image: linear-gradient(to right, var(--yellow), #303028, #101010);
+	height: 2.5em;
+	background-image: linear-gradient(to right, #404040, #202020, #404040);
 	color: #202020;
+	position: relative;
+	text-transform: uppercase;
+	margin: 0;
 }
 
 h1 {
-	color: black;
-	font-size: 2.4em;
-	text-shadow: 2px 3px #aaaa66;
+	text-align: center;
+	color: white;
+	font-size: 2em;
+	text-shadow: 2px 3px grey;
+	margin: 0;
 }
 
 body {
+	background-image: URL("hosizora2.gif");
+	color: black;
+	font-family: Georgia, serif;
 	margin: 0;
+	overflow: hidden;
 }
 
 .inner {
 	background-color: #050005;
-	height: calc(100% - 3em);
+	color: #effea9;
+	height: calc(100% - 2.5em);
 }
 
 p {
 	color: white;
 	text-align: center;
-	border: 1px dashed var(--yellow);
-	border-left: none;
-	border-right: none;
+	border-top: dashed;
+	border-bottom: dashed;
+	border-width: 1px;
+	border-color: #effea9;
 	font-family: Georgia, serif;
 	padding-top: .5em;
 	padding-bottom: .5em;
-	/* margin: auto; */
 }
 
 .main {
 	background-color: #200020;
 	float: right;
-	width: calc(100% - 12.1em);
+	width: calc(100% - 9em);
 	height: 100%;
 }
 
 #leftbar {
-	background-image: URL("hosizora2.gif");
 	overflow: auto;
-	border-right: 1px solid var(--yellow);
+	border-right: 1px solid #effea9;
 	float: left;
-	width: 12em;
+	width: 8em;
 	height: 100%;
 }
 
@@ -58,17 +63,25 @@ iframe {
 }
 
 button {
-	background-color: transparent;
+	background-color: #050005;
 	width: 100%;
 	border: none;
-    border-bottom: 1px solid #404040;
+    border-bottom: 1px solid #181818;
     color: white;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1em;
+    font-size: 16px;
 	padding-top: 1em;
 	padding-bottom: 1em;
+}
+
+.hidden {
+	display: none;
+}
+
+.inline-block {
+	display: inline-block;
 }
 
 .subtitle {
@@ -77,16 +90,17 @@ button {
 }
 
 button:hover {
-    animation-name: button_hover;
-    animation-duration: 2.5s;
+    background-color: darkslategrey;
+    animation-name: example;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
 
-@keyframes button_hover {
-    0%  {background-color: #505050;}
-    50%   {background-color: #101010;}
-    100%  {background-color: #505050;}
+@keyframes example {
+    0%  {background-color: darkslategrey;}
+    50%   {background-color: #050005;}
+    100%  {background-color: darkslategrey;}
 }
 
 .style_button {
@@ -99,13 +113,6 @@ button:hover {
 	background-color: #e8e8e8;
 	font-size: 40px;
 	float: right;
-}
-
-.style_button:hover {
-	background-color: #ffffff;
-	color: #888888;
-    animation-iteration-count: 0;
-	border: none;
 }
 
 .style_dropdown {
@@ -122,8 +129,6 @@ button:hover {
 
 #roller {
 	width: 6em;
-	background-color: #050005;
-	border: none;
 }
 
 #roller:hover {

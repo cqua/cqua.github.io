@@ -8,9 +8,36 @@
 	  "used_on_room_obj" : "TRUE",
 	  "synonym" : [
 		"h",
-		"hlp"
+		"hlp",
+		"command",
+		"?"
 	  ],
 	  "desc" : "get a list of commands, or use with a specific command to learn its use and synonyms (ie 'HELP LOOK')"
+	},
+    {
+	  "name" : "score",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"rank",
+		"ranking"
+	  ],
+	  "desc" : "display your score and ranking"
+	},
+    {
+	  "name" : "health",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"diagnostic",
+		"hp",
+		"self"
+	  ],
+	  "desc" : "display your current physical status"
 	},
     {
 	  "name" : "clear",
@@ -37,9 +64,10 @@
 		"examine",
 		"consider",
 		"read",
-		"dir"
+		"dir",
+		"ls"
 	  ],
-	  "desc" : "examine surroundings, or examine a particular object (ie 'LOOK LANTERN')"
+	  "desc" : "examine surroundings, or examine a particular object (ie '<span>LOOK AT LANTERN</span>')"
 	},
     {
 	  "name" : "take",
@@ -53,7 +81,7 @@
 		"acquire",
 		"pick up"
 	  ],
-	  "desc" : "put an item in your inventory"
+	  "desc" : "put an item in your inventory, or put everything in a room in your inventory with '<span>take all</span>'"
 	},
     {
 	  "name" : "drop",
@@ -111,7 +139,8 @@
 		"run",
 		"travel",
 		"wasd",
-		"g"
+		"g",
+		"climb"
 	  ],
 	  "desc" : "use with a direction or location to travel there (ie 'GO WEST'); you can also do this by entering the direction (ie 'WEST') or sometimes just the first letter (ie 'W')"
 	},
@@ -145,7 +174,11 @@
 	  "used_on_room_obj" : "TRUE",
 	  "synonym" : [
 		"speak",
-		"tell"
+		"tell",
+		"listen",
+		"hi",
+		"hello",
+		"greet"
 	  ],
 	  "desc" : "use with an intelligent character to hear what they have to say (ie 'TALK TO THE GUARD' or just 'TALK GUARD')"
 	},
@@ -162,14 +195,41 @@
 	},
     {
 	  "name" : "all",
+	  "type" : "abstract",
+	  "synonym" : [
+		"everything"
+	  ],
+	  "desc" : "all of the objects, items, and characters in the given area"
+	},
+    {
+	  "name" : "verbose",
 	  "type" : "command",
 	  "used_on_command" : "FALSE",
 	  "used_on_inv_obj" : "FALSE",
 	  "used_on_room_obj" : "FALSE",
 	  "synonym" : [
-		"everything"
 	  ],
-	  "desc" : "all of the objects, items, and characters in the given area"
+	  "desc" : "room descriptions will always display automatically when you enter a room"
+	},
+    {
+	  "name" : "brief",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+	  ],
+	  "desc" : "room descriptions will only display automatically the first time you enter a room"
+	},
+    {
+	  "name" : "superbrief",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+	  ],
+	  "desc" : "room descriptions will never display automatically"
 	},
     {
 	  "name" : "north",
@@ -208,6 +268,42 @@
 	  "desc" : "the direction towards the setting sun"
 	},
     {
+	  "name" : "northwest",
+	  "type" : "direction",
+	  "synonym" : [
+		"nw",
+		"northwestward"
+	  ],
+	  "desc" : "the fusion of north and west"
+	},
+    {
+	  "name" : "southeast",
+	  "type" : "direction",
+	  "synonym" : [
+		"se",
+		"southeastward"
+	  ],
+	  "desc" : "the fusion of south and east"
+	},
+    {
+	  "name" : "southwest",
+	  "type" : "direction",
+	  "synonym" : [
+		"sw",
+		"southwestward"
+	  ],
+	  "desc" : "the fusion of south and west"
+	},
+    {
+	  "name" : "northeast",
+	  "type" : "direction",
+	  "synonym" : [
+		"ne",
+		"northeastward"
+	  ],
+	  "desc" : "the fusion of north and east"
+	},
+    {
 	  "name" : "up",
 	  "type" : "direction",
 	  "synonym" : [
@@ -237,11 +333,10 @@
 	  "desc" : "the direction of the not inside"
 	},
     {
-	  "name" : "in",
+	  "name" : "enter",
 	  "type" : "direction",
 	  "synonym" : [
-		"inside",
-		"enter"
+		"inside"
 	  ],
 	  "desc" : "the direction of the not outside"
 	},
@@ -262,7 +357,8 @@
 		}
 	  ],
 	  "item" : [
-		"i01"
+		"i01",
+		"i17"
 	  ],
 	  "coord" : {
 	    "x" : "0",
@@ -298,7 +394,7 @@
 		}
 	  ],
 	  "item" : [
-		"i02"
+		"i18"
 	  ],
 	  "coord" : {
 	    "x" : "1",
@@ -516,7 +612,7 @@
 	  "type" : "room",
 	  "synonym" : [
 	  ],
-	  "desc" : "the [i11] stands before you in a sunlit room",
+	  "desc" : "the $i11 stands before you in a sunlit room",
 	  "exit" : [
 		{
 			"dir" : "down",
@@ -591,6 +687,7 @@
 	  "iid" : "i00",
 	  "name" : "metal lantern",
 	  "type" : "object",
+	  "subtype" : "tool",
 	  "synonym" : [
 	    "black lantern",
 	    "lantern",
@@ -603,21 +700,20 @@
 	  "use" : [
 	    {
 	      "target" : "i09",
-	      "msg" : "light shines from the $i00 and the darkness is obliterated",
+	      "msg" : "light shines from the $i00 and the $i09 is obliterated",
 		  "unlock" : "down",
 		  "drop" : "-1",
 		  "consumes_item" : "0",
 		  "destroys_target" : "1"
 	    }
 	  ],
-	  "dialogue" : [],
-	  "fail_msg" : "this area is well lit enough already, the $i00 reveals nothing",
-	  "can_be_picked_up" : "1"
+	  "fail_msg" : "this area is well lit enough already, the $i00 reveals nothing"
 	},
 	{
 	  "iid" : "i01",
 	  "name" : "frod",
 	  "type" : "object",
+	  "subtype" : "tool",
 	  "synonym" : [
 		"worn fishing rod",
 	    "fishing",
@@ -636,19 +732,16 @@
 		  "destroys_target" : "0"
 	    }
 	  ],
-	  "dialogue" : [],
-	  "fail_msg" : "you cast the line, but seeing as there are no inhabited bodies of water in the vicinity, you shouldn't be surprised when nothing bites",
-	  "can_be_picked_up" : "1"
+	  "fail_msg" : "you cast the line, but seeing as there are no inhabited bodies of water in the vicinity, you shouldn't be surprised when nothing bites"
 	},
 	{
 	  "iid" : "i02",
 	  "name" : "red rose",
 	  "type" : "object",
+	  "subtype" : "tool",
 	  "synonym" : [
-	    "rosebush",
 	    "rose",
-	    "flower",
-		"bush"
+	    "flower"
 	  ],
 	  "desc" : "a single rose puts the rest to shame; dew glances off of its crimson petals- what a magnificent gift!",
 	  "use" : [
@@ -661,14 +754,13 @@
 		  "destroys_target" : "0"
 	    }
 	  ],
-	  "dialogue" : [],
-	  "fail_msg" : "you take a deep whiff of the $i02- still fresh",
-	  "can_be_picked_up" : "1"
+	  "fail_msg" : "you take a deep whiff of the $i02- still fresh"
 	},
 	{
 	  "iid" : "i03",
 	  "name" : "fat salmon",
 	  "type" : "object",
+	  "subtype" : "tool",
 	  "synonym" : [
 	    "fat fish",
 	    "red",
@@ -690,13 +782,13 @@
 	    }
 	  ],
 	  "dialogue" : [],
-	  "fail_msg" : "you test the $i03 with your teeth, but human teeth aren't capable of the kind of rip and tear these thick scales require",
-	  "can_be_picked_up" : "1"
+	  "fail_msg" : "you test the $i03 with your teeth, but human teeth aren't capable of the kind of rip and tear these thick scales require"
 	},
 	{
 	  "iid" : "i04",
 	  "name" : "mouse",
 	  "type" : "object",
+	  "subtype" : "npc",
 	  "synonym" : [
 	    "mouse-shaped hole in the tree",
 	    "hole",
@@ -704,18 +796,16 @@
 	    "hole in tree"
 	  ],
 	  "desc" : "although you cannot see any mice, there is the sound of distant paw-scampering",
-	  "use" : [
-	  ],
 	  "dialogue" : [
 	    "*squeek*"
 	  ],
-	  "fail_msg" : "the only way to move a hole is to move that which encompasses it, and that tree aint going nowhere",
-	  "can_be_picked_up" : "0"
+	  "fail_msg" : "the only way to move a hole is to move that which encompasses it, and that tree aint going nowhere"
 	},
 	{
 	  "iid" : "i05",
 	  "name" : "mean troll",
 	  "type" : "object",
+	  "subtype" : "npc",
 	  "synonym" : [
 	    "mean troll blocking the gate",
 	    "angry",
@@ -723,21 +813,19 @@
 	    "troll"
 	  ],
 	  "desc" : "a dangerous troll standing 12ft tall; it is preposterously strong and known for its special attack, the 40x CONSECUTIVE HUMAN SKULL CRUSH<br/>violent engagement is ill advised<br/>just your luck that it is currently between you and the castle interior...",
-	  "use" : [
-	  ],
 	  "dialogue" : [
 	    "\"Grrr...\"",
 	    "\"Grumble...\"",
 	    "\"Grumblegrrr...\"",
 	    "\"Grrrrrrumble...\""
 	  ],
-	  "fail_msg" : "it only grumbles menacingly",
-	  "can_be_picked_up" : "0"
+	  "fail_msg" : "it only grumbles menacingly"
 	},
 	{
 	  "iid" : "i06",
 	  "name" : "contented troll",
 	  "type" : "object",
+	  "subtype" : "npc",
 	  "synonym" : [
 	    "contented troll",
 	    "angry",
@@ -745,21 +833,19 @@
 	    "troll"
 	  ],
 	  "desc" : "it seems he was merely hungry after all...",
-	  "use" : [
-	  ],
 	  "dialogue" : [
 	    "\"Omnomble...\"",
 	    "\"Nomble...\"",
 	    "\"Grumblegrrr...nom...\"",
 	    "\"Grrrrrrnomnomblenom...\""
 	  ],
-	  "fail_msg" : "best not bother it now",
-	  "can_be_picked_up" : "0"
+	  "fail_msg" : "best not bother it now"
 	},
 	{
 	  "iid" : "i07",
 	  "name" : "smelly cheese",
 	  "type" : "object",
+	  "subtype" : "tool",
 	  "synonym" : [
 	    "poorly-aged cheese",
 	    "cheese",
@@ -785,19 +871,13 @@
 		  "destroys_target" : "1"
 	    }
 	  ],
-	  "dialogue" : [
-	    "\"SHOW ME YOUR MOVES\"",
-	    "\"PROVE YOURSELF\"",
-	    "\"FACE ME IN COMBAT\"",
-	    "\"I DONT LIKE YOUR FACE\""
-	  ],
-	  "fail_msg" : "you remove the cheese from your knapsack and instantly regret it- cheesesmell abounds",
-	  "can_be_picked_up" : "1"
+	  "fail_msg" : "you remove the cheese from your knapsack and instantly regret it- cheesesmell abounds"
 	},
 	{
 	  "iid" : "i08",
 	  "name" : "shining key",
 	  "type" : "object",
+	  "subtype" : "tool",
 	  "synonym" : [
 	    "shiny key",
 	    "key",
@@ -815,29 +895,25 @@
 		  "destroys_target" : "1"
 	    }
 	  ],
-	  "dialogue" : [],
-	  "fail_msg" : "you insert the key into whatever you hoped to insert it, but whatever it was, it was not a $i15, so it does not unlock",
-	  "can_be_picked_up" : "1"
+	  "fail_msg" : "you insert the key into whatever you hoped to insert it, but whatever it was, it was not a $i15, so it does not unlock"
 	},
 	{
 	  "iid" : "i09",
 	  "name" : "darkness",
 	  "type" : "object",
+	  "subtype" : "static",
 	  "synonym" : [
 	    "darkness making it impossible to go down",
 	    "dark"
 	  ],
 	  "desc" : "you can't descend the stairs like this",
-	  "use" : [
-	  ],
-	  "dialogue" : [],
-	  "fail_msg" : "what an absurd notion",
-	  "can_be_picked_up" : "0"
+	  "fail_msg" : "what an absurd notion"
 	},
 	{
 	  "iid" : "i10",
 	  "name" : "golden crown",
 	  "type" : "object",
+	  "subtype" : "tool",
 	  "synonym" : [
 	    "crown",
 	    "gold crown"
@@ -853,34 +929,31 @@
 		  "destroys_target" : "0"
 	    }
 	  ],
-	  "dialogue" : [],
-	  "fail_msg" : "to crown oneself would be overly conceited, would it not?",
-	  "can_be_picked_up" : "1"
+	  "fail_msg" : "to crown oneself would be overly conceited, would it not?"
 	},
 	{
 	  "iid" : "i11",
 	  "name" : "her highness",
 	  "type" : "object",
+	  "subtype" : "npc",
 	  "synonym" : [
 	    "princess",
 	    "royal"
 	  ],
 	  "desc" : "a $i11 stands before you in a surprisingly well-kept dress",
-	  "use" : [
-	  ],
 	  "dialogue" : [
 	    "\"Only the crowned may sit upon the throne.\"",
 		"\"Do you play Fortnite?\"",
 		"\"My father had a very sensitive nose. He hated weird smells.\"",
 		"\"If you see what remains of my father, take his crown. But he will not give it freely.\""
 	  ],
-	  "fail_msg" : "she slaps you, saying \"I am not that kind of woman!\"",
-	  "can_be_picked_up" : "0"
+	  "fail_msg" : "she slaps you, saying \"I am not that kind of woman!\""
 	},
 	{
 	  "iid" : "i12",
 	  "name" : "candle",
 	  "type" : "object",
+	  "subtype" : "tool",
 	  "synonym" : [
 	    "weird candle",
 	    "strange candle"
@@ -898,29 +971,25 @@
 	  ],
 	  "dialogue" : [
 	  ],
-	  "fail_msg" : "a weird odor pervades the area",
-	  "can_be_picked_up" : "1"
+	  "fail_msg" : "a weird odor pervades the area"
 	},
 	{
 	  "iid" : "i13",
 	  "name" : "throne",
 	  "type" : "object",
+	  "subtype" : "static",
 	  "synonym" : [
 	    "golden throne",
 	    "oranate throne"
 	  ],
 	  "desc" : "while the metal has tarnished and the cushioning has been chewed away by rats, this throne manages to remain impressively expensive-looking",
-	  "use" : [
-	  ],
-	  "dialogue" : [
-	  ],
-	  "fail_msg" : "you probably shouldn't do that",
-	  "can_be_picked_up" : "0"
+	  "fail_msg" : "you probably shouldn't do that"
 	},
 	{
 	  "iid" : "i14",
 	  "name" : "ghost",
 	  "type" : "object",
+	  "subtype" : "npc",
 	  "synonym" : [
 	    "crowned ghost",
 	    "king's ghost",
@@ -928,50 +997,89 @@
 	    "phantom"
 	  ],
 	  "desc" : "a mortifying undead, whose golden crown shines in the darkness, and whose bony hand reaches towards you",
-	  "use" : [
-	  ],
 	  "dialogue" : [
 	    "\"you do not smell like royalty\"",
 		"\"stay away from my daughter\"",
 		"\"you smell delicious\""
 	  ],
-	  "fail_msg" : "\"you do not smell like royalty\"",
-	  "can_be_picked_up" : "0"
+	  "fail_msg" : "\"you do not smell like royalty\""
 	},
 	{
 	  "iid" : "i15",
 	  "name" : "door",
 	  "type" : "object",
+	  "subtype" : "npc",
 	  "synonym" : [
 	    "locked door",
 	    "lock"
 	  ],
 	  "desc" : "a sturdy wooden door; what could be behind it?",
-	  "use" : [
-	  ],
 	  "dialogue" : [
 	    "\"Help!\"",
 	    "\"My father trapped me in here!\"",
 	    "\"This kingdom is in shambles!\""
 	  ],
-	  "fail_msg" : "\"You'll never get in like that, go find a guard with a key!\"",
-	  "can_be_picked_up" : "0"
+	  "fail_msg" : "\"You'll never get in like that, go find a guard with a key!\""
 	},
 	{
 	  "iid" : "i16",
 	  "name" : "pond",
 	  "type" : "object",
+	  "subtype" : "static",
 	  "synonym" : [
 		"fishing pond",
 		"water"
 	  ],
 	  "desc" : "you can see plenty of fish jumping about",
-	  "use" : [
+	  "fail_msg" : "you scoop water, but it flows between your fingers; picking up the lake will have to wait..."
+	},
+	{
+	  "iid" : "i17",
+	  "name" : "case",
+	  "type" : "object",
+	  "subtype" : "container",
+	  "synonym" : [
+		"display case",
+		"display"
 	  ],
-	  "dialogue" : [
+	  "desc" : "through the glass you could see all the trophies you might put in there",
+	  "contents" : [
 	  ],
-	  "fail_msg" : "you scoop water, but it flows between your fingers",
-	  "can_be_picked_up" : "0"
+	  "capacity" : 3,
+	  "fail_msg" : "all that wood and glass is actually pretty heavy"
+	},
+	{
+	  "iid" : "i18",
+	  "name" : "bush",
+	  "type" : "object",
+	  "subtype" : "container",
+	  "synonym" : [
+		"rosebush",
+		"shrub"
+	  ],
+	  "desc" : "just barely in season, most roses have yet to bloom",
+	  "contents" : [
+		"i02"
+	  ],
+	  "capacity" : 1,
+	  "fail_msg" : "the $i18 is rooted firmly in the ground"
 	}
-  ]
+  ],
+  "ignorables" : [
+	"the", 
+	"a", 
+	"to", 
+	"fuckin",
+	"fucking",
+	"on", 
+	"with", 
+	"for", 
+	"small", 
+	"about", 
+	"it", 
+	"from", 
+	"in", 
+	"at"
+  ],
+  "intro_text" : "you wake up"
 }

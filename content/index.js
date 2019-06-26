@@ -9,7 +9,10 @@ function menutoggle(menu) {
 	var x = document.getElementById(menu);
 	if(menu == "music_dropdown") {
 		if(!music_loaded) {
-			x.innerHTML = '<iframe style="border: 0; width: 170px; height: 170px;" src="https://bandcamp.com/EmbeddedPlayer/album=517238578/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://chillhop.bandcamp.com/album/chillhop-essentials-summer-2019">Chillhop Essentials Summer 2019 by Chillhop Music</a></iframe><br/><iframe style="border: 0; width: 170px; height: 170px;" src="https://bandcamp.com/EmbeddedPlayer/album=2322633469/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="http://maxoisnuts.bandcamp.com/album/fakebit-2010">FAKEBIT 2010 by Maxo</a></iframe>';
+			mc = "";
+			for(i = 0; i < music_content.length; i++)
+				mc += music_content[i] + "<br/>";
+			x.innerHTML = mc;
 			music_loaded = true;
 		}
 		document.getElementById("die_dropdown").style.display = "none";
@@ -32,62 +35,29 @@ function menutoggle(menu) {
 	}
 }
 
-function changemenu(kind) {
+function changemenu(new_menu) {
 	var bar = document.getElementById("leftbar");
-	var names;
+	var i = -1;
+	var m;
+	
 	while(bar.hasChildNodes()) {
 		bar.removeChild(bar.lastChild);
 	}
-
-	if(kind == "home") {
-		var np = document.createElement("p");
-		var node = document.createTextNode("home");
-		np.appendChild(node);
-		bar.appendChild(np);
-
-		makebutton("about me", "gothere('views/about_me.html')");
-		makebutton("work experience", "gothere('views/work_experience.html')");
-		makebutton("interests", "gothere('views/interests.html')");
-		var np = document.createElement("p");
-		var node = document.createTextNode("projects");
-		np.appendChild(node);
-		bar.appendChild(np);
-		makebutton("schoolwork", "changemenu('school')");
-		makebutton("games", "changemenu('game');");
-
-
-		makebutton('&#9829', "window.location.href = 'views/games/ac/ac.html'");
-	} else {
-		makebutton("&lt==", "changemenu('home')");
-
-		if(kind == "school") {
+	
+	do {
+		i++
+		m = menu_content[i];
+	} while(new_menu != m.name);
+	
+	for(i = 0; i < m.content.length; i++) {
+		if(m.content[i].action == "NODE") {
 			var np = document.createElement("p");
-			var node = document.createTextNode("schoolwork");
+			var node = document.createTextNode(m.content[i].title);
 			np.appendChild(node);
 			bar.appendChild(np);
-
-			names = [
-				"Pathfinder Character Builder <br/><span class='subtitle'>Spring 2019</span>", "school/gui_ii.html",
-				"x86 Compiler<br/><span class='subtitle'>Spring 2019</span>", "school/compilers.html",
-				"GUI I <br/><span class='subtitle'>Fall 2018</span>", "school/gui_i.html"
-			];
+		} else {
+			makebutton(m.content[i].title, m.content[i].action);
 		}
-
-		if(kind == "game") {
-			var np = document.createElement("p");
-			var node = document.createTextNode("games");
-			np.appendChild(node);
-			bar.appendChild(np);
-
-			names = [
-				"Action Castle <br/><span class='subtitle'>Fall 2018</span>", "games/action_castle.html", 
-				"The Spinward Marches <br/><span class='subtitle'>Fall 2018</span>", "games/diaspora.html"
-			];
-		}
-	}
-
-	for(var i = 0; i < names.length; i+=2) {
-		makebutton(names[i].replace(/_/g, " "), "gothere('views/" + names[i+1] + "')");
 	}
 }
 
