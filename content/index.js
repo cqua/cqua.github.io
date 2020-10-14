@@ -19,11 +19,11 @@ function menutoggle(menu) {
 	} else {
 		if(!die_loaded) {
 			x.innerHTML = 
-			'<button id="roller" onclick="roll();">roll!</button>\
-			<input type="text" id="dieout1"> +\
+			'<button id="roller" class="button_roller" onclick="roll();">roll!</button>\
+			<input type="text" id="dieout1" class="input_roller"> +\
 			Modifier:\
-			<input type="text" id="diemod"> =\
-			<input type="text" id="dieoutf">';
+			<input type="text" id="diemod" class="input_roller"> =\
+			<input type="text" id="dieoutf" class="input_roller">&nbsp;';
 			die_loaded = true;
 		}
 		document.getElementById("music_dropdown").style.display = "none";
@@ -52,8 +52,13 @@ function changemenu(new_menu) {
 	for(i = 0; i < m.content.length; i++) {
 		if(m.content[i].action == "NODE") {
 			var np = document.createElement("p");
-			var node = document.createTextNode(m.content[i].title);
-			np.appendChild(node);
+			if(m.content[i].title == "DATE") {
+				var d = new Date(document.lastModified);
+				np.innerHTML = d.getMonth() + "." + d.getDate() + "." + (parseInt(d.getYear()) - 100);
+				//np.innerHTML = d.toDateString();
+			} else
+				np.innerHTML = m.content[i].title;
+			np.className = "p_menunode"
 			bar.appendChild(np);
 		} else {
 			makebutton(m.content[i].title, m.content[i].action);

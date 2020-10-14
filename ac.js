@@ -10,6 +10,7 @@ var MAP_XMAX = -25565;
 var MAP_YMIN = 25565;
 var MAP_YMAX = -25565;
 	
+const IGNORABLES = ["the", "a", "to", "fucking", "on", "with", "for", "small", "about", "it", "from", "in", "at"];
 var inventory = [];
 var explored = {};
 var touched = [];
@@ -115,13 +116,10 @@ function enter() {
 		document.getElementById("scr").innerHTML = "SCORE: " + score + "/" + max_score;
 		
 		inventory.push(dbSearch("object", "i00"));
-		print(db.intro_text + "<br/><br/>");
 		go("r00");
 		state = 0;
 		document.getElementById("map_button").disabled = false;
 		document.getElementById("inv_button").disabled = false;
-		
-		print("<br/>what do you do?")
 		return;
 	}
 	
@@ -200,13 +198,13 @@ function parse(inp) {
 			}
 			
 			if(parsed.length <= count) {
-				for(j = 0; j < db.ignorables.length; j++) {
-					if(inp[i].toLowerCase() == db.ignorables[j]) {
-						j = db.ignorables.length + 20;
+				for(j = 0; j < IGNORABLES.length; j++) {
+					if(inp[i].toLowerCase() == IGNORABLES[j]) {
+						j = IGNORABLES.length + 20;
 						count--;
 					}
 				}
-				if(j <= db.ignorables.length) {
+				if(j <= IGNORABLES.length) {
 					print("I don't know \"" + inp[i] + "\".");
 					return 0;
 				}
@@ -387,13 +385,8 @@ function look(val) {
 	} else {
 		print("you are in the " + span(here.name));
 		print(here.desc);
-		for(var i = 0; i < explored[here.rid].item.length; i++) {
-			try{
-				print(explored[here.rid].item[i].glance_desc);
-			} catch(e) {
-				print("there is a " + span(explored[here.rid].item[i].synonym[0]));
-			}
-		}
+		for(var i = 0; i < explored[here.rid].item.length; i++)
+			print("there is a " + span(explored[here.rid].item[i].synonym[0]));
 		print("exits: ");
 		for(var i = 0; i < here.exit.length; i++)
 			if(explored[here.rid].lock[here.exit[i].dir] == 0)
@@ -449,28 +442,8 @@ function take(val, container) {
 					print("the " + span(val.name) + " is too big to take<br/>" + 
 					val.fail_msg);
 				}
-			} else {
-				for(var i = 0; i < explored[here.rid].item.length; i++)
-					if(explored[here.rid].item[i].subtype == "container"){
-						if(explored[here.rid].item[i].contents.includes(val.iid)) {
-							if(val.subtype == "tool") {
-								print("you got the " + span(val.name) + " from inside the " + span(explored[here.rid].item[i].name) + "!");
-								inventory.push(val);
-								explored[here.rid].item[i].contents.splice(explored[here.rid].item.indexOf(val), 1);
-								if(!touched.includes(val.iid)) {
-									score += NEWITEMSCORE;
-									touched.push(val.iid);
-								}
-							} else {
-								print("the " + span(val.name) + " is too big to take<br/>" + 
-								val.fail_msg);
-							}
-							state = 0;
-							return;
-						}
-					}
+			} else
 				print("there is no " + span(val.name) + " here");
-			}
 		}
 		
 		state = 0;

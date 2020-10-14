@@ -1,0 +1,1068 @@
+{
+  "dictionary" : [
+    {
+	  "name" : "help",
+	  "type" : "command",
+	  "used_on_command" : "TRUE",
+	  "used_on_inv_obj" : "TRUE",
+	  "used_on_room_obj" : "TRUE",
+	  "synonym" : [
+		"h",
+		"hlp",
+		"command",
+		"?"
+	  ],
+	  "desc" : "get a list of commands, or use with a specific command to learn its use and synonyms (ie 'HELP LOOK')"
+	},
+    {
+	  "name" : "score",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"rank",
+		"ranking"
+	  ],
+	  "desc" : "display your score and ranking"
+	},
+    {
+	  "name" : "health",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"diagnostic",
+		"hp",
+		"self"
+	  ],
+	  "desc" : "display your current physical status"
+	},
+    {
+	  "name" : "clear",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"c",
+		"clr",
+		"cls",
+		"clearscreen"
+	  ],
+	  "desc" : "clear previous commands"
+	},
+    {
+	  "name" : "look",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "TRUE",
+	  "used_on_room_obj" : "TRUE",
+	  "synonym" : [
+		"l",
+		"examine",
+		"consider",
+		"read",
+		"dir",
+		"ls"
+	  ],
+	  "desc" : "examine surroundings, or examine a particular object (ie '<span>LOOK AT LANTERN</span>')"
+	},
+    {
+	  "name" : "take",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "TRUE",
+	  "synonym" : [
+		"get",
+		"grab",
+		"acquire",
+		"pick up"
+	  ],
+	  "desc" : "put an item in your inventory, or put everything in a room in your inventory with '<span>take all</span>'"
+	},
+    {
+	  "name" : "drop",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "TRUE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"place",
+		"put down",
+		"put",
+		"leave"
+	  ],
+	  "desc" : "remove an item from your inventory and put it in the current room"
+	},
+    {
+	  "name" : "inventory",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"i",
+		"knapsack",
+		"belongings",
+		"things"
+	  ],
+	  "desc" : "list everything you have picked up"
+	},
+    {
+	  "name" : "use",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "TRUE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"give",
+		"eat",
+		"smell",
+		"sniff",
+		"taste",
+		"lick"
+	  ],
+	  "desc" : "make use of or give away an item; how this is done is based on context"
+	},
+    {
+	  "name" : "go",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"move",
+		"walk",
+		"run",
+		"travel",
+		"wasd",
+		"g",
+		"climb"
+	  ],
+	  "desc" : "use with a direction or location to travel there (ie 'GO WEST'); you can also do this by entering the direction (ie 'WEST') or sometimes just the first letter (ie 'W')"
+	},
+    {
+	  "name" : "save",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"sav"
+	  ],
+	  "desc" : "CURRENTLY NONFUNCTIONAL. save your progress under your name, using browser cookies"
+	},
+    {
+	  "name" : "load",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+		"lod"
+	  ],
+	  "desc" : "CURRENTLY NONFUNCTIONAL. load the progress under a given name, using browser cookies"
+	},
+    {
+	  "name" : "talk",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "TRUE",
+	  "synonym" : [
+		"speak",
+		"tell",
+		"listen",
+		"hi",
+		"hello",
+		"greet"
+	  ],
+	  "desc" : "use with an intelligent character to hear what they have to say (ie 'TALK TO THE GUARD' or just 'TALK GUARD')"
+	},
+    {
+	  "name" : "sit",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "TRUE",
+	  "synonym" : [
+		"sit down"
+	  ],
+	  "desc" : "sit upon a sittable object"
+	},
+    {
+	  "name" : "all",
+	  "type" : "abstract",
+	  "synonym" : [
+		"everything"
+	  ],
+	  "desc" : "all of the objects, items, and characters in the given area"
+	},
+    {
+	  "name" : "verbose",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+	  ],
+	  "desc" : "room descriptions will always display automatically when you enter a room"
+	},
+    {
+	  "name" : "brief",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+	  ],
+	  "desc" : "room descriptions will only display automatically the first time you enter a room"
+	},
+    {
+	  "name" : "superbrief",
+	  "type" : "command",
+	  "used_on_command" : "FALSE",
+	  "used_on_inv_obj" : "FALSE",
+	  "used_on_room_obj" : "FALSE",
+	  "synonym" : [
+	  ],
+	  "desc" : "room descriptions will never display automatically"
+	},
+    {
+	  "name" : "north",
+	  "type" : "direction",
+	  "synonym" : [
+		"n",
+		"northward"
+	  ],
+	  "desc" : "the direction of the arctic pole"
+	},
+    {
+	  "name" : "south",
+	  "type" : "direction",
+	  "synonym" : [
+		"s",
+		"southward"
+	  ],
+	  "desc" : "the direction towards the antarctic pole"
+	},
+    {
+	  "name" : "east",
+	  "type" : "direction",
+	  "synonym" : [
+		"e",
+		"eastward"
+	  ],
+	  "desc" : "the direction towards the rising sun"
+	},
+    {
+	  "name" : "west",
+	  "type" : "direction",
+	  "synonym" : [
+		"w",
+		"westward"
+	  ],
+	  "desc" : "the direction towards the setting sun"
+	},
+    {
+	  "name" : "northwest",
+	  "type" : "direction",
+	  "synonym" : [
+		"nw",
+		"northwestward"
+	  ],
+	  "desc" : "the fusion of north and west"
+	},
+    {
+	  "name" : "southeast",
+	  "type" : "direction",
+	  "synonym" : [
+		"se",
+		"southeastward"
+	  ],
+	  "desc" : "the fusion of south and east"
+	},
+    {
+	  "name" : "southwest",
+	  "type" : "direction",
+	  "synonym" : [
+		"sw",
+		"southwestward"
+	  ],
+	  "desc" : "the fusion of south and west"
+	},
+    {
+	  "name" : "northeast",
+	  "type" : "direction",
+	  "synonym" : [
+		"ne",
+		"northeastward"
+	  ],
+	  "desc" : "the fusion of north and east"
+	},
+    {
+	  "name" : "up",
+	  "type" : "direction",
+	  "synonym" : [
+		"u",
+		"upward",
+		"upstairs"
+	  ],
+	  "desc" : "the direction towards the midday sun"
+	},
+    {
+	  "name" : "down",
+	  "type" : "direction",
+	  "synonym" : [
+		"d",
+		"downward",
+		"downstairs"
+	  ],
+	  "desc" : "the direction towards the midnight sun"
+	},
+    {
+	  "name" : "out",
+	  "type" : "direction",
+	  "synonym" : [
+		"outside",
+		"leave"
+	  ],
+	  "desc" : "the direction of the not inside"
+	},
+    {
+	  "name" : "enter",
+	  "type" : "direction",
+	  "synonym" : [
+		"inside"
+	  ],
+	  "desc" : "the direction of the not outside"
+	},
+    {
+	  "rid" : "r00",
+	  "name" : "cottage",
+	  "type" : "room",
+	  "synonym" : [
+		"home"
+	  ],
+	  "desc" : "dusty and dilapidated, but nonetheless you call it home",
+	  "exit" : [
+		{
+			"dir" : "east",
+			"dest" : "r01",
+			"locked" : 0,
+			"desc" : "an old wooden door through which sunlight leaks faintly"
+		}
+	  ],
+	  "item" : [
+		"i01",
+		"i17"
+	  ],
+	  "coord" : {
+	    "x" : "0",
+	    "y" : "4"
+	  }
+	},
+    {
+	  "rid" : "r01",
+	  "name" : "garden path",
+	  "type" : "room",
+	  "synonym" : [
+		"garden"
+	  ],
+	  "desc" : "a lush garden path outside your cottage",
+	  "exit" : [
+		{
+			"dir" : "north",
+			"dest" : "r03",
+			"locked" : 0,
+			"desc" : "a worn dirt path up the hill"
+		},
+		{
+			"dir" : "south",
+			"dest" : "r02",
+			"locked" : 0,
+			"desc" : "a worn dirt path down to the fishing pond"
+		},
+		{
+			"dir" : "west",
+			"dest" : "r00",
+			"locked" : 0,
+			"desc" : "an old, nostalgic wooden door"
+		}
+	  ],
+	  "item" : [
+		"i18"
+	  ],
+	  "coord" : {
+	    "x" : "1",
+	    "y" : "4"
+	  }
+	},
+    {
+	  "rid" : "r02",
+	  "name" : "pondside",
+	  "type" : "room",
+	  "synonym" : [
+		"pondedge"
+	  ],
+	  "desc" : "a stony beach, with a short, dilapidated dock and some broken-down wooden chairs and crates",
+	  "exit" : [
+		{
+			"dir" : "north",
+			"dest" : "r01",
+			"locked" : 0,
+			"desc" : "a worn dirt path back home"
+		}
+	  ],
+	  "item" : [
+		"i16"
+	  ],
+	  "coord" : {
+	    "x" : "1",
+	    "y" : "5"
+	  }
+	},
+    {
+	  "rid" : "r03",
+	  "name" : "winding path",
+	  "type" : "room",
+	  "synonym" : [
+		"tree base"
+	  ],
+	  "desc" : "you come to the base of a tall, looming tree; it looks climbable",
+	  "exit" : [
+		{
+			"dir" : "south",
+			"dest" : "r01",
+			"locked" : 0,
+			"desc" : "a worn dirt path back home"
+		},
+		{
+			"dir" : "east",
+			"dest" : "r05",
+			"locked" : 0,
+			"desc" : "an untamed road to the castle"
+		}
+	  ],
+	  "item" : [
+		"i04"
+	  ],
+	  "coord" : {
+	    "x" : "1",
+	    "y" : "3"
+	  }
+	},
+    {
+	  "rid" : "r05",
+	  "name" : "drawbridge",
+	  "type" : "room",
+	  "synonym" : [
+	  ],
+	  "desc" : "you stand before the open drawbridge to a dilapidated castle; perhaps that which you are looking for is inside...",
+	  "exit" : [
+		{
+			"dir" : "east",
+			"dest" : "r06",
+			"locked" : 1,
+			"desc" : "a tall, iron castle gate"
+		},
+		{
+			"dir" : "west",
+			"dest" : "r03",
+			"locked" : 0,
+			"desc" : "an untamed road from the castle"
+		}
+	  ],
+	  "item" : [
+		"i05"
+	  ],
+	  "coord" : {
+	    "x" : "2",
+	    "y" : "3"
+	  }
+	},
+    {
+	  "rid" : "r06",
+	  "name" : "castle courtyard",
+	  "type" : "room",
+	  "synonym" : [
+	    "courtyard"
+	  ],
+	  "desc" : "a garden that has been unattended for some time and has overgrown",
+	  "exit" : [
+		{
+			"dir" : "east",
+			"dest" : "r11",
+			"locked" : 0,
+			"desc" : "a pair of rusted double doors leading into the castle proper"
+		},
+		{
+			"dir" : "west",
+			"dest" : "r05",
+			"locked" : 0,
+			"desc" : "a tall, iron castle gate"
+		},
+		{
+			"dir" : "up",
+			"dest" : "r09",
+			"locked" : 0,
+			"desc" : "a set of stairs leading up the tallest tower"
+		},
+		{
+			"dir" : "down",
+			"dest" : "r07",
+			"locked" : 0,
+			"desc" : "a set of stairs leading down the deepest dungeon"
+		}
+	  ],
+	  "item" : [
+	  ],
+	  "coord" : {
+	    "x" : "3",
+	    "y" : "3"
+	  }
+	},
+    {
+	  "rid" : "r07",
+	  "name" : "dungeon stairs",
+	  "type" : "room",
+	  "synonym" : [
+	  ],
+	  "desc" : "dark stone stairs leading deep beneath the castle",
+	  "exit" : [
+		{
+			"dir" : "up",
+			"dest" : "r06",
+			"locked" : 0,
+			"desc" : "stairs back up towards sunlight"
+		},
+		{
+			"dir" : "down",
+			"dest" : "r08",
+			"locked" : 1,
+			"desc" : "stairs leading down to the depths"
+		}
+	  ],
+	  "item" : [
+		"i09"
+	  ],
+	  "coord" : {
+	    "x" : "3",
+	    "y" : "4"
+	  }
+	},
+    {
+	  "rid" : "r08",
+	  "name" : "dungeon",
+	  "type" : "room",
+	  "synonym" : [
+	  ],
+	  "desc" : "a foul place which has not seen light in some time",
+	  "exit" : [
+		{
+			"dir" : "up",
+			"dest" : "r07",
+			"locked" : 0,
+			"desc" : "stairs back up towards sunlight"
+		}
+	  ],
+	  "item" : [
+		"i14"
+	  ],
+	  "coord" : {
+	    "x" : "3",
+	    "y" : "5"
+	  }
+	},
+    {
+	  "rid" : "r09",
+	  "name" : "tower stairs",
+	  "type" : "room",
+	  "synonym" : [
+	  ],
+	  "desc" : "stone stairs which ascend to the highest room in the castle",
+	  "exit" : [
+		{
+			"dir" : "up",
+			"dest" : "r10",
+			"locked" : 1,
+			"desc" : "stairs up to a decorated door"
+		},
+		{
+			"dir" : "down",
+			"dest" : "r06",
+			"locked" : 0,
+			"desc" : "stairs back down towards the courtyard"
+		}
+	  ],
+	  "item" : [
+		"i15"
+	  ],
+	  "coord" : {
+	    "x" : "3",
+	    "y" : "2"
+	  }
+	},
+    {
+	  "rid" : "r10",
+	  "name" : "princess' chamber",
+	  "type" : "room",
+	  "synonym" : [
+	  ],
+	  "desc" : "the [i11] stands before you in a sunlit room",
+	  "exit" : [
+		{
+			"dir" : "down",
+			"dest" : "r09",
+			"locked" : 0,
+			"desc" : "stairs back down towards the courtyard"
+		}
+	  ],
+	  "item" : [
+		"i11"
+	  ],
+	  "coord" : {
+	    "x" : "3",
+	    "y" : "1"
+	  }
+	},
+    {
+	  "rid" : "r11",
+	  "name" : "great feasting hall",
+	  "type" : "room",
+	  "synonym" : [
+	    "main hall"
+	  ],
+	  "desc" : "you come to a great hall lined with tables decorated with tattered tablecloths and dusty candles. Unwashed plates and molded food litters the unattended gallery",
+	  "exit" : [
+		{
+			"dir" : "east",
+			"dest" : "r12",
+			"locked" : 0,
+			"desc" : "a shattered golden doorway through which a throne can be seen"
+		},
+		{
+			"dir" : "west",
+			"dest" : "r06",
+			"locked" : 0,
+			"desc" : "a pair of rusted double doors leading out to the courtyard"
+		}
+	  ],
+	  "item" : [
+		"i07",
+		"i12"
+	  ],
+	  "coord" : {
+	    "x" : "4",
+	    "y" : "3"
+	  }
+	},
+    {
+	  "rid" : "r12",
+	  "name" : "throneroom",
+	  "type" : "room",
+	  "synonym" : [
+	  ],
+	  "desc" : "carefully stepping over the remains of a once expensive doorway, you come to a grand sitting room which all centers around a golden throne",
+	  "exit" : [
+		{
+			"dir" : "west",
+			"dest" : "r11",
+			"locked" : 0,
+			"desc" : "a shattered golden doorway through which a feasting hall can be seen"
+		}
+	  ],
+	  "item" : [
+		"i13"
+	  ],
+	  "coord" : {
+	    "x" : "5",
+	    "y" : "3"
+	  }
+	},
+	{
+	  "iid" : "i00",
+	  "name" : "metal lantern",
+	  "type" : "object",
+	  "subtype" : "tool",
+	  "synonym" : [
+	    "black lantern",
+	    "lantern",
+	    "black",
+	    "metal",
+		"lamp",
+		"light"
+	  ],
+	  "desc" : "an old black lantern made from cast iron",
+	  "use" : [
+	    {
+	      "target" : "i09",
+	      "msg" : "light shines from the $i00 and the darkness is obliterated",
+		  "unlock" : "down",
+		  "drop" : "-1",
+		  "consumes_item" : "0",
+		  "destroys_target" : "1"
+	    }
+	  ],
+	  "fail_msg" : "this area is well lit enough already, the $i00 reveals nothing"
+	},
+	{
+	  "iid" : "i01",
+	  "name" : "frod",
+	  "type" : "object",
+	  "subtype" : "tool",
+	  "synonym" : [
+		"worn fishing rod",
+	    "fishing",
+	    "worn",
+	    "rod",
+		"pole"
+	  ],
+	  "desc" : "made from young wood and string and worn from age and use- it has helped you catch many a fish before, but it may not catch you many more",
+	  "use" : [
+	    {
+	      "target" : "i16",
+	      "msg" : "you drop the hook in the water, and after a time, you feel a tug! you reel in a $i03! but as you go to unhook the bugger, he gives a strong wiggle and your $i01 snaps! you manage to catch the fish in the end, but was it worth it?<br/>you suspect so",
+		  "unlock" : "-1",
+		  "drop" : "i03",
+		  "consumes_item" : "1",
+		  "destroys_target" : "0"
+	    }
+	  ],
+	  "fail_msg" : "you cast the line, but seeing as there are no inhabited bodies of water in the vicinity, you shouldn't be surprised when nothing bites"
+	},
+	{
+	  "iid" : "i02",
+	  "name" : "red rose",
+	  "type" : "object",
+	  "subtype" : "tool",
+	  "synonym" : [
+	    "rose",
+	    "flower"
+	  ],
+	  "desc" : "a single rose puts the rest to shame; dew glances off of its crimson petals- what a magnificent gift!",
+	  "use" : [
+	    {
+	      "target" : "i11",
+	      "msg" : "\"what a magnificent gift\", says the $i11 as she takes the $i02 from your hand in between her teeth and proceeds to swallow... yikes",
+		  "unlock" : "-1",
+		  "drop" : "-1",
+		  "consumes_item" : "1",
+		  "destroys_target" : "0"
+	    }
+	  ],
+	  "fail_msg" : "you take a deep whiff of the $i02- still fresh"
+	},
+	{
+	  "iid" : "i03",
+	  "name" : "fat salmon",
+	  "type" : "object",
+	  "subtype" : "tool",
+	  "synonym" : [
+	    "fat fish",
+	    "red",
+	    "fish",
+	    "salmon",
+	    "big",
+	    "fat",
+	    "fosh"
+	  ],
+	  "desc" : "a big red salmon; you personally wouldn't eat it raw, but someone less discerning might",
+	  "use" : [
+	    {
+	      "target" : "i05",
+	      "msg" : "the $i05 quickly takes from you the $i03; he scampers to the edge of the area and chews on it greedily",
+		  "unlock" : "east",
+		  "drop" : "i06",
+		  "consumes_item" : "1",
+		  "destroys_target" : "1"
+	    }
+	  ],
+	  "dialogue" : [],
+	  "fail_msg" : "you test the $i03 with your teeth, but human teeth aren't capable of the kind of rip and tear these thick scales require"
+	},
+	{
+	  "iid" : "i04",
+	  "name" : "mouse",
+	  "type" : "object",
+	  "subtype" : "npc",
+	  "synonym" : [
+	    "mouse-shaped hole in the tree",
+	    "hole",
+	    "tree hole",
+	    "hole in tree"
+	  ],
+	  "desc" : "although you cannot see any mice, there is the sound of distant paw-scampering",
+	  "dialogue" : [
+	    "*squeek*"
+	  ],
+	  "fail_msg" : "the only way to move a hole is to move that which encompasses it, and that tree aint going nowhere"
+	},
+	{
+	  "iid" : "i05",
+	  "name" : "mean troll",
+	  "type" : "object",
+	  "subtype" : "npc",
+	  "synonym" : [
+	    "mean troll blocking the gate",
+	    "angry",
+	    "12ft",
+	    "troll"
+	  ],
+	  "desc" : "a dangerous troll standing 12ft tall; it is preposterously strong and known for its special attack, the 40x CONSECUTIVE HUMAN SKULL CRUSH<br/>violent engagement is ill advised<br/>just your luck that it is currently between you and the castle interior...",
+	  "dialogue" : [
+	    "\"Grrr...\"",
+	    "\"Grumble...\"",
+	    "\"Grumblegrrr...\"",
+	    "\"Grrrrrrumble...\""
+	  ],
+	  "fail_msg" : "it only grumbles menacingly"
+	},
+	{
+	  "iid" : "i06",
+	  "name" : "contented troll",
+	  "type" : "object",
+	  "subtype" : "npc",
+	  "synonym" : [
+	    "contented troll",
+	    "angry",
+	    "12ft",
+	    "troll"
+	  ],
+	  "desc" : "it seems he was merely hungry after all...",
+	  "dialogue" : [
+	    "\"Omnomble...\"",
+	    "\"Nomble...\"",
+	    "\"Grumblegrrr...nom...\"",
+	    "\"Grrrrrrnomnomblenom...\""
+	  ],
+	  "fail_msg" : "best not bother it now"
+	},
+	{
+	  "iid" : "i07",
+	  "name" : "smelly cheese",
+	  "type" : "object",
+	  "subtype" : "tool",
+	  "synonym" : [
+	    "poorly-aged cheese",
+	    "cheese",
+		"fromage",
+		"fumous"
+	  ],
+	  "desc" : "this cheese reeks, and it is melted just enough to mold like clay, leaving your hands with a slight, cheesy film",
+	  "use" : [
+	    {
+	      "target" : "i04",
+	      "msg" : "as you produce the cheese, a $i04 scurries out with blinding speed and takes the cheese from you; you stand in surprise for a moment, as the mice return the favor and throw out of their hole one $i08",
+		  "unlock" : "-1",
+		  "drop" : "i08",
+		  "consumes_item" : "1",
+		  "destroys_target" : "0"
+	    },
+	    {
+	      "target" : "i14",
+	      "msg" : "the $i14 retracts, apparently frightened of the fumous fromage- he disappates, leaving only his crown",
+		  "unlock" : "-1",
+		  "drop" : "i10",
+		  "consumes_item" : "0",
+		  "destroys_target" : "1"
+	    }
+	  ],
+	  "fail_msg" : "you remove the cheese from your knapsack and instantly regret it- cheesesmell abounds"
+	},
+	{
+	  "iid" : "i08",
+	  "name" : "shining key",
+	  "type" : "object",
+	  "subtype" : "tool",
+	  "synonym" : [
+	    "shiny key",
+	    "key",
+	    "gold key",
+	    "golden key"
+	  ],
+	  "desc" : "a golden key, apparently polished out of respect- where might it lead?",
+	  "use" : [
+	    {
+	      "target" : "i15",
+	      "msg" : "the $i15 swings open",
+		  "unlock" : "up",
+		  "drop" : "-1",
+		  "consumes_item" : "1",
+		  "destroys_target" : "1"
+	    }
+	  ],
+	  "fail_msg" : "you insert the key into whatever you hoped to insert it, but whatever it was, it was not a $i15, so it does not unlock"
+	},
+	{
+	  "iid" : "i09",
+	  "name" : "darkness",
+	  "type" : "object",
+	  "subtype" : "static",
+	  "synonym" : [
+	    "darkness making it impossible to go down",
+	    "dark"
+	  ],
+	  "desc" : "you can't descend the stairs like this",
+	  "fail_msg" : "what an absurd notion"
+	},
+	{
+	  "iid" : "i10",
+	  "name" : "golden crown",
+	  "type" : "object",
+	  "subtype" : "tool",
+	  "synonym" : [
+	    "crown",
+	    "gold crown"
+	  ],
+	  "desc" : "fit for a monarch",
+	  "use" : [
+	    {
+	      "target" : "i11",
+	      "msg" : "you kneel before the $i11 as she places gently the $i10 upon your head- you are crowned",
+		  "unlock" : "kingship",
+		  "drop" : "-1",
+		  "consumes_item" : "1",
+		  "destroys_target" : "0"
+	    }
+	  ],
+	  "fail_msg" : "to crown oneself would be overly conceited, would it not?"
+	},
+	{
+	  "iid" : "i11",
+	  "name" : "her highness",
+	  "type" : "object",
+	  "subtype" : "npc",
+	  "synonym" : [
+	    "princess",
+	    "royal"
+	  ],
+	  "desc" : "a $i11 stands before you in a surprisingly well-kept dress",
+	  "dialogue" : [
+	    "\"Only the crowned may sit upon the throne.\"",
+		"\"Do you play Fortnite?\"",
+		"\"My father had a very sensitive nose. He hated weird smells.\"",
+		"\"If you see what remains of my father, take his crown. But he will not give it freely.\""
+	  ],
+	  "fail_msg" : "she slaps you, saying \"I am not that kind of woman!\""
+	},
+	{
+	  "iid" : "i12",
+	  "name" : "candle",
+	  "type" : "object",
+	  "subtype" : "tool",
+	  "synonym" : [
+	    "weird candle",
+	    "strange candle"
+	  ],
+	  "desc" : "its greenish wax emits an odor that can only really be described as weird",
+	  "use" : [
+	    {
+	      "target" : "i14",
+	      "msg" : "the $i14 retracts, apparently frightened of the simple act of lighting a candle- he disappates, leaving only his crown",
+		  "unlock" : "-1",
+		  "drop" : "i10",
+		  "consumes_item" : "0",
+		  "destroys_target" : "1"
+	    }
+	  ],
+	  "dialogue" : [
+	  ],
+	  "fail_msg" : "a weird odor pervades the area"
+	},
+	{
+	  "iid" : "i13",
+	  "name" : "throne",
+	  "type" : "object",
+	  "subtype" : "static",
+	  "synonym" : [
+	    "golden throne",
+	    "oranate throne"
+	  ],
+	  "desc" : "while the metal has tarnished and the cushioning has been chewed away by rats, this throne manages to remain impressively expensive-looking",
+	  "fail_msg" : "you probably shouldn't do that"
+	},
+	{
+	  "iid" : "i14",
+	  "name" : "ghost",
+	  "type" : "object",
+	  "subtype" : "npc",
+	  "synonym" : [
+	    "crowned ghost",
+	    "king's ghost",
+	    "king",
+	    "phantom"
+	  ],
+	  "desc" : "a mortifying undead, whose golden crown shines in the darkness, and whose bony hand reaches towards you",
+	  "dialogue" : [
+	    "\"you do not smell like royalty\"",
+		"\"stay away from my daughter\"",
+		"\"you smell delicious\""
+	  ],
+	  "fail_msg" : "\"you do not smell like royalty\""
+	},
+	{
+	  "iid" : "i15",
+	  "name" : "door",
+	  "type" : "object",
+	  "subtype" : "npc",
+	  "synonym" : [
+	    "locked door",
+	    "lock"
+	  ],
+	  "desc" : "a sturdy wooden door; what could be behind it?",
+	  "dialogue" : [
+	    "\"Help!\"",
+	    "\"My father trapped me in here!\"",
+	    "\"This kingdom is in shambles!\""
+	  ],
+	  "fail_msg" : "\"You'll never get in like that, go find a guard with a key!\""
+	},
+	{
+	  "iid" : "i16",
+	  "name" : "pond",
+	  "type" : "object",
+	  "subtype" : "static",
+	  "synonym" : [
+		"fishing pond",
+		"water"
+	  ],
+	  "desc" : "you can see plenty of fish jumping about",
+	  "fail_msg" : "you scoop water, but it flows between your fingers; picking up the lake will have to wait..."
+	},
+	{
+	  "iid" : "i17",
+	  "name" : "case",
+	  "type" : "object",
+	  "subtype" : "container",
+	  "synonym" : [
+		"display case",
+		"display"
+	  ],
+	  "desc" : "through the glass you could see all the trophies you might put in there",
+	  "contents" : [
+	  ],
+	  "capacity" : 3,
+	  "fail_msg" : "all that wood and glass is actually pretty heavy"
+	},
+	{
+	  "iid" : "i18",
+	  "name" : "bush",
+	  "type" : "object",
+	  "subtype" : "container",
+	  "synonym" : [
+		"rosebush",
+		"shrub"
+	  ],
+	  "desc" : "just barely in season, most roses have yet to bloom",
+	  "contents" : [
+		"i02"
+	  ],
+	  "capacity" : 1,
+	  "fail_msg" : "the $i18 is rooted firmly in the ground"
+	}
+  ]
+}
