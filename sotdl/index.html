@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>D&amp;D Spellbook Generator</title>
+    <title>SotDL Spellbook Generator</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="mustache.min.js"></script>
     <script type="text/javascript" src="stupidtable.min.js"></script>
@@ -155,6 +155,11 @@
         background: teal;
         color: white;
       }
+	  
+	  .tradition-table {
+		font-size: 1em;
+		text-align: center;
+	  }
 
       #filterinput {
         width: 50%;
@@ -171,7 +176,7 @@
       #floater {
         position: relative;
         overflow: hidden;
-        width: 25%;
+        width: 50%;
         background: white;
         padding: .5em;
         font-size: .8em;
@@ -251,44 +256,74 @@
         </div>
         <div class="filtercat">
           <b>Official:</b> (<a id="clearsources" class="filterbutton">clear</a>)
-          <a id="filtersotdl" class="filterbutton filtersource selected">&nbsp;Shadow of the Demon Lord&nbsp;</a>
-          <!--a id="filtereepc" class="filterbutton filtersource">&nbsp;EE PC&nbsp;</a-->
+          <a id="filtersotdl" class="filterbutton filtersource">&nbsp;Shadow of the Demon Lord&nbsp;</a>
+          <a id="filterdlc1" class="filterbutton filtersource">&nbsp;Demon Lord's Companion 1&nbsp;</a>
+          <a id="filterdlc2" class="filterbutton filtersource">&nbsp;Demon Lord's Companion 2&nbsp;</a>
+          <a id="filterocphi" class="filterbutton filtersource">&nbsp;Occult Philosophy&nbsp;</a>
         </div>
         <div class="filtercat">
-          <b>Tradition:</b> (<a id="cleartrads" class="filterbutton">clear</a>)<br/>
-		  Intellect:
-          <a id="filterarcana" class="filterbutton filterschool">Arcana</a>
-          <a id="filterbattle" class="filterbutton filterschool">Battle</a>
-          <a id="filterconjuration" class="filterbutton filterschool">Conjuration</a>
-          <a id="filtercurse" class="filterbutton filterschool">Curse</a>
-          <a id="filterdivination" class="filterbutton filterschool">Divination</a>
-          <a id="filterenchantment" class="filterbutton filterschool">Enchantment</a>
-          <a id="filterforbidden" class="filterbutton filterschool">Forbidden</a>
-          <a id="filterillusion" class="filterbutton filterschool">Illusion</a>
-          <a id="filternecromancy" class="filterbutton filterschool">Necromancy</a>
-          <a id="filterprotection" class="filterbutton filterschool">Protection</a>
-          <a id="filterrune" class="filterbutton filterschool">Rune</a>
-          <a id="filtershadow" class="filterbutton filterschool">Shadow</a>
-          <a id="filtertechnomancy" class="filterbutton filterschool">Technomancy</a>
-          <a id="filterteleportation" class="filterbutton filterschool">Teleportation</a>
-          <a id="filtertime" class="filterbutton filterschool">Time</a>
-		  <br/>
-		  Will:
-          <a id="filterair" class="filterbutton filterschool">Air</a>
-          <a id="filteralteration" class="filterbutton filterschool">Alteration</a>
-          <a id="filtercelestial" class="filterbutton filterschool">Celestial</a>
-          <a id="filterchaos" class="filterbutton filterschool">Chaos</a>
-          <a id="filterdestruction" class="filterbutton filterschool">Destruction</a>
-          <a id="filterearth" class="filterbutton filterschool">Earth</a>
-          <a id="filterfire" class="filterbutton filterschool">Fire</a>
-          <a id="filterlife" class="filterbutton filterschool">Life</a>
-          <a id="filternature" class="filterbutton filterschool">Nature</a>
-          <a id="filterprimal" class="filterbutton filterschool">Primal</a>
-          <a id="filtersong" class="filterbutton filterschool">Song</a>
-          <a id="filterstorm" class="filterbutton filterschool">Storm</a>
-          <a id="filtertheurgy" class="filterbutton filterschool">Theurgy</a>
-          <a id="filtertransformation" class="filterbutton filterschool">Transformation</a>
-          <a id="filterwater" class="filterbutton filterschool">Water</a>
+          <b>Tradition:</b> (<a id="cleartrads" class="filterbutton">clear</a>)
+			<table class='tradition-table'>
+				<tr><th>Auspex</th><th>Dark</th><th>Elf</th><th>Jotunn</th><th>Old Faith</th><th>Primordial</th><th>Revered</th></tr>
+				<tr>
+					<td>
+						<a id="filterarcana" class="filterbutton filterschool">Arcana</a><br/>
+						<a id="filtertechnomancy" class="filterbutton filterschool">Technomancy</a><br/>
+						<a id="filtertelepathy" class="filterbutton filterschool">Telepathy</a><br/>
+						<a id="filterteleportation" class="filterbutton filterschool">Teleportation</a><br/>
+						<a id="filtertelekinesis" class="filterbutton filterschool">Telekinesis</a><br/>
+						<a id="filtertime" class="filterbutton filterschool">Time</a>
+					</td>
+					<td>
+						<a id="filtercurse" class="filterbutton filterschool">Curse</a><br/>
+						<a id="filterdeath" class="filterbutton filterschool">Death</a><br/>
+						<a id="filterdemonology" class="filterbutton filterschool">Demonology</a><br/>
+						<a id="filterforbidden" class="filterbutton filterschool">Forbidden</a><br/>
+						<a id="filtermadness" class="filterbutton filterschool">Madness</a><br/>
+						<a id="filternecromancy" class="filterbutton filterschool">Necromancy</a>
+					</td>
+					<td>
+						<a id="filterconjuration" class="filterbutton filterschool">Conjuration</a><br/>
+						<a id="filterdivination" class="filterbutton filterschool">Divination</a><br/>
+						<a id="filterenchantment" class="filterbutton filterschool">Enchantment</a><br/>
+						<a id="filterfey" class="filterbutton filterschool">Fey</a><br/>
+						<a id="filterillusion" class="filterbutton filterschool">Illusion</a><br/>
+						<a id="filtershadow" class="filterbutton filterschool">Shadow</a>
+					</td>
+					<td>
+						<a id="filteralteration" class="filterbutton filterschool">Alteration</a><br/>
+						<a id="filterbattle" class="filterbutton filterschool">Battle</a><br/>
+						<a id="filterinvocation" class="filterbutton filterschool">Invocation</a><br/>
+						<a id="filterrune" class="filterbutton filterschool">Rune</a><br/>
+						<a id="filtersong" class="filterbutton filterschool">Song</a><br/>
+						<a id="filtersoul" class="filterbutton filterschool">Soul</a>
+					</td>
+					<td>
+						<a id="filteralchemy" class="filterbutton filterschool">Alchemy</a><br/>
+						<a id="filterprimal" class="filterbutton filterschool">Primal</a><br/>
+						<a id="filternature" class="filterbutton filterschool">Nature</a><br/>
+						<a id="filterspiritualism" class="filterbutton filterschool">Spiritualism</a><br/>
+						<a id="filterstorm" class="filterbutton filterschool">Storm</a><br/>
+						<a id="filtertransformation" class="filterbutton filterschool">Transformation</a>
+					</td>
+					<td>
+						<a id="filterair" class="filterbutton filterschool">Air</a><br/>
+						<a id="filterchaos" class="filterbutton filterschool">Chaos</a><br/>
+						<a id="filterdestruction" class="filterbutton filterschool">Destruction</a><br/>
+						<a id="filterearth" class="filterbutton filterschool">Earth</a><br/>
+						<a id="filterfire" class="filterbutton filterschool">Fire</a><br/>
+						<a id="filterwater" class="filterbutton filterschool">Water</a><br/>
+					</td>
+					<td>
+						<a id="filtercelestial" class="filterbutton filterschool">Celestial</a><br/>
+						<a id="filterprotection" class="filterbutton filterschool">Protection</a><br/>
+						<a id="filterlife" class="filterbutton filterschool">Life</a><br/>
+						<a id="filtermetal" class="filterbutton filterschool">Metal</a><br/>
+						<a id="filterorder" class="filterbutton filterschool">Order</a><br/>
+						<a id="filtertheurgy" class="filterbutton filterschool">Theurgy</a>
+					</td>
+				</tr>
+			</table>
           <br/>
 			<!--
           Cleric Domain:
@@ -341,11 +376,12 @@
           <a id="filterlevel2" class="filterbutton filterlevel">2</a>
           <a id="filterlevel3" class="filterbutton filterlevel">3</a>
           <a id="filterlevel4" class="filterbutton filterlevel">4</a>
-          <a id="filterlevel5" class="filterbutton filterlevel">5</a>
+          <a id="filterlevel5" class="filterbutton filterlevel">5</a> | 
           <a id="filterlevel6" class="filterbutton filterlevel">6</a>
           <a id="filterlevel7" class="filterbutton filterlevel">7</a>
           <a id="filterlevel8" class="filterbutton filterlevel">8</a>
           <a id="filterlevel9" class="filterbutton filterlevel">9</a>
+          <a id="filterlevel10" class="filterbutton filterlevel">10</a>
         </div>
         <div class="filtercat">
           <b>Search:</b> (<a id="clearsearch" class="filterbutton">clear</a>)

@@ -59,8 +59,8 @@ $(document).ready(function() {
       filterOaths = new Set(),
       filterPatrons = new Set(),
 
-      filterSources = new Set(['SotDL']),
-      filterLevels = new Set(),
+      filterSources = new Set(),
+      filterLevels = new Set([0, 1, 2, 3, 4, 5]),
       filterSchools = new Set(),
       filterSearch = '';
 
@@ -510,9 +510,9 @@ $(document).ready(function() {
   }
 
   $('#filtersotdl').bind('click',function() { toggleFilter(this, filterSources, 'SotDL') });
-  $('#filtereepc').bind('click',function() { toggleFilter(this, filterSources, 'EE PC') });
-  $('#filterscag').bind('click',function() { toggleFilter(this, filterSources, 'SCAG') });
-  $('#filterai').bind('click',function() { toggleFilter(this, filterSources, 'AI') });
+  $('#filterdlc1').bind('click',function() { toggleFilter(this, filterSources, 'DLC1') });
+  $('#filterdlc2').bind('click',function() { toggleFilter(this, filterSources, 'DLC2') });
+  $('#filterocphi').bind('click',function() { toggleFilter(this, filterSources, 'OcPhi') });
   $('#filterllok').bind('click',function() { toggleFilter(this, filterSources, 'LLOK') });
   $('#filterxgte').bind('click',function() { toggleFilter(this, filterSources, 'XGTE') });
   $('#filterggtr').bind('click',function() { toggleFilter(this, filterSources, 'GGTR') });
@@ -524,6 +524,7 @@ $(document).ready(function() {
     refilter();
   });
 
+  $('#filteralchemy').bind('click', function() { toggleFilter(this, filterSchools, 'alchemy') });
   $('#filterarcana').bind('click', function() { toggleFilter(this, filterSchools, 'arcana') });
   $('#filterair').bind('click', function() { toggleFilter(this, filterSchools, 'air') });
   $('#filterbattle').bind('click', function() { toggleFilter(this, filterSchools, 'battle') });
@@ -554,6 +555,17 @@ $(document).ready(function() {
   $('#filtertheurgy').bind('click', function() { toggleFilter(this, filterSchools, 'theurgy') });
   $('#filtertransformation').bind('click', function() { toggleFilter(this, filterSchools, 'transformation') });
   $('#filterwater').bind('click', function() { toggleFilter(this, filterSchools, 'water') });
+  $('#filterdeath').bind('click', function() { toggleFilter(this, filterSchools, 'death') });
+  $('#filterdemonology').bind('click', function() { toggleFilter(this, filterSchools, 'demonology') });
+  $('#filterspiritualism').bind('click', function() { toggleFilter(this, filterSchools, 'spiritualism') });
+  $('#filtertelepathy').bind('click', function() { toggleFilter(this, filterSchools, 'telepathy') });
+  $('#filtertelekinesis').bind('click', function() { toggleFilter(this, filterSchools, 'telekinesis') });
+  $('#filterfey').bind('click', function() { toggleFilter(this, filterSchools, 'fey') });
+  $('#filterinvocation').bind('click', function() { toggleFilter(this, filterSchools, 'invocation') });
+  $('#filtermadness').bind('click', function() { toggleFilter(this, filterSchools, 'madness') });
+  $('#filtermetal').bind('click', function() { toggleFilter(this, filterSchools, 'metal') });
+  $('#filterorder').bind('click', function() { toggleFilter(this, filterSchools, 'order') });
+  $('#filtersoul').bind('click', function() { toggleFilter(this, filterSchools, 'soul') });
   $('#cleartrads').bind('click', function() {
     $('a.filterschool').removeClass('selected');
     filterSchools = new Set();
