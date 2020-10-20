@@ -25,7 +25,9 @@ var floatingDescriptionTemplate = `
 <br/><div><b>On a 20+:</b> {{{crit}}}</div>
 {{/crit}}
 	{{#concentration}}<br/><h3>This spell normally lasts for 1 round, but you can use the concentrate action to extend its duration</h3>{{/concentration}}
+	{{#forbidden}}<br/><h3>Casting Forbidden spells requires speaking mystic phrases in Dark Speech. If you don’t know this language, you make attack rolls using Forbidden spells with 1 bane and creatures make challenge rolls to resist your Forbidden spells with 1 boon.</h3>{{/forbidden}}
 	{{#dark}}<br/><h3>You gain 1 Corruption when you discover a Dark Magic tradition. Whenever you learn a Dark Magic spell, you must roll a 0 or higher on a d6 minus the number of Dark Magic spells you know or gain 1 Corruption. Each Dark Magic spell you know grants 1 boon to avoid Insanity.</h3>{{/dark}}
+	{{#fey}}<br/><h3>You cannot cast Fey spells while you are in contact with iron or an alloy of iron. In addition, when you attack with a Fey spell, you make the attack roll with 1 bane if the target is wearing iron or an iron alloy, and the target makes any challenge roll to resist the attack with 1 boon.</h3>{{/fey}}
 <h3>{{source}} {{page}}</h3>
 `;
 
