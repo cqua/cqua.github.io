@@ -62,7 +62,7 @@ $(document).ready(function() {
       filterPatrons = new Set(),
 
       filterSources = new Set(),
-      filterLevels = new Set([0, 1, 2, 3, 4, 5]),
+      filterLevels = new Set(),
       filterSchools = new Set(),
       filterSearch = '';
 
@@ -84,7 +84,7 @@ $(document).ready(function() {
          intersects(sp.paladin_oath, filterOaths) ||
          intersects(sp.warlock_patron, filterPatrons))) return false;
 
-    if (filterSchools.size !== 0 && !filterSchools.has(sp.tradition))
+    if (filterSchools.size !== 0 && !filterSchools.has(sp.tradition) || sp.rank > 5)
       return false;
 
     if (filterLevels.size !== 0 && !filterLevels.has(sp.rank))
