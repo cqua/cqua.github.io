@@ -84,7 +84,10 @@ $(document).ready(function() {
          intersects(sp.paladin_oath, filterOaths) ||
          intersects(sp.warlock_patron, filterPatrons))) return false;
 
-    if (filterSchools.size !== 0 && !filterSchools.has(sp.tradition) || sp.rank > 5)
+    if (filterSchools.size !== 0 && !filterSchools.has(sp.tradition))
+      return false;
+
+    if (filterLevels.size == 0  && sp.rank > 5)
       return false;
 
     if (filterLevels.size !== 0 && !filterLevels.has(sp.rank))
