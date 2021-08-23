@@ -2,37 +2,50 @@
 //room object arrays
 
 var h;
-var music_loaded = false;
-var die_loaded = false;
 
-function menutoggle(menu) {
-	var x = document.getElementById(menu);
-	if(menu == "music_dropdown") {
-		if(!music_loaded) {
-			mc = "";
-			for(i = 0; i < music_content.length; i++)
-				mc += music_content[i] + "<br/>";
-			x.innerHTML = mc;
-			music_loaded = true;
-		}
-		document.getElementById("die_dropdown").style.display = "none";
-	} else {
-		if(!die_loaded) {
-			x.innerHTML = 
-			'<button id="roller" class="button_roller" onclick="roll();">roll!</button>\
-			<input type="text" id="dieout1" class="input_roller"> +\
-			Modifier:\
-			<input type="text" id="diemod" class="input_roller"> =\
-			<input type="text" id="dieoutf" class="input_roller">&nbsp;';
-			die_loaded = true;
-		}
-		document.getElementById("music_dropdown").style.display = "none";
+function loadmenu(menu, page) {
+	var bar = document.getElementById("sidebar");
+	var i = -1;
+	var m;
+	
+	while(bar.hasChildNodes()) {
+		bar.removeChild(bar.lastChild);
 	}
-	if (x.style.display === "block") {
-		x.style.display = "none";
-	} else {
-		x.style.display = "block";
+	
+	bar.innerHTML = '<div class="sidebar-header"><a class="pagetitle" href="#">Jeff Quattro</a></div>'
+	
+	var ul = document.createElement("ul");
+	ul.classList.add("list-unstyled")
+	ul.classList.add("components")
+	
+	do {
+		i++
+		m = menu_content[i];
+	} while(menu != m.name);
+	
+	for(i = 0; i < m.content.length; i++) {
+		if(m.content[i].action == "NODE") {
+			var np = document.createElement("p");
+			if(m.content[i].title == "DATE") {
+				var d = new Date(document.lastModified);
+				np.innerHTML = d.getMonth()+1 + "." + d.getDate() + "." + (parseInt(d.getYear()) - 100);
+				//np.innerHTML = d.toDateString();
+			} else
+				np.innerHTML = m.content[i].title;
+			np.className = "p_menunode"
+			ul.appendChild(np);
+		} else {
+			var np = document.createElement("li");
+			np.innerHTML = m.content[i].title;
+			if(m.content[i].action == page) {
+				np.childNodes[0].classList.add("active");
+				np.childNodes[0].href = "#";
+			}
+			ul.appendChild(np);
+		}
 	}
+	
+	bar.appendChild(ul);
 }
 
 function changemenu(new_menu) {
@@ -54,7 +67,7 @@ function changemenu(new_menu) {
 			var np = document.createElement("p");
 			if(m.content[i].title == "DATE") {
 				var d = new Date(document.lastModified);
-				np.innerHTML = d.getMonth() + "." + d.getDate() + "." + (parseInt(d.getYear()) - 100);
+				np.innerHTML = d.getMonth()+1 + "." + d.getDate() + "." + (parseInt(d.getYear()) - 100);
 				//np.innerHTML = d.toDateString();
 			} else
 				np.innerHTML = m.content[i].title;
@@ -68,14 +81,11 @@ function changemenu(new_menu) {
 
 function makebutton(name, action) {
 	var bar = document.getElementById("leftbar");
-	var nb = document.createElement("button");
+	var nb = document.createElement("a");
 	nb.innerHTML = name;
-	nb.setAttribute( "onClick", "javascript: " + action + ";");
+	nb.setAttribute( "href", action);
+	nb.setAttribute( "class", "btn btn-primary");
 	bar.appendChild(nb);
-}
-
-function gothere(srce) {
-	document.getElementById("frame").src = srce;
 }
 
 function roll() {

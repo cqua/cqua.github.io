@@ -1,33 +1,70 @@
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<!-- the name of the page -->
-		<title>jeff quattro</title>
-		<!-- link rhw css stylesheet -->
-		<link rel="shortcut icon" href="content/favicon.ico" />
-		<link rel="stylesheet" href="content/index.css">
-		<script src="content/index_menu.js"></script>
-		<script src="content/index.js"></script>
+<!DOCTYPE html>
+<html>
 
-	</head>
-	<body onload="changemenu('home')">
-		<div class="div_header">
-			<button id="music_button" class="style_button" onclick="menutoggle('music_dropdown');">&#9835</button>
-			<button id="die_button" class="style_button" onclick="menutoggle('die_dropdown');">&#9861</button>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="content/favicon.ico" />
+
+    <title>jeff quattro</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="page wrapper bg-dark text-light">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+			<button type="button" id="sidebarCollapse" class="btn btn-info">
+				<i class="fas fa-align-left"></i>
+				<span>Toggle Sidebar</span>
+			</button>
+
+			<h1>About Me</h1>
 			
-			<h1 class="h1_pagetitle">&nbsp;jeff quattro</h1>
+			<p>
+				 dabbled in Unity for game development - - (.cs)<br/>
+				studied Computer Science at UMass Lowell - - (.c .cpp .asm .js .py)<br/>
+				taught programming at a summer camp - - (.cpp .java)<br/>
+				writes websites for work and for pleasure - - (.js .cs .sql .json .cshtml)
+			</p>
+			<p>
+				loves dragons, black coffee, and super mario<br/>
+				jeffreyquattro@gmail.com<br/>
+				hmu 
+			</p>
 		</div>
-		<div class="div_inner">
-			<section class="section_main">
-				<iframe id="frame" class="iframe_view" src="views/about_me.html"></iframe>
-			</section>
-			<section id="leftbar">
+    </div>
 
-			</section>
-		</div>
-		
-		<div id="music_dropdown" class="style_dropdown"></div>
-		
-		<div id="die_dropdown" class="style_dropdown"></div>
-	</body>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	
+    <script src="content/index.js"></script>
+    <script src="content/index_menu.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+			loadmenu("home", "index");
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
 </html>
