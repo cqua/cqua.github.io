@@ -20,6 +20,12 @@ function changemenu(kind) {
 	}
 	
 	if(kind == "home") {
+		var nb = document.createElement("button");
+		var node = document.createTextNode("https://cqua.github.io/rp");
+		nb.setAttribute( "onClick", "location.href='https://cqua.github.io/rp'");
+		nb.appendChild(node);
+		bar.appendChild(nb);
+		
 		var np = document.createElement("p");
 		var node = document.createTextNode("Home");
 		np.appendChild(node);

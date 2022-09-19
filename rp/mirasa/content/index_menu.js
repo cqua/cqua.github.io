@@ -53,6 +53,10 @@ var menu_content = [
 			{
 				"title" : "DATE",
 				"action" : "NODE"
+			},
+			{
+				"title" : '<a href="https://cqua.github.io/rp">cqua.github.io/rp</a>',
+				"action" : "return"
 			}
 		]
 	},
