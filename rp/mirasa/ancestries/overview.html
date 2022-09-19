@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="../content/favicon.ico" />
+
+    <title>Rangers of Mirasa</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper bg-dark text-light">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+		<button type="button" id="sidebarCollapse" class="btn btn-info">
+			<i class="fas fa-align-left"></i>
+			<span>Toggle Sidebar</span>
+		</button>
+
+		<h1>Ancestries</h1>
+		<p>
+			The first thing you do to create your character is to pick your ancestry. Ancestries tell you something about your homeland, culture, religious inclination, and appearance. As well, they indicate areas in which your character excels and where your character might be wanting.
+		</p>
+		<ul>
+			<li><b>Humans</b> are a diverse people encompassing numerous civilizations, cultures, and ethnicities. They are the most common people in the world. Humans excel in any path they choose.</li>
+			<li><b>Beastfolk</b> are fuse animalistic characteristics with humanoid forms. Beastfolk are usually fur-covered and have the heads of beasts, such as goats, wolves, bears, rats, bulls, and others. Beastfolk are skilled in a close fight, and often have good senses.</li>
+			<li><b>Clockwork</b> are people created by binding souls to mechanical bodies. Clockwork have many different forms, and their origins determine the paths they will walk.</li>
+			<li><b>Elves</b> are graceful scouts and sorcerers who long ago where touched by the Fae. They live in closed societies in the forest, with strict, complex social codes. Elves are well equipped to wield wand or bow.</li>
+			<li><b>Goblins</b> are exiles from among the Faerie, forced to live among humanity or on the edges of human lands. They are a dynamic and chaotic, often acting in ways incomprehensible to other mortals. Goblins do well as rogues and magicians.</li>
+			<li><b>Stormsoul</b> are mana given temporary sentient form. They are typically logical and exist to fulfill some purpose. They do well in a close fight or with magic.</li>
+			<li><b>Woodwose</b> are the descendants of the ancient protectors of the forest. They are solitary creatures without names, bound to the wood. They make good priests and rogues.</li>
+		</ul>
+		</div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	
+    <script src="../content/index.js"></script>
+    <script src="../content/index_menu.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+			loadmenu("ancestries", "overview");
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

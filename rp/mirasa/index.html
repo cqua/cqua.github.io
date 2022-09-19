@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="content/favicon.ico" />
+
+    <title>Rangers of Mirasa</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper bg-dark text-light">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+			<button type="button" id="sidebarCollapse" class="btn btn-info">
+				<i class="fas fa-align-left"></i>
+				<span>Toggle Sidebar</span>
+			</button>
+
+			<h1>Mirasa Awakens</h1>
+			<div class="profile">
+				<img class="profile-img" src="content/titus_lunter-cinder_glade.png" alt="Artist: Titus Lunter">
+				<div><span class='icon'></span>Titus Lunter</div>
+			</div>
+			<p>
+				You are Rangers of the territory surrounding Mirasa, an untamable jungle. Mirasa is an unexplored monster breeding ground, from which emerges new deadlier mutants every year. The rapid rate of mutation is a mystery, but the nearby villages and outposts are under frequent attack by tiger apes, lava lobsters, or turtle-gators.
+			</p><p>
+				As Rangers, you are to travel the continent and aid the settlements through the following four duties:
+			</p>
+			<ul>
+				<li>Protect the settlements from beast threats.</li>
+				<li>Deliver the mail.</li>
+				<li>Officiate or participate in important ceremonies, such as naming babies, marriages, tending to the ill, and funerals.</li>
+				<li>Offer counsel.</li>
+			</ul>
+			<p>
+				Rangers are trained to perform these duties. Additionally, Rangers are trained in the use of mana. Mana is the connection between mortals and the natural world. Without it, people quickly grow sick and wither. It is much stronger in natural areas, and much weaker in cities. As such, Mirasa is a well of mana the likes of which has never been tapped before. As Rangers, you are specially equipped to use this power. Rangers use mana to gain inhuman strength and agility, heighten their senses, and cast spells.
+			</p><p>
+				Think about your reasons for being a Ranger. These are some common reasons:
+			</p>
+			<ul>
+				<li>I want to protect people.</li>
+				<li>I want to improve society, and I believe the resources from Mirasa will accomplish that.</li>
+				<li>What better way to train than against untamed wilds and giant beasts?</li>
+				<li>I want to see new and magical things.</li>
+				<li>The pay is pretty good.</li>
+				<li>I have a personal vendetta against the monsters of Mirasa, and the Rangers are doing more than anyone to fight them.</li>
+				<li>I seek a specific artifact of legend said to be hidding in the jungles of Mirasa.</li></ul>
+		</div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	
+    <script src="content/index.js"></script>
+    <script src="content/index_menu.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+			loadmenu("home", "index");
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

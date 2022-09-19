@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="../content-type">
+    <link type="text/css" rel="stylesheet" href="../jquery.tocify.css" />
+    <link type="text/css" rel="stylesheet" href="../bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="../style.css" />
+			<script src="prescript.js"></script>
+		<title>Games</title>
+	</head>
+	<body>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <nav class="navbar navbar-default navbar-fixed-top">
+            <div>
+              <ul class = "nav navbar-nav">
+								<li><a class="mainHeader">Ciaran Quattrociocchi</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li class="active"><a href>Games</a></li>
+                <li><a href="../rp/index.html">Tabletop</a></li>
+                <form id="f1" class="navbar-form navbar-left" name="f1" action="javascript:void()" onsubmit="if(this.t1.value!=null &amp;&amp; this.t1.value!='') parent.findInPage(this.t1.value);return false;">
+	                <div class="input-group">
+                    <input type="search" class="form-control" id="t1" name="t1" placeholder="Hit enter to search" />
+	                </div>
+                </form>
+              </ul>
+        			<div class="ribbon">
+        				<div class="ribbon-text">Version<br />&nbsp;&nbsp;1.0</div>
+          		</div>
+            </div>
+          </nav>
+					<div id="toc"></div>
+				</div>
+				<div class="span9 main-content">
+					<div style="position: relative;">
+						<span class="pageHeader">Games</span>
+						<h1 id="vendrien-keep">Action Castle</h1>
+						<div>
+								<h2><i>Fall 2018</i></h2>
+							<p>A solo project, a text adventure which uses basic natural language processing to simulate Jared A. Sorensen's game Action Castle from Parsley Games.</p>
+							<p>Play Action Castle: <a href="action-castle/index.html">cqua.github.io/rp/action-castle</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../jquery-1.12.0.min.js"></script>
+		<script src="../jquery-ui.min.js"></script>
+		<script src="../jquery.tocify.min.js"></script>
+    <script src="../dice.js"></script>
+		<script>
+	    //Executes your code when the DOM is ready.  Acts the same as $(document).ready().
+	    $(function() {
+        // Calls the selectBoxIt method on your HTML select box and updates the showEffect option
+        var toc = $("#toc").tocify({selectors: "h1, h2, h3, h4, h5" }).data("toc-tocify");
+
+        // Sets the showEffect, scrollTo, and smoothScroll options
+        toc.setOptions({ showEffect: "fadeIn", scrollTo: 40, smoothScroll: false});
+
+        //Adds "roll" link to each table containing dice values
+        setupDiceTables();
+	    });
+		</script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-72843823-1', 'auto');
+			ga('send', 'pageview');
+
+		</script>
+	</body>
+</html>

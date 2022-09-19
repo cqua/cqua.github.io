@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="../content/favicon.ico" />
+
+    <title>Rangers of Mirasa</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper bg-dark text-light">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+			<button type="button" id="sidebarCollapse" class="btn btn-info">
+				<i class="fas fa-align-left"></i>
+				<span>Toggle Sidebar</span>
+			</button>
+
+			<h1>Thief</h1>
+			<div class="profile">
+				<img class="profile-img" src="../content/paths/daria_rashev-thief.png" alt="Artist: Daria Rashev">
+				<div><span class='icon'></span>Daria Rashev</div>
+			</div>
+		<p>
+			Thieves live by taking things that don’t belong to them.
+They have the skills they need to do so without being
+caught in the act. They palm objects, lift items from people
+they brush up against, thwart locks, foil traps, and discover
+ways into places ordinarily forbidden to them. Although
+many thieves steal for selfish reasons or because they feel
+the need to do so, others develop the techniques to explore
+tombs, scour ruins for lost relics, or hunt down other
+thieves and bring them to justice.
+		</p>
+		<h3>CORE THIEF</h3>
+		<p>
+			<b>Attributes</b> Increase two by 1<br/>
+			<b>Characteristics</b> Health +3, Perception +1<br/>
+			<b>Languages and Professions</b> Add three professions.
+		</p>
+		<p>
+			<b>Quick Reflexes</b> You can use a reaction on your turn to hide or retreat.
+		</p>
+		<p>
+			<b>Thievery Talents</b> Choose two thievery talents from the ones described below.
+		</p>
+		<h3>EXPERT THIEF</h3>
+		<p>
+			<b>Characteristics</b> Health +3, Perception +1
+		</p>
+		<p>
+			<b>Dodge</b> You can use an action or a reaction on your turn to choose one creature you can see within short range. Until the end of the round, the target makes attack rolls against you with 2 bane and you make challenge rolls to resist its attacks with 2 boon.
+		</p>
+		<p>
+			<b>Opportunist</b> When a creature within your reach takes damage from an attack, you can use a reaction to attack that creature.
+		</p>
+		<p>
+			<b>Thievery Talents</b> Choose two thievery talents from the ones described below.
+		</p>
+		<h3>THIEVERY TALENTS</h3>
+		<ul>
+			<li><b>Disguise Expertise</b> If you have a disguise kit, you can use an action to expend a use from the kit to don a disguise.</li>
+			<li><b>Escape Artist</b> When you are grabbed, you can use a reaction to escape.<br/>
+			When rope bindings or manacles restrain you, you can use an action to attempt to escape the bonds. You must concentrate for 1 minute. At the end of this time, make an Agility challenge roll. On a success, you escape the bonds. On a failure, you are bound tight and you remain bound until freed.</li>
+			<li><b>Hide in Shadows</b> You can attempt to hide when you are in an area at least partially obscured by shadows, even if you are being observed.</li>
+			<li><b>Keen Senses</b> You make all Perception rolls with 1 boon.</li>
+			<li><b>Manufacture Poison</b> You can use an action and a Tool Kit to create a dose of poison. You must spend at least 1 minute concentrating, during which time you use the kit and special ingredients worth 5 cp. At the end of this time, you create one dose of poison (see Gear). The poison retains potency until you complete a rest.</li>
+			<li><b>Move Silently</b> You make challenge rolls to sneak with 2 boons.</li>
+			<li><b>Open Locks</b> If you have lock picks, you can use an action to open one lock you can reach. If the GM calls for a challenge roll, you make it with 1 boon.</li>
+			<li><b>Pick Pockets</b> You can use an action, or a reaction on your turn, to take an object from a creature within your reach. The object taken must be something you can hold in one hand and be somewhere on the creature’s body but not held in its hands (or in a similar appendage). If you can see the object, you can take that object. If you can’t, because you reach into a pouch or backpack, the GM determines the item taken.</li>
+			<li><b>Scale Walls</b> You ignore the effects of difficult terrain when climbing, and you make challenge rolls to climb with 1 boon.</li>
+			<li><b>Trap Sense</b> When you search for traps or would resist a trap’s effects, you make the challenge roll with 1 boon.</li>
+		</ul>
+		</div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	
+    <script src="../content/index.js"></script>
+    <script src="../content/index_menu.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+			loadmenu("maaspect", "thief");
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
