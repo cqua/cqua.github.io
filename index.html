@@ -26,7 +26,7 @@
                 </form>
               </ul>
         			<div class="ribbon">
-        				<div class="ribbon-text">Version<br />&nbsp;&nbsp;1.0</div>
+        				<div class="ribbon-text" id="ribbon-text">Version 1.0</div>
           		</div>
             </div>
           </nav>
@@ -90,6 +90,8 @@
 
 			ga('create', 'UA-72843823-1', 'auto');
 			ga('send', 'pageview');
+			lm = new Date(document.lastModified);
+			document.getElementById("ribbon-text").textContent = "Updated " + (parseInt(lm.getMonth())+1) + "." + lm.getDate() + "." + (parseInt(lm.getYear()) - 100);
 
 		</script>
 	</body>

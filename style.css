@@ -42,12 +42,12 @@ th {
 }
 /* This is for the version number in the upper right hand corner */
 .ribbon {
-  background: #581A0F;
+  background: #0F1A58;
   border-left: 1px groove #CAAD6B;
   border-right: 1px groove #CAAD6B;
     border-radius: 5px 5px 0px 0px;
-    box-shadow: 5px 0 0 #581A0F,
-                -5px 0 0 #581A0F;
+    box-shadow: 5px 0 0 #0F1A58,
+                -5px 0 0 #0F1A58;
     height: 52px;
     margin: 0 5px;
     position: relative;
@@ -61,7 +61,7 @@ th {
   /* Uncomment to give a banner effect */
 .ribbon:after,
 .ribbon:before {
-    border-top: 10px solid #581A0F;
+    border-top: 10px solid #0F1A58;
     content: '';
     height: 0;
     position: absolute;
@@ -82,13 +82,10 @@ th {
   /* This centers text in the banner */
 .ribbon-text {
   position: absolute;
-    top: 40%;
-    left: 50%;
-    height: 30%;
-    width: 50%;
-    margin: -15% 0 0 -47%;
+    top: 16px;
     font-weight: bold;
-    font-size: 10px;
+    font-size: 9px;
+    line-height: 9px;
     color: #f0f0f0;
     text-align: center;
 }
