@@ -105,13 +105,16 @@ th {
   color: var(--darkertext);
 }
 .pageHeader {
-  font-family:"MrsEavesSmallCaps";
+  font-family:"georgia";
+  --text-transform:uppercase;
   font-weight:600;
   font-size:30px;
   color: var(--hover);
-  text-indent:-1em;
   line-height: 1.1em;
   display: block;
+  background-color: var(--secondarybase);
+  border-radius: 8px;
+  text-align: center;
 }
 h1 {
   font-family:"MrsEavesSmallCaps";
@@ -122,6 +125,7 @@ h1 {
   color: white;
   border-bottom: medium solid var(--darkertext);
   margin: 1em 0px .5em 0em;
+  font-weight: bold;
   font-style: italic;
 }
 h2 {
@@ -154,7 +158,6 @@ h4 {
 	background-color: var(--basecolor);
 	padding: 5em 1em 1em 3em;
 	box-shadow: rgba(0, 0, 0, 0.2) -16px 10px 16px;
-  text-indent: 1em;
   overflow-y: auto;
 }
 
@@ -167,7 +170,7 @@ h4 {
 .nav-list > li > a {
 	padding: 5px;
 	color: inherit;
-	font-weight: 400;
+	font-weight: 500;
   border: 2px transparent solid;
   border-radius: 4px;
 }
@@ -177,7 +180,7 @@ h4 {
 {
   border: 2px white solid;
   background-color: transparent;
-	font-weight: 600;
+	font-weight: 700;
 }
 
 .nav-list > .active > a,
