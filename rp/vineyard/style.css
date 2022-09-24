@@ -1,0 +1,204 @@
+html, body {
+  background-image: URL("hosizora2.gif");
+	color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+dt {
+	background-color: var(--secondarybase);
+}
+table.noborder, td.noborder {
+  border-style: none;
+}
+.nobackground {
+  background:rgba(0,0,0,0);
+          border:rgba(0,0,0,0);
+}
+.thumbed {
+  height: 32em;
+}
+div.thumbed img {
+  height: inherit;
+  --max-width: 35%;
+    max-height: 32em;
+  float: right;
+}
+td {
+  border: 1px solid  var(--secondarybase);
+  padding: 2px;
+}
+th {
+	border: 1px solid var(--secondarybase);
+	background-color: var(--secondarybase);
+  padding: 5px;
+}
+/* For smaller table font */
+.small-font table tr td {
+  padding: 0px 0px 0px 0px;
+  font-size: 10px;
+}
+.small-font th {
+  font-size: 10px;
+}
+/* This is for the version number in the upper right hand corner */
+.ribbon {
+  background: #0F1A58;
+  border-left: 1px groove #CAAD6B;
+  border-right: 1px groove #CAAD6B;
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 5px 0 0 #0F1A58,
+                -5px 0 0 #0F1A58;
+    height: 52px;
+    margin: 0 5px;
+    position: relative;
+    float: right;
+    top: -15px;
+    right: 7px;
+    width: 40px;
+    z-index: 1;
+    -webkit-filter: drop-shadow(0 2px 5px hsla(0,0%,0%,.5));
+}
+  /* Uncomment to give a banner effect */
+.ribbon:after,
+.ribbon:before {
+    border-top: 10px solid #0F1A58;
+    content: '';
+    height: 0;
+    position: absolute;
+    top: 100%;
+    width: 0;
+    z-index: 1;
+}
+.ribbon:after {
+    border-left: 27px solid transparent;
+    right: -6px;
+    z-index: 1;
+}
+.ribbon:before {
+    border-right: 27px solid transparent;
+    z-index: 1;
+    left: -6px;
+}
+  /* This centers text in the banner */
+.ribbon-text {
+  position: absolute;
+    top: 16px;
+    font-weight: bold;
+    font-size: 9px;
+    line-height: 9px;
+    color: #f0f0f0;
+    text-align: center;
+}
+.behind {
+  position: relative;
+  z-index: 0;
+  padding-top: 5px;
+  background-color: var(--basecolor);;
+}
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a.mainHeader,
+.navbar .nav > li > a.mainHeader:hover {
+  background-color: var(--highlight);
+  color: var(--darkertext);
+}
+.pageHeader {
+  font-family:"georgia";
+  --text-transform:uppercase;
+  font-weight:600;
+  font-size:30px;
+  color: var(--hover);
+  line-height: 1.1em;
+  display: block;
+  background-color: var(--secondarybase);
+  border-radius: 8px;
+  text-align: center;
+}
+h1 {
+  font-family:"MrsEavesSmallCaps";
+  font-weight:normal;
+  font-size:30px;
+  line-height: 1em;
+  text-indent:-1em;
+  color: white;
+  border-bottom: medium solid var(--darkertext);
+  margin: 1em 0px .5em 0em;
+  font-weight: bold;
+  font-style: italic;
+}
+h2 {
+  font-family:"MrsEavesSmallCaps";
+  font-weight:normal;
+  font-size:24px;
+  color: var(--secondarybase);
+  line-height:80%;
+  color: var(--darkertext);
+  line-height: 1.1em;
+  display: block;
+  text-indent:-.8em;
+}
+h3 {
+  font-family:"MrsEavesSmallCaps";
+  font-weight:normal;
+  font-size:20px;
+  color: var(--darkertext);
+  margin: 7px 0px 2px 0px;
+}
+h4 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight:normal;
+  font-size:15px;
+  color: var(--darkertext);
+  margin: 2px 2px 0px 0px;
+}
+
+.main-content {
+	background-color: var(--basecolor);
+	padding: 5em 1em 1em 3em;
+	box-shadow: rgba(0, 0, 0, 0.2) -16px 10px 16px;
+  overflow-y: auto;
+}
+
+.nav-list > li > a, .nav-list .nav-header {
+	margin: 0px;
+	color: inherit;
+	background-color: rgba(0,0,0,0.2);
+}
+
+.nav-list > li > a {
+	padding: 5px;
+	color: inherit;
+	font-weight: 500;
+  border: 2px transparent solid;
+  border-radius: 4px;
+}
+
+.nav-list > li > a:hover,
+.nav-list > li > a:focus
+{
+  border: 2px white solid;
+  background-color: transparent;
+	font-weight: 700;
+}
+
+.nav-list > .active > a,
+.nav-list > .active > a:hover,
+.nav-list > .active > a:focus {
+	color: black;
+  background-color: var(--selected);
+  border: 2px transparent solid;
+	font-weight: 600;
+}
+
+.conditions h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight:normal;
+  font-size:15px;
+  align: center;
+}
+@media (max-width: 600px) {
+  #toc {
+    position: relative;
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+  }
+}
