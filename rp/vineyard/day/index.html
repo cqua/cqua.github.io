@@ -17,9 +17,9 @@
               <ul class = "nav navbar-nav">
 				<li><a class="mainHeader">PROJECT VINEYARD</a></li>
                 <li><a href="../">Overview</a></li>
-                <li class = "active"><a href = "../rules/">Core Rules</a></li>
+                <li><a href = "../rules/">Core Rules</a></li>
                 <li><a href = "../pcs/">Character Creation</a></li>
-                <li><a href="../day/">The Day</a></li>
+                <li class = "active"><a href="../day/">The Day</a></li>
                 <li><a href="../night/">The Night</a></li>
                 <li><a href="../advancement/">Advancement</a></li>
                 <form id="f1" class="navbar-form navbar-left" name="f1" action="javascript:void()" onsubmit="if(this.t1.value!=null &amp;&amp; this.t1.value!='') parent.findInPage(this.t1.value);return false;">
@@ -37,47 +37,78 @@
 				</div>
 				<div class="span9 main-content">
 					<div style="position: relative;">
-						<span class="pageHeader">Core Rules</span>
+						<span class="pageHeader">The Day</span>
 						<div>
-						<h1 id="principles">Core Principles</h1>
+							<h1 id="daytime">A Day on the Moon</h1>
 							<p>TBA</p>
 						</div>
 						<div>
-						<h1 id="skills">Skills</h1>
-							<p>Each character has five skills, a number between 0 and 5, which represents how adept they are at that skill:</p>
-								<p><b>Grit (GR)</b> is a character's physical prowess.
-									It measures strength, endurance, and resistance to physical ailments.
-									Use Grit when wielding a heavy tool, running a long distance, intimidating an enemy, fighting off a poison.</p>
-								<p><b>Finesse (FN)</b> is a character's physical fidelity.
-									It measures flexibility, reaction speed, and ability to dodge.
-									Use Finesse when using a fine tool, moving stealthily, telling a convincing lie, or avoiding a physical danger.</p>
-								<p><b>Acuity (AC)</b> is a character's mental clarity.
-									It measures logical reasoning, and ability to read emotions and intentions.
-									Use Acuity when researching, scanning the horizon, or working with a machine.</p>
-								<p><b>Sense (SN)</b> is a character's perception.
-									It measures ability to percieve and quickly interpret the sights, sounds, and finer details of their environment.
-									Use Sense when scanning the horizon, listening for footsteps, or reading body language.</p>
-								<p><b>Forecast (FC)</b> is a character's perception.
-									It measures ability to percieve and quickly interpret the sights, sounds, and finer details of their environment.
-									Use Sense when scanning the horizon, listening for footsteps, or reading body language.</p>
+							<p>
+								<h1 id="actions">Daytime Actions</h1>
+								During the day, each player is able to take two actions- one during the morning and one during the afternoon.
+								If multiple players perform the same action at the same time of day, they can choose to form a <a href="#teams">team</a>.
+							</p>
+							<p>
+								<h2 id="raid">Raid a Location.</h2>
+								Indicate your plan and whether this mission is assault, stealth, or social based.
+							</p>
+							<p>
+								<h2 id="scavenge">Scavenge for Supplies.</h2>
+								Roll on your best skill, then follow the chart:
+								<ul>
+									<li><b>On a 4/5,</b> choose one:
+										<ul>
+											<li>You find supply, but you take a level-2 harm of the Referee's choice.</li>
+											<li>You find supply with -1 effect.</li>
+											<li>You return empty-handed, having lost any equipment you used for the roll.</li>
+										</ul>
+									</li>
+									<li><b>On a 6,</b> you find supply.</li>
+									<li><b>On a Critical Success,</b> choose one:
+										<ul>
+											<li>You gain supply, and a useful item of the Referee's choice.</li>
+											<li>You gain supply with +1 effect.</li>
+											<li>You gain supply and find a place to rest. Reduce one harm.</li>
+										</ul>
+									</li>
+								</ul>
 
+								<b>When you find supply:</b>
+								<ul>
+									<li><b>0 Effect</b> Nothing.</li>
+									<li><b>1 Effect</b> 1 Supply.</li>
+									<li><b>2 Effect</b> 1d3 Supply.</li>
+									<li><b>3 Effect</b> 2d3 Supply.</li>
+									<li><b>4 Effect</b> 3d3 Supply.</li>
+								</ul>
+							</p>
+							<p>
+								<h2 id="craft">Craft & Design</h2>
+								Choose a recipe from below or another recipe you've learned.
+							</p>
+							<p><b>The following recipes are Simple</b> - you may craft up to five in one action.
+								<ul>
+									<li>Filter Mask</li> Ignore the negative effects of being outside. +1 effect to Scavenge.
+								</ul>
+							</p>
+							<p><b>The following recipes are Complicated</b> - you must spend 1 Supply, roll on Acuity, then refer to the Complicated Crafting chart.
+								<ul>
+									<li>¯\(°_o)/¯</li>
+								</ul>
+								<b>Complicated Crafting</b>
+								<ul>
+									<li><b>On a 4/5,</b> you make it, but suffer 1 harm.</li>
+									<li><b>On a 6,</b> you make it.</li>
+									<li><b>On a Critical Success,</b> you make two.</li>
+								</ul>
+							</p>
+							<p>
+								<h2 id="rest">Rest & Heal</h2>
+								Spend 1 Supply and reduce all harm. <i>(All Level-1 harm is healed, all harm of a higher level is brought down one level).</i>
+							</p>
 						</div>
 						<div>
-						<h1 id="rolls">Skill Rolls</h1>
-							<p>When you try to do an uncertain action, or when an ability calls for it, do a skill roll.</p>
-							<p>Pick the appropriate skill. You start off with a number of d6 equal to that skill. Any relevant effect that gives you +d adds one more d6. If another character is helping you, you also get +d (does not apply to team actions, explained later).</p>
-							<p>Then determine your effect level. Effect defaults to 0, and can be increased by equipment</p>
-							<p>Roll the collected dice and look at the highest number rolled (if you would have zero or fewer dice, instead roll two and look at the lowest).</p>
-							<p><b>On a 1-3, you Fumble.</b> You are at the mercy of the referee.</p>
-							<p><b>A 4/5 is a Mixed Success.</b> You succeed with a consequence.</p>
-							<p><b>A 6 is a Success.</b> You accomplish what you set out to do.</p>
-							<p><b>If multiple dice rolled 6, thats a Critical Success.</b> You succeed beyond all expectation You gain 1 Momentum for every 6 rolled after the first.</p>
-						</div>
-						<div>
-							<h1 id="harm">Harm</h1>
-						</div>
-						<div>
-							<h1 id="supply">Supply</h1>
+							<h1 id="teams">Working as a Team</h1>
 						</div>
 					</div>
 				</div>
