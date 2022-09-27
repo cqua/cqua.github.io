@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="../content-type">
+    <link type="text/css" rel="stylesheet" href="../jquery.tocify.css" />
+    <link type="text/css" rel="stylesheet" href="../bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="../style.css" />
+	<script src="../prescript.js"></script>
+	<title>Project Vineyard</title>
+	</head>
+	<body>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <nav class="navbar navbar-default navbar-fixed-top">
+            <div>
+              <ul class = "nav navbar-nav">
+				<li><a class="mainHeader">PROJECT VINEYARD</a></li>
+                <li><a href="../">Overview</a></li>
+                <li><a href = "../rules/">Core Rules</a></li>
+                <li><a href = "../pcs/">Character Creation</a></li>
+                <li><a href="../day/">The Day</a></li>
+                <li class = "active"><a href="../night/">The Night</a></li>
+                <li><a href="../advancement/">Advancement</a></li>
+                <form id="f1" class="navbar-form navbar-left" name="f1" action="javascript:void()" onsubmit="if(this.t1.value!=null &amp;&amp; this.t1.value!='') parent.findInPage(this.t1.value);return false;">
+	                <div class="input-group">
+                    <input type="search" class="form-control" id="t1" name="t1" placeholder="Hit enter to search" />
+	                </div>
+                </form>
+              </ul>
+        			<div class="ribbon">
+        				<div id="ribbon-text" class="ribbon-text">Version 1.0</div>
+          		</div>
+            </div>
+          </nav>
+					<div id="toc"></div>
+				</div>
+				<div class="span9 main-content">
+					<div style="position: relative;">
+						<span class="pageHeader">The Night</span>
+						<div>
+							<h1 id="nighttime">The Hunt Begins</h1>
+							<p>TBA</p>
+						</div>
+						<div>
+							<h1 id="thebase">The Base</h1>
+							<p>
+								The survivors must remain close to the base to survive the cold of night.
+							</p>
+							<p>Typically, each room in the base is one zone.</p>
+							<h2 id="features">Zone Features</h2>
+							<p></p>
+							<h3 id="burning">Burning</h3>
+							<p></p>
+							<h3 id="cluttered">Cluttered</h3>
+							<p></p>
+							<h3 id="cramped">Cramped</h3>
+							<p></p>
+							<h3 id="dark">Dark</h3>
+							<p></p>
+							<h3 id="freezing">Freezing</h3>
+							<p></p>
+							<h3 id="unfiltered">Unfiltered</h3>
+							<p>Most outdoor zones will have this feature.</p>
+						</div>
+						<div>
+							<h1 id="themonsters">That Which Lurks in the Dark</h1>
+							<p>
+								Creatures are drawn to areas with heat and light.
+							</p>
+						</div>
+						<div>
+							<h1 id="preparation">Preparation Phase</h1>
+							<p>
+								While the sky is yet orange, once all survivors are returned to the base, this is the time to prepare.
+							</p>
+							<h2 id="fuel">Fuel</h2>
+							<p>In order to provide heat, light, and air, the generator must be fueled. The generator consumes fuel depending on how much power is being used-
+								in general, 1 Supply can power one room for 4 hours. Power can be specifically rerouted to and from rooms to conserve power or to alter the battlefield; this can be done during any
+							phase.</p>
+							<p>Any room without power is <a href="#dark">dark</a>, <a href="#freezing">freezing</a>, and <a href="#unfiltered">unfiltered</a>. While the generator is empty, all rooms lose power.</p>
+							<h2 id="traps">Traps</h2>
+							<p>Spend 1 supply to coat a zone with fuel. Disable sprinklers, light as an action, roll each turn it burns.</p>
+						</div>
+						<div>
+							<h1 id="combat">Hidden Phase</h1>
+							<p>This phase ends when a survivor is seen.</p>
+							<p>Every round in the Hidden Phase is equivalent to 6 rounds in the Holdout Phase.</p>
+							<p>Whenever moving from one zone to another, roll Finesse. -Effect in cluttered zones.</p>
+						</div>
+						<div>
+							<h1 id="combat">Holdout Phase</h1>
+							<p></p>
+							<h2 id="rounds">Round Structure</h2>
+							<p>Each round progresses in the following order:</p>
+							<ol>
+								<li><b>Top of Round.</b> Each player chooses "Fast Turn" or "Slow Turn".</li>
+								<li><b>Player Fast Turns.</b> Each player who chose "Fast Turn" may take one action. Players take turns simultaneously, but once a player has begun an
+								action, they must resolve that action before any player may take another action.</li>
+								<li><b>Enemy Fast Turns.</b> Each enemy taking a fast turn acts.</li>
+								<li><b>Player Slow Turns.</b> Each player did not act during fast turns may take two actions. Again, players take turns simultaneously, but once a player has begun an
+								action, they must resolve that action before any player may take another action.</li>
+								<li><b>Enemy Slow Turns.</b> Each enemy which did not take a fast turn acts.</li>
+								<li><b>End of Round.</b></li>
+							</ol>
+							<h2 id="holdoutactions">Actions</h2>
+							<p>When a player takes an action during the holdout Phase, they choose one of the following:</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../jquery-1.12.0.min.js"></script>
+		<script src="../jquery-ui.min.js"></script>
+		<script src="../jquery.tocify.min.js"></script>
+    <script src="../dice.js"></script>
+		<script>
+	    //Executes your code when the DOM is ready.  Acts the same as $(document).ready().
+	    $(function() {
+        // Calls the selectBoxIt method on your HTML select box and updates the showEffect option
+        var toc = $("#toc").tocify({selectors: "h1, h2, h3, h4, h5" }).data("toc-tocify");
+
+        // Sets the showEffect, scrollTo, and smoothScroll options
+        toc.setOptions({ showEffect: "fadeIn", scrollTo: 40, smoothScroll: false});
+
+        //Adds "roll" link to each table containing dice values
+        setupDiceTables();
+	    });
+		</script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-72843823-1', 'auto');
+			ga('send', 'pageview');
+			lm = new Date(document.lastModified);
+			document.getElementById("ribbon-text").textContent = "Updated " + (parseInt(lm.getMonth())+1) + "." + lm.getDate() + "." + (parseInt(lm.getYear()) - 100);
+
+		</script>
+	</body>
+</html>
