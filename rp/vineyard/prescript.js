@@ -56,8 +56,6 @@
 
 
 
-		</script>
-		<script language="javascript">
 		(function(document, history, location) {
 		  var HISTORY_SUPPORT = !!(history && history.pushState);
 
