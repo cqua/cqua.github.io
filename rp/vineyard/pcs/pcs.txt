@@ -1,0 +1,38 @@
+Surveyor
+0 1 0 1 0
+  You get:
+    You can craft:
+      Beartrap
+      Chain Trap
+  	When you scout, roll with +1d.
+    Spend 1 Momentum: double ranged weapon range.
+
+		Recipe: Homemade Rifle - Complicated
+    When you cook, each team member takes Momentum.
+		If you would mark Hungry as a level-2 harm or higher, you do not mark harm.
+    When you fire from a position where you cannot be seen, take +1 effect.
+		When you scout, take 1 Momentum.
+
+		+ Accuracy
+		+Skirmish
+		Animals
+
+Special Armor
++1 effect
++1d
++1 Momentum
+-1 Momentum
+
+Spacer LEECH
+		0 1 1 0 0
+		Recipes:
+			Stimpack - Complicated
+			Bomb
+			landmine
+			Anathema Scent
+			Enticing Scent
+		You may expend special armor to reduce the consequence of chemical effects, or to gain +1 effect when handling chemicals.
+		When you Study a malady or corpse, take 1 Momentum.
+		More resources when foraging
+		Weak spot
+		Explosives
