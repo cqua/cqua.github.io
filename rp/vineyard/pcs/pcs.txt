@@ -1,3 +1,29 @@
+soldier
+  Scavenging
+  Melee damage
+surveyor
+  Scouting
+  Ranged damage
+Spacer
+  Crafting
+  Explosives
+Broker
+  Teamwork
+  Encouragement
+Courier
+  Extra actions
+  Can always act first
+Far Traveler
+  Predictions
+  CC
+
+  Special Armor
+  +1 effect
+  +1d
+  +1 Momentum
+  -1 Momentum
+
+
 Surveyor
 0 1 0 1 0
   You get:
@@ -17,11 +43,6 @@ Surveyor
 		+Skirmish
 		Animals
 
-Special Armor
-+1 effect
-+1d
-+1 Momentum
--1 Momentum
 
 Spacer LEECH
 		0 1 1 0 0
@@ -36,3 +57,10 @@ Spacer LEECH
 		More resources when foraging
 		Weak spot
 		Explosives
+
+  Stranger
+    You can Meditate as a Day action. Only a Stranger can lead during a Meditate action.
+    Make a Forecast roll.
+    On a 1-3, something bad is coming.
+    On a 4/5,
+    
