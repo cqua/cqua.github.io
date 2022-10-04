@@ -1,0 +1,57 @@
+Grit
+	Toughness
+	Melee
+	Stamina
+Finesse
+	Dodge
+	Mobility
+	Drive
+Acuity
+	Survival
+	Comtech
+	Medical
+Sense
+	Observation
+	Range
+	Insight
+Forecast
+	
+
+
+The planet has a disease which reacts to light.
+The disease turns humans into monsters.
+
+The players must return to base- to the light- at night. Otherwise they risk 
+transformation.
+
+Possible goals:
+	Restoration - What does treatment look like?
+	Escape - Offworld travel is near impossible due to the quarantine.
+	
+Heritages
+	Raltine
+		Homeworld Luraltis
+		Biological theives
+	
+On-world factions
+	"heroic" Abomination-killers
+		The darkness is a drug
+			Why the players stay away: too rambunctious
+			What they want: food & drugs
+			What they can offer: Weapons
+	Monastic light in a bunker - keepers of knowledge
+		Stayed in the original colony ship. Lead by the AI
+			Why the players stay away: closed society
+			What they want: scavenged tech
+			What they can offer: knowledge, scan
+	Growth
+		Bioluminescence - Nausicaa
+			Why the players stay away: 
+			What they want: plant samples???? seeds, weapons
+			What they can offer: food & drugs
+	Blood in the Dark - Raltine
+		Infected and still human - partially transformed - adapted
+			Why the players stay away: infected
+			What they want: Food / Drugs
+			What they can offer: Pheromones
+			
