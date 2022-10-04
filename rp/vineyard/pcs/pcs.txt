@@ -24,6 +24,22 @@ Far Traveler
   -1 Momentum
 
 Soldier
+1 1 0 0 0
+		Recipes:
+			Heavy Stick
+			Manacles
+			Chain
+			Armor - Complicated
+		When you cook, erase a level-1 harm.
+		When you scavenge and succeed, each teammate takes 1 momentum.
+		When you scavenge and succeed, you can additionally choose the following option:
+			You find supply and a weapon (referee's choice).
+		Spend special armor to surge or dodge
+		Spend 1 Momentum: take the damage a teammate would have taken. Reduce the damage 1 level.
+		Higher load limits [5/7/8]
+		Pull aggro / taunt
+		+1d to intimidate
+		Morning person +1 momentum
   When you use your weapon for something other than doing harm to a living
   creature (wrecking, disarm, trick shot, stunning, defense), take +1 effect.
   When you lock eyes...
@@ -41,6 +57,7 @@ Surveyor
     You can craft:
       Beartrap
       Chain Trap
+      Looking Glass
   	When you scout, roll with +1d.
     Spend 1 Momentum: double ranged weapon range.
 
@@ -50,6 +67,10 @@ Surveyor
     When you fire from a position where you cannot be seen, take +1 effect.
 		When you scout, take 1 Momentum.
     Attune to call upon nature
+    When you hunt a creature you've wounded, take +1 effect
+    +1d to first info roll on nature / ruins
+    Special armor for fatigue
+    Momentum when scouting
 
 		+ Accuracy
 		+Skirmish
@@ -64,7 +85,7 @@ Spacer LEECH
 				Placable explosive w/ long fuse
 				Smoke bomb
 				explodes upon contact w/ air
-			
+
 			level-1 harm woozy
 				sleep
 				rampant
@@ -83,26 +104,64 @@ Spacer LEECH
 				toxic blood
 			nullifyer
 			glue
-			
-			
+
+
 			Stimpack - Complicated
 			Anathema Scent
 			Enticing Scent
 		You may expend special armor to reduce the consequence of chemical effects, or to gain +1 effect when handling chemicals.
 		When you Study a malady or corpse, take 1 Momentum.
+    Spend momentum to excrete a drug/poison - you are immune
 		More resources when foraging
 		Weak spot
 		Explosives
 
-Broker
-  Only take 1 harm when you lead a group action
+Runner LURK - SCOUNDREL
+	1 1 0 0 0
+	Recipes:
+		Climbing gear
+		Lockpick
+	When you scavenge and succeed, you can additionally choose the following option:
+		You may take an additional day action after this (You may only do this once per day).
+	Scale walls & Pick locks
+	When you attack from hiding or activate a trap, take +1d.
+	When you roll with zero effect, take +1d. Any harm you take as a consequence is one level higher.
+	Spend 1 Momentum: double movement or direct an attack at you at an enemy.
+	Choose a skill. When you are leader using that skill, you can only suffer harm once regardless of failures.
+	Expend special armor to remain undetected.
+  Attune to become invisible
 
+
+Broker SPIDER/PRIEST
+	0 0 1 1 0
+	When you rest, you may choose the following action:
+		Grant another player an additional daytime action. You may only do this once per day.
+	compel human
+	Encourage
+		Spend 1 Momentum: Target player stands up if they are knocked down, and their next attack made before the end of their next turn gets +1d.
+	Allies in your zone get +1 Grit, +1 Finesse, +1 Acuity, or +1 Influence
+    Only take 1 harm when you lead a group action
+    Attune to alter memories
 
 Stranger
+0 0 1 0 1
+  Recipes:
+      Augury Bones
     You can Meditate as a Day action. Only a Stranger can lead during a Meditate action.
     Make a Forecast roll.
       On a 1-3, something bad is coming.
       On a 4/5, ????
+  	Foresee intent
+  	Compel Beast
+  	Life sense
+
+Chimera - Souljar - Threshold
+  Monsterhearts - feed on monster hearts to gain abilities
+    Toxic Breath
+    Wicked Claws
+    Lifesense
+  When you eat a heart, learn memory, heal 1 harm
+  Full transformation
 
 
 
