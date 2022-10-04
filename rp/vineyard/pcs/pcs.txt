@@ -23,6 +23,17 @@ Far Traveler
   +1 Momentum
   -1 Momentum
 
+Soldier
+  When you use your weapon for something other than doing harm to a living
+  creature (wrecking, disarm, trick shot, stunning, defense), take +1 effect.
+  When you lock eyes...
+  When you accept harm instead of resisting...
+  When you bear down despite grevious harm...
+  Lead in combat?
+  Armor counts as 1 less weight and is fine
+  Take momentum when you tough damage
+  Attune to call upon your ancestors
+
 
 Surveyor
 0 1 0 1 0
@@ -38,6 +49,7 @@ Surveyor
 		If you would mark Hungry as a level-2 harm or higher, you do not mark harm.
     When you fire from a position where you cannot be seen, take +1 effect.
 		When you scout, take 1 Momentum.
+    Attune to call upon nature
 
 		+ Accuracy
 		+Skirmish
@@ -58,9 +70,17 @@ Spacer LEECH
 		Weak spot
 		Explosives
 
-  Stranger
+Broker
+  Only take 1 harm when you lead a group action
+
+
+Stranger
     You can Meditate as a Day action. Only a Stranger can lead during a Meditate action.
     Make a Forecast roll.
-    On a 1-3, something bad is coming.
-    On a 4/5,
-    
+      On a 1-3, something bad is coming.
+      On a 4/5, ????
+
+
+
+
+WHEN you use a Fine item, take +1 effect
