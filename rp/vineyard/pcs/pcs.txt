@@ -59,9 +59,33 @@ Surveyor
 Spacer LEECH
 		0 1 1 0 0
 		Recipes:
+			loud
+				Grenade
+				Placable explosive w/ long fuse
+				Smoke bomb
+				explodes upon contact w/ air
+			
+			level-1 harm woozy
+				sleep
+				rampant
+				pleasant intoxication
+				open to psychic
+				spark
+				hypnotic trance
+			level-1 harm sickened
+				suffocation
+				blundness
+				migranes
+				paralysis
+			spirit-accosted
+				silence area
+				dark area
+				toxic blood
+			nullifyer
+			glue
+			
+			
 			Stimpack - Complicated
-			Bomb
-			landmine
 			Anathema Scent
 			Enticing Scent
 		You may expend special armor to reduce the consequence of chemical effects, or to gain +1 effect when handling chemicals.
