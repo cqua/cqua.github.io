@@ -7,22 +7,22 @@ function loadmenu(menu, page) {
 	var bar = document.getElementById("sidebar");
 	var i = -1;
 	var m;
-	
+
 	while(bar.hasChildNodes()) {
 		bar.removeChild(bar.lastChild);
 	}
-	
-	bar.innerHTML = '<div class="sidebar-header"><a class="pagetitle" href="#">RANGERS OF MIRASA</a><div class="pagesubtitle">A SHADOW OF THE DEMON LORD Game</div></div>'
-	
+
+	bar.innerHTML = '<div class="sidebar-header"><a class="pagetitle" href="#">THE LAST TRAIN TO DUSKWALL</a></div>'
+
 	var ul = document.createElement("ul");
 	ul.classList.add("list-unstyled")
 	ul.classList.add("components")
-	
+
 	do {
 		i++
 		m = menu_content[i];
 	} while(menu != m.name);
-	
+
 	for(i = 0; i < m.content.length; i++) {
 		if(m.content[i].action == "NODE") {
 			var np = document.createElement("p");
@@ -45,7 +45,7 @@ function loadmenu(menu, page) {
 			ul.appendChild(np);
 		}
 	}
-	
+
 	bar.appendChild(ul);
 }
 
@@ -53,16 +53,16 @@ function changemenu(new_menu) {
 	var bar = document.getElementById("leftbar");
 	var i = -1;
 	var m;
-	
+
 	while(bar.hasChildNodes()) {
 		bar.removeChild(bar.lastChild);
 	}
-	
+
 	do {
 		i++
 		m = menu_content[i];
 	} while(new_menu != m.name);
-	
+
 	for(i = 0; i < m.content.length; i++) {
 		if(m.content[i].action == "NODE") {
 			var np = document.createElement("p");

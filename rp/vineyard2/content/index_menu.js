@@ -7,48 +7,52 @@ var menu_content = [
 				"action" : "index"
 			},
 			{
-				"title" : '<a href="rules/basic_rules.html">Rules</a>',
+				"title" : "Core System",
+				"action" : "NODE"
+			},
+			{
+				"title" : '<a href="rules/basic_rules.html">Core Rules</a>',
 				"action" : "rules"
+			},
+			{
+				"title" : "<a href='yourranger.html'>The Day</a>",
+				"action" : "yourranger"
+			},
+			{
+				"title" : "<a href='yourranger.html'>The Night</a>",
+				"action" : "yourranger"
 			},
 			{
 				"title" : "Character Creation",
 				"action" : "NODE"
 			},
 			{
-				"title" : "<a href='yourranger.html'>Creating Your Ranger</a>",
+				"title" : "<a href='yourranger.html'>Creating Your Survivor</a>",
 				"action" : "yourranger"
 			},
 			{
-				"title" : "<a href='ancestries/overview.html'>Ancestries</a>",
+				"title" : "<a href='ancestries/overview.html'>Origin</a>",
 				"action" : "ancestries"
 			},
 			{
-				"title" : '<a href="paths/overview.html">Starting Paths</a>',
-				"action" : "paths"
-			},
-			{
-				"title" : '<a href="maaspects/overview.html">Major Aspects</a>',
+				"title" : '<a href="maaspects/overview.html">Heritage</a>',
 				"action" : "maaspect"
 			},
 			{
-				"title" : '<a href="miaspects/overview.html">Minor Aspects</a>',
+				"title" : '<a href="paths/overview.html">Advancement</a>',
+				"action" : "paths"
+			},
+			{
+				"title" : "The World",
+				"action" : "NODE"
+			},
+			{
+				"title" : '<a href="maaspects/overview.html">The Shattered Isles</a>',
+				"action" : "maaspect"
+			},
+			{
+				"title" : '<a href="miaspects/overview.html">Duskwall</a>',
 				"action" : "miaspect"
-			},
-			{
-				"title" : '<a href="professions.html">Professions & Languages</a>',
-				"action" : "profs"
-			},
-			{
-				"title" : '<a href="equipment.html">Equipment</a>',
-				"action" : "equipment"
-			},
-			{
-				"title" : '<a href="gear.html">Gear</a>',
-				"action" : "gear"
-			},
-			{
-				"title" : '<a href="gods.html">Gods of the Realm</a>',
-				"action" : "gods"
 			},
 			{
 				"title" : "DATE",
