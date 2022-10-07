@@ -170,7 +170,11 @@ margin-left: 0px;
 }
 
 .main-content > div > div {
-  max-width: 50em;
+  max-width: 70%;
+}
+.main-content > div  > img {
+  max-width: 30%;
+  float: right;
 }
 
 .nav-list > li > a, .nav-list .nav-header {
@@ -222,16 +226,16 @@ margin-left: 0px;
   }
 }
 @media (max-width: 768px) {
-    #toc {
+    #toc.hidden {
         width: 100%;
     }
-    #toc.hidden {
+    #toc {
         width: 250px;
     }
-    #main-content {
+    #main-content.full {
       margin-left: 800px;
     }
-    #main-content.full {
+    #main-content {
       margin-left: 0;
     }
 }

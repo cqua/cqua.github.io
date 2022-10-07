@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="content/favicon.ico" />
+
+    <title>Rangers of Mirasa</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper bg-dark text-light">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+			<button type="button" id="sidebarCollapse" class="btn btn-info">
+				<i class="fas fa-align-left"></i>
+				<span>Toggle Sidebar</span>
+			</button>
+
+			<h1>Creating Your Ranger</h1>
+			<div class="profile">
+				<img class="profile-img" src="content/sloth-being-leigh-nutting-final.jpg" alt="Artist: SlothBeing">
+				<div><span class='icon'></span>SlothBeing</div>
+			</div>
+			<p>
+			To create your Ranger, complete the following steps:
+			<ol>
+				<li>Choose an <a href="ancestries/overview.html">Ancestry</a>. Follow its guidelines.</li>
+				<li>Choose a <a href="paths/overview.html">Starting Path</a>. Follow its guidelines for enhancement to Level 1.</li>
+				<li>You have 15sp. Pick out items from the <a href="gear.html">Gear</a> and <a href="equipment.html">Equipment</a> pages up to 15sp worth.</li>
+			</ol>
+			<p>
+			Your <b>Attributes</b> are modifiers, which are added to attack and challenge rolls.
+			</p>
+			<p>
+			<b>Strength</b> represents your ability to perform strenuous tasks, such as moving a boulder, running for miles, taking a blow, or fighting off a disease.
+			</p>
+			<p>
+			<b>Agility</b> represents your ability to perform precise tasks, like dodging an attack, picking a lock, dancing, and hiding.
+			</p>
+			<p>
+			<b>Intellect</b> represents your overall knowledge and your ability to process and interpret new information. Many spells require Intellect as well.
+			</p>
+			<p>
+			<b>Will</b> represents your confidence and ability sway others with your speech. Many spells require Will as well.
+			</p>
+			<p>
+			<b>Perception</b> is your overall ability to see, hear, or otherwise sense your surroundings.
+			</p>
+			<p>
+			<b>Defense</b> represents your cumulative ability to block, dodge, or avoid damage from attacks.
+			</p>
+			<p>
+			<b>Health</b> represents your endurance, you ability to continue after a blow.
+			</p>
+			<p>
+			<b>Healing Rate</b> is how much your Damage decreases when you <a href="resting.html">complete a rest</a>, up to its max.
+			</p>
+			<p>
+			<b>Size</b> is how much space a character takes up. Size 1 represents the standard human, about 1 yard cube.
+			</p>
+			<p>
+			<b>Speed</b> is how many yards a character can move in a turn.
+			</p>
+			<p>
+			<b>Power</b> represents a character's <a href="rules/spellcasting.html">spellcasting ability</a>.
+			</p>
+			<p>
+			<b>Damage</b> represents your current physical state. When it is equal to your Health, you fall unconscious and begin making <a href="fate.html">Fate Rolls</a>.
+			</p>
+			<p>
+			<b>Beasthood</b> is how affected by the forest's magic you are.
+			</p>
+			</p>
+			<h1>Advancement</h1>
+			<p>
+				Refer to the Advancement table for what to do upon leveling up:
+			</p>
+				<table class="table table-dark">
+				<tr><th>Level</th><th>Benefit</th></tr></tr>
+				<tr><td>1</td><td><b>Choose a Starting Path</b> and take the Level 1 enhancements</td></tr>
+				<tr><td>2</td><td>Starting Path enhancements</td></tr>
+				<tr><td>3</td><td><b>Choose a Major Aspect</b></td></tr>
+				<tr><td>4</td><td>Ancestry enhancement</td></tr>
+				<tr><td>5</td><td>Starting path enhancement</td></tr>
+				<tr><td>6</td><td>Choose a new Aspect (Major or Minor), or enhance your Major Aspect</td></tr>
+				<tr><td>7</td><td>Choose a new Aspect, or enhance one of your chosen Aspects</td></tr>
+				<tr><td>8</td><td>Starting path enhancement</td></tr>
+				<tr><td>9+</td><td>Choose a new Aspect, or enhance one of your chosen Aspects</td></tr>
+				</table>
+		</div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	
+    <script src="content/index.js"></script>
+    <script src="content/index_menu.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+			loadmenu("home", "yourranger");
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

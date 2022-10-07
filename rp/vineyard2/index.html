@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="content/favicon.ico" />
+
+    <title>Rangers of Mirasa</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper bg-dark text-light">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+			<button type="button" id="sidebarCollapse" class="btn btn-info">
+				<i class="fas fa-align-left"></i>
+				<span>Toggle Sidebar</span>
+			</button>
+      <div class="block page-header">
+			     <h1>Life in the Deathlands</h1>
+      </div>
+			<div class="profile">
+				<img class="profile-img" src="content/christian-bravery-zwei-church-version-2-001.png" alt="Artist: Christian Bravery">
+				<div><span class='icon'></span>Christian Bravery</div>
+			</div>
+      <div>
+			<p>
+				Betwixt the few cities which dot Akoros, beyond the lightning barriers keeping Her Imperial citizens safe,
+        stetches the Deathlands- that wasteland of petrified trees and choking miasma belonging to restless souls.
+        The only reliable way of spanning that distance is via train, and even that has its failings.
+			</p><p>
+				So when a train does break down, and it's miniature lightning barrier fails, its passengers can only try their luck in the wastes.
+			</p>
+    </div>
+    <div>
+			<h2>The Game</h2>
+			<p>
+        THE LAST TRAIN TO DUSKWALL is a game about a group of daring survivors cutting through an abomination-ridden wasteland. There will be dangerous holdhouts,
+        scavenging, jerry-rigging, weary strangers, deception, betrayal, victory, and death.
+      </p>
+      <p>
+        The object of the game is to find out: can these unlucky afflicted survive the teeming threats of roving abominations, nomadic hunting parties,
+         heedless scavengers, starvation, and the dark void miasma.
+			</p>
+    </div>
+    <div>
+			<h2>About the Setting</h2>
+    </div>
+    <div>
+			<h2>Contact</h2>
+		</div>
+  </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script src="content/index.js"></script>
+    <script src="content/index_menu.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+			loadmenu("home", "index");
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
