@@ -127,8 +127,8 @@ p, ul, ol {
 }
 
 #sidebar ul p {
-    border-bottom: 2px white solid;
-    border-top: 2px white solid;
+    border-bottom: 2px rgb(48, 52, 54) solid;
+    border-top: 2px rgb(48, 52, 54) solid;
     padding: 10px;
 	color: white;
 }
