@@ -12,95 +12,32 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #fafafa;
-	max-height: 40em;
-	overflow: hidden;
-	background: linear-gradient(180deg,#0d0e13,#2b2c31 80%);
 }
 
-p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 1.7em;
-}
-
-.blockquote {
-    font-size: 1em;
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+	max-height: 100vh;
+	background: linear-gradient(180deg,#0d0e13,#181C2D 80%);
 }
 
 a,
 a:hover,
 a:focus {
-    color: inherit;
-    text-decoration: none;
-    transition: all 0.3s;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
 }
-
-a {
-	color: #aaf;
-}
-
-.sidebar-link a {
-	color: white;
-}
-
-p, ul, ol {
-	max-width: 60em;
-}
-
-.navbar {
-    padding: 15px 10px;
-    background: #fff;
-    border: none;
-    border-radius: 0;
-    margin-bottom: 40px;
-}
-
-.pagetitle {
-	color: white;
-	font-weight: bold;
-	font-family: immortal;
-	font-size: 1.75rem;
-}
-
-.pagesubtitle {
-	font-style: italic;
-	font-weight: bold;
-}
-
-.navbar-btn {
-    box-shadow: none;
-    outline: none !important;
-    border: none;
-}
-
-.line {
-    width: 100%;
-    height: 1px;
-    border-bottom: 1px dashed #ddd;
-    margin: 40px 0;
-}
-
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
 
-.wrapper {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-	max-height: 100vh;
-}
-
 #sidebar {
-    min-width: 250px;
-    max-width: 250px;
-    color: #fff;
-    transition: all 0.3s;
-		background: linear-gradient(180deg,#0d0e13,#181C2D 80%);
-	text-align: center;
+  min-width: 250px;
+  max-width: 250px;
+  color: white;
+  transition: all 0.3s;
 	overflow-y: scroll;
 	height: 100vh;
 }
@@ -109,126 +46,50 @@ p, ul, ol {
     margin-left: -250px;
 }
 
-#sidebar .sidebar-header {
-    padding: 20px;
-	border-radius: 4px;
+#sidebarCollapse {
+	display: none;
 }
 
-.sidebar-header .pagetitle {
-	color: white;
+#sidebar > .sidebar-header {
+  padding: 20px;
+	border-radius: 4px;
 	font-weight: 900;
-	font-family: papyrus;
 	font-size: 1.5rem;
 }
 
-#sidebar ul.components {
-    padding: 20px 0;
-    border-bottom: 1px solid white;
-}
-
-#sidebar ul p {
-    border-bottom: 2px rgb(48, 52, 54) solid;
-    border-top: 2px rgb(48, 52, 54) solid;
-    padding: 10px;
+#sidebar > .sidebar-header > a {
 	color: white;
 }
 
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
+#sidebar > .sidebar-header > a:hover {
+	color: var(--darker);
 }
 
-#sidebar ul li a:hover {
-    color: #000;
+#sidebar ul p {
+  border-bottom: 2px rgb(48, 52, 54) solid;
+  border-top: 2px rgb(48, 52, 54) solid;
+  padding: 10px;
+	color: white;
+	text-align: center;
+}
+
+#sidebar > ul > li >  a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+	color: white;
+	text-align: left;
+}
+
+#sidebar > ul > li > a:hover {
+  color: #000;
 	background: #effea9;
 }
 
-.profile {
-	float: right;
-	margin-left: 2em;
-	text-align: right;
-	color: grey;
-}
-
-.profile-img {
-	max-height: 80vh;
-}
-
-.icon {
-    background-image: url('content/artist.png');
-    height: 14px;
-    width: 20px;
-    display: inline-block;
-    /* Other styles here */
-}
-
-a.active {
-    background: #cccc66;
+#sidebar > ul > li > a.active,
+#sidebar > ul > li > a.active:hover{
+  background: #cccc66;
 	color: black;
-}
-
-a[data-toggle="collapse"] {
-    position: relative;
-}
-
-.dropdown-toggle::after {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-}
-
-ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: #6d7fcc;
-}
-
-ul.CTAs {
-    padding: 20px;
-}
-
-ul.CTAs a {
-    text-align: center;
-    font-size: 0.9em !important;
-    display: block;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-
-a.download {
-    background: #fff;
-    color: #7386D5;
-}
-
-b {
-	font-weight: bold;
-}
-
-h1 {
-	font-style: italic;
-	font-weight: bold;
-}
-
-div.btn-group {
-	background: #343a40;
-}
-
-div.container {
-	border-radius: 5px;
-}
-
-h2 {
-	font-family: georgia;
-	color: var(--primary);
-	font-weight: bold;
-}
-
-h3 {
-	font-family: georgia;
-	font-weight: bold;
 }
 
 /* ---------------------------------------------------
@@ -236,8 +97,8 @@ h3 {
 ----------------------------------------------------- */
 
 #content {
-    width: 100%;
-    transition: all 0.3s;
+  width: 100%;
+  transition: all 0.3s;
 	overflow-y: scroll;
 	max-height: 100%;
 	background: #E5E5E5;
@@ -245,7 +106,30 @@ h3 {
 }
 
 #content > div {
-	padding: 20px;
+	padding: 0 20px;
+}
+
+#content > div > p,
+#content > div > ul,
+#content > div > ol {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+		max-width: 65%;
+}
+
+#content > div > a,
+#content > div > p > a,
+#content > div > ul > a,
+#content > div > ol > a {
+	color: #aaf;
+}
+
+#content > div > h2,
+#content > div > h3 {
+	color: var(--primary);
+	font-weight: bold;
 }
 
 .page-header {
@@ -253,12 +137,36 @@ h3 {
 	color: #E5E5E5;
 }
 
+.page-header > h1 {
+	font-style: italic;
+	font-weight: bold;
+	padding: 20px;
+}
+
 .table {
 	width: auto;
 }
 
-#sidebarCollapse {
-	display: none;
+.profile {
+	float: right;
+	margin-left: 2em;
+	text-align: right;
+	color: grey;
+	max-width: 35%;
+	font-family: georgia;
+		font-style: italic;
+}
+
+.profile > img {
+	max-height: 80vh;
+	max-width: 100%;
+}
+
+.profile > div > span.icon {
+    background-image: url('content/artist.png');
+    height: 14px;
+    width: 20px;
+    display: inline-block;
 }
 
 /* ---------------------------------------------------
@@ -280,4 +188,13 @@ h3 {
     #sidebarCollapse span {
         display: none;
     }
+}
+
+/*-----
+JUNK
+-----*/
+
+
+.blockquote {
+    font-size: 1em;
 }

@@ -12,7 +12,7 @@ function loadmenu(menu, page) {
 		bar.removeChild(bar.lastChild);
 	}
 
-	bar.innerHTML = '<div class="sidebar-header"><a class="pagetitle" href="#">THE LAST TRAIN TO DUSKWALL</a></div>'
+	bar.innerHTML = '<div class="sidebar-header"><a href="https://cqua.github.io/rp/vineyard2/">THE LAST TRAIN TO DUSKWALL</a></div>'
 
 	var ul = document.createElement("ul");
 	ul.classList.add("list-unstyled")
@@ -36,7 +36,6 @@ function loadmenu(menu, page) {
 			ul.appendChild(np);
 		} else {
 			var np = document.createElement("li");
-			np.classList.add("sidebar-link")
 			np.innerHTML = m.content[i].title;
 			if(m.content[i].action == page) {
 				np.childNodes[0].classList.add("active");
