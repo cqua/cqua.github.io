@@ -11,48 +11,48 @@ var menu_content = [
 				"action" : "NODE"
 			},
 			{
-				"title" : '<a href="rules/basic_rules.html">Core Rules</a>',
+				"title" : '<a href="rules/index.html">Core Rules</a>',
 				"action" : "rules"
 			},
 			{
-				"title" : "<a href='yourranger.html'>The Day</a>",
-				"action" : "yourranger"
+				"title" : "<a href='rules/day/index.html'>The Day</a>",
+				"action" : "day"
 			},
 			{
-				"title" : "<a href='yourranger.html'>The Night</a>",
-				"action" : "yourranger"
+				"title" : "<a href='rules/night/index.html'>The Night</a>",
+				"action" : "night"
 			},
 			{
 				"title" : "Character Creation",
 				"action" : "NODE"
 			},
 			{
-				"title" : "<a href='yourranger.html'>Creating Your Survivor</a>",
-				"action" : "yourranger"
+				"title" : "<a href='pcs/index.html'>Creating Your Survivor</a>",
+				"action" : "yoursurvivor"
 			},
 			{
-				"title" : "<a href='ancestries/overview.html'>Origin</a>",
-				"action" : "ancestries"
+				"title" : "<a href='pcs/professions/index.html'>Professions</a>",
+				"action" : "professions"
 			},
 			{
-				"title" : '<a href="maaspects/overview.html">Heritage</a>',
-				"action" : "maaspect"
+				"title" : '<a href="pcs/heritage/index.html">Heritage</a>',
+				"action" : "heritage"
 			},
 			{
-				"title" : '<a href="paths/overview.html">Advancement</a>',
-				"action" : "paths"
+				"title" : '<a href="pcs/advancement/index.html">Advancement</a>',
+				"action" : "advancement"
 			},
 			{
 				"title" : "The World",
 				"action" : "NODE"
 			},
 			{
-				"title" : '<a href="maaspects/overview.html">The Shattered Isles</a>',
-				"action" : "maaspect"
+				"title" : '<a href="world/index.html">The Shattered Isles</a>',
+				"action" : "worldoverview"
 			},
 			{
-				"title" : '<a href="miaspects/overview.html">Duskwall</a>',
-				"action" : "miaspect"
+				"title" : '<a href="world/duskwall/index.html">Duskwall</a>',
+				"action" : "duskwall"
 			},
 			{
 				"title" : "DATE",

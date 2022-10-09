@@ -1,21 +1,40 @@
-soldier
+cutter
   Scavenging
   Melee damage
-surveyor
+hound
   Scouting
   Ranged damage
-Spacer
+leech
   Crafting
   Explosives
-Broker
-  Teamwork
-  Encouragement
-Courier
+lurk
   Extra actions
   Can always act first
-Far Traveler
+spider
+  Teamwork
+  Encouragement
+stranger
   Predictions
   CC
+
+Advanced Professions
+  survivalist   - cutter+hound
+  mutant        - cutter+leech
+  ???           - cutter+lurk
+  captain       - cutter+spider
+                - cutter+stranger
+  fireworks     - hound+leech
+                - hound+lurk
+                - hound+spider
+                - hound+stranger
+  poisoner      - leech+lurk
+  healer        - leech+spider
+                - leech+stranger
+                - lurk+spider
+  unseen        - lurk+stranger
+  puppeteer     - spider+stranger
+
+
 
   Special Armor
   +1 effect
