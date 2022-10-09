@@ -83,7 +83,11 @@ function makebutton(name, action) {
 	var bar = document.getElementById("leftbar");
 	var nb = document.createElement("a");
 	nb.innerHTML = name;
-	nb.setAttribute( "href", action);
+
+	var href = 'cqua.github.io/rp/vineyard2/' + action;
+	console.log(href);
+
+	nb.setAttribute( "href", href);
 	nb.setAttribute( "class", "btn btn-primary");
 	bar.appendChild(nb);
 }

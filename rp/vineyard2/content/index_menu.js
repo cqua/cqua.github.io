@@ -3,7 +3,7 @@ var menu_content = [
 		"name" : "home",
 		"content" : [
 			{
-				"title" : "<a href='index.html'>Overview</a>",
+				"title" : "<a href='https://cqua.github.io/rp/vineyard2/'>Overview</a>",
 				"action" : "index"
 			},
 			{
@@ -11,15 +11,15 @@ var menu_content = [
 				"action" : "NODE"
 			},
 			{
-				"title" : '<a href="rules/index.html">Core Rules</a>',
+				"title" : '<a href="https://cqua.github.io/rp/vineyard2/rules/">Core Rules</a>',
 				"action" : "rules"
 			},
 			{
-				"title" : "<a href='rules/day/index.html'>The Day</a>",
+				"title" : "<a href='https://cqua.github.io/rp/vineyard2/rules/day/'>The Day</a>",
 				"action" : "day"
 			},
 			{
-				"title" : "<a href='rules/night/index.html'>The Night</a>",
+				"title" : "<a href='https://cqua.github.io/rp/vineyard2/rules/night/'>The Night</a>",
 				"action" : "night"
 			},
 			{
@@ -27,19 +27,19 @@ var menu_content = [
 				"action" : "NODE"
 			},
 			{
-				"title" : "<a href='pcs/index.html'>Creating Your Survivor</a>",
+				"title" : "<a href='https://cqua.github.io/rp/vineyard2/pcs/'>Creating Your Survivor</a>",
 				"action" : "yoursurvivor"
 			},
 			{
-				"title" : "<a href='pcs/professions/index.html'>Professions</a>",
+				"title" : "<a href='https://cqua.github.io/rp/vineyard2/pcs/professions/'>Professions</a>",
 				"action" : "professions"
 			},
 			{
-				"title" : '<a href="pcs/heritage/index.html">Heritage</a>',
+				"title" : '<a href="https://cqua.github.io/rp/vineyard2/pcs/heritage/">Heritage</a>',
 				"action" : "heritage"
 			},
 			{
-				"title" : '<a href="pcs/advancement/index.html">Advancement</a>',
+				"title" : '<a href="https://cqua.github.io/rp/vineyard2/pcs/advancement/">Advancement</a>',
 				"action" : "advancement"
 			},
 			{
@@ -47,11 +47,11 @@ var menu_content = [
 				"action" : "NODE"
 			},
 			{
-				"title" : '<a href="world/index.html">The Shattered Isles</a>',
+				"title" : '<a href="https://cqua.github.io/rp/vineyard2/world/">The Shattered Isles</a>',
 				"action" : "worldoverview"
 			},
 			{
-				"title" : '<a href="world/duskwall/index.html">Duskwall</a>',
+				"title" : '<a href="https://cqua.github.io/rp/vineyard2/world/duskwall/">Duskwall</a>',
 				"action" : "duskwall"
 			},
 			{
