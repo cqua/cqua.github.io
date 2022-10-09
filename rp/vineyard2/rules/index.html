@@ -35,9 +35,13 @@
 		     <h1>Core Rules</h1>
          <p class="contents">
              <a href="#CorePrinciples">Core Principles</a>
-           • <a href="#RollingDice">Roling Dice</a>
+           • <a href="#RollingDice">Rolling Dice</a>
            • <a href="#StructureOfTheGame">Structure of the Game</a>
-           • <a href="#Attributes">Attributes</a></p>
+           • <a href="#Attributes">Attributes</a>
+           • <a href="#EffectLevel">Effect Level</a>
+           • <a href="#Harm">Harm</a>
+           • <a href="#Momentum">Momentum</a>
+           • <a href="#Supply">Supply</a></p>
       </div>
     </div>
 		<div class="profile">
@@ -80,10 +84,9 @@
         </ul>
         <p><i>If you would roll zero or fewer dice, instead roll two dice and look at the lowest.</i></p>
         <p>
-          To create a dice pool for a roll, you pick a relevant <a href="#attribute">attribute</a>, and roll dice equal to its number.
+          To create a dice pool for a roll, you pick a relevant <a href="#Attributes">attribute</a>, and roll dice equal to its number.
           Effects which say "take +d" add one die to relevant rolls,
           and effects which say "take -d" subtract one.
-
   			</p>
       </div>
       <div>
@@ -129,20 +132,43 @@
         </ul>
       </div>
       <div>
-  			<h2>Attributes</h2>
+  			<h2 id="EffectLevel">Effect Level</h2>
         <p>
-          Each day begins at <b>Dawn</b>. The characters talk to each other, discuss plans, and prepare for the day.
+          While Attributes govern how likely a given roll is to succeed, Effect Level determines the magnitude of the result. It is largely determined by the equipment and tools used, as well as the environment and circumstances. Before you perform roll, the GM will tell you your predicted effect level.
         </p>
-        <p>
-          When the group is ready, they enter <b>Daylight</b>. Each PC decides what tasks they will accomplish for the day
-          and goes about them. They make rolls, overcome obstacles, and hopefully succeed. See <a href="/daylight/">Daylight</a> for details.
-          When all tasks are finished, the game moves towards <b>Preparation</b>.
-        </p>
-        <p>
-          During Preparation, PCs must return to their chosen Holdout. They then power their generator, set any traps, and decide their
-          strategy. See <a href="/preparation/">Preparation</a> for details. When preparations are complete, and the sun has set, the game enters <b>Holdout</b>, during which they can only wait and survive until <b>Dawn</b> graces them again. See <a href="/holdout/">Holdout</a> for details.
-        </p>
+        <table>
+          <tr><th>Level</th><th>Effect</th></tr>
+          <tr><td class="center">0</td><td><b>Zero.</b> Your achievements are negligable. A fist against stone.</td></tr>
+          <tr><td class="center">1</td><td><b>Limited.</b> You achieve a partial or weak effect. A stone hammer against stone.</td></tr>
+          <tr><td class="center">2</td><td><b>Standard.</b> You achieve what might be expected on an even playing field. A pickaxe against stone.</td></tr>
+          <tr><td class="center">3</td><td><b>Great.</b> You achieve above usual. Spark-craft against stone.</td></tr>
+          <tr><td class="center">4+</td><td><b>Extreme.</b> You achieve beyond great.</td></tr>
+        </table>
+        <h3>Assessing Effect Level</h3>
+        <p>Start with your gut feeling, ask <i>how much could a person of average skill accomplish in this environment?</i>
+        If one side has an advantage in potency, quality, or scale, that side will generally have greater effect. Are resources and time limited or plentiful? Are tools easy to use and effective? Is there a particular weakness to be taken advantage of? Oftentimes, a clever strategy may require fewer dice, but increase effect.</p>
       </div>
+      <div>
+        <h2 id="Harm">Harm</h2>
+        <p>Harm is a consequence which represents a long-lasting injury- physical, mental, or supernatural. When a PC suffers harm, they record the specific injury on their character sheet equal to the level of harm suffered.</p>
+        <p>While a row of harm is filled, the PC suffers the penalty listed for that row. While a PC has two Level-1 Harm, they have -1 effect to all rolls. While a PC has two Level-2 harm, they have -d to all rolls. While a PC has any Level-3 harm, they can't do anything without help from an ally or risking serious consequences.</p>
+        <p>If a PC would record harm, but the row is already filled, the harm increases to the next available level. If any recorded harm would exceed Level-3, that PC is <b>downed</b>, cannot perform any actions, and suffers a <b>severe permanent consequence</b>.</p>
+        <ul><li>To <b>heal a harm</b>, erase the harm from your sheet.</li>
+        <li>To <b>reduce a harm</b>, move it to the previous level <i>only if</i> a space is available.</li>
+        <li>To <b>aggravate a harm</b>, move it to the next available level.</li></ul>
+        <h3>Armor</h3>
+        <p>If a PC has a type of armor that can resist a harm they would suffer, they can mark an armor box to negate the harm. Once an armor box is marked, it cannot be used again until it's restored at Dawn.</p>
+      </div>
+      <div>
+        <h2 id="Momentum">Momentum</h2>
+        <p><b>Momentum</b> represents a PCs extra energy built up throughout the day, which can be spent to exert themselves and achieve above-normal feats. Whenever a PC rolls a <b>Critical Success</b>, they gain 1 Momentum for each 6 rolled after the first. See <a href="holdout/#MometumMoves">Momentum Moves</a> to see how Momentum can be spent.</p>
+        <p>Each PC has a Momentum Cap, which limits how much Momentum can be retained from day to day. When a PC <a href="day/#Rest">rests</a>, they lose all excess Momentum above their Momentum Cap.</p>
+      </div>
+      <div>
+        <h2 id="Supply">Supply</h2>
+        <p>Supply is an abstract measure of food, fuel, and ammunition; which material it is is determined upon use. One unit of supply can feed one person for a day, power an electroplasmic lamp for four hours, or fully load one gun. It can also represent other common resources such as money, common medical supplies like bandages and opium, construction tools, and animal feed. Typical rations would consist of rice, fish, goat-cheese, and wine if you're lucky, or eel and mushrooms if you're not.</p>
+      </div>
+      <hr></hr>
     </div>
   </div>
 
