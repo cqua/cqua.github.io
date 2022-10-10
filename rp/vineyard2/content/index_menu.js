@@ -15,7 +15,7 @@ var menu_content = [
 				"action" : "rules"
 			},
 			{
-				"title" : "<a href='https://cqua.github.io/rp/vineyard2/rules/day/'>Daylight</a>",
+				"title" : "<a href='https://cqua.github.io/rp/vineyard2/rules/day/'>The Day</a>",
 				"action" : "day"
 			},
 			{
