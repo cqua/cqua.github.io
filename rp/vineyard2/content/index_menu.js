@@ -3,64 +3,64 @@ var menu_content = [
 		"name" : "home",
 		"content" : [
 			{
-				"title" : "<a href='https://cqua.github.io/rp/vineyard2/'>Overview</a>",
-				"action" : "index"
+				"title" : "Overview",
+				"action" : ""
 			},
 			{
 				"title" : "Core System",
 				"action" : "NODE"
 			},
 			{
-				"title" : '<a href="https://cqua.github.io/rp/vineyard2/rules/">Core Rules</a>',
+				"title" : 'Core Rules',
 				"action" : "rules"
 			},
 			{
-				"title" : "<a href='https://cqua.github.io/rp/vineyard2/rules/day/'>The Day</a>",
-				"action" : "day"
+				"title" : "Daylight",
+				"action" : "rules/day"
 			},
 			{
-				"title" : "<a href='https://cqua.github.io/rp/vineyard2/rules/night/'>The Night</a>",
-				"action" : "night"
+				"title" : "The Night",
+				"action" : "rules/night"
 			},
 			{
 				"title" : "Character Creation",
 				"action" : "NODE"
 			},
 			{
-				"title" : "<a href='https://cqua.github.io/rp/vineyard2/pcs/'>Creating Your Survivor</a>",
-				"action" : "yoursurvivor"
+				"title" : "Creating Your Survivor",
+				"action" : "pcs"
 			},
 			{
-				"title" : "<a href='https://cqua.github.io/rp/vineyard2/pcs/professions/'>Professions</a>",
-				"action" : "professions"
+				"title" : "Professions",
+				"action" : "pcs/professions"
 			},
 			{
-				"title" : '<a href="https://cqua.github.io/rp/vineyard2/pcs/heritage/">Heritage</a>',
-				"action" : "heritage"
+				"title" : 'Heritage',
+				"action" : "pcs/heritage"
 			},
 			{
-				"title" : '<a href="https://cqua.github.io/rp/vineyard2/pcs/advancement/">Advancement</a>',
-				"action" : "advancement"
+				"title" : 'Advancement',
+				"action" : "pcs/advancement"
 			},
 			{
 				"title" : "The World",
 				"action" : "NODE"
 			},
 			{
-				"title" : '<a href="https://cqua.github.io/rp/vineyard2/world/">The Shattered Isles</a>',
-				"action" : "worldoverview"
+				"title" : 'The Shattered Isles',
+				"action" : "world"
 			},
 			{
-				"title" : '<a href="https://cqua.github.io/rp/vineyard2/world/duskwall/">Duskwall</a>',
-				"action" : "duskwall"
+				"title" : 'Duskwall',
+				"action" : "world/duskwall"
 			},
 			{
 				"title" : "DATE",
 				"action" : "NODE"
 			},
 			{
-				"title" : '<a href="https://cqua.github.io/rp">cqua.github.io/rp</a>',
-				"action" : "return"
+				"title" : 'cqua.github.io/rp',
+				"action" : ".."
 			}
 		]
 	},

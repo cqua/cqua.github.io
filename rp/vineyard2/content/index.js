@@ -12,6 +12,12 @@ function loadmenu(menu, page) {
 		bar.removeChild(bar.lastChild);
 	}
 
+	var environment = 'prod'
+
+	if(window.location.href.substring(0, 5) == 'file:') {
+		environment = 'local'
+	}
+
 	bar.innerHTML = '<div class="sidebar-header"><a href="https://cqua.github.io/rp/vineyard2/">THE LAST TRAIN TO DUSKWALL</a></div>'
 
 	var ul = document.createElement("ul");
@@ -36,8 +42,12 @@ function loadmenu(menu, page) {
 			ul.appendChild(np);
 		} else {
 			var np = document.createElement("li");
-			np.innerHTML = m.content[i].title;
-			if(m.content[i].action == page) {
+			if(environment == 'local') {
+				np.innerHTML = "<a href='" + 'file:///C:/Users/JQUATTROCIOCCHI/Documents/GitHub/cqua.github.io/rp/vineyard2/' + m.content[i].action + "/index.html'>" + m.content[i].title + "</a>";
+			} else {
+				np.innerHTML = "<a href='" + "https://cqua.github.io/rp/vineyard2/" + m.content[i].action + "/'>" + m.content[i].title + "</a>";
+			}
+			if(m.content[i].title == page) {
 				np.childNodes[0].classList.add("active");
 				np.childNodes[0].href = "#";
 			}
