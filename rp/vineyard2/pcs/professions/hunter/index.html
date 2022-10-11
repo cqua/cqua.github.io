@@ -11,7 +11,7 @@
   <!-- Bootstrap CSS CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <!-- Our Custom CSS -->
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../../style.css">
   <!-- <link rel="stylesheet" href="https://cqua.github.io/rp/vineyard2/style.css"> -->
 
   <!-- Font Awesome JS -->
@@ -31,7 +31,7 @@
           <button type="button" id="sidebarCollapse" class="btn btn-info">
             <span class="fas fa-bars">≡</span>
           </button>
-          <h1>Professions</h1>
+          <h1>Hunter</h1>
           <p class="contents">
             <a href="#StartingProfessions">Starting Professions</a>
             • <a href="#AdvancedProfessions">Advanced Professions</a></p>
@@ -42,25 +42,34 @@
         <div><span class='icon'></span>Christian Bravery</div>
       </div>
       <div>
-        <p></p>
+        <h2>A deadly tracker and stealthy infiltrator</h2>
+        <p>[desc]</p>
       </div>
       <div>
-        <h2 id="StartingProfessions">Starting Professions</h2>
-        <p><a href="hunter/"><b>Hunters</b></a></p>
-        <p><b>Reaver</b></p>
-        <p><b>Spider</b></p>
-        <p><b>Stranger</b></p>
+        <h2>Starting as a Hunter</h2>
+        <h3>Attributes</h3>
+        <table>
+          <tr>
+            <th>GR</th><th>FN</th><th>AC</th><th>SN</th><th>AT</th>
+          </tr>
+          <tr>
+            <td class="center">0</td>
+            <td class="center">1</td>
+            <td class="center">0</td>
+            <td class="center">1</td>
+            <td class="center">0</td>
+          </tr>
+        </table>
+        <p>Rivals, allies, stuff</p>
       </div>
       <div>
-        <h2 id="AdvancedProfessions">Advanced Professions</h2>
-        <p><b>Advisor</b></p>
-        <p><b>Butcher</b></p>
-        <p><b>Chemist</b></p>
-        <p><b>Chimera</b></p>
-        <p><b>Hunters</b></p>
-        <p><b>Reaver</b></p>
-        <p><b>Spider</b></p>
-        <p><b>Stranger</b></p>
+        <h2>Core Hunter</h2>
+        <p><b>Attributes</b> Increase two Attributes by 1.</p>
+        <p><b>Momentum Cap</b> +2</p>
+        <p><b>Survey Proficiency</b> Take +d to Survey rolls.</p>
+        <p><b>Nimble Recovery</b> <i>[Holdout Action]</i> Reduce one harm and move to an adjacent zone.</p>
+        <p><b>Hidden Blade</b> Attacks you make during the <a href="../../../rules/night/#HiddenPhase">Hidden Phase</a> have <b>Great</b> effect.</p>
+        <p><b>Deadshot</b> Spend 1 Momentum when making a ranged attack: greatly increase the range of the attack.</p>
       </div>
       <div>
         <p><a href="">↑ Back to top ↑</a></p>
@@ -76,12 +85,12 @@
   <!-- Bootstrap JS -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
-  <script src="../../content/index.js"></script>
-  <script src="../../content/index_menu.js"></script>
+  <script src="../../../content/index.js"></script>
+  <script src="../../../content/index_menu.js"></script>
 
   <script type="text/javascript">
       $(document).ready(function () {
-		       loadmenu("professions", "pcs/professions");
+		       loadmenu("professions", "pcs/professions/hunter");
           $('#sidebarCollapse').on('click', function () {
               $('#sidebar').toggleClass('active');
           });
