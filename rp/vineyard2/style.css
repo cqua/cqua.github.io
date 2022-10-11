@@ -119,8 +119,8 @@ a:focus {
 
 #content > div > a,
 #content > div > p > a,
-#content > div > ul > a,
-#content > div > ol > a {
+#content > div > ul > li > a,
+#content > div > ol > li > a {
 	color: #33f;
 }
 

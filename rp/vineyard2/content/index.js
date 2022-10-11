@@ -47,7 +47,7 @@ function loadmenu(menu, page) {
 			} else {
 				np.innerHTML = "<a href='" + "https://cqua.github.io/rp/vineyard2/" + m.content[i].action + "/'>" + m.content[i].title + "</a>";
 			}
-			if(m.content[i].title == page) {
+			if(m.content[i].action == page) {
 				np.childNodes[0].classList.add("active");
 				np.childNodes[0].href = "#";
 			}

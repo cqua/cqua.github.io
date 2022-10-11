@@ -65,48 +65,92 @@ var menu_content = [
 		]
 	},
 	{
-		"name" : "ancestries",
+		"name" : "professions",
 		"content" : [
 			{
-				"title" : "<a href='../index.html'>&lt==</a>",
-				"action" : "home"
+				"title" : "&lt==",
+				"action" : ""
 			},
 			{
-				"title" : "Ancestries",
+				"title" : 'Overview',
+				"action" : "pcs/professions"
+			},
+			{
+				"title" : "Starter Professions",
 				"action" : "NODE"
 			},
 			{
-				"title" : '<a href="overview.html">Overview</a>',
-				"action" : "overview"
+				"title" : 'Hunter',
+				"action" : "pcs/professions/hunter"
 			},
 			{
-				"title" : '<a href="human.html">Human</a>',
-				"action" : "human"
+				"title" : 'Reaver',
+				"action" : "pcs/professions/reaver"
 			},
 			{
-				"title" : '<a href="beastfolk.html">Beastfolk</a>',
-				"action" : "beastfolk"
+				"title" : 'Spider',
+				"action" : "pcs/professions/spider"
 			},
 			{
-				"title" : '<a href="clockwork.html">Clockwork</a>',
-				"action" : "clockwork"
+				"title" : 'Stranger',
+				"action" : "pcs/professions/stranger"
 			},
 			{
-				"title" : '<a href="elf.html">Elf</a>',
-				"action" : "elf"
+				"title" : "Advanced Professions",
+				"action" : "NODE"
 			},
 			{
-				"title" : '<a href="goblin.html">Goblin</a>',
-				"action" : 'goblin'
+				"title" : 'Advisor',
+				"action" : "pcs/professions/advisor"
 			},
 			{
-				"title" : '<a href="stormsoul.html">Stormsoul</a>',
-				"action" : "stormsoul"
+				"title" : 'Butcher',
+				"action" : "pcs/professions/butcher"
 			},
 			{
-				"title" : '<a href="woodwose.html">Woodwose</a>',
-				"action" : "woodwose"
-			}
+				"title" : 'Chemist',
+				"action" : "pcs/professions/chemist"
+			},
+			{
+				"title" : 'Chimera',
+				"action" : "pcs/professions/chimera"
+			},
+			{
+				"title" : 'Druid',
+				"action" : "pcs/professions/druid"
+			},
+			{
+				"title" : 'Gravewarden',
+				"action" : "pcs/professions/gravewarden"
+			},
+			{
+				"title" : 'Grenadier',
+				"action" : "pcs/professions/grenadier"
+			},
+			{
+				"title" : 'Gunner',
+				"action" : "pcs/professions/gunner"
+			},
+			{
+				"title" : 'Surveyor',
+				"action" : "pcs/professions/surveyor"
+			},
+			{
+				"title" : 'Sentinel',
+				"action" : "pcs/professions/sentinel"
+			},
+			{
+				"title" : 'Thief',
+				"action" : "pcs/professions/thief"
+			},
+			{
+				"title" : 'Undying',
+				"action" : "pcs/professions/undying"
+			},
+			{
+				"title" : 'Whisper',
+				"action" : "pcs/professions/whisper"
+			},
 		]
 	},
 	{
