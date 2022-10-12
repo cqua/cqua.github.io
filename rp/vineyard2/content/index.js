@@ -43,7 +43,7 @@ function loadmenu(menu, page) {
 		} else {
 			var np = document.createElement("li");
 			if(environment == 'local') {
-				np.innerHTML = "<a href='" + 'file:///C:/Users/JQUATTROCIOCCHI/Documents/GitHub/cqua.github.io/rp/vineyard2/' + m.content[i].action + "/index.html'>" + m.content[i].title + "</a>";
+				np.innerHTML = "<a href='" + 'file:///C:/Users/JQUATTROCIOCCHI/Documents/GitHub/cqua.github.io/rp/vineyard2/' + m.content[i].action + "index.html'>" + m.content[i].title + "</a>";
 			} else {
 				np.innerHTML = "<a href='" + "https://cqua.github.io/rp/vineyard2/" + m.content[i].action + "/'>" + m.content[i].title + "</a>";
 			}

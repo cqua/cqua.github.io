@@ -12,15 +12,15 @@ var menu_content = [
 			},
 			{
 				"title" : 'Core Rules',
-				"action" : "rules"
+				"action" : "rules/"
 			},
 			{
 				"title" : "Daylight",
-				"action" : "rules/day"
+				"action" : "rules/day/"
 			},
 			{
 				"title" : "The Night",
-				"action" : "rules/night"
+				"action" : "rules/night/"
 			},
 			{
 				"title" : "Character Creation",
@@ -28,19 +28,19 @@ var menu_content = [
 			},
 			{
 				"title" : "Creating Your Survivor",
-				"action" : "pcs"
+				"action" : "pcs/"
 			},
 			{
 				"title" : "Professions",
-				"action" : "pcs/professions"
+				"action" : "pcs/professions/"
 			},
 			{
 				"title" : 'Heritage',
-				"action" : "pcs/heritage"
+				"action" : "pcs/heritage/"
 			},
 			{
 				"title" : 'Advancement',
-				"action" : "pcs/advancement"
+				"action" : "pcs/advancement/"
 			},
 			{
 				"title" : "The World",
@@ -48,11 +48,11 @@ var menu_content = [
 			},
 			{
 				"title" : 'The Shattered Isles',
-				"action" : "world"
+				"action" : "world/"
 			},
 			{
 				"title" : 'Duskwall',
-				"action" : "world/duskwall"
+				"action" : "world/duskwall/"
 			},
 			{
 				"title" : "DATE",
