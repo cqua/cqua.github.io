@@ -17,23 +17,23 @@ stranger
   Predictions
   CC
 
+  Cutter
+  Hound
+  Spider
+  Stranger
 Advanced Professions
-  survivalist   - cutter+hound
-  mutant        - cutter+leech
-  ???           - cutter+lurk
-  captain       - cutter+spider
-                - cutter+stranger
-  fireworks     - hound+leech
-                - hound+lurk
-                - hound+spider
-                - hound+stranger
-  poisoner      - leech+lurk
-  healer        - leech+spider
-                - leech+stranger
-                - lurk+spider
-  unseen        - lurk+stranger
-  puppeteer     - spider+stranger
-
+  Berserker [C]
+  Chemist [S]
+  Chimera [R]
+  Defender [C]
+  Druid [R]
+  Gravewarden [S]
+  Gunslinger [H]
+  Explorer [H]
+  Lurk [H]
+  Manipulator [S]
+  Undying [C]
+  Whisper [R]
 
 
   Special Armor
