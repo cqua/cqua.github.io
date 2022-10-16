@@ -59,7 +59,7 @@ var menu_content = [
 				"action" : "NODE"
 			},
 			{
-				"title" : 'cqua.github.io/rp',
+				"title" : 'cqua.github.io/rp/',
 				"action" : ".."
 			}
 		]
@@ -73,7 +73,7 @@ var menu_content = [
 			},
 			{
 				"title" : 'Overview',
-				"action" : "pcs/professions"
+				"action" : "pcs/professions/"
 			},
 			{
 				"title" : "Starter Professions",
@@ -81,19 +81,19 @@ var menu_content = [
 			},
 			{
 				"title" : 'Hunter',
-				"action" : "pcs/professions/hunter"
+				"action" : "pcs/professions/hunter/"
 			},
 			{
 				"title" : 'Reaver',
-				"action" : "pcs/professions/reaver"
+				"action" : "pcs/professions/reaver/"
 			},
 			{
 				"title" : 'Spider',
-				"action" : "pcs/professions/spider"
+				"action" : "pcs/professions/spider/"
 			},
 			{
 				"title" : 'Stranger',
-				"action" : "pcs/professions/stranger"
+				"action" : "pcs/professions/stranger/"
 			},
 			{
 				"title" : "Advanced Professions",
