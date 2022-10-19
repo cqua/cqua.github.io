@@ -3,6 +3,10 @@
 
 var h;
 
+var pc = 'D:/Github/Web Projects/home/'
+var work_laptop = 'C:/Users/JQUATTROCIOCCHI/Documents/GitHub/cqua.github.io/'
+var personal_lappy = 'C:/Users/jeffr/Documents/Github/cqua.github.io/'
+
 function loadmenu(menu, page) {
 	var bar = document.getElementById("sidebar");
 	var i = -1;
@@ -43,7 +47,7 @@ function loadmenu(menu, page) {
 		} else {
 			var np = document.createElement("li");
 			if(environment == 'local') {
-				np.innerHTML = "<a href='" + 'file:///C:/Users/jeffr/Documents/Github/cqua.github.io/rp/vineyard2/' + m.content[i].action + "index.html'>" + m.content[i].title + "</a>";
+				np.innerHTML = "<a href='" + 'file:///' + pc + 'rp/vineyard2/' + m.content[i].action + "index.html'>" + m.content[i].title + "</a>";
 			} else {
 				np.innerHTML = "<a href='" + "https://cqua.github.io/rp/vineyard2/" + m.content[i].action + "'>" + m.content[i].title + "</a>";
 			}
