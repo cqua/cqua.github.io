@@ -22,22 +22,22 @@ STARTING FACTIONS
 	Adept to the Path of Echoes
 		Karth Orris - respected member
 		Selia - legend
-		
+
 	*will not appear
 
 FACTIONS OF THE WASTES
-	The Path of Echoes 
+	The Path of Echoes
 		seek to study the abominations
 		they see it as the next evolution of humanity
 		Enemy to the "Church of Flame"
-		
+
 		Created "Blighttown" as failed experiment
 		Enemy to Scavengers, sees them as wanton destroyers
-	
+
 	Deathlands Scavengers
 		Largely Severosi warriors and Ironhook prisoners
 		led by the Lady Thorn and her right hand Richter
-		
+
 		Aims to destroy Blighttown
 		Enemy to PoE, sees them as unholy manipulators
 		Trades with the Dimmer Sisters
@@ -46,7 +46,7 @@ FACTIONS OF THE WASTES
 		Roslyn & Irene
 		Reputation for dark arcana
 		trying to bring life to the wasteland
-		
+
 		Accept members from Blighttown
 		Supplies the Scavengers
 
@@ -62,18 +62,19 @@ NPCs OF THE WASTES
 		the soul with many bodies
 		"The Amalgam" "The Blue Caravan"
 		Looking for their "True Love"?
-		
+
 		Looks bad, is good
-	
+
 	Bazco Baz [Chaos]
 		A big Akorosi man who smells like whiskey
 		Leader of the Lampblacks
 		Rogue
-		
+
 			is never sure whether people are calling him "Baz" or "Boss"
-			
+
 		looks bad, is bad
-		
+		always stealing
+
 	Pickett Henner [Amnesty]
 		Lanky, Slimy Skovlander
 		Loyal to Bazco, "The Big Man"
@@ -82,28 +83,38 @@ NPCs OF THE WASTES
 	Mercy & Grace [Valor]
 		Severosi & Skovlander
 		A Deathlands Scavenger
-		
+
+		destroying wells of souls
+
 		looks bad, is good
 
 	Telda [Blood]
 		An abomination which retained their mind
-		
+		getting supplies
+
 		looks bad, is good
-	
+
 	Karth Orris [Truth]
 		Iruvian man with dark hair and brown eyes, wears bold, fine clothes (gregarious, smiley, insightful)
 		a member of the path of echoes
 		explorer & documentor
 		Selling goods "complements of the Hive"
-		
+		investigating the truth
+
 		many of Orris' goods are gotten by Chiral Synthesis, retreiving things from outside of time.
 		They are then branded with the Golden Bee
 		looks good, is bad??
-	
+
 	Roslyn Dimmer [Growth]
 		A dark-haired Akorosi woman with a ghostly appearance
 		A Dimmer Sister
-		
+		getting rare plants
+
 		holds a suspicious package of seeds
 
 		looks good, is good
+
+EVENTS
+	Valor v Chaos - Bazco steals from the Deathlands Scavengers and comes to the players
+	Truth v Blood - Karth is suspicious of Telda?
+	Amnesty v Growth - Pickett is going to
