@@ -63,6 +63,10 @@ NPCs OF THE WASTES
 		"The Amalgam" "The Blue Caravan"
 		Looking for their "True Love"?
 
+		trading memories / thought strands
+			asks the players to kidnap Karth
+
+
 		Looks bad, is good
 
 	Bazco Baz [Chaos]
@@ -72,8 +76,10 @@ NPCs OF THE WASTES
 
 			is never sure whether people are calling him "Baz" or "Boss"
 
+
 		looks bad, is bad
 		always stealing
+			Steals from the Scavengers
 
 	Pickett Henner [Amnesty]
 		Lanky, Slimy Skovlander
@@ -85,12 +91,14 @@ NPCs OF THE WASTES
 		A Deathlands Scavenger
 
 		destroying wells of souls
+			Tries to kill Telda
 
 		looks bad, is good
 
 	Telda [Blood]
 		An abomination which retained their mind
 		getting supplies
+
 
 		looks bad, is good
 
@@ -100,6 +108,7 @@ NPCs OF THE WASTES
 		explorer & documentor
 		Selling goods "complements of the Hive"
 		investigating the truth
+			wants the biz on the Roslyn
 
 		many of Orris' goods are gotten by Chiral Synthesis, retreiving things from outside of time.
 		They are then branded with the Golden Bee
@@ -109,6 +118,7 @@ NPCs OF THE WASTES
 		A dark-haired Akorosi woman with a ghostly appearance
 		A Dimmer Sister
 		getting rare plants
+			Get seeds from a structure Bozco has claimed
 
 		holds a suspicious package of seeds
 
