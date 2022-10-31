@@ -1,25 +1,25 @@
 STARTING FACTIONS
-	An appointed Magistrate of the Duskwall High Council
+	An appointed MAGISTRATE of the Duskwall High Council
 		Lord Drake*
 		Bazco Baz - ruffian, problem
 		Lady Thorn - threat, opposition
-	Supervisor for the Ministry of Preservation
+	SUPERVISOR for the Ministry of Preservation
 		Lady Thorn - threat, opposition
 		Selia - spooky legend
-	Initiate to the Church of Flame
+	PRIEST to the Church of Flame
 		Lord Drake*
 		Lady Thorn - respected member
-	Merchant of the Hive
+	MERCHANT of the Hive
 		Karth Orris - respected member
-	Bravo for the Lampblacks
+	LAMPBLACK Bravo
 		Bazco Baz - leader
 		Pickett Henner - right hand to Bazco
-	Prisoner of Ironhook Penitentiary
+	PRISONER of Ironhook Penitentiary
 		Lady Thorn - legend
 		Grace & Mercy - martyrs
-	A Dimmer Sister
+	A Dimmer SISTER
 		Roslyn Dimmer - respected member
-	Adept to the Path of Echoes
+	ADEPT to the Path of Echoes
 		Karth Orris - respected member
 		Selia - legend
 
