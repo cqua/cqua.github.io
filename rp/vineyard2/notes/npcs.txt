@@ -1,5 +1,5 @@
 == === ==  FACTIONS OF THE WASTES  == === ==
-	The Path of Echoes - Monastic Keepers of Knowledge & Light
+	THE PATH OF ECHOES - Monastic Keepers of Knowledge & Light
 		seek to study the abominations
 		they see it as the next evolution of humanity
 		Enemy to the "Church of Flame"
@@ -11,7 +11,7 @@
 		Want salvaged tech/artifacts
 		Offer knowledge/artifacts
 
-	Deathlands Scavengers - "Heroic" Abomination-Slayers
+	DEATHLANDS SCAVENGERS - "Heroic" Abomination-Slayers
 		Largely Severosi warriors and Ironhook prisoners
 		led by the Lady Thorn and her right hand Richter
 
@@ -24,7 +24,7 @@
 
 		The darkness is their drug
 
-	The Dimmer Sisters - The Bioluminescence
+	THE DIMMER SISTERS - The Bioluminescence
 		Roslyn & Irene
 		Reputation for dark arcana
 		trying to bring life to the wasteland
@@ -35,7 +35,7 @@
 		Want plant samples
 		Offer food & drugs
 
-	Raltine Blood in the Dark
+	RALTINE BLOOD IN THE DARK
 		Infected and still human - partially transformed - adapted
 		Created by Path of Echoes
 		Trades with Dimmer Sisters
@@ -45,7 +45,7 @@
 
 
 == === ==  NPCs OF THE WASTES  == === ==
-	Selia [Breath]
+	SELIA [Breath]
 		information broker, reconciled spirit moves from body to body
 		Attached to disattachment
 		found nowhere, wanderer
@@ -56,43 +56,39 @@
 		trading memories / thought strands
 			asks the players to kidnap Karth
 
-
-		Looks bad, is good
-
-	Bazco Baz [Chaos]
+	BAZCO BAZ [Chaos]
 		A big Akorosi man who smells like whiskey
 		Leader of the Lampblacks
 		Rogue
 
 			is never sure whether people are calling him "Baz" or "Boss"
-
-
-		looks bad, is bad
 		always stealing
 			Steals from the Scavengers
 
-	Pickett Henner [Amnesty]
-		Lanky, Slimy Skovlander
+	PICKETT HENNER [Amnesty]
+		Lanky, Slimy Skovlander Man
 		Loyal to Bazco, "The Big Man"
 		Chicken
 
-	Mercy & Grace [Valor]
-		Severosi & Skovlander
-		A Deathlands Scavenger
+	GRACE [Valor]
+		Skovlander Deathlands Scavenger, leather armor
+
+		Dedicated to good & honor
 
 		destroying wells of souls
+
+	MERCY [Contract]
+		Severosi Deathlands Scavenger, plate armor
+
+		Has multiple souls in her head, is a walking soul-well
+		Dedicated to slaying the abominations
 			Tries to kill Telda
 
-		looks bad, is good
-
-	Telda [Blood]
+	TELDA [Blood]
 		An abomination which retained their mind
 		getting supplies
 
-
-		looks bad, is good
-
-	Karth Orris [Truth]
+	KARTH ORRIS [Truth]
 		Iruvian man with dark hair and brown eyes, wears bold, fine clothes (gregarious, smiley, insightful)
 		a member of the path of echoes
 		explorer & documentor
@@ -102,14 +98,11 @@
 
 		many of Orris' goods are gotten by Chiral Synthesis, retreiving things from outside of time.
 		They are then branded with the Golden Bee
-		looks good, is bad??
 
-	Roslyn Dimmer [Growth]
+	ROSLYN DIMMER [Growth]
 		A dark-haired Akorosi woman with a ghostly appearance
 		A Dimmer Sister
 		getting rare plants
-			Get seeds from a structure Bozco has claimed
+			Get seeds from a structure Bazco has claimed
 
 		holds a suspicious package of seeds
-
-		looks good, is good

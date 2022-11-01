@@ -58,7 +58,17 @@
 	Chaos v Blood
 
 
-	== === ==  EVENTS  == === ==
-		Valor v Chaos - Bazco steals from the Deathlands Scavengers and comes to the players
-		Truth v Blood - Karth is suspicious of Telda?
-		Amnesty v Growth - Pickett is going to
+== === ==  EVENTS  == === ==
+	Valor v Chaos - Bazco steals from the Deathlands Scavengers and comes to the players
+	Truth v Blood - Karth is suspicious of Telda?
+	Amnesty v Growth - Pickett is going to
+
+== === ==  Ghosts  == === ==
+	Spirits feed on Souls.
+	A spirit is a person's uniqueness, a soul is what makes them alive
+		- Body is the hardware, Spirit is the software, Soul is the power source
+	A ghost is a spirit separated from body, which must feed on souls or deteriorate.
+
+== === ==  LOCATIONS  == === ==
+	SOUL WELL
+		Soul Wells are sites which spawn souls, thus attracting spirits or worse.
