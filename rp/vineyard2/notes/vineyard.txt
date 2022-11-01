@@ -1,25 +1,22 @@
 THE VINEYARD
 
-SITUATION:
-	UWP: E47720H-4
-	Players are stranded on a rimworld. The rimworld is characterized by:
-		Trees
-		An atmosphere requiring air filters
-		Mechanized technology - Guns, computers, antiseptics
-		Hostile lifeforms, more active during the night, which will not or cannot kill the players
-		
-
-SKILLS:
-	Grit (GR)
-		One's ability to strengthen their body through aura
-	Finesse (FN)
-		One's ability to boost the fidelity of their body through aura
-	Acuity (AC)
-		One's experience and mental insight; one's ability to use aura to change how they are percieved
-	Influence (IN)
-		One's charisma and persuasiveness, through charm, deceipt, or menace.
-	Psionics (PS) / Forecast
-		One's ability to project forth their aura to create unique effects
+SKILLS
+	Grit
+		Toughness
+		Melee
+		Stamina
+	Finesse
+		Dodge
+		Mobility
+		Drive
+	Acuity
+		Survival
+		Comtech
+		Medical
+	Sense
+		Observation
+		Range
+		Insight
 
 CHECKS:
 	Pick a skill, Referee determines the base effect
@@ -31,7 +28,7 @@ CHECKS:
 		On a 4 or 5, you succeed with a consequence
 		On a 6, you succeed
 		If you roll multiple 6s, you get a critical success, and take +effect. You gain 1 momentum for every 6 rolled after the first, to a cap of 3.
-		
+
 EFFECT LEVELS:
 	0: Zero effect
 	1: Limited
@@ -47,9 +44,9 @@ COMBAT
 		Slow Turns
 		Slow Monster Turns
 		End of Round
-	
+
 	BEGINNING OF ROUND:
-		At the beginning of the round, resolve any triggers, then each player chooses Fast Turn or Slow Turn. 
+		At the beginning of the round, resolve any triggers, then each player chooses Fast Turn or Slow Turn.
 	FAST TURNS:
 		All players who chose Fast Turn may either act or move once during this phase. Players determine the order in which this is done amongst themselves. Once a player has begun acting or moving, they must finish before another player can act or move.
 	FAST MONSTER TURNS:
@@ -60,7 +57,7 @@ COMBAT
 		Monsters who did nothing during the Fast Monster Turns phase may move and act during this phase.
 	END OF ROUND:
 		Resolve any triggers.
-		
+
 	PLAYER ACT:
 		Players can act to attack, use gear, or interact with objects.
 	PLAYER MOVEMENT:
@@ -72,7 +69,7 @@ COMBAT
 			SURGE - Spend 1 Momentum: Perform 1 action immediately. The action cannot require more than 10 seconds. Actions that can be chosen include attacking, setting a trap, or surveying a field. Actions that cannot be chosen include picking a lock, reading a book, or having a conversation.
 			DASH - Spend 1 Momentum: Move up to your speed.
 			DODGE - Spend 1 Momentum: Receive no harm from 1 incoming attack.
-			
+
 	whenever a player would take damage, if they have armor, they can mark an armor box and nullify the damage
 	If a player suffers level 4 harm, they suffer a random Long Term Consequence, and cannot participate in any activities until next dawn.
 	Physical
@@ -109,87 +106,6 @@ EQUIPMENT
 ORIGIN
 	Each player adds 1 to three different stats
 
-	Soldier CUTTER - FIGHTER
-		1 1 0 0 0
-		Recipes:
-			Heavy Stick
-			Manacles
-			Chain
-			Armor - Complicated
-		When you cook, erase a level-1 harm.
-		When you scavenge and succeed, each teammate takes 1 momentum.
-		When you scavenge and succeed, you can additionally choose the following option:
-			You find supply and a weapon (referee's choice).
-		Spend special armor to surge or dodge
-		Spend 1 Momentum: take the damage a teammate would have taken. Reduce the damage 1 level.
-		Higher load limits [5/7/8]
-		Pull aggro / taunt
-		+1d to intimidate
-		Morning person +1 momentum
-		
-	Surveyor HOUND
-		1 0 1 0 0
-		Recipes:
-			Homemade Rifle - Complicated
-			Beartrap
-			Chain Trap
-		Spend 1 Momentum: double weapon range.
-		If you would lose track of someone, spend your special armor to keep tracking them.
-		When you roll Acuity to locate a target, you get +1 effect.
-		When you hide in a prepared position or use camouflage, you get +1d to rolls to avoid detection.
-		If you would mark Hungry as a level-2 harm or higher, you do not mark harm.
-		Better at finding areas to scavenge
-		When you scout, take 1 Momentum.
-		+ Accuracy
-		+Skirmish
-		When you 
-		Animals
-		
-	Spacer LEECH
-		0 1 1 0 0
-		Recipes:
-			Stimpack - Complicated
-			Bomb
-			landmine
-			Anathema Scent
-			Enticing Scent
-		You may expend special armor to reduce the consequence of chemical effects, or to gain +1 effect when handling chemicals.
-		When you Study a malady or corpse, take 1 Momentum.
-		More resources when foraging
-		Weak spot
-		Explosives
-		
-	Runner LURK - SCOUNDREL
-		1 1 0 0 0
-		Recipes:
-			Climbing gear
-			Lockpick
-		When you scavenge and succeed, you can additionally choose the following option:
-			You may take an additional day action after this (You may only do this once per day).
-		Scale walls & Pick locks
-		When you attack from hiding or activate a trap, take +1d.
-		When you roll with zero effect, take +1d. Any harm you take as a consequence is one level higher.
-		Spend 1 Momentum: double movement or direct an attack at you at an enemy.
-		Choose a skill. When you are leader using that skill, you can only suffer harm once regardless of failures.
-		Expend special armor to remain undetected.
-		
-		
-	Broker SPIDER/PRIEST
-		0 0 1 1 0
-		When you rest, you may choose the following action:
-			Grant another player an additional daytime action. You may only do this once per day.
-		compel human
-		Encourage
-			Spend 1 Momentum: Target player stands up if they are knocked down, and their next attack made before the end of their next turn gets +1d.
-		Allies in your zone get +1 Grit, +1 Finesse, +1 Acuity, or +1 Influence
-		
-	Far Traveller / Stranger / Outsider WHISPER
-		0 0 1 0 1
-		Foresee event
-		Foresee intent
-		Compel Beast
-		Life sense
-		
 HERITAGE
 	Core World
 	Militant world
@@ -204,6 +120,7 @@ DAYLIGHT
 
 	Each morning, every player who did not mark a level-4 harm the previous night reduce all harm by 1 and gain 1 xp. Then, all players mark level 1 harm: Hungry.
 	While scavenging, players will find Supply. Players can spend supply to eat, refuel the generator, or reload a weapon
+	SURVEY: Each day, events are revealed around the map
 	Each day, each player can perform two actions
 		Raid
 		Scout
@@ -215,17 +132,17 @@ DAYLIGHT
 					Standard: 1d3
 					Great: 2d3
 					Extreme: 2d4
-					
+
 				On a mixed success, choose one:
 					You suffer level-2 harm of the referee's choice and find supply.
 					You lose a day action (only if this is your first action of the day) and find supply.
 					You return empty-handed.
-					
+
 				On a success, choose one:
 					You take +1 effect and find supply.
 					You find supply and a place to relax (reduce one harm 1 level).
 					You find supply and something useful (referee's choice).
-					
+
 				On a critical success, you either find an item of your choice, or choose two from above.
 			If multiple people work together on an outing, choose a leader. Each team member makes a roll. The result is the best result, but the leader suffers level 1 harm for each fumble rolled.
 		Rest
@@ -243,17 +160,18 @@ DAYLIGHT
 						the created item has +1 effect (if applicable)
 						doubled amount
 						you manage to minimize resource cost, regain the supply spent.
-					
+
 				Base recipes:
 					Filter mask
-		
+
 		Players can acquire new sequences for the replicator to print.
+		WHEN you use a Fine item, take +1 effect
 
 	Base has
 		Generator that requires fuel
 			Every Raid may acquire 2/3 Night fuel on average per person
 		Healing upgrades: oven, well
-	
+
 ENEMIES
 	Dogs, 2 damage. 1 damage recoils them
 	Creeping Mold / Ants
@@ -261,30 +179,11 @@ ENEMIES
 	Wolf - Priority token
 		(give players a way to fuck with priority tokens)
 	L4D Special infected
-	
+
 	Encounters should answer the following questions:
 		- What makes splitting up a bad idea?
 		- What makes the players do it anyway?
 			Enemies that must be approached
 			Enemies that attack the generator
-		
-		
-Colonial construction resources include:
-	Administrative NHP
-	genetic variance library
-	printers
-	colony ship w/ prefab habitation pods
-	drones
-	medical supplies
-	pan-biome seed libraries
-	
-	
-Why was the colony abandoned?
-	They discovered something. Did they take it? Did they use it?
-	The colony was built to fail, to hide from the coalition
-	It's a training ground for a bioweapon, disguised as a failed colony
-	it was supposed to be a jurassic park
-	
-	
+
 Annapurna
-The 

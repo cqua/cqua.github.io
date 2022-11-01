@@ -1,60 +1,50 @@
-STARTING FACTIONS
-	An appointed MAGISTRATE of the Duskwall High Council
-		Lord Drake*
-		Bazco Baz - ruffian, problem
-		Lady Thorn - threat, opposition
-	SUPERVISOR for the Ministry of Preservation
-		Lady Thorn - threat, opposition
-		Selia - spooky legend
-	PRIEST to the Church of Flame
-		Lord Drake*
-		Lady Thorn - respected member
-	MERCHANT of the Hive
-		Karth Orris - respected member
-	LAMPBLACK Bravo
-		Bazco Baz - leader
-		Pickett Henner - right hand to Bazco
-	PRISONER of Ironhook Penitentiary
-		Lady Thorn - legend
-		Grace & Mercy - martyrs
-	A Dimmer SISTER
-		Roslyn Dimmer - respected member
-	ADEPT to the Path of Echoes
-		Karth Orris - respected member
-		Selia - legend
-
-	*will not appear
-
-FACTIONS OF THE WASTES
-	The Path of Echoes
+== === ==  FACTIONS OF THE WASTES  == === ==
+	The Path of Echoes - Monastic Keepers of Knowledge & Light
 		seek to study the abominations
 		they see it as the next evolution of humanity
 		Enemy to the "Church of Flame"
 
-		Created "Blighttown" as failed experiment
+		Created the Raltine as failed experiment
 		Enemy to Scavengers, sees them as wanton destroyers
 
-	Deathlands Scavengers
+		In a steel bunker
+		Want salvaged tech/artifacts
+		Offer knowledge/artifacts
+
+	Deathlands Scavengers - "Heroic" Abomination-Slayers
 		Largely Severosi warriors and Ironhook prisoners
 		led by the Lady Thorn and her right hand Richter
 
-		Aims to destroy Blighttown
+		Aims to destroy Raltine
 		Enemy to PoE, sees them as unholy manipulators
 		Trades with the Dimmer Sisters
 
-	The Dimmer Sisters
+		Want food & drugs
+		Can offer weapons
+
+		The darkness is their drug
+
+	The Dimmer Sisters - The Bioluminescence
 		Roslyn & Irene
 		Reputation for dark arcana
 		trying to bring life to the wasteland
 
-		Accept members from Blighttown
+		Accept members from the Raltine
 		Supplies the Scavengers
 
-	Blighttown
+		Want plant samples
+		Offer food & drugs
+
+	Raltine Blood in the Dark
+		Infected and still human - partially transformed - adapted
 		Created by Path of Echoes
 		Trades with Dimmer Sisters
 
-NPCs OF THE WASTES
+		What they want: Food / Drugs
+		What they can offer: Pheromones
+
+
+== === ==  NPCs OF THE WASTES  == === ==
 	Selia [Breath]
 		information broker, reconciled spirit moves from body to body
 		Attached to disattachment
@@ -123,8 +113,3 @@ NPCs OF THE WASTES
 		holds a suspicious package of seeds
 
 		looks good, is good
-
-EVENTS
-	Valor v Chaos - Bazco steals from the Deathlands Scavengers and comes to the players
-	Truth v Blood - Karth is suspicious of Telda?
-	Amnesty v Growth - Pickett is going to

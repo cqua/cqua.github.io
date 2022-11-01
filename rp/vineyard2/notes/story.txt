@@ -1,0 +1,64 @@
+== === ==  PARANOIA  == === ==
+	Its a dream
+	its scientists
+	its my friends betrayal
+
+== === ==  ENTANGLEMENTS  == === ==
+	Players roll
+		Arrest
+			Enemy to Greater power
+				Bribe, fight, or run
+		Cooperation
+			Ally to Greater power
+				Do what they want
+				forfeit rep
+		Demonic Notice
+			Dark bargain
+			forfeit rep
+		Flipped
+			Lose loyalty of an contact, patron or client
+		Faction Trouble
+			Enemy to Equal power
+				Bribe, fight, or lose rep
+		Interrogation
+			pay coin
+			take harm
+			tell them, take heat
+		Hostage
+		Reprisals
+
+== === ==  ASPECTS  == === ==
+	Breath 		Disattachment
+	Contract	Attachment
+	Amnesty		My People
+	Truth		Law
+	Chaos		Self
+	Valor		What's Right
+	Blood		Humanity
+	Growth		Life
+
+== === ==  ASPECT CONFLICTS  == === ==
+	Amnesty v Truth
+		What happens when someone you trust breaks the law?
+		What happens when someone you love lies to you?
+		What happens when someone you legally owe something to someone you hate?
+	Chaos v Valor
+		Doing the right thing vs doing whats right for yourself.
+		Would you sacrifice yourself for another?
+	Blood v Growth
+		Who has more value, an animal or a human?
+		Do you accept those who are different or do you expect them to better themselves?
+	Amnesty v Chaos
+		Do you give yourself for your friends?
+	Truth v Valor
+		What happens when the law is injust?
+		What happens when a good person breaks the law?
+		Can a lie be morally right?
+		Can one do evil by telling the truth?
+	Chaos v Blood
+
+
+	== === ==  EVENTS  == === ==
+		Valor v Chaos - Bazco steals from the Deathlands Scavengers and comes to the players
+		Truth v Blood - Karth is suspicious of Telda?
+		Amnesty v Growth - Pickett is going to
