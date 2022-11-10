@@ -1,29 +1,74 @@
 == === ==  STARTING FACTIONS  == === ==
 	An appointed MAGISTRATE of the Duskwall High Council
-		Lord Drake*
-		Bazco Baz - ruffian, problem
-		Lady Thorn - threat, opposition
+		Attributes: 0 1 1 0 0
+		Connections
+			Lord Drake*
+			Bazco Baz - ruffian, problem
+			Lady Thorn - threat, opposition
 	SUPERVISOR for the Ministry of Preservation
-		Lady Thorn - threat, opposition
-		Selia - spooky legend
+		Attributes: 0 0 1 1 0
+		Connections
+			Lady Thorn - threat, opposition
+			Selia - spooky legend
 	PRIEST to the Church of Flame
-		Lord Drake*
-		Lady Thorn - respected member
+		Attributes: 0 1 0 1 0
+		Connections
+			Lord Drake*
+			Lady Thorn - respected member
 	MERCHANT of the Hive
-		Karth Orris - respected member
+		Attributes: 0 1 0 1 0
+		Connections
+			Karth Orris - respected member
 	LAMPBLACK Bravo
-		Bazco Baz - leader
-		Pickett Henner - right hand to Bazco
+		Attributes: 1 1 0 0 0
+		Connections
+			Bazco Baz - leader
+			Pickett Henner - right hand to Bazco
 	PRISONER of Ironhook Penitentiary
-		Lady Thorn - legend
-		Grace & Mercy - martyrs
+		Attributes: 1 0 0 1 0
+		Connections
+			Lady Thorn - legend
+			Grace & Mercy - martyrs
 	A Dimmer SISTER
-		Roslyn Dimmer - respected member
+		Attributes: 0 0 1 0 1
+		Connections
+			Roslyn Dimmer - respected member
 	ADEPT to the Path of Echoes
-		Karth Orris - respected member
-		Selia - legend
+		Attributes: 0 0 0 1 1
+		Connections
+			Karth Orris - respected member
+			Selia - legend
 
 	*will not appear
+
+Fighters
+	LAMPBLACK - marine
+		When you lead a Rest, each teammate gains 1 Momentum.
+		can surge to attack at 0 momentum
+		can surge to attack twice in a turn
+	PRISONER roughneck
+		True Grit: The first time you would take damage each round, roll Grit. For each 6 rolled, reduce the harm by 1 level.
+Talkers
+	MAGISTRATE - agent
+		When you lead, you take max 1 harm from others' failures.
+		When you fail a roll
+	SUPERVISOR - scientist
+		Spend a Special Talent to study the strange or arcane. Roll Acuity. For every 6 you roll, ask a question:
+				Is it human?
+				Is it alive?
+				How old is it?
+				What is it's purpose?
+				How do I use it?
+				What problems could it cause?
+			The GM answers truthfully. If you get at least one answer, all teammates gain 1 Momentum. Otherwise, all teammates lose 1 Momentum.
+	PRIEST - marshal
+		When you roll to subdue an opponent without harming them, take +d.
+		Burn Body
+Whispers
+	SISTER medic
+
+	ADEPT
+		False Identity
 
 == === ==  ABILITIES  == === ==
   COSTS

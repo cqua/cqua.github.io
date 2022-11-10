@@ -1,7 +1,11 @@
+Game is divided into 4 chapters, each a season
+	or use Duskwall seasons? Mendar, Kalivet, Suran, Ulsivet, Volnivet, Elisar
+
 == === ==  PARANOIA  == === ==
 	Its a dream
 	its scientists
 	its my friends betrayal
+	Time Loop
 
 == === ==  ENTANGLEMENTS  == === ==
 	Players roll
@@ -26,6 +30,14 @@
 			tell them, take heat
 		Hostage
 		Reprisals
+		===
+		Encounter a healer
+		Fight a monster and loot their adventurer prey
+		trigger an obvious trap
+			human-human-made
+			biological (fungi)
+		object embedded in a monster
+		defacable shrine
 
 == === ==  ASPECTS  == === ==
 	Breath 		Disattachment
@@ -72,3 +84,25 @@
 == === ==  LOCATIONS  == === ==
 	SOUL WELL
 		Soul Wells are sites which spawn souls, thus attracting spirits or worse.
+
+=== === ??? === ===
+cabin
+	used as a camp
+	contains ghost who appears to be a human prisoner
+	contains an abomination
+
+cave
+	abomination with weapon embedded in flesh
+	more loot around
+
+Roslyn Dimmer's fire by another landmark
+	protective of her belongings, willing to give aid - food, drugs
+
+Karth Orris
+
+Spirit Well
+
+
+
+
+shapes of twigs and leaves
