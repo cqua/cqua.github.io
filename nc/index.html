@@ -8,27 +8,47 @@
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link href="style.css" rel="stylesheet" type="text/css" media="all">
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
   </head>
   <body>
 	<div class="container">
-	<div class="row mt-5">
-		<div id="navbar" class="col-12 center-block">
-			<a class="btn nav-btn" href="#">home</a>
-			<a class="btn nav-btn" href="test">games</a>
-			<a class="btn nav-btn" href="test">devlogs</a>
-			<a class="btn nav-btn" href="test">shrines</a>
-			<a class="btn nav-btn" href="test">links</a>
+		<h1 class='logo-header'><a href='index.html'>snorv games</a></h1>
+		<div class="header">
+		<div id="navbar">
+			<a class="btn nav-btn active" href="#">home</a>
+			<a class="btn nav-btn" href="games.html">games</a>
+			<a class="btn nav-btn" href="devlogs.html">devlogs</a>
 		</div>
 		</div>
-		<div class="row mt-5">
-			<div class="col-3 center-block sidebar">
-			home
+		<div class='main-body'>
+			<div class="main-content post">
+				<section>
+					<p>hi im ciaran</p>
+					<p>i like to make games</p>
+					<p>email: snorvgames@gmail.com</p>
+				</section>
+				<section>
+					<p>game engines i use:
+					</p>
+					<ul>
+						<li><a href='https://godotengine.org/'>Godot</a></li>
+						<li><a href='https://www.lexaloffle.com/pico-8.php'>PICO-8</a></li>
+						<li><a href='https://twinery.org/'>Twine</a></li>
+					</ul>
+				</section>
 			</div>
-			<div class="col-9 center-block">
-				<p>hi im ciaran</p>
+			<div class="gutter">
+			</div>
+			<div class="sidebar">
+				<div class="card pet-card">
+					<img src="images/icon_bb.png" alt="Card image cap">
+					<div class="card-body">
+						<p class="card-text">This site is owned and operated by Big Boy.</p>
+					</div>
+				</div>
 			</div>
 		</div>
+		<div class='footer'>updated October 21, 2024</div>
 	</div>
   </body>
 </html>
