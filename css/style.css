@@ -5,7 +5,7 @@
 body {
   background: url('../images/bg_silverkey.png') no-repeat center top;
   background-color: black;
-  color: #e4f495;
+  color: #ffa;
   font-family: tahoma, DejaVu Sans Mono, monospace;
 }
 
@@ -31,37 +31,39 @@ h1 > a:hover {
 }
 
 #navbar {
-	background-color:#000c;
+	background-color:#151515;
 	margin:0;
 	margin-bottom:3em;
 	display:flex;
 }
 
 .sidebar {
+	min-width:13em;
 	background-color:#000c;
-	width:20%;
+	width:25%;
 	display:inline-block;
 	padding-top: .5em;
 	padding-left: 1em;
 	padding-right: 1em;
 }
 
+.nav-btn {
+	width: 25%;
+	border-radius: 0;
+	color:white;
+	margin:0;
+	font-weight:bold;
+}
+
 .main-content {
 	background-color:#000c;
-	width:77%;
+	width:72%;
 	display:inline-block;
 }
 
 .main-body {
 	display:flex;
-	min-height: 79vh;
-}
-
-.nav-btn {
-	width: 33.3%;
-	border-radius: 0;
-	color:white;
-	margin:0;
+	min-height: 50vh;
 }
 
 .gutter {
@@ -146,27 +148,36 @@ h1 > a:hover {
 	display:block;
 }
 
+.post-link > a {
+	color:#fee;
+}
+
+.collapsed {
+	color: #aaf;
+}
+
 .collapse.in {
 	opacity: 1;
 	height: auto;
 	display:block;
 }
 
-p,ul,li {
+p,ul,ol {
 	color:#FFF1E8;
-	margin:0;
 	line-height:1.3;
-}
-
-p.indent {
-	text-indent:1em;
-}
-
-section {
-	margin-bottom:1.5em;
+	margin-top:.5em;
+	margin-bottom:1em;
 }
 
 .footer {
 	margin-top:1em;
 	background-color:#000c;
+}
+
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
+.label {
+	font-weight: bold;
 }
