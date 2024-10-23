@@ -45,6 +45,10 @@ p {
 	margin-top:.5em;
 }
 
+iframe {
+	max-width:100%;
+}
+
 /* layout */
 .header {
 	margin:0;
@@ -162,6 +166,13 @@ hr.solid {
 	margin:0;
 }
 
+.code-block {
+	border-radius: 12px;
+	padding: 1em;
+	background-color: #333;
+	font-family: Consolas,monospace;
+}
+
 /* games */
 .game-card {
 	width: 16rem;
@@ -210,6 +221,7 @@ hr.solid {
 
 .devlog-img {
 	max-height:15em;
+	max-width: 100%;
 	padding-top: .5em;
 	padding-bottom: .5em;
 	padding-right: .5em;
@@ -236,4 +248,17 @@ hr.solid {
 	opacity: 1;
 	height: auto;
 	display:block;
+}
+
+/* mobile */
+@media (max-width: 700px) {
+	.main-body {
+		display:block;
+	}
+	.main-content {
+		width:100%;
+	}
+	.sidebar {
+		width: 100%;
+	}
 }

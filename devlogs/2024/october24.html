@@ -26,8 +26,11 @@
 				<div class="sidebar">
 					<div><h5>2024</h5></div>
 					<div class='post-link active'>
-						project hopping<div class='date-subtitle'>october 3, 2024</div>
+						experimenting with real time strategy<div class='date-subtitle'>october 24, 2024</div>
 					</div>
+					<a class='post-link' href='../2024/october.html'>
+						project hopping<div class='date-subtitle'>october 3, 2024</div>
+					</a>
 					<a class='post-link' href='../2024/september.html'>
 						Orbital Terminus<div class='date-subtitle'>september 1, 2024</div>
 					</a>
@@ -60,15 +63,56 @@
 							</div>
 							<p>hi all,<br/>
 							the project hopping hasnt gotten better</p>
-							<p>this month i worked on a real-time strategy </p>
-							<p>Micah is an exploration game about finding and using different transformative effects, inspired by Yume Nikki</p>
-							<p>heres some out-of-context screenshots</p>
-							<p>ive ported the project from Love2D to Godot so that I can build it out faster</p>
-							<p>Orbital Terminus is very close to finished</p>
-							<p>thank you for reading, and see you next month<br/>
+							<p>this month i put together the start to a real-time strategy game. i dont plan to turn this into anything final, i just made it to see how it would work.</p>
+							<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3otJ5bYtxJU?si=DJHIUFwoUNSagrbX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+							<p>the units use art from Fire Emblem: Shadow Dragon. the rest of the art is mine. i started with basic isometric blocks to draw a map.</p>
+							<img src="media/241024-a.PNG" title="a small map made up of blank white isometric cubes" alt="a small map made up of blank white isometric cubes" class='devlog-img'>
+							<figcaption class="figure-caption">we love the cubes</figcaption>
+							<p>i set up a camera that could pan around the map and zoom in and out. i added units the player could select with the mouse, and set up some 
+							simple pathfinding. the pathfinding is similar to what i talked about <a href='may.html'>back in may</a>. then i created some enemies and set up some basic logic for the units to follow. the logic flows like this:</p>
+							<div class='code-block'>
+							while alive:<br/>
+							&nbsp&nbspif not moving and not attacking:<br/>
+							&nbsp&nbsp&nbsp&nbspcheck if the nearest enemy is within awareness range<br/>
+							&nbsp&nbsp&nbsp&nbspif so, move towards them and attack them<br/>
+							&nbsp&nbspelse if attacking:<br/>
+							&nbsp&nbsp&nbsp&nbspif the target is alive:<br/>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif the target is out of range: <br/>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspmove towards the target<br/>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse:<br/>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspattack the target<br/>
+							&nbsp&nbsp&nbsp&nbspelse:<br/>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbspstop attacking<br/>
+							&nbsp&nbspelse if moving:<br/>
+							&nbsp&nbsp&nbsp&nbspif the position has not been reached and<br/>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbspa nearer position can be reached and<br/>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbspi am not being attacked:<br/>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspmove<br/>
+							&nbsp&nbsp&nbsp&nbspelse:<br/>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspstop moving<br/>
+							</div>
+							<p>the player’s units and enemy units use the same logic, with the exception that the player can manually set move/attack targets for their own units.</p>
+							<p class='no-margin'>finally, i set up the fog of war. every tile has three states:</p>
+							<ul class='no-margin'>
+							<li>unexplored. no player unit has had awareness here. nothing visible</li>
+							<li>visible. a player unit currently has awareness here. tile is visible and units move normally</li>
+							<li>explored. a player unit once had awareness here but no longer does. tile is rendered faded. enemies will remain visible, but their position will not visually update, showing the player the last known location.</li>
+							</ul>
+							<p>when drawing the map, the game draws a translucent black layer over the explored areas, and a solid black layer over the unexplored areas.</p>
+							<img src="media/241024-b.PNG" title="three images of the isometric grid, showing each state of fog of war" alt="three images of the isometric grid, showing each state of fog of war" class='devlog-img'>
+							<figcaption class="figure-caption">each layer of the map: the terrain layer, the explored layer, and the unexplored layer</figcaption>
+							<p>thats pretty much the whole thing. the next feature i would work on is making buildings functional- allowing the player to place buildings and set buildings to spawn more units.</p>
+							<p>instead im going to keep hopping and move onto something different.</p>
+							<hr class='solid'/>
+							<p>im putting Silver Key on hiatus. i will definitely be back for Phase III, but i need a change of pace.</p>
+							<p>i will continue working on Micah on and off</p>
+							<p>Orbital Terminus was intended to be a small project i could get out quickly, but if youve been reading these devlogs, you know how that goes. the only thing to finish are some enemies and bosses.</p>
+							<p>its weird writing a devlog for a game i will never finish (or at least a game i dont intend to finish). 
+							i want to be able to take detours like this, and i want to be more transparent about what im actually working on, even if it has no deliverable.</p>
+							<p>thank you for reading. ill see you next time with a new detour.<br/>
 							- ciaran</p>
-							<img src="media/animals/241003-g.jpg" title="a young deer stands backdropped by a city. its ears are splayed." alt="a young deer stands backdropped by a city. its ears are splayed." class='devlog-img'>
-							<figcaption class="figure-caption">image source: <a href='https://www.clawonline.org'>clawonline.org</a></figcaption>
+							<img src="media/animals/241024.PNG" title="a brown stoat looks directly upward at the camera" alt="a brown stoat looks directly upward at the camera" class='devlog-img'>
+							<figcaption class="figure-caption">image source: <a href='https://www.youtube.com/watch?v=nGM6UHORDL8'>Stoat Mother Hunts to Feed Kits | Weasels: Feisty & Fearless | BBC Earth</a></figcaption>
 							<a href="#">↑ back to top ↑</a>
 						</div>
 				</div>
