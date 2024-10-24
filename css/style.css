@@ -261,4 +261,10 @@ hr.solid {
 	.sidebar {
 		width: 100%;
 	}
+	#navbar {
+	display:block;
+}
+	.nav-btn {
+		width:100%;
+	}
 }
