@@ -1,0 +1,1 @@
+document.getElementById('footer').innerHTML="hosted at <a href='https://neocities.org/'>neocities.org</a> ◆ updated october 26, 2024"
