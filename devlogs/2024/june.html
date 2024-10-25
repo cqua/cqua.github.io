@@ -6,7 +6,7 @@
 		<title>snorv games - devlogs</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 		<link href="../../css/style.css" rel="stylesheet" type="text/css" media="all">
 	</head>
@@ -66,8 +66,7 @@
 							Phase II of Silver Key is progressing steadily. the player has a face now.</p>
 							<p>this month, i built a discrete action system. discrete actions are any action the player can perform that have a predefined ending and can't be done continuously. this includes attacking, dodging, and using items. its a broad category, but theres a lot of behavior that can be defined across all of them, and that will save a lot of time.</p>
 							<h2>the anatomy of an action</h2>
-							<img src="media/240621-anims.png" title="action diagram" alt="action diagram" class='devlog-img'>
-							<figcaption class="figure-caption">all frames of the basic sword attack, split up into its wind-up, strike, and recovery animations</figcaption>
+							<img src="media/240621-anims.png" alt="action diagram" class='devlog-img modal-img' caption='all frames of the basic sword attack, split up into its wind-up, strike, and recovery animations'>
 							<p>the system is built around the player's animations. each animation has a wind-up, strike, and recovery.</p>
 							<p>during the wind-up, the player is locked into the action they are about to do. this is mostly just a delay, keeping actions from happening instantly and providing a bit of time for the enemy to interrupt the player, or vice versa.</p>
 							<p>the strike is the phase where the action is actually performed. in the case of an attack, enemies hit by the weapon during this phase will take damage. in the case of a used item, its effects will realize now.</p>
@@ -92,8 +91,7 @@
 							<p>im still on track to release Phase II in august.</p></section>
 							<p>thank you for reading, and ill see you in july!<br/>
 							- ciaran</p>
-							<img src="media/animals/240621.jpg" title="a wolf washing their paws in the sink" alt="a wolf washing their paws in the sink" class='devlog-img'>
-							<figcaption class="figure-caption">image source: <a href='https://www.flickr.com/photos/animalpeopleforum/'>https://www.flickr.com/photos/animalpeopleforum/</a></figcaption>
+							<img src="media/animals/240621.jpg" title="a wolf washing their paws in the sink" alt="a wolf washing their paws in the sink" class='devlog-img modal-img' caption="image source: <a href='https://www.flickr.com/photos/animalpeopleforum/'>https://www.flickr.com/photos/animalpeopleforum/</a>">
 							<a href="#">↑ back to top ↑</a>
 						</div>
 				</div>
@@ -101,4 +99,5 @@
 		<div class='footer'>hosted at <a href='https://neocities.org/'>neocities.org</a> ◆ updated october 24, 2024</div>
 		</div>
 	</body>
+	<script src='../../js/modal.js'></script>
 </html>

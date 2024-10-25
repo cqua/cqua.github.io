@@ -6,7 +6,7 @@
 		<title>snorv games - devlogs</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 		<link href="../../css/style.css" rel="stylesheet" type="text/css" media="all">
 	</head>
@@ -66,8 +66,8 @@
 							<p>this month i put together the start to a real-time strategy game. i dont plan to turn this into anything final, i just made it to see how it would work.</p>
 							<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3otJ5bYtxJU?si=DJHIUFwoUNSagrbX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 							<p>the units use art from Fire Emblem: Shadow Dragon. the rest of the art is mine. i started with basic isometric blocks to draw a map.</p>
-							<img src="media/241024-1.png" title="a small map made up of blank white isometric cubes" alt="a small map made up of blank white isometric cubes" class='devlog-img'>
-							<figcaption class="figure-caption">we love the cubes</figcaption>
+							<img src="media/241024-1.png" caption='we love the cubes' alt="a small map made up of blank white isometric cubes" class='devlog-img modal-img'>
+							
 							<p>i set up a camera that could pan around the map and zoom in and out. i added units the player could select with the mouse, and set up some 
 							simple pathfinding. the pathfinding is similar to what i talked about <a href='may.html'>back in may</a>. then i created some enemies and set up some basic logic for the units to follow. the logic flows like this:</p>
 							<div class='code-block'>
@@ -99,8 +99,7 @@
 							<li>explored. a player unit once had awareness here but no longer does. tile is rendered faded. enemies will remain visible, but their position will not visually update, showing the player the last known location.</li>
 							</ul>
 							<p>when drawing the map, the game draws a translucent black layer over the explored areas, and a solid black layer over the unexplored areas.</p>
-							<img src="media/241024-2.png" title="three images of the isometric grid, showing each state of fog of war" alt="three images of the isometric grid, showing each state of fog of war" class='devlog-img'>
-							<figcaption class="figure-caption">each layer of the map: the terrain layer, the explored layer, and the unexplored layer</figcaption>
+							<img src="media/241024-2.png" caption='each layer of the map: the terrain layer, the explored layer, and the unexplored layer' alt="three images of the isometric grid, showing each state of fog of war" class='devlog-img modal-img'>
 							<p>thats pretty much the whole thing. the next feature i would work on is making buildings functional- allowing the player to place buildings and set buildings to spawn more units.</p>
 							<p>instead im going to keep hopping and move onto something different.</p>
 							<hr class='solid'/>
@@ -111,8 +110,7 @@
 							i want to be able to take detours like this, and i want to be more transparent about what im actually working on, even if it has no deliverable.</p>
 							<p>thank you for reading. ill see you next time with a new detour.<br/>
 							- ciaran</p>
-							<img src="media/animals/241024.png" title="a brown stoat looks directly upward at the camera" alt="a brown stoat looks directly upward at the camera" class='devlog-img'>
-							<figcaption class="figure-caption">image source: <a href='https://www.youtube.com/watch?v=nGM6UHORDL8'>Stoat Mother Hunts to Feed Kits | Weasels: Feisty & Fearless | BBC Earth</a></figcaption>
+							<img src="media/animals/241024.png" caption="image source: <a href='https://www.youtube.com/watch?v=nGM6UHORDL8'>Stoat Mother Hunts to Feed Kits | Weasels: Feisty & Fearless | BBC Earth</a>" alt="a brown stoat looks directly upward at the camera" class='devlog-img modal-img'>
 							<a href="#">↑ back to top ↑</a>
 						</div>
 				</div>
@@ -121,4 +119,5 @@
 		<div class='footer'>hosted at <a href='https://neocities.org/'>neocities.org</a> ◆ updated october 24, 2024</div>
 		</div>
 	</body>
+	<script src='../../js/modal.js'></script>
 </html>
