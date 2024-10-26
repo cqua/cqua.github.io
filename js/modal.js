@@ -19,7 +19,7 @@ for (let i = 0; i < img.length; i++) {
 	modalcontent.classList.add('modal-content');
 	
 	let modalimg = document.createElement("img");
-	modalimg.src=img[i].src;
+	modalimg.src=img[i].src.replace('_small','');
 	modalimg.setAttribute('alt',img[i].getAttribute("alt"));
 	modalimg.setAttribute('title',img[i].getAttribute("alt"));
 	
