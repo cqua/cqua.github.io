@@ -31,7 +31,12 @@ for (let i = 0; i < img.length; i++) {
 		figcaption.classList.add('figure-caption');
 		figcaption.innerHTML=img[i].getAttribute("caption")
 		modalcontent.appendChild(figcaption.cloneNode(true));
-		figcaption.setAttribute('style','width:'+img[i].width+'px');
+		let w=img[i].width;
+		if (w>0) {
+			figcaption.setAttribute('style','width:'+img[i].width+'px');
+		} else {
+			figcaption.setAttribute('style','width:100%');
+		}
 		img[i].after(figcaption);
 	} else {
 		let figcaption = document.createElement("figcaption");
