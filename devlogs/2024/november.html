@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>snorv games - devlogs</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+		<link href="../../css/style.css" rel="stylesheet" type="text/css" media="all">
+		<link href="css/taxigame.css" rel="stylesheet" type="text/css" media="all">
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+		<h1 class='logo-header'><a href='../../index.html'>snorv games<img src='../../images/icon_silverkey.png' alt='Silver Key'></a></h1>
+				<div id="navbar">
+					<a class="nav-btn" href="../../index.html">home</a>
+					<a class="nav-btn" href="../../games.html">games</a>
+					<div class="nav-btn active" href="#">devlogs</div>
+					<a class="nav-btn" href="../../guestbook.html">guestbook</a>
+					<a class="nav-btn" href="../../extra.html">extra</a>
+				</div>
+			</div>
+			<p>
+			<div class='main-body'>
+				<div class="sidebar">
+					<div><h5>2024</h5></div>
+					<div class='post-link active'>
+						experimenting with taxis<div class='date-subtitle'>november 7, 2024</div>
+					</div>
+					<a class='post-link' href='../2024/october24.html'>
+						experimenting with real time strategy<div class='date-subtitle'>october 24, 2024</div>
+					</a>
+					<a class='post-link' href='../2024/october.html'>
+						project hopping<div class='date-subtitle'>october 3, 2024</div>
+					</a>
+					<a class='post-link' href='../2024/september.html'>
+						Orbital Terminus<div class='date-subtitle'>september 1, 2024</div>
+					</a>
+					<a class='post-link' href='../2024/july.html'>
+						[Silver Key] Phase II release<div class='date-subtitle'>july 23, 2024</div>
+					</a>
+					<a class='post-link' href='../2024/june.html'>
+						[Silver Key] discrete actions<div class='date-subtitle'>june 21, 2024</div>
+					</a>
+					<a class='post-link' href='../2024/may.html'>
+						[Silver Key] pathfinding<div class='date-subtitle'>may 15, 2024</div>
+					</a>
+					<a class='post-link' href='../2024/april.html'>
+						[Silver Key] state machines<div class='date-subtitle'>april 30, 2024</div>
+					</a>
+					<a class='post-link' href='../2024/february.html'>
+						february status<div class='date-subtitle'>february 24, 2024</div>
+					</a>
+					<a class='post-link' href='../2024/january.html'>
+						PLAY BOXIBAN<div class='date-subtitle'>january 26, 2024</div>
+					</a>
+				</div>
+				<div class="gutter">
+				</div>
+				<div id="main-content" class="main-content">
+						<div class="post">
+							<div class="post-header">
+								<h1>experimenting with taxis</h1>
+								<div class="subtitle">november 7, 2024</div>
+							</div>
+							<p>hi all,<br/>
+							the past two weeks ive been building a taxi game. you can play it here: <a href='temp'>link</a></p>
+							<p>im especially interested in feedback on how it feels to control. there are customization options to alter the car physics, so if you play it, please let me know what you liked!</p>
+							<img src="media/2411-a.png" alt="a yellow car in devtest valley in front of a purple train and several grey buildings" class='devlog-img modal-img'>
+							<p>the core loop of the game has you finding and picking up passengers and delivering them to their destination. i built a small map with scattered features and set up the passengers and goals to populate randomly around the map.</p>
+							<img src="media/2411-c.png" caption='topdown view of the map' alt="top down view of devtest valley, featuring the train track, grey buildings, and trees" class='devlog-img modal-img'>
+							<p>the player car uses Godot's vehicle physics as a base. this is a physics object that uses "wheels" to apply force and friction. the wheels don't have any collision themselves and act more like propulsion jets - the wheels you see on the car's model are wholly seperate objects.</p>
+							<img src="media/2411-b.png" caption='car customization menu' alt='car customization menu, including options for coat color, weight, power, and traction' class='devlog-img modal-img'>
+							<p>during customization, the player can select a weight, power, and traction setting. in an effort to make the car feel like a car, each setting controls more than the label implies.</p>
+							<p>the weight of the car is tricky. given that the wheels work like jets, it's easy to get the car sailing through the air with just a little too much power and a little too little traction. this is made even trickier by the Rev Dash, which lets the player reach top speed from a standstill. in the hope of keeping wheels on the ground, the Rev Dash increases the car's speed and traction in proportion to its weight, and not its power like you might expect.</p>
+							<p>power is the amount of force each wheel applies while the car is already in motion on a flat plane. unlike most driving games, this style of game requires the player to stop frequently, meaning players need to be able stop and go easily. to make accelerating easier, the car's power increases for the first few seconds after it leaves standstill. the car's power also increases when climbing slopes.</p>
+							<p>traction determines both how much force each wheel applies to the car and how much each wheel resists contrary forces. that resistance also functions to make the car stick to the ground. in order to create a drift, when the player applies the brake to a moving car, the front wheels gain traction and the back wheels lose traction, causing the rear to spin. after the car slows some, the rear wheels gain traction to match the front, parking the car in place.</p>
+							<img src="media/2411-d.png" alt='car carrying a passenger through green cone trees' class='devlog-img modal-img'>
+							<p>with all that said, id probably start over completely to continue this project. Godot's physics dont give me the control id like- id prefer a more arcade-y feeling game, and i think id have to code the physics myself for that. even so, this has been a fun experiment.</p>
+							<p>thank you for reading. i hope you got something out of this. see you next time!<br/>
+							- ciaran</p>
+							<img src="media/animals/241107.png" caption="image source: <a href='https://youtu.be/Lpy1OCHMaMM?t=346'>CLAW Nature Cam - 2022 Highlight Reel</a>" alt="a brown stoat looks directly upward at the camera" class='devlog-img modal-img'>
+							<a href="#">↑ back to top ↑</a>
+						</div>
+				</div>
+
+			</div>
+		<div id='footer'></div>
+		</div>
+	</body>
+	<script src='../../js/modal.js'></script>
+	<script src='../../js/fill_text.js'></script>
+</html>
