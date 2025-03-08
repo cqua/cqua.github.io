@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="content/favicon.ico" />
+
+  <title>Requiem in Duskwall</title>
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="../style.css">
+  <!-- <link rel="stylesheet" href="https://cqua.github.io/rp/vineyard2/style.css"> -->
+
+  <!-- Font Awesome JS -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" 
+    integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" 
+  integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="wrapper bg-dark text-light">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+      <div class="block page-header">
+        <div>
+          <button type="button" id="sidebarCollapse" class="btn btn-info">
+          	<span class="fas fa-bars">≡</span>
+          </button>
+          <h1>Core Rules</h1>
+          <p class="contents">
+              <a href="#CorePrinciples">Core Principles</a>
+            • <a href="#RollingDice">Rolling Dice</a>
+            • <a href="#Attributes">Attributes</a>
+            • <a href="#Skills">Skills</a>
+            • <a href="#Health">Health</a>
+            • <a href="#Willpower">Willpower</a>
+            • <a href="#Humanity">Humanity</a></p>
+          </div>
+       </div>
+	     <div class="profile">
+  			<img src="../content/christian-bravery-zwei-church-version-2-001.png" alt="Artist: Christian Bravery">
+  			<div><span class='icon'></span>Christian Bravery</div>
+	     </div>
+    <div>
+      <h2 id="CorePrinciples">Core Principles</h2>
+    </div>
+      <div>
+        <blockquote class="card bg-dark blockquote card-body">
+          <p>
+            "<b>No one is in charge of the story.</b> The story is what happens as a result of the situation presented by the 
+            GM, the actions the characters take, the outcomes of the mechanics, and the consequences that result. 
+            The story emerges from the unpredictable collision of all of these elements. You <b>play to find out</b> 
+            what the story will be."
+          </p>
+          <footer class="blockquote-footer">John Harper, <cite title="Source Title">Blades in the Dark</cite></footer>
+        </blockquote>
+      </div>
+      <div>
+  			<p>
+  			</p><p>
+  			</p>
+      </div>
+      <div>
+  			<h2 id="RollingDice">Rolling Dice</h2>
+  			<p>
+          This game uses ten-sided dice. When there is uncertainty, build a dice pool, roll, and count your successes.
+        </p>
+        <p>
+          Most of the time, your dice pool will be equal to an <a href="#Attributes">attribute</a> plus a 
+          <a href="#Skills">skill</a>. Many rolls also have modifiers due to equipemnt, circumstance, or opposition.
+  			</p>
+        <p>
+          Each die that shows an 8, 9, or 10 is a success. Normally, you only need one success to achieve your goal, 
+          but more successes is always better. For each die that shows 10, you may count the success and roll it again, 
+          potentially scoring another success. If this second roll comes up as another 10, count the success and
+          roll it again, on until you roll a number other than 10.
+  			</p>
+        <ul>
+          <li><b>Success</b>: With <b>1 or more successes</b> (a die showing 8, 9, or 10), you succeed. Things go as planned.</li>
+          <li><b>Failure</b>: With <b>no successes</b>, you fail. You don't get what you want and complications are headed your way.</li>
+          <li><b>Exceptional Success</b>: With <b>5 or more successes</b>, your character’s action succeeds
+            beyond expectation. Your character gains a beneficial <a href="#Conditions">condition</a>, usually, the 
+            <a href="#Inspired">Inspired Condition</a>. You can give this Condition to another character when it’s 
+            appropriate to the story.</li>
+        </ul>
+        <p>
+          If your pool drops below one die, you instead roll a single <b>chance die</b>. The chance die only counts 
+          as a success if you roll a 10, which you do not reroll. Any other result is a failure.
+          If you roll a 1 on the chance die, your character suffers a <b>Dramatic Failure</b>- your character fails 
+          badly, and things are about to get a whole lot worse.
+  			</p>
+      </div>
+      <div>
+  			<h2 id="Attributes">Attributes</h2>
+        <p>
+          Attributes are the basic abilities that every character possesses, and are the foundation for most rolls. 
+          There are nine Attributes, split between the Mental, Physical, and Social categories.
+        </p>
+        <p>All characters start with one dot in each Attribute, which
+          is below average for that Attribute. Two dots represents
+          average ability, three dots is above average, and four dots is
+          someone who is truly exceptional. A character with five dots
+          in an Attribute has reached the peak of human potential
+          within that ability.
+        </p>
+  			<h3>Mental Attributes</h2>
+        <ul>
+          <li>
+            <b>Intelligence</b> is your character’s book smarts and ability to process data. It represents memory, general 
+            knowledge, and ability to solve complex and difficult problems.
+          </li>
+          <li>
+            <b>Wits</b> represents quick thinking and improvisation. A character with a high Wits responds quickly to 
+            new information and situations. It also represents perception and the ability
+            to notice details and subtle tells.
+          </li>
+          <li>
+            <b>Resolve</b> represents your character’s patience, concentra-
+            tion, and determination. A high Resolve allows a character
+            to focus despite distractions or discouragement.
+          </li>
+        </ul>
+  			<h3>Physical Attributes</h2>
+        <ul>
+          <li>
+            <b>Strength</b> is a character’s muscular power and ability to use
+            the force of her body. It is used for a large number of physical
+            tasks, and is important for most applications of violence.
+          </li>
+          <li>
+            <b>Dexterity</b> represents hand-eye coordination, agility, and
+            physical speed. A character with a high Dexterity has fast
+            reactions, a good sense of balance, and accurate control of
+            physical force.
+          </li>
+          <li>
+            <b>Stamina</b> is your character’s general fitness and health. It
+            is used for sustained effort, as well as determining how much
+            physical punishment your body can take.
+          </li>
+        </ul>
+  			<h3>Social Attributes</h2>
+        <ul>
+          <li>
+            <b>Presence</b> is a character’s raw charisma, assertiveness, and
+            ability to command. Characters with a high Presence domi-
+            nate a room and are adept at changing people’s thoughts
+            and moods.
+          </li>
+          <li>
+            <b>Manipulation</b> epresents your character’s ability to choose
+            his words, mask his intentions, and convince others to go
+            along with his ideas.
+          </li>
+          <li>
+            <b>Composure</b> is a character’s ability to keep control of her
+            emotions and resist others’ manipulations. It also represents
+            poise, dignity, and the ability to keep a level head when under
+            fire (metaphorically or literally).
+          </li>
+        </ul>
+      </div>
+      <div>
+  			<h2 id="Skills">Skills</h2>
+        <p>
+          Skills are learned and practiced abilities, rather than the innate
+abilities that Attributes represent. Skills reflect a character’s origins
+and interests, and can be acquired in many ways, from institution-
+alized learning to hands-on experience. Skills are divided into the
+same Mental, Physical, and Social categories as Attributes.
+        </p>
+  			<h3>Mental Skills</h2>
+        <ul>
+          <li>
+            <b>Academics</b> represents general higher education and
+            knowledge of arts and humanities. It covers topics like his-
+            tory, language, literature, law, and economics.
+          </li>
+          <li>
+            <b>Crafts</b> represents a character’s knowledge of
+            repairing, designing, and creating things. It covers tasks like
+            rebuilding a car engine, laying a foundation for a house, or
+            sewing clothing.
+          </li>
+          <li>
+            <b>Investigation</b> is a character’s ability to find and put to-
+            gether clues and solve mysteries and puzzles. It represents
+            the ability to think laterally and make intuitive leaps,
+            find meaningful patterns in confusion, and draw conclusions.
+          </li>
+          <li>
+            <b>Medicine</b> is a character’s knowledge of the human
+            body and the medical techniques used to keep it healthy. It
+            represents a practical and applicable knowledge of biology,
+            anatomy, and chemistry.
+          </li>
+          <li>
+            <b>Occult</b> is a character’s knowledge of the strange things that
+            exist in the dark corners of the world. Occult can help a
+            character separate fiction and myth from fact and determine which stories are likely to be actual 
+            supernatural events and which are just rumors.
+          </li>
+          <li>
+            <b>Politics</b> represents a character’s knowledge of political
+            bodies, figures, and issues. It helps a character to navigate
+            bureaucracies and play the political game to get what he
+            wants.
+          </li>
+          <li>
+            <b>Science</b> is a character’s understanding of the natural
+            and physical sciences. It includes subjects like biology,
+            physics, chemistry, and geology. Science
+            is useful for understanding how the world works.
+          </li>
+        </ul>
+  			<h3>Physical Skills</h2>
+        <ul>
+          <li>
+            <b>Athletics</b> broadly covers a number of different areas of
+            physical ability. It can be used with any general application of physical power and coordination, 
+            such as running a marathon, jumping between buildings, climbing a fence, or dodging threats.
+          </li>
+          <li>
+            <b>Brawl</b> is the fine art of hurting another person
+            with no weapons other than the character’s own body. It
+            can represent martial arts training, bar fight experience, or
+            simply a bad temper and a willingness to hurt others. 
+          </li>
+          <li>
+            <b>Drive</b> is a broad Skill used for the handling of any vehicle. It is used for maneuvering and controlling
+            carriages, automobiles, and even boats.
+          </li>
+          <li>
+            <b>Firearms</b> represents a character’s familiarity and comfort
+            with guns. It reflects her ability to shoot, maintain, and
+            identify any type of personal firearm.
+          </li>
+          <li>
+            <b>Larceny</b> covers the generally-illegal skills of breaking and
+            entering, lock picking, pickpocketing, safecracking, and
+            similar activities.
+          </li>
+          <li>
+            <b>Stealth</b> is a character’s ability to stay hidden, unseen, and
+            unheard. It covers sneaking around in the shadows, blending
+            into a crowd, using a disguise to appear as just another bystand-
+            er in the background, or taking advantage of an appropriately
+            timed distraction.
+          </li>
+          <li>
+            <b>Survival</b> represents a character’s experience and ability
+            to “live off the land.” He knows how to find shelter, gather
+            food, and endure harsh elements and environments.
+          </li>
+          <li>
+            <b>Weaponry</b> is the ability to fight with
+            hand-to-hand weapons. A character with
+            this skill can wield knives, swords, or even things like a length of chain or
+            a chainsaw.
+          </li>
+        </ul>
+  			<h3>Social Skills</h2>
+        <ul>
+          <li>
+            <b>Animal Ken</b> epresents a character’s understanding of
+            animal behavior. A character can use this Skill to train ani-
+            mals, calm frightened or injured animals, or cow violent and
+            aggressive creatures.
+          </li>
+          <li>
+            <b>Empathy</b> is a character’s ability to read and understand
+            others’ feelings and motivations. It can represent careful
+            observation of body language, tone, and other cues, or it
+            could be an instinctive sense that the character isn’t even
+            entirely aware of
+          </li>
+          <li>
+            <b>Expression</b> is the character’s ability to communicate his
+            thoughts and emotions. It covers writing and spoken com-
+            munication, art like painting or sculpture, and performances
+            like acting, music, and dance.
+          </li>
+          <li>
+            <b>Intimidation</b> is the art of using fear to convince others to
+            do what you want. A character can use this Skill for threats,
+            interrogation, subtle implications, or even a direct show of
+            force.
+          </li>
+          <li>
+            <b>Persuasion</b> is about using influence, charm, and careful
+            arguments to change minds and influence behavior. It can
+            involve logic and reason, glib fast talking, or appealing to
+            emotions or baser instincts
+          </li>
+          <li>
+            <b>Socialize</b> is the art of small talk, polite gestures,
+            and fitting in. It represents your ability to interact with people
+            in a variety of social settings, from dive bars to state dinners.
+          </li>
+          <li>
+            <b>Streetwise</b> is about how life on the streets works, and surviving and thriv-
+            ing by its rules. He can navigate the city, knows who to go
+            to for information or help, and knows where he will be safe.
+          </li>
+          <li>
+            <b>Subterfuge</b> is the fine art of deception. With Subterfuge,
+            a character can lie convincingly, recognize when she is being
+            lied to, or convey hidden meaning in what she says.
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 id="Health">Health</h2>
+        <p>Characters can suffer three types of damage. Fists and feet,
+          along with other kinds of low-impact trauma, deal bashing
+          damage. Brass knuckles, knives, and speeding carriages deal
+          lethal damage. Kindred take bashing damage from all mundane
+          weapons, because they’re less fazed by pain and don’t depend
+          on their internal organs.</p>
+          <p>Some horrifying powers — along with the great banes of the
+            Kindred — deal aggravated damage. When something deals
+            aggravated damage directly, it’s quite obvious. Flesh bubbles
+            and sloughs away. Foaming pustules taint the victim’s flesh.
+            Blackened veins streak out from the site of the injury.</p>
+          <p>If a vampire’s health track is filled with bashing damage,
+            she remains conscious. If it fills with lethal damage, she falls
+            into torpor. If it fills with aggravated damage, she suffers Final
+            Death, and her body rots as though she had died on the date
+            of her Embrace.</p>
+          <p>A character’s Health track contains a number of boxes
+          equal to his Health trait, determined by his Stamina + Size.</p>
+          <h3>Marking Damage</h3>
+          <p>When a character suffers bashing damage, mark it with a
+            slash (/) in the leftmost empty box of his health track.</p><p>
+            When a character suffers lethal damage, mark it with an
+            X in the leftmost box of his health track that doesn’t contain
+            lethal or aggravated damage. If you mark over a point of
+            bashing damage, it moves one box to the right.</p><p>
+            When a character suffers aggravated damage, mark it with
+            a large asterisk (*) in the leftmost box that doesn’t already
+            contain aggravated damage. If you mark over a point of
+            bashing or lethal damage, it all moves one box to the right.</p><p>
+            Always mark the most severe injuries at the left of a
+            character’s health track, and push any less severe injuries to
+            the right. Characters heal their rightmost health boxes first
+            and progress left</p>
+            <h3>Wound Penalties</h3>
+            <p>As a character takes damage, it impairs her ability to act.
+              When one of her three rightmost Health boxes has damage marked, she suffers a penalty accordingly. 
+              Subtract this penalty from every action she performs, including rolling for
+              Initiative, but not including Stamina rolls to stay conscious.</p>
+            <table>
+              <tr><th>Health Boxes Marked</th><th>Penalty</th></tr>
+              <tr><td class="center">Third-to-last</td><td class="center">-1</td></tr>
+              <tr><td class="center">Second-to-last</td><td class="center">-2</tr>
+              <tr><td class="center">Last</td><td class="center">-3</tr>
+            </table>
+            <h3>Full Health Tracks</h3>
+            <p>If a character’s Health track is filled with bashing damage,
+              each point of further bashing or lethal damage upgrades the
+              leftmost point of bashing damage to lethal — turn one of the
+              slashes into an X. When a character’s rightmost Health box
+              has bashing damage marked in it, his player must make a
+              reflexive Stamina roll each turn for him to remain conscious.</p>
+              <p>If a character’s Health track is filled with lethal damage,
+              each point of further damage upgrades an existing point of
+              lethal damage to aggravated. Turn the leftmost X into an
+              asterisk. When a character’s rightmost Health box has lethal
+              damage marked in it, he takes another point of damage each
+              minute (upgrading existing lethal damage to aggravated) until
+              he receives medical attention, mundane or supernatural.</p>
+              <p>If a character’s Health track is filled with aggravated
+              damage, he’s dead.</p>
+              <h3>Healing</h3>
+              <p>Unlike mortals who rely on time and medical care to recover from injury, kindred use their 
+                vitae to return their bodies to the state of their embrace. Kindred have no use for medical care.</p>
+              <p>For information on kindred healing, see <a href="/rules/combat/#regeneration">Regeneration</a>.</p>
+      </div>
+      <div>
+        <h2 id="Willpower">Willpower</h2>
+        <p>A character’s Willpower represents their determination and
+          ability to go above and beyond what should be possible to achieve their goals. 
+          Spending a point of Willpower adds a +3 die
+          bonus to most dice pools, or +2 to a Resistance trait. You can
+          only spend one point of Willpower per action.</p>
+          <p>Willpower is regained by taking actions according to your <a>Mask</a>, <a>Dirge</a>, and <a>Touchstone</a>.</p>
+        <p>A vampire’s Willpower score is equal to their Resolve + Composure.</p>
+      </div>
+      <div>
+        <h2 id="Humanity">Humanity</h2>
+      </div>
+      <hr></hr>
+      <div>
+        <p><a href="">↑ Back to top ↑</a></p>
+      </div>
+      <hr></hr>
+    </div>
+  </div>
+
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+  <script src="../content/index.js"></script>
+  <script src="../content/index_menu.js"></script>
+
+  <script type="text/javascript">
+      $(document).ready(function () {
+		       loadmenu("home", "rules/");
+          $('#sidebarCollapse').on('click', function () {
+              $('#sidebar').toggleClass('active');
+          });
+      });
+  </script>
+</body>
+
+</html>

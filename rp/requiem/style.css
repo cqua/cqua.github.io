@@ -1,0 +1,236 @@
+:root {
+	--primary: #0d0e13;
+	--darker: #cccc66;
+	--tert: #99ffff;
+}
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+@font-face {
+	font-family: 'immortal';
+	src: url('content/IMMORTAL.ttf') format('truetype');
+}
+
+body {
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+	max-height: 100vh;
+	background: linear-gradient(180deg,#130d0e,#3D181C 80%);
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  color: white;
+  transition: all 0.3s;
+	overflow-y: scroll;
+	height: 100vh;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebarCollapse {
+	display: none;
+}
+
+#sidebar > .sidebar-header {
+  padding: 20px;
+	border-radius: 4px;
+	font-weight: 900;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+#sidebar > .sidebar-header > a {
+	color: white;
+}
+
+#sidebar > .sidebar-header > a:hover {
+	color: var(--darker);
+}
+
+#sidebar ul p {
+  border-bottom: 2px rgb(48, 52, 54) solid;
+  border-top: 2px rgb(48, 52, 54) solid;
+  padding: 10px;
+	color: white;
+	text-align: center;
+}
+
+#sidebar > ul > li >  a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+	color: white;
+	text-align: left;
+}
+
+#sidebar > ul > li > a:hover {
+  color: #000;
+	background: #effea9;
+}
+
+#sidebar > ul > li > a.active,
+#sidebar > ul > li > a.active:hover{
+  background: #cccc66;
+	color: black;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+  width: 100%;
+  transition: all 0.3s;
+	overflow-y: scroll;
+	max-height: 100%;
+	background: #E5E5E5;
+	color:#2B2C31;
+}
+
+#content > div {
+	padding: 0 20px;
+}
+
+#content > div > p,
+#content > div > ul,
+#content > div > ol,
+#content > div > i {
+    font-family: 'Poppins', sans-serif;
+		max-width: 65%;
+}
+
+#content > div > a,
+#content > div > p > a,
+#content > div > ul > li > a,
+#content > div > ol > li > a {
+	color: #33f;
+}
+
+#content > div > h2 {
+	color: var(--primary);
+	font-weight: bold;
+}
+
+#content > div > h3 {
+	font-weight: bold;
+	color: #445;
+	font-size: 1.5em;
+	margin-bottom: 0;
+}
+
+#content > div > h4 {
+	font-size: 1.2em;
+	font-weight: 200;
+}
+
+b {
+	font-family: georgia;
+}
+
+.page-header {
+	background: #0d0e13;
+	color: #E5E5E5;
+}
+
+.page-header > div {
+	padding: 20px;
+}
+
+.page-header > div > h1 {
+	font-style: italic;
+	font-weight: bold;
+}
+
+.page-header > div > p.contents > a {
+	color: #aaf !important;
+}
+
+.blockquote {
+	color: #E5E5E5;
+  font-size: 1.05em;
+	max-width: 65%;
+	margin:0 20px;
+}
+
+.blockquote-footer {
+	color: #c5c5c5;
+}
+
+.profile {
+	float: right;
+	margin-left: 2em;
+	text-align: right;
+	color: grey;
+	max-width: 35%;
+	font-family: georgia;
+	font-style: italic;
+}
+
+.profile > img {
+	max-height: 80vh;
+	max-width: 100%;
+}
+
+.profile > div > span.icon {
+    background-image: url('content/artist.png');
+    height: 14px;
+    width: 20px;
+    display: inline-block;
+}
+
+#content > div > table {
+	width: 62%;
+	margin-bottom: 1rem;
+}
+
+th {
+	background: linear-gradient(180deg,#000,#333 80%);
+	color: #E5E5E5;
+	text-align: center;
+	min-width: 5em;
+}
+
+th, td {
+	border-bottom: 2px #aac solid;
+}
+
+td.center {
+	text-align: center;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+
+	#sidebarCollapse {
+		display: block;
+		background: #666;
+	}
+}

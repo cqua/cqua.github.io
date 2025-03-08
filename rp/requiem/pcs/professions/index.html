@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="content/favicon.ico" />
+
+  <title>Project Vineyard</title>
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="../../style.css">
+  <!-- <link rel="stylesheet" href="https://cqua.github.io/rp/vineyard2/style.css"> -->
+
+  <!-- Font Awesome JS -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="wrapper bg-dark text-light">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+      <div class="block page-header">
+        <div>
+          <button type="button" id="sidebarCollapse" class="btn btn-info">
+            <span class="fas fa-bars">≡</span>
+          </button>
+          <h1>Professions</h1>
+          <p class="contents">
+            <a href="#StartingProfessions">Starting Professions</a>
+            • <a href="#AdvancedProfessions">Advanced Professions</a></p>
+        </div>
+      </div>
+      <div class="profile">
+        <img src="../content/christian-bravery-zwei-church-version-2-001.png" alt="Artist: Christian Bravery">
+        <div><span class='icon'></span>Christian Bravery</div>
+      </div>
+      <div>
+        <p></p>
+      </div>
+      <div>
+        <h2 id="StartingProfessions">Starting Professions</h2>
+        <ul><li><a href="hunter/"><b>Hunters</b></a> are expert rangers trained in searching, tracking, and killing. Move stealthily and observe, a Hunter needs only one shot.</li>
+        <li><a href="reaver/"><b>Reavers</b></a> are built for Deathland survival. When their proficient scavenging isn't enough, they can survive on scraps. Ride the waste and cut down the opposition.</li>
+        <li><a href="spider/"><b>Spiders</b></a> are tricksters, tinkerers, and masterminds. A crafty soul can find the utility of anything. Use words, tonics, arcane artifacts, a hidden blade, and if all else fails, explosives.</li>
+        <li>The <a href="stranger/"><b>Stranger</b></a> has been shaped by the ghostfield. They don't fear it anymore, it answers to them. Seek out the strange forces and bend them to your will.</li></ul>
+      </div>
+      <div>
+        <h2 id="AdvancedProfessions">Advanced Professions</h2>
+        <ul>
+          <li><a href="advisor/"><b>Advisor</b></a> </li>
+          <li><a href="butcher/"><b>Butcher</b></a> </li>
+          <li><a href="chemist/"><b>Chemist</b></a> </li>
+          <li><a href="chimera/"><b>Chimera</b></a> </li>
+          <li><a href="druid/"><b>Druid</b></a> </li>
+          <li><a href="gravewarden/"><b>Gravewarden</b></a> </li>
+          <li><a href="grenadier/"><b>Grenadier</b></a> </li>
+          <li><a href="gunner/"><b>Gunner</b></a> </li>
+          <li><a href="surveyor/"><b>Surveyor</b></a> </li>
+          <li><a href="sentinel/"><b>Sentinel</b></a> </li>
+          <li><a href="thief/"><b>Thief</b></a> </li>
+          <li><a href="undying/"><b>Undying</b></a> </li>
+          <li><a href="whisper/"><b>Whisper</b></a> </li>
+        </ul>
+      </div>
+      <div>
+        <p><a href="">↑ Back to top ↑</a></p>
+      </div>
+      <hr></hr>
+    </div>
+  </div>
+
+  <!-- jQuery CDN - Slim version (=without AJAX) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+  <script src="../../content/index.js"></script>
+  <script src="../../content/index_menu.js"></script>
+
+  <script type="text/javascript">
+      $(document).ready(function () {
+		       loadmenu("professions", "pcs/professions/");
+          $('#sidebarCollapse').on('click', function () {
+              $('#sidebar').toggleClass('active');
+          });
+      });
+  </script>
+</body>
+
+</html>
