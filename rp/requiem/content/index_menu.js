@@ -20,7 +20,7 @@ var menu_content = [
 			},
 			{
 				"title" : "Vampirism",
-				"action" : "rules/vampires/"
+				"action" : "rules/vampirism/"
 			},
 			{
 				"title" : "Your Character",

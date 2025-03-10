@@ -98,8 +98,8 @@ a:focus {
 ----------------------------------------------------- */
 
 #content {
-  width: 100%;
-  transition: all 0.3s;
+	width: 100%;
+	transition: all 0.3s;
 	overflow-y: scroll;
 	max-height: 100%;
 	background: #E5E5E5;
@@ -114,8 +114,8 @@ a:focus {
 #content > div > ul,
 #content > div > ol,
 #content > div > i {
-    font-family: 'Poppins', sans-serif;
-		max-width: 65%;
+	font-family: 'Poppins', sans-serif;
+	max-width: 65%;
 }
 
 #content > div > a,
@@ -153,6 +153,7 @@ b {
 
 .page-header > div {
 	padding: 20px;
+	padding-bottom: 1px;
 }
 
 .page-header > div > h1 {
