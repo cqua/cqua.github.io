@@ -167,9 +167,8 @@ b {
 
 .blockquote {
 	color: #E5E5E5;
-  font-size: 1.05em;
+	font-size: 1.05em;
 	max-width: 65%;
-	margin:0 20px;
 }
 
 .blockquote-footer {
@@ -180,7 +179,7 @@ b {
 	float: right;
 	margin-left: 2em;
 	text-align: right;
-	color: grey;
+	color: #4F4F4F;
 	max-width: 35%;
 	font-family: georgia;
 	font-style: italic;
@@ -192,10 +191,10 @@ b {
 }
 
 .profile > div > span.icon {
-    background-image: url('content/artist.png');
-    height: 14px;
-    width: 20px;
-    display: inline-block;
+	background-image: url('content/artist.png');
+	height: 14px;
+	width: 20px;
+	display: inline-block;
 }
 
 #content > div > table {
@@ -218,17 +217,22 @@ td.center {
 	text-align: center;
 }
 
+.bg-grey {
+	background-color: #c5c5c5;
+	color: #000;
+}
+
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
 
 @media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
-    }
-    #sidebar.active {
-        margin-left: 0;
-    }
+	#sidebar {
+		margin-left: -250px;
+	}
+	#sidebar.active {
+		margin-left: 0;
+	}
 
 	#sidebarCollapse {
 		display: block;
