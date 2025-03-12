@@ -198,7 +198,7 @@ b {
 }
 
 #content > div > table {
-	width: 62%;
+	max-width: 62%;
 	margin-bottom: 1rem;
 }
 
@@ -211,6 +211,7 @@ th {
 
 th, td {
 	border-bottom: 2px #aac solid;
+	padding: 0 1em;
 }
 
 td.center {
