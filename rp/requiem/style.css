@@ -1,6 +1,6 @@
 :root {
 	--primary: #0d0e13;
-	--darker: #cccc66;
+	--darker: #cc6;
 	--tert: #99ffff;
 }
 
@@ -19,7 +19,7 @@ body {
   width: 100%;
   align-items: stretch;
 	max-height: 100vh;
-	background: linear-gradient(180deg,#130d0e,#3D181C 80%);
+	background: linear-gradient(180deg,#000,#400 80%);
 }
 
 a,
@@ -75,22 +75,22 @@ a:focus {
 }
 
 #sidebar > ul > li >  a {
-  padding: 10px;
-  font-size: 1.1em;
-  display: block;
+	padding: 10px;
+	font-size: 1.1em;
+	display: block;
 	color: white;
 	text-align: left;
-}
-
-#sidebar > ul > li > a:hover {
-  color: #000;
-	background: #effea9;
-}
+	}
 
 #sidebar > ul > li > a.active,
 #sidebar > ul > li > a.active:hover{
-  background: #cccc66;
-	color: black;
+  background: #863d3d;
+  color: white;
+}
+
+#sidebar > ul > li > a:hover {
+  	color: #000;
+	background: #E5E5E5;
 }
 
 /* ---------------------------------------------------
@@ -120,7 +120,9 @@ a:focus {
 
 #content > div > a,
 #content > div > p > a,
+#content > div > p > b > a,
 #content > div > ul > li > a,
+#content > div > ul > li > b > a,
 #content > div > ol > li > a {
 	color: #33f;
 }

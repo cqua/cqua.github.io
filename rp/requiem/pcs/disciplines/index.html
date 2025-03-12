@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="shortcut icon" href="content/favicon.ico" />
+
+      <title>REQUIEM IN DUSKWALL</title>
+
+      <!-- Bootstrap CSS CDN -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+      <!-- Our Custom CSS -->
+      <link rel="stylesheet" href="../../style.css">
+      <!-- <link rel="stylesheet" href="https://cqua.github.io/rp/vineyard2/style.css"> -->
+
+      <!-- Font Awesome JS -->
+      <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" 
+      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+      <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" 
+      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <div class="wrapper bg-dark text-light">
+         <!-- Sidebar  -->
+         <nav id="sidebar">
+         </nav>
+
+         <!-- Page Content  -->
+         <div id="content">
+            <div class="block page-header">
+               <div>
+                  <button type="button" id="sidebarCollapse" class="btn btn-info">
+                     <span class="fas fa-bars">≡</span>
+                  </button>
+                  <h1>Disciplines</h1>
+                  <p class="contents">
+               </div>
+            </div>
+            <div>
+               <h2 id="Overview">Overview</h2>
+               <table>
+                  <tr><th>Discipline</th><th>•</th><th>••</th><th>•••</th><th>••••</th><th>•••••</th></tr>
+                  <tr>
+                     <td><b><a href="#Animalism">Animalism</a></b></td>
+                     <td><a href="#FeralWhispers">Feral Whispers</a></td>
+                     <td><a href="#RaiseTheFamiliar">Raise the Familiar</a></td>
+                     <td><a href="#SummonTheHunt">Summon the Hunt</a></td>
+                     <td><a href="#FeralInfection">Feral Infection</a></td>
+                     <td><a href="#LordOfTheLand">Lord of the Land</a></td>
+                  </tr>
+                  <tr>
+                     <td><b><a href="#Auspex">Auspex</a></b></td>
+                     <td><a href="#BeastsHackles">Beast's Hackles</a></td>
+                     <td><a href="#UncannyPerception">Uncanny Perception</a></td>
+                     <td><a href="#TheSpiritsTouch">The Spirit's Touch</a></td>
+                     <td><a href="#LayOpenTheMind">Lay Open the Mind</a></td>
+                     <td><a href="#TwilightProjection">TwilightProjection</a></td>
+                  </tr>
+                  <tr>
+                     <td><b><a href="#Celerity">Celerity</a></b></td>
+                     <td></td>
+                     <td></td>
+                     <td class="center">N/A</td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td><b><a href="#Dominate">Dominate</a></b></td>
+                     <td><a href="#Mesmerize">Mesmerize</a></td>
+                     <td><a href="#IronEdict">Iron Edict</a></td>
+                     <td><a href="#EntombedCommand">Entombed Command</a></td>
+                     <td><a href="#TheLyingMind">The Lying Mind</a></td>
+                     <td><a href="#Possession">Possession</a></td>
+                  </tr>
+                  <tr>
+                     <td><b><a href="#Majesty">Majesty</a></b></td>
+                     <td><a href="#Awe">Awe</a></td>
+                     <td><a href="#Confidant">Confidant</a></td>
+                     <td><a href="#GreenEyes">Green Eyes</a></td>
+                     <td><a href="#Loyalty">Loyalty</a></td>
+                     <td><a href="#Idol">Idol</a></td>
+                  </tr>
+                  <tr>
+                     <td><b><a href="#Nightmare">Nightmare</a></b></td>
+                     <td><a href="#DreadPresence">Dread Presence</a></td>
+                     <td><a href="#FaceOfTheBeast">Face of the Beast</a></td>
+                     <td><a href="#TheGrandDelusion">The Grand Delusion</a></td>
+                     <td><a href="#WakingNightmare">Waking Nightmare</a></td>
+                     <td><a href="#MortalTerror">Mortal Terror</a></td>
+                  </tr>
+                  <tr>
+                     <td><b><a href="#Obfuscate">Obfuscate</a></b></td>
+                     <td><a href="#FaceInTheCrowd">Face in the Crowd</a></td>
+                     <td><a href="#TouchOfShadow">Touch of Shadow</a></td>
+                     <td><a href="#CloakOfNight">Cloak of Night</a></td>
+                     <td><a href="#TheFamiliarStranger">The Familiar Stranger</a></td>
+                     <td><a href="#Oubliette">Oubliette</a></td>
+                  </tr>
+                  <tr>
+                     <td><b><a href="#Protean">Protean</a></b></td>
+                     <td><a href="#UnmarkedGrave">Unmarked Grave</a></td>
+                     <td><a href="#PredatoryAspect">Predatory Aspect</a></td>
+                     <td><a href="#BeastsSkin">Beast's Skin</a></td>
+                     <td><a href="#UnnaturalAspect">Unnatural Aspect</a></td>
+                     <td><a href="#PrimevalMiasma">Primeval Miasma</a></td>
+                  </tr>
+                  <tr>
+                     <td><b><a href="#Resilience">Resilience</a></b></td>
+                     <td></td>
+                     <td></td>
+                     <td class="center">N/A</td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td><b><a href="#Vigor">Vigor</a></b></td>
+                     <td></td>
+                     <td></td>
+                     <td class="center">N/A</td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+               </table>
+            </div>
+            <div>
+               <h2 id="Animalism">Animalism</h2>
+               <p>A vampire’s Beast is not just a facet of her predatory nature,
+                  but a predator in and of itself — and it’s at the top of the food
+                  chain. A vampire can slip the leash of her Beast just a little
+                  to overpower weaker animals, forcing her will on them. Most
+                  Animalism powers affect predators and scavenging animals. In
+                  a city, the Kindred can call on feral cats and dogs, pigeons and
+                  crows, foxes, and more rats than anyone wants to think about.
+                  Rural vampires can summon bats, wolves, mountain lions, and
+                  even bears — any animal that feasts on the flesh of another.</p>
+               <h3 id="FeralWhispers">Feral Whispers •</h3>
+               <p>To those she would command, a vampire must first make
+                  herself understood. So it is with beasts as well as men. A vampire
+                  using Feral Whispers overpowers the animal’s instinctive
+                  reactions and forces it to understand. She can ask questions of
+                  a creature and it must respond as best it can, and with a further
+                  slight nudge, she can compel it to obey her. A canny vampire
+                  can use magpies and crows to spy on her victims from above,
+                  or command a gangster’s mastiffs to savage their owner.</p>
+               <p>The vampire talks to the animal, either using human words
+                  or, much more frequently, by making animal sounds of her
+                  own. She can command groups of animals, such as a flock of
+                  birds or a swarm of rats, as long as she is close enough that the
+                  animals can all hear her, and she can see all of them.</p>
+               <p><b>Cost:</b> None</p>
+               <p><b>Dice Pool:</b> Manipulation + Animal Ken + Animalism</p>
+               <p><b>Action:</b> Instant</p>
+               <p><b>Duration:</b> Scene, command can persist up to a night.</p>
+               <h4>Roll Results</h4>
+               <p><b>Dramatic Failure:</b> The animal misunderstands the vampire’s
+                  command, giving false information when the vampire asks, or
+                  obeying a twisted version of the vampire’s command.</p>
+               <p><b>Failure:</b> The animals fear the Beast, fleeing from a superior
+                  predator.</p>
+               <p><b>Success:</b> The vampire can communicate with an animal,
+                  asking it what it has perceived. Most animals can remember
+                  what has happened over the last night. Animals relate what they
+                  have encountered through the lens of their own perceptions —
+                  dogs answer in terms of smell and hearing, while birds relate
+                  what they could see. The vampire can also give the victim a
+                  simple command, equivalent to what the animal could do on
+                  its own, such as “attack him,” “follow her then return here,”
+                  “chew through these cables.” The command doesn’t normally
+                  persist for more than a night, but the vampire can add simple
+                  contingencies such as forcing the beast to go to ground if
+                  noticed, or to return once the command is complete.</p>
+               <p><b>Exceptional Success:</b> The animal is exceptionally obedient to the
+                  vampire, improvising to follow the spirit of the Kindred’s command.</p>
+               <h3 id="RaiseTheFamiliar">Raise the Familiar ••</h3>
+               <p>True beasts cannot be Embraced. They have never had the
+                  necessary Humanity. With this power, though, the vampire
+                  can complete the process halfway. By feeding a drained animal
+                  some of her Vitae, a vampire can infuse it with a fragment of the
+                  Kindred’s twilight life. It looks as it did when it died, though
+                  if appropriate, it might gain retractable fangs like a vampire.
+                  But the fangs are a lie — its true tragedy is that it cannot
+                  transubstantiate blood into Vitae. If it was wounded in death,
+                  it retains signs of the injuries, but its body functions fully. A
+                  coyote crushed by an SUV has a tire track running across it
+                  but no crushed bones, and a crow with a busted wing has bone
+                  jutting out of the wound but can still fly.</p>
+               <p>It doesn’t act like a normal animal — it doesn’t hunt for
+                  food, nor is it spooked by loud noises. It sleeps throughout the
+                  day, but becomes active at night. A human observing such an
+                  animal might be able to tell something’s wrong, but only the
+                  most grievous wounds usually make them take the time to look.</p>
+               <p><b>Cost:</b> 1 vitae</p>
+               <p><b>Requirement:</b> Feed 1 Vitae to the corpse (included in cost)</p>
+               <p><b>Action:</b> Instant</p>
+               <p><b>Duration:</b> (Blood Potency * animal’s Stamina) nights</p>
+               <p>The vampire feeds one point of Vitae to the animal’s corpse.
+                  The animal returns to a semblance of life for a number of
+                  nights equal to (Blood Potency * animal’s Stamina). Once she
+                  has raised a beast, a vampire can feed it more Vitae; each point ensures the animal’s continued existence as though the vampire
+                  had just raised it.</p>
+               <p>The raised creature gains a semblance of intelligence and
+                  a certain low cunning, enough to follow complex orders that
+                  most animals could not understand, and to interpret the spirit
+                  of commands rather than the letter. Treat the familiar as having
+                  one dot of Intelligence.</p>
+               <p>Infused with Vitae, the familiar takes bashing damage from
+                  attacks like a vampire, and does not fall unconscious or bleed
+                  out. The animal does not decompose.</p>
+               <p>The Vitae burning within the animal’s dead veins forges
+                  a sympathetic link between it and the vampire. The vampire
+                  can use Feral Whispers on her familiar at any time, over any
+                  distance, communicating silently or issuing commands at
+                  any range. Though she must still roll to see if her familiar
+                  interpreted her command, the animal does not resist.</p>
+               <h3 id="SummonTheHunt">Summon the Hunt •••</h3>
+               <p>The vampire infuses some of her Vitae with the essence of her
+                  prey, making it irresistible to other predators and scavenging beasts.
+                  Wherever she spills her blood — on the ground, over an object, or
+                  even splashing it on another person — the animals she calls will try
+                  to consume it. Her blood only loses potency once the summoned
+                  animals destroy whatever she poured it over or once the sun rises, at
+                  which point the Vitae burns away as though it were never present.
+                  She can focus her Beast’s call on one kind of creature, for example
+                  summoning just birds or rats. Prey animals in the affected area
+                  rightly shy away, afraid of the power of a vampire’s Beast.</p>
+               <p><b>Cost:</b> 2 Vitae</p>
+               <p><b>Requirement:</b> Spill 1 Vitae upon the target (included in cost).</p>
+               <p><b>Dice Pool:</b> Presence + Animal Ken + Animalism</p>
+               <p><b>Action:</b> Instant</p>
+               <p><b>Duration:</b> One night, or until the item marked with blood
+               is destroyed.</p>
+               <h4>Roll Results</h4>
+               <p><b>Dramatic Failure:</b> The animals follow the Beast’s call, but
+               lash out against the vampire in fear.</p>
+               <p><b>Failure:</b> Animals within the Discipline’s range feel their
+               normal fear of the Kindred and stay well away.</p>
+               <p><b>Success:</b> The vampire chooses when spilling the Vitae whether
+               to summon all predators and scavengers, or whether to restrict
+               herself to one kind of animal. All animals that match her
+               request within (successes) city blocks in the city, or (successes
+               * 100) yards (successes * 90 meters) in the country respond to
+               her call. Once they taste the spilled Vitae, the vampire can
+               imprint a command as though she had used Feral Whispers
+               on the animal. All animals receive the same command, but it
+               persists even while the vampire slumbers; the animals follow
+               her command for one night per success.</p>
+               <p><b>Exceptional Success:</b> Animals that taste the vampire’s blood
+               follow her command with single-minded zeal. They do not stop
+               to eat or sleep, deriving sustenance from the taste of Vitae alone.</p>
+               <h3 id="FeralInfection">Feral Infection ••••</h3>
+               <p>The vampire floods the area with her predatory aura, infecting
+                  everything around her with the ravings of her Beast. The scent
+                  of her blood inspires rage in animals, and can drive men mad,
+                  especially those who have recently touched her blood. Other
+                  Kindred witnessing the effects of Feral Infection recognize the
+                  Beast unchained, likening the victims’ actions to their own
+                  moments of frenzy. The vampire using this Discipline can exert
+                  a measure of control over her victims’ madness, focusing her
+                  own Beast against some victim she wants to crush, or a goal
+                  she wants to conquer.</p>
+               <p><b>Cost:</b> 2 Vitae</p>
+               <p><b>Requirement:</b> Spill 1 Vitae upon the ground (included in
+               cost).</p>
+               <p><b>Dice Pool:</b> Presence + Intimidation + Animalism</p>
+               <p><b>Action:</b> Instant</p>
+               <p><b>Duration:</b> Scene</p>
+               <h4>Roll Results</h4>
+               <p><b>Dramatic Failure:</b> The vampire loses hold of her Beast, and
+               it smashes past her. She is provoked to frenzy, though with a
+               –2 die modifier on the roll to resist.</p>
+               <p><b>Failure:</b> Affected animals display odd behavior — chasing
+               their tails, or attacking their own limbs — but nothing drives
+               them into a rage.</p>
+               <p><b>Success:</b> Any animal that can smell the vampire’s blood
+               enters a state of feral rage. It lashes out, attacking the nearest
+               victim without a thought for its own safety. Once the victim
+               is unconscious or dead, the animal feeds on his flesh. If the
+               vampire wishes, she can direct the mob of frenzied creatures
+               towards a single target or goal. She can’t give complex
+               instructions or a direct command, but can point out targets to
+               attack or the direction to move in.</p>
+               <p>Humans and supernatural creatures must make a reflexive
+               (Resolve + Composure – vampire’s successes) roll to resist the
+               vampire’s predatory Aura. If the victim has touched or imbibed
+               the vampire’s blood within the last night, they suffer a –3
+               die penalty. A failed roll puts the victim under the vampire’s
+               command. Vampires and werewolves frenzy, their victims
+               dictated by the Kindred who provoked them. Humans and
+               other supernatural creatures fall into an atavistic state where
+               they must attack the target, or move towards it if they can’t
+               reach it. If the vampire does not set a command, her victims
+               turn upon one another. A supernatural creature can spend a
+               point of Willpower to ignore the vampire’s commands, though
+               she remains frenzied.</p>
+               <p><b>Exceptional Success:</b> Unleashing her Beast sates it
+               temporarily. The vampire gains the Sated Condition (p. 305).</p>
+               <h3 id="LordOfTheLand">Lord of the Land •••••</h3>
+               <p>The vampire marks her territory with Vitae, in much the
+               same way that animals use urine or feces. She must encircle her
+               territory in a ring of Vitae, claiming it as her own — assuming she has driven off any prior residents. When encircling the territory,
+               she must walk the whole border. Some Kindred open wounds
+               on their hands and arms and walk at a stately pace, dripping
+               a slow stream of thick blood behind them. Others run wild,
+               smearing blood and bodily fluids on surfaces like a feral beast.</p>
+               <p>Once she has established her territory, the vampire is privy to
+               everything that happens within it. She can command animals,
+               summon or banish people, and provoke other vampires to leave
+               her lair. Most vampires establish their territory in small places,
+               like a brownstone or small public garden. A powerful vampire
+               might claim a whole public park or castle, but he must make
+               sure that nothing interrupts his claim — more than one vampire
+               has discovered that his territory is already claimed by an angry
+               pack of werewolves halfway through claiming it.</p>
+               <p><b>Cost:</b> 3-9 Vitae and 1 Willpower</p>
+               <p><b>Requirement:</b> The vampire must walk a circuit around his new
+               territory while marking it with Vitae. Three Vitae is enough to
+               secure a small house or garden, six can secure a city block, while
+               nine is enough to claim a castle. She must make sure that the
+               area contains no other vampires; many Kindred prefer to evict
+               all supernatural denizens. While the Discipline will still function
+               if her territory contains werewolves or other monsters, they will
+               suffer the effects — and will deduce that the vampire is to blame.</p>
+               <p><b>Action:</b> Instant</p>
+               <p><b>Duration:</b> One week per dot of Blood Potency, longer if the
+               vampire remains in his territory.</p>
+               <p>The vampire marks her territory. It remains empowered for at
+               least one week per dot of Blood Potency, though the effects of
+               this Discipline only end when the vampire leaves her territory
+               after the duration. Rumors speak of ancient vampires lying in
+               torpor whose territories remain active to this day.</p>
+               <p>A vampire’s territory scares off most creatures. Animals
+               and wild beasts won’t enter, and will fight to escape if forced
+               inside, unless otherwise affected by the vampire’s powers.
+               Humans and supernatural creatures, including other vampires,
+               must succeed at a reflexive Composure + Blood Potency roll
+               to enter — or to stay in the area once it is created. Unless they
+               roll an exceptional success, the feeling of overwhelming dread
+               inflicts a –3 die penalty on all actions. For Kindred, simply
+               being in another vampire’s territory is provocation to frenzy,
+               and rolls to resist suffer a –2 die penalty. If a vampire explicitly
+               invites someone into his territory — or uses Feral Whispers or
+               Summon the Hunt in the case of animals — they do not suffer
+               these penalties. Ghoul animals are also exempt.</p>
+               <p>When the vampire is within her territory, she can feel when a
+               person or animal crosses into her territory; if an invader is a vampire,
+               she knows his general Blood Potency. She always has a rough idea of
+               where everyone is within her domain, and only supernatural means
+               such as Disciplines can cut through her awareness — triggering a
+               Clash of Wills. As the undisputed master of her territory, a frenzying
+               creature cannot attack the vampire, nor may they spend Willpower
+               to resist her commands delivered through Feral Infection. Any
+               commands given by Feral Whispers last indefinitely, or until the animal leaves the vampire’s territory. Finally, the vampire can snatch
+               the senses of any animal she has raised with Raise the Familiar within
+               her territory, and use that animal to deliver commands using Feral
+               Whispers to other creatures.</p>
+            </div>
+            <div>
+               <h2 id="Auspex">Auspex</h2>
+                  <p>Auspex turns the Beast’s predatory instincts loose on secrets,
+                  finding points of weakness and hidden gems that the vampire
+                  can exploit to his advantage. Auspex is an internal Discipline,
+                  revealing information to the Kindred through visions that range
+                  from the direct to the hallucinatory. Other vampires have no
+                  way to know when someone is using Auspex to discover their
+                  secrets, and for that reason many Mekhet feel the stares and
+                  whispered barbs of other vampires who worry what secrets the
+                  clan of Shadows will uncover next.</p>
+                  <h3 id="BeastsHackles">Beast’s Hackles •</h3>
+                  <p>The Beast focuses on danger and weakness. A vampire who
+                  borrows her Beast’s senses can use that focus to know if someone
+                  is about to attack her, or to pinpoint the weakest person in the
+                  room. The Beast is sensitive to things that other people cannot
+                  normally perceive; using this Discipline can pierce Obfuscate
+                  (see “Clash of Wills,” p.125).</p>
+                  <p><b>Cost:</b> Varies, as the Discipline is slightly tiring; the first use
+                  in a scene is free, but subsequent uses in the same scene cost
+                  1 Vitae each.</p>
+                  <p><b>Dice Pool:</b> Wits + Empathy + Auspex</p>
+                  <p><b>Action:</b> Instant</p>
+                  <h4>Roll Results</h4>
+                  <p><b>Dramatic Failure:</b> The player asks a question as though he
+                  had rolled a success; the Storyteller should either give false
+                  information, or present a warped version of the truth.</p>
+                  <p><b>Failure:</b> The vampire’s senses cloud; his Beast doesn’t see any
+                  immediate point of weakness.</p>
+                  <p><b>Success:</b> The player can ask one question of the Storyteller.
+                  The Storyteller’s answer should include the imagery conjured
+                  by the Beast to convey the answer. This level of Auspex can
+                  only answer immediate questions about danger or weakness; the sample questions below cover much of the information the
+                  Beast can provide.</p>
+                  <p><b>Exceptional Success:</b> The player can ask two questions.</p>
+                  <h4>Sample Questions</h4>
+                  <ul><li>Who here is the most likely to give me what I want? <i>Blood
+                  throbbing through the victim’s jugular vein. The sound of jingling
+                  coins from the victim’s pocket.</i></li>
+                  <li>Who/what here is most likely to lapse into violence? <i>The
+                  victim’s hands stained with blood. The smell of gunpowder wafting
+                  from the victim.</i></li>
+                  <li>Who here is most afraid? <i>The smell of urine from the victim’s
+                  pants. A whimpering sound from the victim.</i></li>
+                  <li>Who/what here is most likely to hurt me? <i>Blood drying on a
+                  car crusher. Waves of hot rage boiling off the victim.</i></li>
+                  <li>Who here is closest to frenzy? <i>The victim’s face twists into a
+                  frenzied rictus. The taste of hot bile when facing the victim.</i></li>
+                  <li>Is a vampire here using Auspex 5? <i>A pall of grey smoke hanging
+                  in the air. A feeling like someone walked over the vampire’s grave.</i></li></ul>
+                  <h3 id="UncannyPerception">Uncanny Perception ••</h3>
+                  <p>The vampire focuses on a single victim, peeling back the
+                  layers of lies and misdirection to reveal the truth underneath.
+                  The Beast sniffs out the victim’s dark secrets, things that she
+                  doesn’t want anyone else to know. What the vampire does with
+                  that information is up to him.</p>
+                  <p><b>Cost:</b> Varies; the first use in a scene is free, but subsequent
+                  uses against the same target that scene cost 1 Vitae each.</p>
+                  <p><b>Dice Pool:</b> Intelligence + Empathy + Auspex</p>
+                  <p><b>Action:</b> Instant</p>
+                  <h4>Roll Results</h4>
+                  <p><b>Dramatic Failure:</b> The player asks a question as though
+                  he had rolled a success; the Storyteller should give false or
+                  misleading information.</p>
+                  <p><b>Failure:</b> The Beast unveils no secrets. Does the victim really
+                  have nothing to hide?</p>
+                  <p><b>Success:</b> The player can ask the Storyteller one question per
+                  success. The Storyteller’s answer should include the imagery
+                  conjured by the Beast to convey the answer. This level of Auspex
+                  focuses on questions concerning the secrets and weaknesses of
+                  a single character.</p>
+                  <p><b>Exceptional Success:</b> The images give the vampire further
+                  insight into the questions asked.</p>
+                  <h4>Sample Questions</h4>
+                  <ul><li>What is this person’s mood? <i>A flash of emotion on the victim’s
+                  face. A smell that the vampire associates with the emotion — the
+                  smell of fresh blood signifying rage, the sound of grinding stone
+                  signifying isolation.</i></li>
+                  <li>What is this person afraid of right now? <i>Shock as lights suddenly
+                  shine on the victim. The sound of dogs barking.</i></li>
+                  What is this person’s Vice/Requiem? The sound of conspiratorial
+                  whispers. The smell of drugs wafting off a junkie.
+                  <li>What is one of this person’s psychological vulnerabilities? <i>A
+                  sudden feeling of incredible depression. Shifting walls and colors as
+                  if in a hallucination.</i></li>
+                  <li>Is this person a diablerist? <i>The smell of brimstone and clotted
+                  blood. Thick black blood dripping off the victim’s chin.</i></li>
+                  <li>Is this person being controlled by someone else? <i>Marionette
+                  strings leading from the victim’s limbs up to the ceiling. A whispered
+                  voice that tells the victim what to do as she acts.</i></li>
+                  <li>Is this person a supernatural creature — and if I have seen
+                  them before, what is she? <i>The taste of torn flesh. The glowing
+                  halo of a mage’s nimbus.</i></li>
+                  <li>Who here does this person want to hurt most? <i>A bloody dagger
+                  drops from the victim’s hand, pointing to the answer. The taste of
+                  bile when looking at the target of the victim’s ire.</i></li></ul>
+                  <h3 id="TheSpiritsTouch">The Spirit’s Touch •••</h3>
+                  <p>A vampire can turn his Beast’s senses on an object or place,
+                  uncovering secrets and destroying lies just as surely as if he had
+                  focused on a person. A vampire can only use this Discipline on
+                  a particular object once per scene.</p>
+                  <p><b>Cost:</b> None</p>
+                  <p><b>Dice Pool:</b> Wits + Occult + Auspex</p>
+                  <p><b>Action:</b> Instant</p>
+                  <h4>Roll Results</h4>
+                  <p><b>Dramatic Failure:</b> The player asks a question as though
+                  he had rolled a success; the Storyteller should give false or
+                  misleading information.</p>
+                  <p><b>Failure:</b> The object yields no secrets to the Kindred’s senses
+                  — this time.</p>
+                  <p><b>Success:</b> The player can ask the Storyteller one question per
+                  success about the place or object. The Beast conjures images
+                  to answer rather than just words. In addition to the sample
+                  questions below, the character can ask questions suggested for
+                  Auspex 1 and 2 if they would be relevant.</p>
+                  <p><b>Exceptional Success:</b> The vampire can fully appreciate the
+                  object or place, and gains a +1 die bonus when using/interacting
+                  with it for the rest of the scene.</p>
+                  <h4>Sample Questions</h4>
+                  <ul><li>Who last touched/owned this? <i>A vision of the person holding the
+                  object. The sound of the victim’s voice, identifying herself.</i></li>
+                  <li>What is the strongest emotion associated with this object? <i>A
+                  hot flash of rage. A sudden flash of serene clarity.</i></li>
+                  <li>What was the object being used for at the point of strongest
+                  emotion? <i>A vision of the vampire using the object. Sounds and
+                  ghostly outlines of people walking through the room.</i></li></ul>
+                  <h3 id="LayOpenTheMind">Lay Open the Mind ••••</h3>
+                  <p>The Mekhet focuses on bringing her thoughts in line with
+                  her victim. He begins to think like her, and soon hears her
+                  thoughts in his mind. By concentrating and gently changing his
+                  own thoughts, he can project ideas or memories into the victim’s
+                  mind. With a little practice, the vampire can communicate
+                  without words, or project full memories to overwhelm the
+                  victim’s senses. He can even stimulate memories by thinking of
+                  a time, place, or emotion that causes the victim to remember —
+                  even if the victim had blocked it out or had it removed by magic.</p>
+                  <p><b>Cost:</b> 1 Vitae</p>
+                  <p><b>Dice Pool:</b> Intelligence + Socialize + Auspex vs. Resolve + Blood Potency</p>
+                  <p><b>Action:</b> Instant</p>
+                  <p><b>Duration:</b> Scene</p>
+                  <h4>Roll Results</h4>
+                  <p><b>Dramatic Failure:</b> The vampire aligns to the victim’s
+                  thoughts, but he cannot keep his thoughts separate from hers.
+                  He suffers the Confused Condition (p. 302).</p>
+                  <p><b>Failure:</b> The victim’s thoughts remain outside of the vampire’s
+                  grasp.</p>
+                  <p><b>Success:</b> The vampire’s thoughts align with the victim’s mind,
+                  and remain connected for the rest of the scene. He hears her
+                  thoughts as though she were speaking them aloud. People don’t
+                  think in complete sentences, but the vampire can discern the
+                  victim’s precise mood and intention, and some snippets of her
+                  current motivation and considerations. He can also project
+                  thoughts, either speaking directly into the victim’s thoughts,
+                  or depositing a mental image or memory.</p>
+                  <p>By focusing, the vampire can drag up a full memory from the
+                  victim, including things that the victim has forgotten or that
+                  were suppressed by magic (though doing so takes a Clash of
+                  Wills). He experiences all of the memory in an instant, with all
+                  five senses. If he chooses to transmit that memory to the victim,
+                  he can inflict a Condition like Guilty, Inspired, or Shaken as
+                  appropriate (p. 302 and p. 305). Uncovering further memories
+                  costs 1 Vitae per memory.</p>
+                  <p><b>Exceptional Success:</b> The vampire can retrieve as many
+                  deep memories as he has dots in Auspex before paying Vitae
+                  to uncover more.</p>
+                  <h3 id="TwilightProjection">Twilight Projection •••••</h3>
+                  <p>The vampire unshackles his mind, leaving his body and
+                  projecting his senses throughout the world. His astral form
+                  exists in a twilight state, with no real physical or spiritual
+                  substance to it, but still in the world and noticeable only by other
+                  vampires with Auspex. The vampire can move at incredible
+                  speeds, traveling to any point within the moon’s orbit — an area
+                  that some Kindred call the “lunar sphere.” While his senses
+                  and consciousness travel the world the vampire’s body appears
+                  to be a normal corpse, albeit one that does not decay.</p>
+                  <p><b>Cost:</b> 2 Vitae</p>
+                  <p><b>Dice Pool:</b> Intelligence + Occult + Auspex</p>
+                  <p><b>Action:</b> Instant</p>
+                  <h4>Roll Results</h4>
+                  <p><b>Dramatic Failure:</b> The character’s senses part from his body,
+                  but something sends his consciousness far away.</p>
+                  <p><b>Failure:</b> The vampire cannot slip the bounds of his dead flesh.</p>
+                  <p><b>Success:</b> The vampire’s senses part from his body, and can
+                  travel the world. Multiply the vampire’s Speed by his (Auspex +
+                  Blood Potency). The vampire is not bound by gravity, and can
+                  travel through physical obstacles and even into the ground.
+                  He cannot interact with the physical world in any way when
+                  separate from his body. He can see and hear as well as he can
+                  normally, but cannot use Disciplines. The vampire’s body lies in
+                  a torpor-like state, and he is unaware of anything that happens
+                  to it — though if someone kills his body or drives him to torpor,
+                  his mind jumps back to his body. Apart from that, the vampire
+                  must move his astral form back to his body to awaken. Every
+                  sunrise that the vampire remains separate from his body he loses
+                  a dot of Blood Potency — and suffers Final Death if his Blood
+                  Potency reaches 0. He regains any lost dots upon returning to
+                  his body. He must still spend a point of Vitae at the beginning
+                  of each night. Some vampires speak of strange magic that can
+                  prevent a vampire from returning to his body, or of his body
+                  walking around unbidden, with yellow eyes the only sign that
+                  something might be wrong.</p>
+                  <p><b>Exceptional Success:</b> The vampire’s senses slip away easily,
+                  and he is left with a memory of where his body is. He can
+                  reflexively spend a point of Vitae to instantly return to his
+                  body — or to the edge of any mystic boundary that prevents
+                  him from returning.</p>
+            </div>
+
+            <div>
+               <h2 id="Celerity">Celerity</h2>
+               <p>Unleashing her Beast, a vampire can cross vast distances in
+               the blink of an eye, catch a thrown punch before her attacker
+               has even moved a muscle, or snatch a gun barrel away from a
+               man’s temple before he can pull the trigger. Celerity makes a
+               vampire so fast that it’s as if she never has to move at all.</p>
+               <p><b>Cost:</b> None or 1 Vitae per active effect</p>
+               <p><b>Dice Pool:</b> None</p>
+               <p><b>Action:</b> None (for persistent effects) or Reflexive (for active
+               effects)</p>
+               <p><b>Duration:</b> Permanent (for persistent effects) or one turn (for
+               active effects)</p>
+               <p>Like other physical Disciplines, Celerity has two kinds of
+               effects: persistent and active. Persistent effects are always on,
+               and have no cost. Active effects are reflexive and cost one Vitae
+               per effect.</p>
+               <p><b>Persistent:</b> Add the vampire’s dots in Celerity to her Defense,
+               or to her Dodge roll when defending actively. If a Firearms attack
+               denies her normal Defense, the attacker still takes a penalty on
+               his attack equal to the vampire’s dots in Celerity. A character
+               must still be aware of incoming attacks to defend against them.</p>
+               If she is restrained, slumbering, or otherwise unable to respond, Celerity offers no advantage.
+               <p><b>Active:</b> By spending Vitae Celerity allows for bursts of speed
+               faster than the eye can perceive. For each point of Vitae spent
+               choose one effect from the following list. A vampire may spend
+               additional Vitae to invoke multiple effects simultaneously, but
+               no effect of Celerity may be used more than once per turn.</p>
+               <ul><li>Immediately move to the head of the Initiative queue.
+               This boost in Initiative lasts only one turn, after which all
+               combatants return to acting in their rolled order. If multiple
+               vampires attempt to jump ahead simultaneously they enter a
+               Clash of Wills (p. 125), the winner acts first.</li>
+               <li>Interrupt the action of another character with a brief action of
+               her own. This could be an attack, making it possible to disable an
+               opponent in mid-action. It may be movement, avoiding harm by
+               shifting out of reach. Or it could be any other instant action, like
+               activating a Discipline or dodging. However, the vampire is still
+               limited to one instant action. She cannot use Celerity to make two
+               attacks, or an attack followed by another instant action. Likewise she
+               cannot move further in a single turn than her Speed would allow.
+               The decision to interrupt is made after another character’s action is
+               declared, but before it actually occurs (before dice are rolled). Once
+               interrupted, the other character must continue his declared action,
+               if it’s still possible. If the action is no longer possible, he takes no
+               action. Alternatively, that character’s player may declare his action a
+               dramatic failure and take a Beat. Celerity cannot interrupt reflexive
+               actions or actions of which the character was unaware. Finally, using
+               Celerity in this way is exhausting; a vampire may only interrupt as
+               many actions in a scene as she has dots in Celerity.</li>
+               <li>Multiply her speed by her dots in Celerity plus one. Moving
+               in this way is sudden, jarring, the vampire appears to shift from
+               point to point without crossing the space in-between. She may
+               use this to briefly avoid detection or launch surprise attacks.</li></ul>
+            </div>
+
+            <div>
+               <h2 id="Dominate">Dominate</h2>
+               <p>The Beast demands obedience from lesser creatures. It slips
+               into the Kindred’s voice, modulating his tone and his words to
+               express absolute authority. It progresses from the simple barked
+               commands of a drill sergeant to creating false memories of
+               whatever the vampire desires — or letting her steal her victim’s
+               body to walk in the sunlight once again.</p>
+               <h3 id="Mesmerize">Mesmerize •</h3>
+               <p>All a vampire has to do is meet her victim’s eye to catch him
+               in her thrall. Her control isn’t obvious; she just asks him to do
+               something and her victim acquiesces. He could unlock a door,
+               pass her a gun — or forget ever meeting her. Some cruel vampires
+               mesmerize passers-by just to take the rap for their crimes.</p>
+               <p><b>Cost:</b> None</p>
+               <p><b>Dice Pool:</b> Intelligence + Expression + Dominate vs. Resolve + Blood Potency</p>
+               <p><b>Action:</b> Instant</p>
+               <h4>Roll Results</h4>
+               <p><b>Dramatic Failure:</b> The victim sees through the vampire’s
+               attempt to control his mind; emboldened, he gains the Steadfast
+               Condition (p. 306).</p>
+               <p><b>Failure:</b> The vampire’s victim proves stronger-willed than
+               she’d thought.</p>
+               <p><b>Success:</b> The vampire holds her victim’s gaze for just a second,
+               but it’s enough to inflict the Mesmerized Condition (p. 305).</p>
+               <p><b>Exceptional Success:</b> The vampire’s control flows over the
+               victim’s brain like water. They want to do whatever the vampire
+               says. The vampire can issue a command in the same action as
+               mesmerizing the victim.</p>
+               <p>Once she has inflicted the Mesmerized Condition, the
+               vampire can command the victim as an instant action. Her
+               commands can’t be longer than three or four words, and she
+               has to be direct — her control doesn’t extend to issuing vague
+               commands. “Follow me,” “Shoot your husband,” and “Repeat
+               after me…” are all suitable commands, while “Forget,” “Submit,”
+               and “Do my bidding” have too much room for interpretation.
+               She can even mess with the victim’s memory, making one
+               statement about the current scene that victim will remember
+               as truth. While she can still only use simple and unambiguous
+               commands, she can pack a lot of changes into four words: “You
+               killed that man” and “I was not here” combine to frame the
+               victim for murder.</p>
+               <h3 id="IronEdict">Iron Edict ••</h3>
+               <p>Once she’s got a hotline into her victim’s mind, the vampire
+               can take some time to play with his thoughts and memories.
+               While it takes more of her power to relay complex commands,
+               she goes from jerking her victim’s strings to controlling him like
+               a puppeteer, making his every movement dance to her tune.</p>
+               <p><b>Cost:</b> 1 Vitae; none if victim is in Vinculum with the vampire</p>
+               <p><b>Requirement:</b> The vampire must have inflicted the Mesmerized Condition on the victim</p>
+               <p><b>Action:</b> Instant</p>
+               <p>The vampire can issue a longer command to a Mesmerized
+               victim. This edict can be up to three sentences long, and can
+               include a successive series of actions. The command takes two
+               turns per sentence to convey. As with Mesmerize, the vampire’s
+               control doesn’t extend to commands that rely on the victim’s
+               interpretation. The victim takes the Dominated Condition (p.
+               302) and will follow the vampire’s commands as soon as she
+               finishes speaking them. He continues to follow the order until
+               he has completed his task, or the sun rises. Many Kindred use
+               Iron Edict to issue a simple command, such as “Obey my direct
+               instructions when I give them to you,” which effectively gives
+               them control over the minion until the sun comes up — though
+               it doesn’t extend the duration of the Mesmerized Condition.</p>
+               <h3 id="EntombedCommand">Entombed Command •••</h3>
+               <p>The vampire has enough control over her meat-puppet to
+               implant a subconscious trigger, a specific set of conditions that
+               will turn him into her slave when he encounters them. She can
+               force her victim into a suggestible state when he points a gun at
+               her, make him transfer all of his money into her account when
+               he hears Beethoven’s Ninth Symphony, or only allow him to
+               remember his son when he smells lilacs.</p>
+               <p><b>Cost:</b> None; other Dominate powers may cost Vitae.</p>
+               <p><b>Dice Pool:</b> Intelligence + Subterfuge + Dominate – victim’s Resolve</p>
+               <p><b>Requirement:</b> The vampire must have inf licted the Mesmerized Condition on the victim</p>
+               <p><b>Action:</b> Instant</p>
+               <p><b>Duration:</b> One week per success, or one month per success (see below).</p>
+               <h4>Roll Results</h4>
+               <p><b>Dramatic Failure:</b> The vampire’s attempt to set up a trigger
+               backfires. The victim loses his Mesmerized Condition. For the
+               next week, when he encounters one trigger that the vampire
+               attempted to set he instead gains the Steadfast Condition (p. 306).
+               Failure: The attempt to set triggers in the victim’s mind
+               doesn’t take. Is he fighting back, or is there another reason?</p>
+               <p><b>Success:</b> The vampire can implant a number of subconscious
+               triggers equal to the number of successes rolled to trigger
+               specific effects of other Dominate powers. She must pay any
+               Vitae cost for these powers as normal. These triggers remain
+               in place for one week per success, or one month per success if
+               the victim is in any stage of Vinculum towards the vampire.
+               During that time, the effects of the trigger emerge each time
+               the victim encounters the stimulus.</p>
+               <p><b>Exceptional Success:</b> The vampire’s commands slip into the
+               victim’s subconscious with ease. Reduce the Vitae cost by one
+               when implanting Iron Edict and The Lying Mind.</p>
+               <p>Each trigger is a specific event or sensory stimulus that causes
+               the linked effect to emerge. The vampire must pay any Vitae
+               cost for other Dominate powers, but only need do so once to
+               attach that power to any number of triggers. Using Iron Edict
+               in conjunction with Entombed Command to force a man
+               to show up at a nightclub when he argues with his wife, and
+               making him fill a USB stick with sensitive information from
+               his workplace all costs only one point of Vitae. Describing both
+               the trigger and its specific effect on the victim takes about two
+               turns per trigger.</p>
+               <p>Other Dominate abilities work as follows when channeled
+               through Entombed Command:</p>
+               <ul><li><b>Mesmerize:</b> The victim gains the Mesmerized Condition
+               when he encounters the trigger. If the vampire isn’t present
+               to capitalize on his state, the effects soon fade.</li>
+               <li><b>Iron Edict:</b> When the victim encounters the trigger, he
+               immediately gains a Dominated Condition relating to the
+               imprinted command. As he is entirely under the vampire’s
+               sway when Dominated, he does not encounter other triggers
+               until he resolves the Condition.</li>
+               <li><b>The Lying Mind:</b> The trigger serves as a switch for memory
+               alteration. Encountering it once causes a memory to emerge
+               (or to vanish), while encountering it again reverses the change.</li></ul>
+               <h3 id="TheLyingMind">The Lying Mind ••••</h3>
+               <p>A mistress of Dominate can dance through her victim’s
+               memories, sculpting them to her whims. He might not remember
+               his family — or she might force him to remember the tragic death
+               of a son who never existed. She can subtly alter his memories,
+               replacing his wife’s face with her own, or moving his memory of
+               a vacation from Paris to London. Beyond necessary generalities,
+               this does not allow the vampire to read the original memories.</p>
+               <p><b>Cost:</b> 2 Vitae</p>
+               <p><b>Requirement:</b> The vampire must have inf licted the
+               Mesmerized Condition on the victim; the victim must consume
+               or be anointed by 1 Vitae (included in cost).</p>
+               <p><b>Action:</b> Instant</p>
+               <p><b>Duration:</b> Permanent</p>
+               <p>While he remains Mesmerized, the vampire can spin her victim’s
+               memories like cotton candy, stretching far back into childhood. She
+               must either feed him some of her Vitae or drip it onto his forehead.
+               She can create memories of events from nothing, erase memories
+               of an event or person, or change the people, events, and location of
+               existing memories to serve her purpose. As part of this alteration, she
+               inflicts a persistent Condition on the victim. If she deletes a broad
+               swath of memories, the victim receives the Amnesia Condition (p.
+               301), otherwise he takes the False Memories Condition (p. 303).</p>
+               <p>The vampire has to speak with her victim, describing the
+               changes she wants to make to his memories. Crude alterations
+               — deleting a swathe of his past, or replacing his wife’s face
+               with the vampire’s in all his memories — take about a minute
+               to describe, but more detailed changes can take quite a bit
+               longer. When changing memories or creating new ones, the
+               vampire can create the factual content of the memory, but
+               the victim’s thoughts and feelings remain out of her control.
+               She can create an environment that makes him predisposed
+               to certain reactions, but she can’t force him to love a son she’s
+               just invented. The vampire’s changes are permanent, unless she
+               used Entombed Command to only reveal them on a trigger.</p>
+               <h3 id="Possession">Possession •••••</h3>
+               <p>Controlling a victim’s memories and actions is one thing, but
+               for some vampires the truest expression of control comes from
+               suppressing the victim’s will entirely, taking complete control of
+               his body. The vampire moves her mind into the victim, using
+               his body instead of her own.</p>
+               <p><b>Cost:</b> 1 Vitae and 1 Willpower</p>
+               <p><b>Dice Pool:</b> Intelligence + Intimidation + Dominate – victim’s Resolve</p>
+               <p><b>Requirement:</b> The vampire must have inflicted the Mesmerized Condition on the victim.</p>
+               <p><b>Action:</b> Reflexive</p>
+               <p><b>Duration:</b> 1 night per success</p>
+               <h4>Roll Results</h4>
+               <p><b>Dramatic Failure:</b> The victim’s mind will not be bound to
+               the vampire’s control. He immediately resolves the Mesmerized
+               Condition and regains a point of Willpower.</p>
+               <p><b>Failure:</b> The vampire cannot take total control of her victim
+               just yet.</p>
+               <p><b>Success:</b> The vampire takes over her victim’s body for one night
+               per success. While in this new body, she uses her victim’s Physical
+               Attributes and Skills in place of her own, and gains any Physical
+               or Combat Merits that the victim possessed. She can stay awake
+               during the day by spending a point of Willpower at dawn and takes
+               no damage from sunlight — if she does not spend Willpower, she
+               returns to her body. Each night, she must spend a point of Vitae
+               as normal. She cannot use Disciplines or Blood Sorcery when
+               possessing someone else, nor can she access any supernatural powers
+               her victim may possess, but she otherwise controls his body totally.
+               If she attempts to kill herself the victim may roll Resolve + Blood
+               Potency as a reflexive action, on a success he evicts the vampire from
+               his consciousness. Possessing a victim removes the Mesmerized and
+               Dominated Conditions, and the vampire is not subject to any triggers
+               set on the victim by Entombed Command while she remains in
+               control. Once she leaves the victim’s body, those triggers affect him
+               as normal. While she commands the victim’s body, the vampire’s
+               own form lies in a torpor-like state awaiting her return; if she remains
+               in the victim’s body for so long that her body slips into torpor, she
+               immediately snaps back into her body.</p>
+               <p><b>Exceptional Success:</b> The vampire slips into the victim’s body with
+               ease, and leaves her jaunt in another body with renewed purpose.
+               Upon leaving the victim’s body, she regains a point of Willpower.</p>
+            </div>
+
+            <div>
+               <h2 id="Majesty">Majesty</h2>
+               <p>Majesty draws on the Beast’s animal magnetism to amplify a
+                  vampire’s force of personality, making people like him and want
+                  to make him happy even though normally they wouldn’t give a shit
+                  about him. They like him and want to be around him just because
+                  it makes them feel good. Using Majesty isn’t like leaning forward
+                  and slipping a command behind a human’s eyes, it’s arranging
+                  the world so that people will kill — or die — for his attention.</p>
+               <h3 id="Awe">Awe •</h3>
+               <p>Awe shines a spotlight on the vampire even in a crowded
+                  room. He’s the most important person around and people want
+                  to be around him. Awe creates an aura of power, a sense that
+                  the vampire’s important, like a billionaire playboy or a movie
+                  star. He could be wearing tattered clothes, with open wounds
+                  and his face caked in shit but people still think he’s cooler than
+                  them, and they want to be around him.</p>
+                  <p><b>Cost:</b> None</p>
+                  <p><b>Action:</b> Instant</p>
+                  <p><b>Duration:</b> Scene</p>
+                  <p>When he wills it, all eyes fall on the vampire and nobody
+                  cares what he’s doing. For the rest of the scene, he suffers no
+                  penalties to Social rolls from his actions or appearance — even
+                  if he’s just beaten another man to death or waved a gun in a
+                  crowded nightclub. Given a chance, he can talk his way out of
+                  minor criminal offenses and almost any social faux pas.</p>
+                  <p>As the center of attention, he adds his Majesty dots to any
+                  Presence rolls when talking to people around him. This bonus
+                  only applies when talking to people normally, not to other uses of
+                  Majesty. Anyone paying attention to him also subtracts his Majesty
+                  dots from any Wits + Composure rolls to notice anything other
+                  than the vampire. With a word, he can summon anyone in the
+                  room to his side — not by any mystical compulsion, but by making
+                  her aware that he wants her to approach. Another vampire can
+                  fortify herself against Awe with her predatory aura (see Lashing
+                  Out, p. 92). If she succeeds, she is unaffected by Awe.</p>
+                  <h3 id="Confidant">Confidant ••</h3>
+                  <p>The vampire doesn’t have to shout to be heard, and in a crowd
+                  that he’s already Awed, sometimes speaking quietly is the best
+                  way to get attention. With little more than a soft voice and a
+                  knowing look, the vampire brings someone new into the fold
+                  and becomes her trusted confidant.</p>
+                  <p><b>Cost:</b> None</p>
+                  <p><b>Requirement:</b> The vampire must use Awe on the victim.</p>
+                  <p><b>Dice Pool:</b> Presence + Empathy + Majesty vs. Resolve + Blood Potency</p>
+                  <p><b>Action:</b> Contested; resistance is reflexive</p>
+                  <h4>Roll Results</h4>
+                  <p><b>Dramatic Failure:</b> The vampire slips up, letting some of what
+                  he wants the victim to feel leak back into himself. He’s affected
+                  by the Swooning Condition (p. 306) for the victim.</p>
+                  <p><b>Failure:</b> The victim doesn’t feel that she’s worthy of joining
+                  the vampire’s inner circle just yet.</p>
+                  <p><b>Success:</b> The vampire successfully charms his victim. She
+                  gains the Charmed Condition (p. 301).</p>
+                  <p><b>Exceptional Success:</b> It’s incredibly hard to resist the force
+                  of the vampire’s personality. The victim’s Charmed Condition
+                  lasts for nights, rather than hours.</p>
+                  <h3 id="GreenEyes">Green Eyes •••</h3>
+                  <p>To a victim of this level of Majesty, the vampire’s
+                  attention feels so good that it’s addictive. His inner
+                  circle craves his attention like a crackhead craves
+                  a rock or a writer needs coffee. That craving first
+                  becomes desperation and then jealousy as other
+                  people attract the vampire’s gaze, if only for a
+                  minute.</p>
+                  <p><b>Cost:</b> 1 Vitae</p>
+                  <p><b>Requirement:</b> The vampire must have inflicted the Charmed or Enthralled Condition on the target.</p>
+                  <p><b>Action:</b> Reflexive</p>
+                  <p><b>Duration:</b> Scene</p>
+                  <p>His victim is now thoroughly obsessed with
+                  the vampire, and he can play with her feelings
+                  and desires like they were a cheap harmonica.
+                  With Green Eyes, he can shift the emotional
+                  state of anyone he’s Charmed, sending them
+                  into a violent rage (or even a frenzy, in the case
+                  of some supernatural creatures) or making them
+                  so depressed that they feel hollow without him.
+                  Each shift costs him a point of Vitae, but he can
+                  instill the same emotion in any number of victims
+                  at once.</p>
+                  <p>The vampire can ask one of his Charmed
+                  minions to do something in such a way that they
+                  feel an obsessive need to accomplish it. He could
+                  ask them to kill someone, to give him money, or
+                  to perform debased and degrading acts for his
+                  amusement. A Charmed victim will do whatever
+                  he wants within reason — if the request would lead
+                  to the victim taking lethal damage or hitting a
+                  breaking point, the victim will save her own skin.
+                  She resolves the Charmed Condition immediately.
+                  An Enthralled victim is far more dangerous —
+                  she won’t commit suicide for the vampire, but
+                  anything else is fair game. If his victim would hit
+                  a breaking point, she doesn’t notice (and doesn’t
+                  roll for experiencing the breaking point) until the
+                  Enthralled Condition expires.</p>
+                  <h3 id="Loyalty">Loyalty ••••</h3>
+                  <p>Among his inner circle, the vampire praises
+                  some more than others, bringing them even
+                  closer to him. With a few words he can inflame
+                  their love for him. Beyond jealousy and obsession
+                  comes complete loyalty. A victim will do absolutely
+                  anything for him — and just thinking about
+                  crossing the vampire is traumatic. She ignores
+                  her other friends and her family. Her vampire is
+                  all that matters.</p>
+                  <p><b>Cost:</b> 2 Vitae</p>
+                  <p><b>Requirement:</b> The vampire must have inflicted the Charmed Condition on the target.</p>
+                  <p><b>Dice Pool:</b> Manipulation + Empathy + Majesty vs. Resolve + Blood Potency</p>
+                  <p><b>Action:</b> Contested; resistance is reflexive</p>
+<h4>Roll Results</h4>
+<p><b>Dramatic Failure:</b> Something sets the victim on edge, some
+discordant note forces her to rethink her affection for the
+vampire. She immediately resolves the Charmed Condition.</p>
+<p><b>Failure:</b> Though the victim remains devoted to the vampire,
+her loyalty does not flare into fanaticism.</p>
+<p><b>Success:</b> The vampire inspires burning loyalty in the victim.
+She’d do anything for him, giving up her blood or organs —
+or taking a bullet for him. The victim gains the Enthralled
+Condition.</p>
+<p><b>Exceptional Success:</b> The Enthralled Condition lasts for one
+week per dot of Blood Potency.</p>
+<h3 id="Idol">Idol •••••</h3>
+<p>More than just a celebrity, a vampire who can play with
+people’s desires becomes a king or a star, the kind of person
+who wouldn’t ever be so crass as to demand people’s loyalty.
+People around him give it willingly, pledging to do whatever
+he wants if he’ll only notice them, look at them, or smile in
+their direction.</p>
+<p><b>Cost:</b> 2 Vitae and 1 Willpower</p>
+<p><b>Action:</b> Reflexive</p>
+   <p><b>Duration:</b> Scene</p>
+<p>Idol enhances Awe’s aura of superiority to divine (or
+blasphemous) levels. The vampire can wait until she’s established
+Awe and then enhance it, or pay the price to immediately
+establish her superiority over everyone else in the room.
+Anyone affected by the vampire’s Awe must make a reflexive
+roll of Resolve + Blood Potency minus the vampire’s Majesty
+dots in order to take an action that could harm or embarrass
+the vampire in any way. Unless they succeed, they can’t so much
+as crack a joke at his expense.</p>
+<p>If the vampire has inflicted the Charmed Condition on
+anyone in his presence, she must make a reflexive Resolve +
+Blood Potency – Majesty dots roll when the vampire activates
+Idol. If she fails, she acquires the Enthralled Condition for the
+remainder of the scene. People who the vampire has already
+Enthralled cannot spend Willpower to act against him.</p>
+<h2 id="Nightmare">Nightmare</h2>
+<p>The Beast doesn’t need fear. Fear is rational, understandable
+— a reaction to a presented stimulus. Any idiot can make
+people fear him. Nightmare indulges the Beast’s desire to cause
+            </div>
+            <hr></hr>
+            <div>
+               <p><a href="">↑ Back to top ↑</a></p>
+            </div>
+            <hr></hr>
+         </div>
+      </div>
+
+      <!-- jQuery CDN - Slim version (=without AJAX) -->
+      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+      <!-- Popper.JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+      <!-- Bootstrap JS -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+      <script src="../../content/index.js"></script>
+      <script src="../../content/index_menu.js"></script>
+
+      <script type="text/javascript">
+      $(document).ready(function () {
+      loadmenu("home", "pcs/disciplines/");
+      $('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+      });
+      });
+      </script>
+   </body>
+
+</html>
