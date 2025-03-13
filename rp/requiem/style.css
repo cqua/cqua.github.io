@@ -84,7 +84,7 @@ a:focus {
 
 #sidebar > ul > li > a.active,
 #sidebar > ul > li > a.active:hover{
-  background: #863d3d;
+  background: linear-gradient(90deg,#863d3d,#0000 100%);
   color: white;
 }
 
