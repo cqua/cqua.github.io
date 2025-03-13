@@ -52,7 +52,11 @@ var menu_content = [
 			},
 			{
 				"title" : 'Life in Duskwall',
-				"action" : "world/duskwall/"
+				"action" : "setting/"
+			},
+			{
+				"title" : 'Factions',
+				"action" : "setting/factions/"
 			},
 			{
 				"title" : "DATE",

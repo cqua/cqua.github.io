@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="shortcut icon" href="content/favicon.ico" />
+
+      <title>REQUIEM IN DUSKWALL</title>
+
+      <!-- Bootstrap CSS CDN -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+      <!-- Our Custom CSS -->
+      <link rel="stylesheet" href="../../style.css">
+      <!-- <link rel="stylesheet" href="https://cqua.github.io/rp/vineyard2/style.css"> -->
+
+      <!-- Font Awesome JS -->
+      <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" 
+      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+      <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" 
+      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <div class="wrapper bg-dark text-light">
+         <!-- Sidebar  -->
+         <nav id="sidebar">
+         </nav>
+
+         <!-- Page Content  -->
+         <div id="content">
+            <div class="block page-header">
+               <div>
+                  <button type="button" id="sidebarCollapse" class="btn btn-info">
+                     <span class="fas fa-bars">≡</span>
+                  </button>
+                  <h1>Factions</h1>
+                  <p class="contents">
+               </div>
+            </div>
+
+            <div>
+               <h2>Circle of Flame</h2>
+               <p></p>
+            </div>
+
+            <div>
+               <h2>Circle of Flame</h2>
+               <p></p>
+            </div>
+
+            <div>
+               <h2>Other Factions</h2>
+               <h3>Silver Nails</h3>
+               <p></p>
+            </div>
+
+            <hr></hr>
+            <div>
+               <p><a href="">↑ Back to top ↑</a></p>
+            </div>
+            <hr></hr>
+         </div>
+      </div>
+
+      <!-- jQuery CDN - Slim version (=without AJAX) -->
+      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+      <!-- Popper.JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+      <!-- Bootstrap JS -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+      <script src="../../content/index.js"></script>
+      <script src="../../content/index_menu.js"></script>
+
+      <script type="text/javascript">
+      $(document).ready(function () {
+      loadmenu("home", "setting/factions/");
+      $('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+      });
+      });
+      </script>
+   </body>
+
+</html>
