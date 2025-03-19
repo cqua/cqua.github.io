@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="shortcut icon" href="content/favicon.ico" />
+
+      <title>REQUIEM IN DUSKWALL</title>
+
+      <!-- Bootstrap CSS CDN -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+      <!-- Our Custom CSS -->
+      <link rel="stylesheet" href="../../style.css">
+      <!-- <link rel="stylesheet" href="https://cqua.github.io/rp/vineyard2/style.css"> -->
+
+      <!-- Font Awesome JS -->
+      <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" 
+      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+      <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" 
+      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <div class="wrapper bg-dark text-light">
+         <!-- Sidebar  -->
+         <nav id="sidebar">
+         </nav>
+
+         <!-- Page Content  -->
+         <div id="content">
+            <div class="block page-header">
+               <div>
+                  <button type="button" id="sidebarCollapse" class="btn btn-info">
+                     <span class="fas fa-bars">≡</span>
+                  </button>
+                  <h1>Merits</h1>
+                  <p class="contents">
+               </div>
+            </div>
+            <div>
+               <table>
+                  <tr><th colspan="6"><a href="#MentalMerits">Mental Merits</a></th></tr>
+                  <tr>
+                     <td colspan="2" class="center"><a href="#DangerSense">Danger Sense (••)</a></td>
+                     <td colspan="2" class="center"><a href="#EideticMemory">Eidetic Memory (••)</a></td>
+                     <td colspan="2" class="center"><a href="#EncyclopedicKnowledge">Encyclopedic Knowledge (••)</a></td>
+                  </tr>
+                  <tr>
+                     <td colspan="2" class="center"><a href="#FastReflexes">Fast Reflexes (• to •••)</a></td>
+                     <td colspan="2" class="center"><a href="#Indomitable">Indomitable (••)</a></td>
+                     <td colspan="2" class="center"><a href="#Language">Language (•)</a></td>
+                  </tr>
+                  <tr><td colspan="6" class="center"><a href="#TrainedObserver">Trained Observer (• or •••)</a></tr>
+                  <tr><th colspan="6" class="center"><a href="#PhysicalMerits">Physical Merits</a></th></tr>
+                  <tr>
+                     <td colspan="3" class="center"><a href="#FleetofFoot">Fleet of Foot (• to •••)</a></td>
+                     <td colspan="3" class="center"><a href="#Hardy">Hardy (• to •••)</a></td>
+                  </tr>
+                  <tr>
+                     <td colspan="3" class="center"><a href="#IronStamina">Iron Stamina (• to •••)</a></td>
+                     <td colspan="3" class="center"><a href="#QuickDraw">Quick Draw (•)</a></td></tr>
+                  <tr><th colspan="6"><a href="#SocialMerits">Social Merits</a></th></tr>
+                  <tr>
+                     <td colspan="2" class="center"><a href="#Allies">Allies (• to •••••)</a></td>
+                     <td colspan="2" class="center"><a href="#Contacts">Contacts (• to •••••)</a></td>
+                     <td colspan="2" class="center"><a href="#Fame">Fame (• to •••)</a></td>
+                  </tr>
+                  <tr>
+                     <td colspan="2" class="center"><a href="#Resources">Resources (• to •••••)</a></td>
+                     <td colspan="2" class="center"><a href="#Retainer">Retainer (• to •••••)</a></td>
+                     <td colspan="2" class="center"><a href="#Status">Status (• to •••••)</a></td>
+                  </tr>
+                  <tr><td colspan="6" class="center"><a href="#StrikingLooks">Striking Looks (• or ••)</a></td></tr>
+                  <tr><th colspan="6"><a href="#SupernaturalMerits">Supernatural Merits</a></th></tr>
+                  <tr>
+                     <td colspan="3" class="center"><a href="#Cursed">Cursed (••)</a></td>
+                     <td colspan="3" class="center"><a href="#UnseenSense">Unseen Sense (••)</a></td>
+                  </tr>
+                  <tr><th colspan="6"><a href="#FightingMerits">Fighting Merits</a></th></tr>
+                  <tr>
+                     <td colspan="2" class="center"><a href="#CloseQuartersCombat">Close Quarters Combat<br/>(• to •••••; Style)</a></td>
+                     <td colspan="2" class="center"><a href="#DefensiveCombat">Defensive Combat (•)</a></td>
+                     <td colspan="2" class="center"><a href="#FightingFinesse">Fighting Finesse (••)</a></td>
+                  </tr>
+                  <tr>
+                     <td colspan="2" class="center"><a href="#Firefight">Firefight (• to •••; Style)</a></td>
+                     <td colspan="2" class="center"><a href="#ImprovisedWeaponry">Improvised Weaponry<br/>(• to •••; Style)</a></td>
+                     <td colspan="2" class="center"><a href="#MartialArts">Martial Arts<br/>(• to •••••; Style)</a></td>
+                  </tr>
+               </table>
+            </div>
+            <div>
+               <h2 id="MentalMerits">Mental Merits</h2>
+               <!--h3 id='AreaOfExpertise'>Area of Expertise •</h3>
+               <p><b>Prerequisite:</b> Resolve •• and one Skill Specialty</p>
+               <p>Your character is uncommonly specialized in one area. Choose a Skill Specialty. If you would gain a bonus from that Skill Specialty, you may
+                  take +2 instead of +1.</p-->
+               <h3 id='DangerSense'>Danger Sense (••)</h3>
+               <p>You gain a +2 modifier on reflexive Wits +
+               Composure rolls for your character to detect an impending
+               ambush.</p>
+               <p>Your character’s reflexes are honed to the point where
+               nothing’s shocking.</p>
+               <h3 id='EideticMemory'>Eidetic Memory (••)</h3>
+               <p>Your character recalls events and details with
+               pinpoint accuracy. You do not have to make rolls for your
+               character to remember past experiences. When making
+               Intelligence + Composure (or relevant Skill) rolls to recall
+               minute facts from swaths of information, take a +2 bonus.</p>
+               <h3 id='EncyclopedicKnowledge'>Encyclopedic Knowledge (••)</h3>
+               <p>Choose a Skill. Due to an immersion in academia,
+               pop culture, or a hobby obsession, your character has collected limitless factoids about the topic, even if she has no
+               dots in the Skill.</p>
+               <p>You can make an Intelligence + Wits roll at any time your
+               character is dealing with her area of interest. On a successful
+               roll, the Storyteller must give a relevant fact or detail about
+               the issue at hand. Your character knows this fact, but you
+               must explain within the scope of your character’s background
+               why she knows it. For example, for Encyclopedic Knowledge:
+               Medicine: “Do you remember that time on that show, when
+               the doctor said it doesn’t manifest before puberty?”</p>
+               <h3 id='FastReflexes'>Fast Reflexes (• to •••)</h3>
+               <p><b>Prerequisite:</b> Wits ••• or Dexterity •••</p>
+               <p>+1 Initiative per dot</p>
+               <p>Your character’s reflexes impress and astound; she’s always
+               fast to react.</p>
+               <!--h3 id='Holistic Awareness'>Holistic Awareness •</h3>
+               <p>Your character is skilled at non-traditional healing
+               methods. While scientific minds might scoff, he can provide
+               basic medical care with natural means. He knows what herbs can Mental Merits 45
+               stem an infection, and what minerals will stave off a minor sickness. Unless your patient suffers wound penalties from lethal or
+               aggravated wounds, you do not need traditional medical equipment to stabilize and treat injuries. With access to woodlands, a
+               greenhouse, or other source of diverse flora, a Wits + Survival
+               roll allows your character to gather all necessary supplies.</p-->
+               <h3 id='Indomitable'>Indomitable (••)</h3>
+               <p><b>Prerequisite:</b> Resolve •••</p>
+               <p>Your character possesses an iron will. The powers of the
+               supernatural have little bearing on her behavior. She can
+               stand up to a vampire’s mind control, a witch’s charms, or a
+               ghost’s gifts of fright. Any time a supernatural creature uses
+               a power to influence your character’s thoughts or emotions,
+               add two dice to the dice pool to contest it. If the roll is resisted,
+               instead subtract two dice from the monster’s dice pool. Note
+               that this only affects mental influence and manipulation
+               from a supernatural origin. A vampire with a remarkable
+               Manipulation + Persuasion score is just as likely to convince
+               your character to do something using mundane tricks.</p>
+               <h3 id='Language'>Language (•)</h3>
+               <p>Your character is skilled with an additional language, beyond her native tongue. Choose a language each
+               time you buy this Merit. Your character can speak, read, and
+               write in that language.</p>
+               <!--h3 id='Library'>Library • to •••</h3>
+               <p>Your character has access to a well of information about a given topic. When purchasing this Merit,
+               choose a Mental Skill. The Library covers that purview. On
+               any extended roll involving the Skill in question, add the
+               dots in this Merit.</p>
+               <p>This Merit can be purchased multiple times, to reflect
+               different Skills. Additionally, its benefits can be shared by
+               various characters, with permission.</p>
+               <h3 id='ToleranceforBiology'>Tolerance for Biology •</h3>
+               <p><b>Prerequisite:</b> Resolve •••</p>
+               <p>Most people turn away at the sight of blood,
+               other bodily fluids, or exotic biology. Your character has
+               seen enough that nothing turns her stomach. When other
+               characters must resist shock or physical repulsion from the
+               disgusting and morbid, your character stands her ground. You
+               do not need to make Composure, Stamina, or Resolve rolls
+               to withstand the biologically strange. This doesn’t mean she’s
+               immune to fear; she’s just used to nature in all its nasty forms.</p-->
+               <h3 id='TrainedObserver'>Trained Observer (• or •••)</h3>
+               <p><b>Prerequisite:</b> Wits ••• or Composure •••</p>
+               <p>Your character has spent years in the field, catch-
+               ing tiny details and digging for secrets. She might not have a
+               better chance of finding things, but she has a better chance
+               of finding important things. Any time you make a Perception
+               roll (usually Wits + Composure), you benefit from the 9-again
+               quality. With the three-dot version, you get 8-again.</p>
+            </div>
+            <div>
+               <h2 id="PhysicalMerits">Physical Merits</h2>
+               <h3 id='FleetofFoot'>Fleet of Foot (• to •••)</h3>
+               <p><b>Prerequisite:</b> Athletics ••</p>
+               <p>Your character is remarkably quick, and runs far
+               faster than his frame suggests. He gains +1 Speed per dot,
+               and anyone pursuing him suffers a -1 per dot to any foot
+               chase rolls.</p>
+               <h3 id='Hardy'>Hardy (• to •••)</h3>
+               <p><b>Prerequisite:</b> Stamina •••</p>
+               <p>Your character’s body goes further than it rightfully should. Add the dots in this Merit to any rolls to resist
+               disease, poison, deprivation, unconsciousness, or suffocation.</p>
+               <h3 id='IronStamina'>Iron Stamina (• to •••)</h3>
+               <p><b>Prerequisites:</b> Stamina ••• or Resolve •••</p>
+               <p>Each dot eliminates a negative modifier (on a one-for-one basis) when resisting the effects of fatigue or injury.
+               For example: A character with Iron Stamina •• is able to
+               ignore up to a -2 modifier brought on by fatigue. The Merit
+               also counteracts the effects of wound penalties. So, if all
+               of your character’s Health boxes are filled (which normally
+               imposes a -3 penalty to his actions) and he has Iron Stamina
+               •, those penalties are reduced to -2. This Merit cannot be
+               used to gain positive modifiers for actions, only to cancel
+               out negative ones.</p>
+               <h3 id='QuickDraw'>Quick Draw (•)</h3>
+               <p><b>Prerequisites:</b> Wits •••, a Specialty in the weapon or fighting style chosen</p>
+               <p>Choose a Specialty in Weaponry or Firearms when
+               you purchase this Merit. Your character has trained in that
+               weapon or style enough that pulling the weapon is his first
+               reflex. Drawing or holstering that weapon is considered a reflexive action, and can be done any time his Defense applies.</p>
+            </div>
+            <div>
+               <h2 id="SocialMerits">Social Merits</h2>
+               <h3 id="Allies">Allies (• to •••••)</h3>
+               <p>Allies help your character. They might be friends,
+               employees, associates, or people your character has blackmailed. Each instance of this Merit represents one type of
+               ally. This could be an organization, a society, a clique, or
+               an individual. Examples include the police, a secret society,
+               criminal organizations, unions, local politicians, or the academic community. Each purchase has its own rating. Your
+               character might have Allies (Masons) ••, Allies (Carter Crime
+               Family) •••, and Allies (Catholic Church) •.</p>
+               <p>Each dot represents a layer of influence in the group.
+               One dot would constitute small favors and passing influence. Three could offer considerable influence, such as the
+               police overlooking a misdemeanor charge. Five dots stretches
+               the limits of the organization’s influence, as its leaders put
+               their own influence on the line for the character. This could
+               include things such as massive insider trading or fouling up
+               a felony investigation. No matter the request, it has to be
+               something that organization could accomplish.</p>
+               <p>The Storyteller assigns a rating between one and five to
+               any favor asked. A character can ask for favors that add up to
+               her Allies rating without penalty in one chapter. If she extends
+               her influence beyond that, her player must roll Manipulation
+               + Persuasion + Allies, with a penalty equal to the favor’s
+               rating. If the roll is successful, the group does as requested.
+               Failed or successful, the character loses a dot of Allies. This
+               dot may return at the end of the chapter (see Sanctity of
+               Merits, on p. 43.) On a dramatic failure, the organization
+               resents her and seeks retribution. On an exceptional success,
+               she doesn’t lose the dot.</p>
+               <p>One additional favor a character can ask of her Allies is to
+               block another character’s Allies, Contacts, Mentor, Retainer,
+               or Status (if she knows the character possesses the relevant
+               Merit). The rating is equal to the Merit dots blocked. As
+               before, no roll is necessary unless the target’s Merit exceeds
+               the character’s Allies. If the block succeeds, the character
+               cannot use the Merit during the same chapter.</p>
+               <h3 id='Contacts'>Contacts (• to •••••)</h3>
+               <p>Contacts provide your character with information.
+               Each dot in this Merit represents a sphere or organization with
+               which the character can garner information. For example, a
+               character with Contacts ••• might have Bloggers, Drug Dealers,
+               and Financial Speculators for connections. Contacts do not
+               provide services, only information. This may be face-to-face, via
+               email, by telephone, or even by séance in some strange instances.</p>
+               <p>Garnering information via Contacts requires a
+               Manipulation + Social Skill roll, depending on the method
+               the character uses, and the relationship between the characters.
+               The Storyteller should give a bonus or penalty, dependent on
+               how relevant the information is to that particular Contact,
+               whether accessing the information is dangerous, and if the
+               character has maintained good relations or done favors for
+               the Contact. These modifiers should range from -3 to +3 in
+               most cases. If successful, the Contact provides the information.</p>
+               <p>One use of a Contact is to dig dirt on another character.
+               A Contact can find another character’s Social Merits, and any
+               relevant Conditions (Embarrassing Secret is a prime example.)</p>
+               <p>A character can have more than five Contacts, but the
+               Merit’s rating is limited to five, for the purposes of Allies
+               blocking.</p>
+               <h3 id='Fame'>Fame (• to •••)</h3>
+               <p>Your character is recognized within a certain
+               sphere, for a certain skill, or because of some past action or
+               stroke of luck. This can mean favors and attention, it can also
+               mean negative attention and scrutiny. When choosing the
+               Merit, define what your character is known for. As a rule of
+               thumb, one dot means local recognition, or reputation within
+               a confined subculture. Two dots means regional recognition
+               by a wide swath of people. Three dots means worldwide
+               recognition to anyone that might have been exposed to the
+               source of the fame. Each dot adds a die to any Social rolls
+               among those who are impressed by your character’s celebrity.</p>
+               <p><b>Drawback:</b> Any rolls to find or identify the character
+               enjoy a +1 bonus per dot of the Merit. If the character has
+               Alternate Identity, she can mitigate this drawback. A character
+               with Fame cannot have the Anonymity Merit.</p>
+               <h3 id='Resources'>Resources (• to •••••)</h3>
+               <p>This Merit reflects your character’s disposable income. She might live in an upscale condo, but if her income
+               is tied up in the mortgage and child support payments, she
+               might have little money to throw around. Characters are assumed to have basic necessities without Resources.</p>
+               <p>The dot rating determines the relative amount of disposable funding the character has available, depending on your
+               particular chronicle’s setting. The same amount of money
+               means completely different things in a game set in Silicon
+               Valley compared to one set in the Detroit slums. One dot is
+               a little spending money here and there. Two is a comfortable,
+               middle class wage. Three is a nicer, upper middle class life.
+               Four is moderately wealthy. Five is filthy rich.</p>
+               <p>Every item has an Availability rating. Once per chapter, your
+               character can procure an item at her Resources level or lower,
+               without issue. An item one Availability above her Resources
+               reduces her effective Resources by one dot for a full month, since
+               she has to rapidly liquidate funds. She can procure items two
+               Availability below her Resources without limit (within reason).
+               For example, a character with Resources •••• can procure as
+               many Availability •• disposable cellphones as she needs.</p>
+               <h3 id='Retainer'>Retainer (• to •••••)</h3>
+               <p>Your character has an assistant, sycophant, ser-
+               vant, or follower on whom she can rely. Establish who this
+               companion is, and how he was acquired. It may be as simple
+               as a paycheck. He might owe your character his life. However
+               it happened, your character has a hold on him.</p>
+               <p>A Retainer is more reliable than a Mentor, and more
+               loyal than an Ally. On the other hand, a Retainer is a lone
+               person, less capable and influential than the broader Merits.
+               The Merit’s dot rating determines the relative competency
+               of the Retainer. A one-dot Retainer is barely able to do
+               anything of use, such as a pet that knows one useful trick,
+               or a homeless old man that does minor errands for food. A
+               three-dot Retainer is a professional in their field, someone
+               capable in his line of work. A five-dot is one of the best in
+               her class. If a Retainer needs to make a roll, and it’s within
+               her field, double the dot rating and use it as a dice pool. For
+               anything else, use the dot rating as a dice pool.</p>
+               <p>This Merit can be purchased multiple times to represent
+               multiple Retainers.</p>
+               <h3 id='Status'>Status (• to •••••)</h3>
+               <p>Your character has standing, membership, author-
+               ity, control over, or respect from a group or organization. This
+               can reflect official standing, or merely informal respect. No
+               matter the source, your character enjoys certain privileges
+               within that structure.</p>
+               <p>Each instance of this Merit reflects standing in a differ-
+               ent group or organization. Your character may have Status
+               (The Luck Gang) •••, Status (Drag Racing Circuit) ••, and
+               Status (Police) •. Each affords its own unique benefits. As
+               you increase dot ratings, your character rises in prominence
+               in the relevant group.</p>
+               <p>Status only allows advantages within the confines of
+               the group reflected in the Merit. Status (Organized Crime)
+               won’t help if your character wants an official concealed carry
+               firearms permit, for example.</p>
+               <p>Status provides a number of advantages:</p>
+               <p>First, your character can apply her Status to any Social roll
+               with those over which she has authority or sway.</p>
+               <p>Second, she has access to group facilities, resources, and
+               funding. Depending on the group, this could be limited by
+               red tape and requisitioning processes. It’s also dependent on
+               the resources the particular group has available.</p>
+               <p>Third, she has pull. If she knows a character’s Mentor,
+               Resources, Retainer, Contacts, or Allies, she can block their
+               usage. Once per chapter, she can stop a single Merit from
+               being used, if it’s of a lower dot rating than her Status, and
+               if it makes sense for her organization to obstruct that type
+               of person’s behavior. In our Organized Crime example, if
+               your character knows that the chief of police has Contacts
+               (Criminal Informant), you may opt to block usage by threat-
+               ening the informant into silence.</p>
+               <p><b>Drawback:</b> Status requires upkeep, and often regular du-
+               ties. If these duties are not upheld, the Status may be lost. The
+               dots will not be accessible until the character re-establishes her
+               standing. In our Organized Crime example, your character
+               may be expected to pay protection money, offer tribute to a
+               higher authority, or undertake felonious activities.</p>
+               <h3 id='StrikingLooks'>Striking Looks (• or ••)</h3>
+               <p>Your character is stunning, alarming, commanding, repulsive, threatening, charming, or otherwise worthy
+               of attention. Determine how your character looks and how
+               people react to that. For one dot, your character gets a +1 bonus on any Social rolls that would be influenced by his looks.
+               For two dots, the benefit increases to +2. Depending on the
+               particulars, this might influence Expression, Intimidation,
+               Persuasion, Subterfuge, or other rolls.</p>
+               <p><b>Drawback:</b> Attention is a double-edged sword. Any rolls
+               to spot, notice, or remember your character gain the same
+               dice bonus. Sometimes, your character will draw unwanted
+               attention in social situations. This could cause further
+               complications.</p>
+            </div>
+            <div>
+               <h2 id="SupernaturalMerits">Supernatural Merits</h2>
+               <h3 id="Cursed">Cursed (••)</h3>
+               <p>Your character has run afoul of fate. Somewhere,
+               somehow, he’s been cursed. Most importantly, he’s aware of
+               the curse. When taking this Merit, define the limitations of
+               the curse. Usually, it’s expressed in the form of a single statement, such as, “On the eve of your twenty-seventh birthday,
+               you will feast upon your doom.” It’s important to work out
+               the details with the Storyteller. The curse must take effect
+               within the scope of the planned chronicle.</p>
+               <p>While he knows how he’ll die, this is a liberating experience. He’s confident of the method of his death, so nothing
+               else fazes him. Gain a +2 on any Resolve + Composure roll
+               to face fear or self-doubt. Any time he takes lethal damage in
+               his last three health boxes, take an additional Beat.</p>
+               <h3 id='UnseenSense'>Unseen Sense (••)</h3>
+               <p>Your character has a “sixth sense” for a type of
+               supernatural creature, chosen when you buy the Merit. For
+               example, you may choose Unseen Sense: Vampires, or Unseen
+               Sense: Fairies. The sense manifests differently for everyone.
+               Her hair stands on end, she becomes physically ill, or perhaps she has a cold chill. Regardless, she knows that something
+               isn’t right when she is in the immediate proximity of the appropriate supernatural being. Once per chapter, the player
+               can accept the Spooked Condition (p. 290), in exchange for
+               which the character can pinpoint where the feeling is coming
+               from. If the target is using a power that specifically cloaks its
+               supernatural nature, however, this does not work (though
+               the Condition remains until resolved as usual).</p>
+            </div>
+            <div>
+               <h2 id="FightingMerits">Fighting Merits</h2>
+               <h3 id='CloseQuartersCombat'>Close Quarters Combat (• to •••••; Style)</h3>
+               <p><b>Prerequisites:</b> Wits •••, Athletics ••, Brawl •••</p>
+               <p>Your character knows that hitting someone in the face
+               is an easy way to break the little bones in his hand. To that
+               end, he’s perfected the art of using the environment to hurt
+               people.</p>
+               <p><b>Firing Lines •:</b> In some situations, your character’s best
+               option is a tactical retreat — especially if he’s inadvertently
+               brought a knife to a gunfight. He can run for cover as a reac-
+               tion to a ranged attack instead of dropping prone. You give
+               up your action for the turn, but your character can get to any
+               cover that’s within twice his Speed.</p>
+               <p><b>Hard Surfaces ••:</b> Bouncing someone’s head off a
+               urinal, computer monitor, or brick wall is a handy way to
+               increase the amount of hurt inflicted while not breaking the
+               aforementioned hand bones. When your character is grap-
+               pling someone, he can bounce them off a hard surface with
+               a Damage move. He deals lethal damage, then immediately
+               ends the grapple.</p>
+               <p><b>Armored Coffin •••:</b> The problem with protection is
+               simple: the very things that protect your opponents can be
+               turned against them. That holds true for body armor just as
+               much as anything else. Sure, it blocks bullets and knives, but
+               get in a clinch and your character’s opponent might as well
+               be wearing a straightjacket. When he grapples an opponent,
+               add their general armor rating to your dice pool. When he
+               uses a Damage move, ignore his opponent’s armor. This
+               technique can’t be used in conjunction with Hard Surfaces.</p>
+               <p><b>Prep Work ••••:</b> If your character has a second to look
+               around, he can catch someone by surprise almost anywhere.
+               When launching a surprise attack, your Dexterity + Stealth
+               roll becomes a rote action.</p>
+               <p><b>Drawback:</b> Your character can’t use this Merit to set up
+               sniper attacks — his ambush must use Brawl or Weaponry.</p>
+               <p><b>Turnabout •••••:</b> If your character’s caught short in a
+               fight, his opponent’s weapon suits him just fine. When he
+               attempts to Disarm his opponent, step the results up one level
+               — on a failure, his opponent drops the weapon. On a success,
+               your character takes possession of his opponent’s weapon. On
+               an exceptional success, your character has the weapon and
+               his opponent takes two points of bashing damage.</p>
+               <h3 id='DefensiveCombat'>Defensive Combat •</h3>
+               <p><b>Prerequisite:</b> Brawl • or Weaponry •; choose one when this Merit is selected</p>
+               <p>Your character is trained in avoiding damage in
+               combat. Use her Brawl or Weaponry to calculate Defense,
+               rather than Athletics. Your character can learn both versions
+               of this Merit, allowing you to use any of the three Skills to
+               calculate Defense. However, you cannot use Weaponry to calculate Defense unless she actually has a weapon in her hand.</p>
+               <h3 id='FightingFinesse'>Fighting Finesse ••</h3>
+               <p><b>Prerequisites:</b> Dexterity •••, a Specialty in Weaponry or Brawl</p>
+               <p>Choose a Specialty in Weaponry or Brawl when
+               you purchase this Merit. Your character’s extensive training
+               in that particular weapon or style has allowed them to benefit
+               more from their alacrity and agility than their strength. You
+               may substitute your character’s Dexterity for her Strength
+               when making rolls with that Specialty.</p>
+               <p>This Merit may be purchased multiple times to gain its
+               benefit with multiple Specialties.</p>
+               <h3 id='Firefight'>Firefight (• to •••; Style)</h3>
+               <p><b>Prerequisites:</b> Composure •••, Dexterity •••, Athletics ••, Firearms ••</p>
+               <p>Your character is comfortable with a gun. She’s
+               been trained in stressful situations, and knows how to keep
+               herself from being shot, while still shooting at her opponents.
+               This Style is about moving, strafing, and taking shots when
+               you get them. It’s not a series of precision techniques; it’s for
+               using a gun practically in a real-world situation.</p>
+               <p><b>Shoot First •:</b> In a firefight, the person shot first is usually
+               the loser. Your character has trained herself to fire first in an
+               altercation. If her gun is drawn, add her Firearms score to her
+               Initiative. If she has Quick Draw, she can use Shoot First to draw
+               and fire with increased Initiative in the first turn of combat.</p>
+               <p><b>Suppressive Fire ••:</b> Sometimes, the purpose of a shot
+               is to distract, not necessarily to hit. Your character is trained
+               to fire off a handful of rounds with the intent to startle opponents and force impulse reactions. When using the Covering
+               Fire maneuver (p. 90), her opponents cannot benefit from aiming against her. She can apply her Defense against incoming Firearms attacks, in addition to any cover bonuses.
+               Additionally, her training allows her to use Suppressive Fire
+               with a semi-automatic weapon.</p>
+               <p><b>Secondary Target •••:</b> Sometimes, shooting an opponent behind cover is all but impossible. However, a bullet
+               can knock objects off balance, or cause ricochets. By using
+               Secondary Target, your character opts not to hit her target,
+               but instead strike them with any collateral objects that might
+               be nearby. She causes bashing damage instead of lethal, but
+               ignores all cover penalties to the roll. The weapon’s damage
+               rating does not add to the damage in this case.</p>
+               <h3 id='ImprovisedWeaponry'>Improvised Weaponry (• to •••; Style)</h3>
+               <p><b>Prerequisites:</b> Wits •••, Weaponry •</p>
+               <p>Most people don’t walk around armed. While someone
+               pulling a knife or a gun can cool a hostile situation down, it
+               can also cause things to boil over — an argument that wouldn’t
+               be more than harsh words suddenly ends up with three
+               people in the morgue. If your character is on the receiving
+               end of someone pulling a knife, it helps to have something
+               in his hand as well.</p>
+               <p>Your character is good at making do with what he’s got.
+               Sometimes he’s lucky — if your character’s in a bar, he’s
+               got a lot of glass bottles, or maybe a pool cue, to play with.
+               However, he’s got something like a sixth sense, and can find
+               a weapon almost anywhere.</p>
+               <p><b>Always Armed •:</b> Your character can always get his
+               hands on something dangerous, and he has an instinctive
+               understanding of how to put it to good — and deadly — use. At
+               the start of your turn, make a reflexive Wits + Weaponry roll
+               to grab an object suitable for use as a weapon in pretty much
+               any environment. (The player is encouraged to work with the
+               Storyteller to determine an appropriate item — a large, jagged
+               rock in the wilderness, for example, or a heavy glass ashtray
+               with one sharp, broken edge in a dive bar.) Regardless of
+               what he picks up, the weapon has a +0 weapon modifier, -1
+               initiative penalty, Size 1, Durability 2, and Structure 4. On
+               an exceptional success, increase the weapon modifier and
+               Size by 1, but the initiative penalty increases to -2. Whatever
+               your character grabs doesn’t cause you to suffer the normal
+               -1 penalty for wielding an improvised weapon (see p. 94).</p>
+               <p><b>In Harm’s Way ••:</b> Your character’s got a knack for putting his weapon in the way of an oncoming attack, no matter
+               how small or inappropriate for blocking it might be. While
+               he’s wielding an improvised weapon acquired with Always
+               Armed, you can treat the Structure of your character’s weapon
+               as general armor against a single Brawl or Weaponry attack.
+               Any damage he takes inflicts an equal amount of damage to
+               the improvised weapon, bypassing Durability. Your character
+               can use the weapon to attack later in the same turn, but can
+               only use this ability when applying his Defense to an attack.</p>
+               <p><b>Breaking Point •••:</b> One sure way to win a fight is to
+               hit the other guy so hard that he doesn’t get back up, even
+               if that means losing a weapon in the process. When making
+               an all-out attack with an improvised weapon acquired with
+               Always Armed, you can reduce the weapon’s Structure by
+               any amount down to a minimum of 0. Every 2 points of
+               Structure spent in this way adds 1 to the weapon modifier
+               for that one single attack. Declare any Structure loss before
+               making the attack; this Structure is reduced even if the attack
+               does no damage. If the weapon is reduced to 0 Structure, it
+               is automatically destroyed after the attack. You can use this
+               technique in conjunction with In Harm’s Way, allowing your
+               character to parry an attack made on a higher Initiative and
+               then go on the offensive, provided that the weapon wasn’t
+               destroyed.</p>
+               <h3 id='MartialArts'>Martial Arts (• to •••••; Style)</h3>
+               <p><b>Prerequisites:</b> Resolve •••, Dexterity •••, Athletics ••, Brawl ••</p>
+               <p>Your character is trained in one or more formal martial arts styles. This may have come from a personal mentor, a
+               dojo, or a self-defense class. It may have been for exercise, protection, show, or tradition. These
+               maneuvers may only be used unarmed, or with weapons
+               capable of using the Brawl Skill, such as a punch dagger,
+               or a weapon using the Shiv Merit (see below).</p>
+               <p><b>Focused Attack •:</b> Your character has trained extensively in striking specific parts of an opponent’s body.
+               Reduce penalties for hitting specific targets by one.
+               Additionally, you may ignore one point of armor on any
+               opponent.</p>
+               <p><b>Defensive Strike ••:</b> Your character excels in defending herself while finding the best time to strike. You can
+               add 1 or 2 points to your character’s Defense. For each
+               Defense point you take, subtract a die from any attacks you
+               make. This can only be used in a turn in which your character intends to attack. It cannot be used with a Dodge.</p>
+               <p><b>Whirlwind Strike •••:</b> When engaged, your character becomes a storm of threatening kicks and punches;
+               nothing close is safe. As long as your character has
+               her Defense available to her, and is not
+               Dodging, any character coming into arm’s
+               reach takes one bashing damage. This damage continues once per turn as long as the
+               enemy stays within range, and occurs on
+               the enemy’s turn. If you spend a point
+               of Willpower, this damage becomes two
+               bashing until your next turn.</p>
+               <p><b>The Hand As Weapon ••••:</b> With
+               this degree of training, your character’s
+               limbs are hardened to cause massive
+               trauma. Her unarmed strikes cause
+               lethal damage.</p>
+               <p><b>The Touch of Death •••••:</b> Your
+               character’s mastery has brought with
+               it the daunting power of causing lethal
+               injury with a touch. If she chooses, her
+               unarmed strikes count as weapons with two
+               damage rating.</p>
+            </div>
+            <hr></hr>
+            <div>
+               <p><a href="">↑ Back to top ↑</a></p>
+            </div>
+            <hr></hr>
+         </div>
+      </div>
+
+      <!-- jQuery CDN - Slim version (=without AJAX) -->
+      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+      <!-- Popper.JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+      <!-- Bootstrap JS -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+      <script src="../../content/index.js"></script>
+      <script src="../../content/index_menu.js"></script>
+
+      <script type="text/javascript">
+      $(document).ready(function () {
+      loadmenu("home", "rules/combat/");
+      $('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+      });
+      });
+      </script>
+   </body>
+
+</html>
