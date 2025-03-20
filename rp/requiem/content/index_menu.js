@@ -19,8 +19,8 @@ var menu_content = [
 				"action" : "rules/combat/"
 			},
 			{
-				"title" : "Vampirism",
-				"action" : "rules/vampirism/"
+				"title" : "Conditions",
+				"action" : "rules/conditions/"
 			},
 			{
 				"title" : "Your Character",
