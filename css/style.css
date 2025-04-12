@@ -293,6 +293,21 @@ hr.solid {
 	margin: 0;
 }
 
+.post-table > tbody > tr:nth-child(odd) {
+	background-color: var(--black);
+ }
+
+.post-table > tbody > tr > td:first-child {
+	background-color: var(--black);
+}
+
+.post-table > tbody > tr > td {
+	padding-left:.5em;
+	padding-right:.5em;
+	color: var(--white);
+	border-bottom: 1px solid #888;
+}
+
 .devlog-img {
 	max-height:15em;
 	max-width: 100%;
@@ -325,6 +340,43 @@ hr.solid {
 
 .mediacolumn-item > img {
 	max-width: 100%;
+}
+
+.tag {
+	border-radius: .5em;
+	padding-left: .5em;
+	padding-right: .5em;
+}
+
+.red {
+	background-color: #800;
+}
+
+.yellow {
+	background-color: rgb(216, 218, 99);
+	color: black;
+}
+
+.lime {
+	background-color: rgb(72, 196, 72);
+	color: black;
+}
+
+.green {
+	background-color: rgb(0, 120, 54);
+}
+
+.aqua {
+	background-color: rgb(64, 214, 222);
+	color: black;
+}
+
+.blue {
+	background-color: rgb(52, 70, 120)
+}
+
+.pink {
+	background-color: rgb(183, 0, 107)
 }
 
 /* mobile */
