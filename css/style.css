@@ -121,7 +121,7 @@ iframe {
 	padding-right: 2em;
 }
 
-.sidebar {
+#sidebar {
 	min-width:13em;
 	background-color:var(--black-transparent);
 	width:25%;
@@ -129,6 +129,25 @@ iframe {
 	padding-top: .5em;
 	padding-left: 1em;
 	padding-right: 1em;
+}
+
+.sidebar-section {
+	display: block;
+  font-family: freepixel;
+  color: var(--yellow);
+  background-color: transparent;
+	width: 100%;
+	border:none;
+	line-height: 1.2;
+	text-align: left;
+}
+
+.sidebar-section:hover {
+	background-color:#503550;
+}
+
+.sidebar-section.active {
+	background-color:#333;
 }
 
 .gutter {
@@ -404,4 +423,15 @@ hr.solid {
 	.mediacolumn {
 		width:100%;
 	}
+}
+
+.collapse-content {
+    max-height: 0;
+    transition: max-height 0.15s linear;
+    overflow: hidden;
+}
+
+.collapse-content.open {
+    max-height: 1028px;
+    transition: max-height 0.15s linear;
 }
