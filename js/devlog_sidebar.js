@@ -79,9 +79,11 @@ function fill_sidebar(postyear, postdate) {
 			year=sidebar_content[i].year
 			sidebar_innerhtml += "<button class='sidebar-section collapse-button"
 			if(postyear==year) {
-				sidebar_innerhtml +=  " active"
+				sidebar_innerhtml +=  " active'><span>&#x2BC6;"
+			} else {
+				sidebar_innerhtml +=  "'><span>&#x2BC8;"
 			}
-			sidebar_innerhtml += "'><h5>" + year + "</h5></button><div class='collapse-content"
+			sidebar_innerhtml += "</span> <span>" + year + "</span></button><div class='collapse-content"
 			if(postyear==year) {
 				sidebar_innerhtml +=  " open"
 			}

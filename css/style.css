@@ -121,7 +121,7 @@ iframe {
 	padding-right: 2em;
 }
 
-#sidebar {
+.sidebar {
 	min-width:13em;
 	background-color:var(--black-transparent);
 	width:25%;
@@ -135,7 +135,7 @@ iframe {
 	display: block;
   font-family: freepixel;
   color: var(--yellow);
-  background-color: transparent;
+  background-color: #222;
 	width: 100%;
 	border:none;
 	line-height: 1.2;
@@ -143,11 +143,10 @@ iframe {
 }
 
 .sidebar-section:hover {
-	background-color:#503550;
+	background-color:#555;
 }
 
 .sidebar-section.active {
-	background-color:#333;
 }
 
 .gutter {
@@ -406,7 +405,7 @@ hr.solid {
 	.main-content {
 		width:100%;
 	}
-	#sidebar {
+	.sidebar {
 		width: 100%;
 	}
 	#navbar {
