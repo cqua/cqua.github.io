@@ -11,29 +11,14 @@
 			Individual games pages
 	-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-		<link href="css/vars.css" rel="stylesheet" type="text/css" media="all">
 		<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
   </head>
   <body>
 	<div class="container">
-		<div class="header">
-			<h1 class='logo-header'><a href='index.html'>snorv games<img src='images/icon_silverkey.png' alt='Silver Key'></a></h1>
-			<div id="navbar">
-				<div class="nav-btn active" href="#">home</div>
-				<a class="nav-btn" href="games.html">games</a>
-				<a class="nav-btn" href="devlogs.html">devlogs</a>
-				<a class="nav-btn" href="guestbook.html">guestbook</a>
-				<div class="nav-btn nav-dropdown">
-					extra &#x2BC6;
-					<div class="dropdown-content">
-						<a href="./extra/bigboy.html">Big Boy</a>
-						<a href="./extra/topster.html">topster</a>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div id="header"></div>
 		<div class='main-body'>
 			<div class="main-content">
 			<div class='post'>
@@ -99,7 +84,7 @@
 				</div>
 				<h2>updates</h2>
 				<div class='scrollable-content' style='max-height:12em;'>
-					<p><span class='label'>april 15, 2025</span>: the devlog list is collabsible now</p>
+					<p><span class='label'>april 15, 2025</span>: added <a href="extra/topster.html">topster page</a>. also the devlog list is collabsible now</p>
 					<p><span class='label'>april 13, 2025</span>: added an <span class='label'>active projects</span> section to the home page</p>
 					<p><span class='label'>april 12, 2025</span>: new devlog - <a href="devlogs/2025/april12.html">[GaW23 Collection] progress report</a>.</p>
 					<p><span class='label'>march 30, 2025</span>: new devlog - <a href="devlogs/2025/march.html">[CritterCatch] first look</a>.</p>
@@ -123,13 +108,21 @@
 				</div>
 				<div class="card sidebar-card">
 					<div class="card-body"> <h5 class="card-title">links</h5>
-					<a href='https://snorv.itch.io/'>itch.io</a>
+				<a href='https://snorv.itch.io/'>itch.io</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div id='footer'>hosted at <a href='https://neocities.org/'>neocities.org</a> ◆ </div>
+		<div id='footer'></div>
 		</div>
 	</body>
 	<script src='js/modal.js'></script>
+	<script>
+		$(document).ready(function(){
+			$('#header').load("header.html", function() {
+				$('#nav-btn-index').addClass("active");
+			});
+			$('#footer').load("footer.html");
+		});
+	</script>
 </html>

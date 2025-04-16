@@ -12,22 +12,7 @@
   </head>
   <body>
 	<div class="container">
-		<div class="header">
-		<h1 class='logo-header'><a href='../index.html'>snorv games<img src='../images/icon_silverkey.png' alt='Silver Key'></a></h1>
-		<div id="navbar">
-			<a class="nav-btn" href="../index.html">home</a>
-			<a class="nav-btn" href="../games.html">games</a>
-			<a class="nav-btn" href="../devlogs.html">devlogs</a>
-			<a class="nav-btn" href="../guestbook.html">guestbook</a>
-				<div class="nav-btn nav-dropdown">
-					extra &#x2BC6;
-					<div class="dropdown-content">
-						<a href="../extra/bigboy.html">Big Boy</a>
-						<a href="../extra/topster.html">topster</a>
-					</div>
-				</div>
-		</div>
-		</div>
+		<div id="header"></div>
 		<div class='main-body'>
 			<div class='main-content-full'>
 			<div style='width:50%;'>
@@ -69,8 +54,16 @@
 			</div>
 			</div>
 		</div>
-		<div id='footer'>hosted at <a href='https://neocities.org/'>neocities.org</a> ◆ </div>
+		<div id='footer'></div>
 		</div>
 	</body>
 	<script src='../js/modal.js'></script>
+	<script>
+		$(document).ready(function(){
+			$('#header').load("../header.html", function() {
+				$('#nav-btn-extra').addClass("active");
+			});
+			$('#footer').load("../footer.html");
+		});
+	</script>
 </html>

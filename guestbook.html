@@ -5,34 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>snorv games - guestbook</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-		<link href="css/vars.css" rel="stylesheet" type="text/css" media="all">
 		<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
   </head>
   <body>
 	<div class="container">
-		<div class="header">
-		<h1 class='logo-header'><a href='index.html'>snorv games<img src='images/icon_silverkey.png' alt='Silver Key'></a></h1>
-		<div id="navbar">
-			<a class="nav-btn" href="index.html">home</a>
-			<a class="nav-btn" href="games.html">games</a>
-			<a class="nav-btn" href="devlogs.html">devlogs</a>
-			<div class="nav-btn active" href="#">guestbook</div>
-			<div class="nav-btn nav-dropdown">
-				extra &#x2BC6;
-				<div class="dropdown-content">
-					<a href="./extra/bigboy.html">Big Boy</a>
-					<a href="./extra/topster.html">topster</a>
-				</div>
-			</div>
-		</div>
-		</div>
+		<div id="header"></div>
 		<div class='main-body'>
 			<iframe width="100%" height="600" src="https://snorv.atabook.org/" title="Guestbook" frameborder="0"></iframe>
 		</div>
-		<div id='footer'>hosted at <a href='https://neocities.org/'>neocities.org</a> ◆ </div>
+		<div id='footer'></div>
 		</div>
 	</body>
 	<script src='js/modal.js'></script>
+	<script>
+		$(document).ready(function(){
+			$('#header').load("header.html", function() {
+				$('#nav-btn-guestbook').addClass("active");
+			});
+			$('#footer').load("footer.html");
+		});
+	</script>
 </html>
