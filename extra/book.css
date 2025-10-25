@@ -9,6 +9,7 @@ div.break {height:2em;}
 span.serif {font-family: serif}
 div.poem {text-align: center;margin-bottom:1rem;}
 div.letter {width: 80%; margin:auto; margin-bottom:1rem;}
+div.right-align {text-align: right;width: 80%; margin:auto;margin-bottom:1rem;}
 
 .main-body {
 	display:flex;
