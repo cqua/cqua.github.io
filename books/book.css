@@ -1,43 +1,8 @@
-body {font-size: 18; background-color: #111; color: #ddd; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
-h1, h2, h3, h4, h5, h6 {text-align: center; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
-h1 {font-size: calc(1.375rem + 2vw)}
-h4 {font-style: italic;}
-h5, h6 {margin:0}
-a {color: #99f}
-p {margin-bottom: .5em; text-indent: 1.5em; text-align: justify;}
-td {vertical-align: top; padding: .5em;}
-table {margin-bottom: 1em}
-div.break {height:2em;}
-span.serif {font-family: serif}
-div.poem {text-align: center;margin-bottom:1rem;}
-div.letter {width: 80%; margin:auto; margin-bottom:1rem;}
-div.align-right {text-align: right;width: 80%; margin:auto;margin-bottom:1rem;}
-div.align-center {text-align: center;width: 80%; margin:auto;margin-bottom:1rem;}
-div.divider {
-	text-align: center;
-	height:3em;
-}
-div.divider::before {
-	content: "✸ ✸ ✸";
-	word-spacing: 4em;
-}
-span.small-caps {
-	font-family:Georgia, 'Times New Roman', Times, serif;
-	font-variant-caps:small-caps;
-}
-
-.main-body {
-	display:flex;
-	min-height: 50vh;
-}
-
-.sidebar {
-	min-width:13em;
-	width:25%;
-	display:inline-block;
-	padding-top: .5em;
-	padding-left: 1em;
-	padding-right: 1em;
+body { 
+	font-size: 18; 
+	background-color: #111; 
+	color: #ddd; 
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 
 .main-content {
@@ -50,38 +15,20 @@ span.small-caps {
 	padding-right: 2em;
 }
 
-.gutter {
-	width: 1%;
-}
-
-
-/* mobile */
-@media (max-width: 700px) {
-	.main-body {
-		display:block;
-	}
-	.main-content {
-		width:100%;
-	}
-	.sidebar {
-		width: 100%;
-	}
-	#navbar {
-		display:block;
-	}
-	.nav-btn {
-		width:100%;
-	}
-	
-	.gallery {
-		display: block;
-	}
-	
-	.mediacolumn {
-		width:100%;
-	}
-
-	.dropdown-content {
-		width: 70%;
-	}
-}
+h1, h2, h3, h4, h5, h6 { text-align: center; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
+h1 { font-size: calc(1.375rem + 2vw); }
+h4 { font-style: italic; }
+h5, h6 { margin:0; }
+a { color: #aae; text-decoration: none;}
+a:hover {text-decoration: underline;}
+p { margin-bottom: .5em; text-indent: 1.5em; text-align: justify; }
+td { vertical-align: top; padding: .5em; }
+table { margin-bottom: 1em; }
+div.break { height:2em; }
+div.poem { text-align: center; margin-bottom:1rem; }
+div.letter { width: 80%; margin:auto; margin-bottom:1rem; }
+div.align-right { text-align: right; width: 80%; margin:auto;margin-bottom:1rem; }
+div.align-center { text-align: center; width: 80%; margin:auto; margin-bottom:1rem; }
+div.divider { text-align: center; height:3em; }
+div.divider::before { content: "✸ ✸ ✸"; word-spacing: 4em; }
+span.small-caps { font-family:Georgia, 'Times New Roman', Times, serif; font-variant-caps:small-caps; }
