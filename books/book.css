@@ -1,5 +1,5 @@
-body {font-size: 18; background-color: #111; color: #ddd; }
-h1, h2, h3, h4, h5, h6 {text-align: center; font-family: geogia;}
+body {font-size: 18; background-color: #111; color: #ddd; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+h1, h2, h3, h4, h5, h6 {text-align: center; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
 h1 {font-size: calc(1.375rem + 2vw)}
 h4 {font-style: italic;}
 h5, h6 {margin:0}
@@ -20,6 +20,10 @@ div.divider {
 div.divider::before {
 	content: "✸ ✸ ✸";
 	word-spacing: 4em;
+}
+span.small-caps {
+	font-family:Georgia, 'Times New Roman', Times, serif;
+	font-variant-caps:small-caps;
 }
 
 .main-body {
