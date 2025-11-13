@@ -33,3 +33,16 @@ div.align-center { text-align: center; width: 80%; margin:auto; margin-bottom:1r
 div.divider { text-align: center; height:3em; }
 div.divider::before { content: "✸ ✸ ✸"; word-spacing: 4em; }
 span.small-caps { font-family:Georgia, 'Times New Roman', Times, serif; font-variant-caps:small-caps; }
+div.illustration {
+	max-height: 25em; 
+	margin-bottom:1rem; 
+	margin-left: auto;
+	margin-right: auto;
+  text-align: center;
+}
+.illustration > img {
+	max-width: inherit;
+	max-height: inherit;
+	margin-left: auto;
+	margin-right: auto;
+}
