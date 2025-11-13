@@ -38,7 +38,7 @@ div.illustration {
 	margin-bottom:1rem; 
 	margin-left: auto;
 	margin-right: auto;
-  text-align: center;
+	text-align: center;
 }
 .illustration > img {
 	max-width: inherit;
