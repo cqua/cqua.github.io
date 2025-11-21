@@ -59,3 +59,10 @@ div.illustration {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+/* mobile */
+@media (max-width: 1000px) {
+	nav, #main-content {
+		width:100%;
+	}
+}
