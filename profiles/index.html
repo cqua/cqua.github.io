@@ -28,23 +28,24 @@
                 <p>a whirling rift catches us like gnats in a web</p>
                 <p>are we not lucky, we who get to stay oblivion's claw, if only for a time?</p>
                 <p>this only ends one way, so let the game run for just a little longer</p>
-                <table class="profile" style="font-family: 'Inter';"><tbody>
+                <div class="profile" style="font-family: 'Inter'; color: #eec">
+                    <img class='art' rowspan="5" src='media/edie_holiday.png'>
+                    <table>
                     <tr>
-                        <td class='art' rowspan="5" style="background-image:url('../images/edie_holiday.png')"></td>
                         <th>name</th>
                         <td>Edie</td>
                     </tr>
                     <tr>
                         <th>class</th>
-                        <td>Engineer</td>
-                    </tr>
-                    <tr>
-                        <th>pronouns</th>
-                        <td>she/they</td>
+                        <td>engineer</td>
                     </tr>
                     <tr>
                         <th>form</th>
                         <td>cat</td>
+                    </tr>
+                    <tr>
+                        <th>id</th>
+                        <td>she/they</td>
                     </tr>
                     <tr>
                         <td colspan="2">
@@ -54,46 +55,48 @@
                             <p>has been accused of thinking too much.</p>
                         </td>
                     </tr>
-                </tbody></table>
-                <table class="profile" style="font-family: freepixel;"><tbody>
+                </table></div>
+                <div class="profile" style="font-family: freepixel; color: #cce;">
+                    <img class='art' rowspan="5" src='media/edie_holiday.png'>
+                    <table>
                     <tr>
-                        <td class='art' rowspan="5" style="background-image:url('../devlogs/2024/media/241003-f.png')"></td>
-                        <th>name</th>
+                        <th>NAME</th>
                         <td>Micah</td>
                     </tr>
                     <tr>
-                        <th>class</th>
+                        <th>CLASS</th>
                         <td>bedhead</td>
                     </tr>
                     <tr>
-                        <th>pronouns</th>
-                        <td>they/them</td>
+                        <th>FORM</th>
+                        <td>rat</td>
                     </tr>
                     <tr>
-                        <th>form</th>
-                        <td>rat</td>
+                        <th>ID</th>
+                        <td>they/them</td>
                     </tr>
                     <tr>
                         <td colspan="2"><p>. . . ?</p></td>
                     </tr>
-                </tbody></table>
-                <table class="profile" style="font-family:Georgia, 'Times New Roman', Times, serif;"><tbody>
+                </table></div>
+                <div class="profile" style="font-family: Georgia, 'Times New Roman', Times, serif; color: #ddc;">
+                    <img class='art' rowspan="5" src='media/splash_silverkey.png'>
+                    <table>
                     <tr>
-                        <td class='art' rowspan="5" style="background-image:url('../images/splash_silverkey.png')"></td>
-                        <th>name</th>
+                        <th>NAME:</th>
                         <td>Fenris, Stillwind Eidolon</td>
                     </tr>
                     <tr>
-                        <th>class</th>
+                        <th>CLASS:</th>
                         <td>Fighter</td>
                     </tr>
                     <tr>
-                        <th>pronouns</th>
-                        <td>they/them</td>
+                        <th>FORM:</th>
+                        <td>Wolf</td>
                     </tr>
                     <tr>
-                        <th>form</th>
-                        <td>wolf</td>
+                        <th>ID:</th>
+                        <td>they/them</td>
                     </tr>
                     <tr>
                         <td colspan="2">
@@ -102,24 +105,25 @@
                             <p>Ancient memories tirelessly retrace ancient labyrinths.</p>
                         </td>
                     </tr>
-                </tbody></table>
-                <table class="profile" style="font-family:Georgia, 'Times New Roman', Times, serif;"><tbody>
+                </table></div>
+                <div class="profile" style="font-family: Georgia, 'Times New Roman', Times, serif; color: #9ea;">
+                    <img class='art' rowspan="5" src='media/splash_silverkey.png'>
+                    <table>
                     <tr>
-                        <td class='art' rowspan="5" style="background-image:url('../images/splash_silverkey.png')"></td>
-                        <th>name</th>
+                        <th>NAME:</th>
                         <td>Prince Hafgan</td>
                     </tr>
                     <tr>
-                        <th>class</th>
+                        <th>CLASS:</th>
                         <td>Merchant</td>
                     </tr>
                     <tr>
-                        <th>pronouns</th>
-                        <td>he/him</td>
+                        <th>FORM:</th>
+                        <td>Frog</td>
                     </tr>
                     <tr>
-                        <th>form</th>
-                        <td>frog</td>
+                        <th>ID:</th>
+                        <td>he/him</td>
                     </tr>
                     <tr>
                         <td colspan="2">
@@ -127,7 +131,7 @@
                             he's a valuable ally in any quest.</p>
                         </td>
                     </tr>
-                </tbody></table>
+                </table></div>
             </div>
             </div>
             <div class="gutter">
@@ -161,10 +165,10 @@
 <script src='js/modal.js'></script>
 <script>
     $(document).ready(function(){
-        $('#header').load("header.html", function() {
+        $('#header').load("../header.html", function() {
             $('#nav-btn-profiles').addClass("active");
         });
-        $('#footer').load("footer.html");
+        $('#footer').load("../footer.html");
     });
 </script>
 </html>

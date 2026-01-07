@@ -17,7 +17,11 @@
     <div class="container">
         <div id="header"></div>
         <div class='main-body'>
-            <iframe width="100%" height="600" src="https://snorv.atabook.org/" title="Guestbook" frameborder="0"></iframe>
+            <iframe width="74%" height="600" src="https://snorv.atabook.org/" title="Guestbook" frameborder="0"></iframe>
+            <div class="gutter">
+            </div>
+            <div class="sidebar">
+            </div>
         </div>
         <div id='footer'></div>
         </div>
@@ -28,6 +32,7 @@
             $('#header').load("header.html", function() {
                 $('#nav-btn-guestbook').addClass("active");
             });
+            $('#sidebar').load("sidebar.html");
             $('#footer').load("footer.html");
         });
     </script>

@@ -37,6 +37,15 @@
                             <li><a href='https://www.lexaloffle.com/pico-8.php'>PICO-8</a></li>
                             <li><a href='https://twinery.org/'>Twine</a></li>
                         </ul>
+                        <div style="height: .5em;"></div>
+                        <p class='no-margin'>other software i use:</p>
+                        <ul class='no-margin'>
+                            <li><a href='https://neovim.io/'>Neovim</a> for text editing</li>
+                            <li><a href='https://www.gimp.org/'>GIMP</a> for drawing and image editing</li>
+                            <li><a href='https://www.blender.org/'>Blender</a> for 3d modeling</li>
+                            <li><a href='https://www.bitwig.com/'>Bitwig Studio</a> for writing music</li>
+                            <li><a href='https://www.audacityteam.org/'>Audacity</a> for audio editing</li>
+                        </ul>
                     </div>
                     <div class='col-sm-6'> <img width=100% style='margin-top:.8em' src="images/deeran-transparent.png" alt="a hapless deer using an unplugged computer"></div>
                 </div>
@@ -61,26 +70,6 @@
             <div class="gutter">
             </div>
             <div class="sidebar">
-                <div class="card sidebar-card">
-                    <img src="extra/media/icon_bb_small.png" alt="Big Boy, looking all handsome like he does">
-                    <div class="card-body">
-                        <p class="card-text">this site is owned and managed by Big Boy</p>
-                        <p class="card-text"><a href='extra/bigboy.html'>Big Boy's page ==></a></p>
-                    </div>
-                </div>
-                <div class="card sidebar-card">
-                    <div class="card-body">
-                        <h5 class="card-title">links</h5>
-                        <div>my button</div>
-                        <div class="banners">
-                            <a href="https://snorv.neocities.org"><img src="" title="snorv.neocities.org" width="88" height="31" border="0"></a>
-                        </div>
-                        <div>cool critters</div>
-                        <div class="banners">
-                            <a href="https://kero.gay"><img src="https://kero.gay/assets/images/banners/kerogaybanner.png" title="kero.gay" width="88" height="31" border="0"></a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div id='footer'></div>
@@ -92,6 +81,7 @@
         $('#header').load("header.html", function() {
             $('#nav-btn-index').addClass("active");
         });
+        $('#sidebar').load("sidebar.html");
         $('#footer').load("footer.html");
     });
 </script>
