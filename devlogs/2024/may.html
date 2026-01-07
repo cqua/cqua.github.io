@@ -1,85 +1,88 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>snorv games - devlogs</title>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snorv games - devlogs</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Delius' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-		<link href="../../css/style.css" rel="stylesheet" type="text/css" media="all">
-		<script src='../../js/collapsible.js'></script>
-	</head>
-	<body>
-		<div class="container">
-			<div id="header"></div>
-			<div class='main-body'>
-				<div id="sidebar" class='sidebar'>
-				</div>
-				<div class="gutter">
-				</div>
-				<div id="main-content" class="main-content">
-						<div class="post">
-							<div class="post-header">
-								<h1>Silver Key - pathfinding</h1>
-								<div class="subtitle">may 15, 2024</div>
-							</div>
-							<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ykJPHfImpmw?si=xYyVCgFWTS2uUqHr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-							<p>hi all,<br/>
-							the Silver Key prototype ive been working on for two months is out!<br/>you can download it here: <a href='https://snorv.itch.io/silver-key'>snorv.itch.io/silver-key</a>.</p>
-							<p>the prototype contains a small section of overworld with a merchant, a small dungeon with 3 enemy types and a boss. i look forward to your feedback.</p></section>
-							<p>this prototype contains a lot of firsts for me. its the most fleshed out 3D character ive built, its my first time creating real-time combat in 3d, the inventory system is new, and the monster ai is more complex than any ive made before.</p>
-							<p>last month, i wrote about the state machine that manages the player. the monsters use a similar, greatly simplified state machine. this is what that looks like for basic enemies:</p>
-							<img src="media/2405-a.png" alt="the monster state machine" class='devlog-img modal-img'>
-							<p>deceptively simple, maybe. "move to player if reachable" is a very complicated bit, it turns out. lets talk about pathfinding.</p>
-							<h2>pathfinding</h2>
-							<img src="media/2405-b.png" alt="the player stands in a room with two orange monsters. a red line shows the shortest path between the monsters and the player." class='devlog-img modal-img' caption="the red line shows the chompers' navigation">
-							<p>for my first implementation, the monsters moved on a square grid. the dungeon is built out of modular, cube-sized tiles, so i was able to pass that grid to the monsters in order for them to know which tiles around them were walkable. using that grid, they i programmed them with an A* search. in brief, A* is the name of a search method which prioritizes looking at locations with the smallest direct distance to the target. it starts by combing through every tile the monster can reach and assigning it a direct distance to the player. if there are no reachable tiles within melee of the player, we can assume the player is unreachable and give up.</p>
-							<p>heres the explanation of A* i referenced when building it out: <a href='https://www.youtube.com/watch?v=-L-WgKMFuhE'>A* Pathfinding (E01: algorithm explanation)</a></p>
-							<img src="media/2405-c.png" alt="a dungeon room built out of cubes" class='devlog-img modal-img' caption='the dungeon terrain is made up of 1x1x1 cube meshes'>
-							<p>this implementation had a few problems</p>
-							<ol>
-							<li>the monsters could only move in eight directions. unless the monster had reached the player, they would only move between the centers of each square. as a result, movement looked very unnatural. </li>
-							<li>monsters could not change elevation. they could only see the terrain grid for their current elevation, so if the base of a slope was on their elevation, they could climb the slope, but if the slope led to a tile on a different elevation, they would see it as empty space. </li>
-							<li>if the grid is the only thing the monster factors in, it will collide with anything not on the grid- torches, chests, other monsters, etc. this causes monsters to get stuck endlessly walking into an object.</li>
-							</ol>
-							<img src="media/2405-d.png" alt="two orange monsters colliding due to bad pathfinding" class='devlog-img modal-img' caption='two chompers trying to pathfind through eachother (or are they kissing...?)'>
-							<p>so what to do? the only long-term solution to #3 is to detect what the monsters will collide with. i hoped to minimize collision detection, as that can get very intensive on the cpu. if every enemy has to check every collider between themselves and the player, that could result in massive slowdown. </p>
-							<p>i mentioned last month that im working in Godot, and Godot has a useful feature for this called NavigationRegions. a NavigationRegion is an object that divides a group of colliders into triangles.</p>
-							<img src="media/2405-e.png" alt="two grey monsters in a dungeon room. the floor of the room is divided into triangles." class='devlog-img modal-img' caption="triangles generated by NavigationRegions based on floor colliders">
-							<p>these triangles can be used for A* pathfinding in the same way you would use a square grid, with some advantages. </p>
-							<ol>
-								<li>since these triangles break down the space based off of adjacent colliders, they allow for much more natural movement than the grid. large, open areas will have few triangles, and monsters will move directly towards their target. small, condensed areas will have more triangles and monsters will move purposefully from triangle to triangle. </li>
-								<li>triangles are not bound to a specific elevation. while a triangle cannot touch more than three adjacent triangles, the vertices can be anywhere in 3d space. this means that moving up and down slopes is simple. </li>
-								<li>NavigationRegions detect colliders within its perimeter, and monsters can access which triangles are blocked when building a path. having the region track this information means that a large number of monsters can pathfind simultaneously without much stress on the system. </li>
-							</ol>
-							<p>from there, the next important piece is behavior. melee monsters move towards the player constantly, while ranged monsters keep a safe distance. eventually, i want to explore more advanced behaviors, such as movement in formation. </p>
-							<h2>Phase II?</h2>
-							<p>im going to keep working on this project. the primary goal of Phase II is to expand combat. the player will have access to two new weapons in addition to the sword. each weapon will have multiple attacks. i will also refine the dodge, and i intend to make the player less clunky to control overall. to match the player’s new tools, im going to give the monsters more kinds of attacks and make them more versatile. </p>
-							<p>to support the player having multiple weapons, im going to add a gear menu. i want gear management to be a core part of the game, so Phase II will contain the minimum viable implementation of the gear system. </p>
-							<p>my target is to finish Phase II by the end of august. i will continue to post monthly updates to track my progress. </p>
-							<p>until then, if you play Silver Key, please share your thoughts. thank you for reading, and see you in june! <br/>
-							- ciaran</p>
-							<img src="media/animals/240519.jpg" alt="an exceptionally round frog sitting like an old man watching construction workers from his porch" class='devlog-img modal-img' caption="image source: <a href='https://www.tumblr.com/frog-toad-daily/750830862791278592/day-127-the-ponderer'>tumblr.com/frog-toad-daily/750830862791278592/day-127-the-ponderer</a>">
-							<a href="#">↑ back to top ↑</a>
-						</div>
-				</div>
-			</div>
-		<div id='footer'></div>
-		</div>
-	</body>
-	<script>
-      $('#header').load("../../header.html", function() {
-         $('#nav-btn-devlogs').addClass("active");
-      });
-      $('#footer').load("../../footer.html");
-      $('#sidebar').load("../devlog_sidebar.html", function() {
-         attach_collapsables()
-         $('#sidebar-2024').addClass("active");
-         $('#sidebar-2024-content').addClass("open");
-         $('#link-2405').addClass("active");
-      });
-	</script>
-	<script src='../../js/modal.js'></script>
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" media="all">
+    <script src='../../js/collapsible.js'></script>
+</head>
+<body>
+    <div class="container">
+        <div id="header"></div>
+        <div class='main-body'>
+            <div id="sidebar" class='sidebar'>
+            </div>
+            <div class="gutter">
+            </div>
+            <div id="main-content" class="main-content">
+                    <div class="post">
+                        <div class="post-header">
+                            <h1>Silver Key - pathfinding</h1>
+                            <div class="subtitle">may 15, 2024</div>
+                        </div>
+                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ykJPHfImpmw?si=xYyVCgFWTS2uUqHr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p>hi all,<br/>
+                        the Silver Key prototype ive been working on for two months is out!<br/>you can download it here: <a href='https://snorv.itch.io/silver-key'>snorv.itch.io/silver-key</a>.</p>
+                        <p>the prototype contains a small section of overworld with a merchant, a small dungeon with 3 enemy types and a boss. i look forward to your feedback.</p></section>
+                        <p>this prototype contains a lot of firsts for me. its the most fleshed out 3D character ive built, its my first time creating real-time combat in 3d, the inventory system is new, and the monster ai is more complex than any ive made before.</p>
+                        <p>last month, i wrote about the state machine that manages the player. the monsters use a similar, greatly simplified state machine. this is what that looks like for basic enemies:</p>
+                        <img src="media/2405-a.png" alt="the monster state machine" class='devlog-img modal-img'>
+                        <p>deceptively simple, maybe. "move to player if reachable" is a very complicated bit, it turns out. lets talk about pathfinding.</p>
+                        <h2>pathfinding</h2>
+                        <img src="media/2405-b.png" alt="the player stands in a room with two orange monsters. a red line shows the shortest path between the monsters and the player." class='devlog-img modal-img' caption="the red line shows the chompers' navigation">
+                        <p>for my first implementation, the monsters moved on a square grid. the dungeon is built out of modular, cube-sized tiles, so i was able to pass that grid to the monsters in order for them to know which tiles around them were walkable. using that grid, they i programmed them with an A* search. in brief, A* is the name of a search method which prioritizes looking at locations with the smallest direct distance to the target. it starts by combing through every tile the monster can reach and assigning it a direct distance to the player. if there are no reachable tiles within melee of the player, we can assume the player is unreachable and give up.</p>
+                        <p>heres the explanation of A* i referenced when building it out: <a href='https://www.youtube.com/watch?v=-L-WgKMFuhE'>A* Pathfinding (E01: algorithm explanation)</a></p>
+                        <img src="media/2405-c.png" alt="a dungeon room built out of cubes" class='devlog-img modal-img' caption='the dungeon terrain is made up of 1x1x1 cube meshes'>
+                        <p>this implementation had a few problems</p>
+                        <ol>
+                        <li>the monsters could only move in eight directions. unless the monster had reached the player, they would only move between the centers of each square. as a result, movement looked very unnatural. </li>
+                        <li>monsters could not change elevation. they could only see the terrain grid for their current elevation, so if the base of a slope was on their elevation, they could climb the slope, but if the slope led to a tile on a different elevation, they would see it as empty space. </li>
+                        <li>if the grid is the only thing the monster factors in, it will collide with anything not on the grid- torches, chests, other monsters, etc. this causes monsters to get stuck endlessly walking into an object.</li>
+                        </ol>
+                        <img src="media/2405-d.png" alt="two orange monsters colliding due to bad pathfinding" class='devlog-img modal-img' caption='two chompers trying to pathfind through eachother (or are they kissing...?)'>
+                        <p>so what to do? the only long-term solution to #3 is to detect what the monsters will collide with. i hoped to minimize collision detection, as that can get very intensive on the cpu. if every enemy has to check every collider between themselves and the player, that could result in massive slowdown. </p>
+                        <p>i mentioned last month that im working in Godot, and Godot has a useful feature for this called NavigationRegions. a NavigationRegion is an object that divides a group of colliders into triangles.</p>
+                        <img src="media/2405-e.png" alt="two grey monsters in a dungeon room. the floor of the room is divided into triangles." class='devlog-img modal-img' caption="triangles generated by NavigationRegions based on floor colliders">
+                        <p>these triangles can be used for A* pathfinding in the same way you would use a square grid, with some advantages. </p>
+                        <ol>
+                            <li>since these triangles break down the space based off of adjacent colliders, they allow for much more natural movement than the grid. large, open areas will have few triangles, and monsters will move directly towards their target. small, condensed areas will have more triangles and monsters will move purposefully from triangle to triangle. </li>
+                            <li>triangles are not bound to a specific elevation. while a triangle cannot touch more than three adjacent triangles, the vertices can be anywhere in 3d space. this means that moving up and down slopes is simple. </li>
+                            <li>NavigationRegions detect colliders within its perimeter, and monsters can access which triangles are blocked when building a path. having the region track this information means that a large number of monsters can pathfind simultaneously without much stress on the system. </li>
+                        </ol>
+                        <p>from there, the next important piece is behavior. melee monsters move towards the player constantly, while ranged monsters keep a safe distance. eventually, i want to explore more advanced behaviors, such as movement in formation. </p>
+                        <h2>Phase II?</h2>
+                        <p>im going to keep working on this project. the primary goal of Phase II is to expand combat. the player will have access to two new weapons in addition to the sword. each weapon will have multiple attacks. i will also refine the dodge, and i intend to make the player less clunky to control overall. to match the player’s new tools, im going to give the monsters more kinds of attacks and make them more versatile. </p>
+                        <p>to support the player having multiple weapons, im going to add a gear menu. i want gear management to be a core part of the game, so Phase II will contain the minimum viable implementation of the gear system. </p>
+                        <p>my target is to finish Phase II by the end of august. i will continue to post monthly updates to track my progress. </p>
+                        <p>until then, if you play Silver Key, please share your thoughts. thank you for reading, and see you in june! <br/>
+                        - ciaran</p>
+                        <img src="media/animals/240519.jpg" alt="an exceptionally round frog sitting like an old man watching construction workers from his porch" class='devlog-img modal-img' caption="image source: <a href='https://www.tumblr.com/frog-toad-daily/750830862791278592/day-127-the-ponderer'>tumblr.com/frog-toad-daily/750830862791278592/day-127-the-ponderer</a>">
+                        <a href="#">↑ back to top ↑</a>
+                    </div>
+            </div>
+        </div>
+    <div id='footer'></div>
+    </div>
+</body>
+<script>
+    $('#header').load("../../header.html", function() {
+        $('#nav-btn-devlogs').addClass("active");
+    });
+    $('#footer').load("../../footer.html");
+    $('#sidebar').load("../devlog_sidebar.html", function() {
+        attach_collapsables()
+        $('#sidebar-2024').addClass("active");
+        $('#sidebar-2024-content').addClass("open");
+        $('#link-2405').addClass("active");
+    });
+</script>
+<script src='../../js/modal.js'></script>
 </html>

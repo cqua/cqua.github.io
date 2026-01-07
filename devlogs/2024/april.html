@@ -1,68 +1,71 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>snorv games - devlogs</title>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snorv games - devlogs</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Delius' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-		<link href="../../css/style.css" rel="stylesheet" type="text/css" media="all">
-		<script src='../../js/collapsible.js'></script>
-	</head>
-	<body>
-		<div class="container">
-			<div id="header"></div>
-			<div class='main-body'>
-				<div id="sidebar" class='sidebar'></div>
-				<div class="gutter">
-				</div>
-				<div id="main-content" class="main-content">
-						<div class="post">
-							<div class="post-header">
-								<h1>Silver Key - state machines</h1>
-								<div class="subtitle">april 30, 2024</div>
-							</div>
-							<p>hi all,<br/>
-							its been 6 months since i released my last game, Vial Varmit, in october 2023. since then, ive started two projects: Silver Key, and untitled mouse game. both were conceived as low-intensity games that i would be able to finish quickly. both ballooned into projects that i wanted to give more time and care. while id really like to release regular, little games, i think it will be more productive to make what im passionate about. so, i've restarted Silver Key in 3d.</p>
-							<img src="media/2404-a.png" alt="an anthropomorphic wolf wielding a sword walking through a dungeon hall" class='devlog-img modal-img'>
-							<img src="media/2404-b.png" alt="an anthropomorphic wolf casting a spell, emitting blue cubes" class='devlog-img modal-img'>
-							<p>since this project is significantly more ambitious, im keeping a taskboard in GitHub. the tasks are organized into Phases, where Phase I is the initial prototype. i am going to release the Phase I prototype before the end of may.</p>
-							<h2>whats In Phase I?</h2>
-							<p>Silver Key Phase I features one small dungeon and a small section of overworld. in the overworld, the player can purchase goods from a merchant and store items. in the dungeon, the player will find three enemy types, as well as silver currency and other items.</p>
-							<p>the primary goal and most difficult aspect of this phase is making the player comfortable to control. the player can attack, run, dodge, block, and use items from their inventory. similar to other games ive made, the player uses a state machine. a state machine is a kind of diagram where every action a player can take has a list of properties and connections to other actions. for example, when the player dodges, they gain the intangible property- damage phases through them- until the dodge ends and they return to the default state. if the player attacks, they gain the property of dealing damage, become immobile, and can leave the state by either finishing the attack and returning to the default state, or by being damaged and interrupted, starting the damaged or possibly death state.</p>
-							<p>these states can get even more granular. youd likely want to separate an attack into three states, attack start, attack damage, and attack end. during attack start, the player raises their arm to strike. no damage is dealt during attack start as that wouldnt make sense. once attack start has ended, it leads into the attack damage state, followed by the attack end state. during the attack end state, the player may return to their default state or may initiate a combo. all of these states could potentially be interrupted by enemy damage, with different consequences. </p>
-							
-							<p class='no-margin'>this is the current player state machine:</p>
-							<img src="media/2404-d.png" alt="the player state machine" class='devlog-img modal-img'>
-							<p>this is the simplest state machine i could make for the prototype. in later phases, i will add more granularity, but im simplifying the number of states so that i can focus on making the transitions feel right.</p>
-							<h2>current progress</h2>
-							<img src="media/2404-c.png" alt="bar graphs of current progress" class='devlog-img modal-img'>
-							<p>the player actions, inventory, and dungeon are all implemented. enemies have some logic and simple pathfinding. one of the three intended enemies is in a playable state.</p>
-							<p>keeping a taskboard has been really useful. i thought it would be tedious as a solo-developer, but the board has made it easy to decide what tasks need to be done, and which tasks i should save for later. its also really encouraging to keep a list of completed tasks.</p>
-							<img src="media/2404-e.png" alt="the wolf blocks magic orbs cast by purple sorcerers" class='devlog-img modal-img'>
-							<img src="media/2404-f.png" alt="the wolf manages her inventory, containing herbs and coins" class='devlog-img modal-img'>
-							<p>thats it for april! ill see you in a month when the prototype is complete!</p><p>- ciaran</p>
-							<img src="media/animals/240429.png" caption="image source: <a href='https://www.tumblr.com/canidgirlfangs/741281793226014720/asleep'>tumblr.com/canidgirlfangs/741281793226014720/asleep</a>" alt="A wolf sleeps contentedly on a snowy rock." class='devlog-img modal-img'>
-							<a href="#">↑ back to top ↑</a>
-						</div>
-				</div>
-			</div>
-		<div id='footer'></div>
-		</div>
-	</body>
-	<script>
-      $('#header').load("../../header.html", function() {
-         $('#nav-btn-devlogs').addClass("active");
-      });
-      $('#footer').load("../../footer.html");
-      $('#sidebar').load("../devlog_sidebar.html", function() {
-         attach_collapsables()
-         $('#sidebar-2024').addClass("active");
-         $('#sidebar-2024-content').addClass("open");
-         $('#link-2404').addClass("active");
-      });
-	</script>
-	<script src='../../js/modal.js'></script>
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" media="all">
+    <script src='../../js/collapsible.js'></script>
+</head>
+<body>
+    <div class="container">
+        <div id="header"></div>
+        <div class='main-body'>
+            <div id="sidebar" class='sidebar'></div>
+            <div class="gutter">
+            </div>
+            <div id="main-content" class="main-content">
+                    <div class="post">
+                        <div class="post-header">
+                            <h1>Silver Key - state machines</h1>
+                            <div class="subtitle">april 30, 2024</div>
+                        </div>
+                        <p>hi all,<br/>
+                        its been 6 months since i released my last game, Vial Varmit, in october 2023. since then, ive started two projects: Silver Key, and untitled mouse game. both were conceived as low-intensity games that i would be able to finish quickly. both ballooned into projects that i wanted to give more time and care. while id really like to release regular, little games, i think it will be more productive to make what im passionate about. so, i've restarted Silver Key in 3d.</p>
+                        <img src="media/2404-a.png" alt="an anthropomorphic wolf wielding a sword walking through a dungeon hall" class='devlog-img modal-img'>
+                        <img src="media/2404-b.png" alt="an anthropomorphic wolf casting a spell, emitting blue cubes" class='devlog-img modal-img'>
+                        <p>since this project is significantly more ambitious, im keeping a taskboard in GitHub. the tasks are organized into Phases, where Phase I is the initial prototype. i am going to release the Phase I prototype before the end of may.</p>
+                        <h2>whats In Phase I?</h2>
+                        <p>Silver Key Phase I features one small dungeon and a small section of overworld. in the overworld, the player can purchase goods from a merchant and store items. in the dungeon, the player will find three enemy types, as well as silver currency and other items.</p>
+                        <p>the primary goal and most difficult aspect of this phase is making the player comfortable to control. the player can attack, run, dodge, block, and use items from their inventory. similar to other games ive made, the player uses a state machine. a state machine is a kind of diagram where every action a player can take has a list of properties and connections to other actions. for example, when the player dodges, they gain the intangible property- damage phases through them- until the dodge ends and they return to the default state. if the player attacks, they gain the property of dealing damage, become immobile, and can leave the state by either finishing the attack and returning to the default state, or by being damaged and interrupted, starting the damaged or possibly death state.</p>
+                        <p>these states can get even more granular. youd likely want to separate an attack into three states, attack start, attack damage, and attack end. during attack start, the player raises their arm to strike. no damage is dealt during attack start as that wouldnt make sense. once attack start has ended, it leads into the attack damage state, followed by the attack end state. during the attack end state, the player may return to their default state or may initiate a combo. all of these states could potentially be interrupted by enemy damage, with different consequences. </p>
+                        
+                        <p class='no-margin'>this is the current player state machine:</p>
+                        <img src="media/2404-d.png" alt="the player state machine" class='devlog-img modal-img'>
+                        <p>this is the simplest state machine i could make for the prototype. in later phases, i will add more granularity, but im simplifying the number of states so that i can focus on making the transitions feel right.</p>
+                        <h2>current progress</h2>
+                        <img src="media/2404-c.png" alt="bar graphs of current progress" class='devlog-img modal-img'>
+                        <p>the player actions, inventory, and dungeon are all implemented. enemies have some logic and simple pathfinding. one of the three intended enemies is in a playable state.</p>
+                        <p>keeping a taskboard has been really useful. i thought it would be tedious as a solo-developer, but the board has made it easy to decide what tasks need to be done, and which tasks i should save for later. its also really encouraging to keep a list of completed tasks.</p>
+                        <img src="media/2404-e.png" alt="the wolf blocks magic orbs cast by purple sorcerers" class='devlog-img modal-img'>
+                        <img src="media/2404-f.png" alt="the wolf manages her inventory, containing herbs and coins" class='devlog-img modal-img'>
+                        <p>thats it for april! ill see you in a month when the prototype is complete!</p><p>- ciaran</p>
+                        <img src="media/animals/240429.png" caption="image source: <a href='https://www.tumblr.com/canidgirlfangs/741281793226014720/asleep'>tumblr.com/canidgirlfangs/741281793226014720/asleep</a>" alt="A wolf sleeps contentedly on a snowy rock." class='devlog-img modal-img'>
+                        <a href="#">↑ back to top ↑</a>
+                    </div>
+            </div>
+        </div>
+    <div id='footer'></div>
+    </div>
+</body>
+<script>
+    $('#header').load("../../header.html", function() {
+        $('#nav-btn-devlogs').addClass("active");
+    });
+    $('#footer').load("../../footer.html");
+    $('#sidebar').load("../devlog_sidebar.html", function() {
+        attach_collapsables()
+        $('#sidebar-2024').addClass("active");
+        $('#sidebar-2024-content').addClass("open");
+        $('#link-2404').addClass("active");
+    });
+</script>
+<script src='../../js/modal.js'></script>
 </html>

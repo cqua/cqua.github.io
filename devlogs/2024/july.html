@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>snorv games - devlogs</title>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snorv games - devlogs</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Delius' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-		<link href="../../css/style.css" rel="stylesheet" type="text/css" media="all">
-		<script src='../../js/collapsible.js'></script>
-	</head>
-	<body>
-		<div class="container">
-			<div id="header"></div>
-			<div class='main-body'>
-				<div id="sidebar" class='sidebar'></div>
-				<div class="gutter">
-				</div>
-				<div id="main-content" class="main-content">
-						<div class="post">
-							<div class="post-header">
-								<h1>Silver Key - Phase II release</h1>
-								<div class="subtitle">july 23, 2024</div>
-							</div>
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/KAsgJ05ghK0?si=b9K-J9Vqlq95je_f" title="Silver Key Phase II Video" frameborder="0"  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-							<p>hi all,<br/>
-							Phase II of Silver Key is out! you can download it here: <a href='https://snorv.itch.io/silver-key'>snorv.itch.io/silver-key</a>.</p>
-							<p>you can read a list of changes here: <a href="https://snorv.itch.io/silver-key/devlog/770387/changelog-v02">snorv.itch.io/silver-key/devlog/770387/changelog-v02</a></p>
-							<p>the focus of this update was to create a workable player to use moving forward. using the discrete action system discussed last month, ive built out new weapons and made the players other abilities more modular. this means that seamless transition between actions (ie combos or dodge cancelling) will be simple to set up. theres also a lock on, which should make combat easier to manage.</p>
-							<p>everything lacks polish of course. theres currently no good way to select which enemy you lock onto. every player animation needs a few more passes. there are also some camera bugs i havent worked out yet. but this base will do for now.</p>
-							<p>Phase III will focus on blocking out the first level. the dungeon up until now has been a test level, so its likely none of it will remain. ill talk about how im structuring the first level next month.</p>
-							<p>my target for Phase III is the end of october.</p>
-							<p>until then, i would love to know your thoughts, thank you for reading, and see you in august!<br/>
-							- ciaran</p>
-							<img src="media/animals/240724.jpg" title="a bearded dragon looking smugly at the camera from its branch." alt="a bearded dragon looking smugly at the camera from its branch." class='devlog-img modal-img' caption="image source: <a href='https://www.tumblr.com/textless/733877276571287552?source=share'>tumblr.com/textless/733877276571287552</a>">
-							<a href="#">↑ back to top ↑</a>
-						</div>
-				</div>
-			</div>
-		<div id='footer'></div>
-		</div>
-	</body>
-	<script>
-      $('#header').load("../../header.html", function() {
-         $('#nav-btn-devlogs').addClass("active");
-      });
-      $('#footer').load("../../footer.html");
-      $('#sidebar').load("../devlog_sidebar.html", function() {
-         attach_collapsables()
-         $('#sidebar-2024').addClass("active");
-         $('#sidebar-2024-content').addClass("open");
-         $('#link-2407').addClass("active");
-      });
-	</script>
-	<script src='../../js/modal.js'></script>
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" media="all">
+    <script src='../../js/collapsible.js'></script>
+</head>
+<body>
+    <div class="container">
+        <div id="header"></div>
+        <div class='main-body'>
+            <div id="sidebar" class='sidebar'></div>
+            <div class="gutter">
+            </div>
+            <div id="main-content" class="main-content">
+                    <div class="post">
+                        <div class="post-header">
+                            <h1>Silver Key - Phase II release</h1>
+                            <div class="subtitle">july 23, 2024</div>
+                        </div>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/KAsgJ05ghK0?si=b9K-J9Vqlq95je_f" title="Silver Key Phase II Video" frameborder="0"  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <p>hi all,<br/>
+                        Phase II of Silver Key is out! you can download it here: <a href='https://snorv.itch.io/silver-key'>snorv.itch.io/silver-key</a>.</p>
+                        <p>you can read a list of changes here: <a href="https://snorv.itch.io/silver-key/devlog/770387/changelog-v02">snorv.itch.io/silver-key/devlog/770387/changelog-v02</a></p>
+                        <p>the focus of this update was to create a workable player to use moving forward. using the discrete action system discussed last month, ive built out new weapons and made the players other abilities more modular. this means that seamless transition between actions (ie combos or dodge cancelling) will be simple to set up. theres also a lock on, which should make combat easier to manage.</p>
+                        <p>everything lacks polish of course. theres currently no good way to select which enemy you lock onto. every player animation needs a few more passes. there are also some camera bugs i havent worked out yet. but this base will do for now.</p>
+                        <p>Phase III will focus on blocking out the first level. the dungeon up until now has been a test level, so its likely none of it will remain. ill talk about how im structuring the first level next month.</p>
+                        <p>my target for Phase III is the end of october.</p>
+                        <p>until then, i would love to know your thoughts, thank you for reading, and see you in august!<br/>
+                        - ciaran</p>
+                        <img src="media/animals/240724.jpg" title="a bearded dragon looking smugly at the camera from its branch." alt="a bearded dragon looking smugly at the camera from its branch." class='devlog-img modal-img' caption="image source: <a href='https://www.tumblr.com/textless/733877276571287552?source=share'>tumblr.com/textless/733877276571287552</a>">
+                        <a href="#">↑ back to top ↑</a>
+                    </div>
+            </div>
+        </div>
+    <div id='footer'></div>
+    </div>
+</body>
+<script>
+    $('#header').load("../../header.html", function() {
+        $('#nav-btn-devlogs').addClass("active");
+    });
+    $('#footer').load("../../footer.html");
+    $('#sidebar').load("../devlog_sidebar.html", function() {
+        attach_collapsables()
+        $('#sidebar-2024').addClass("active");
+        $('#sidebar-2024-content').addClass("open");
+        $('#link-2407').addClass("active");
+    });
+</script>
+<script src='../../js/modal.js'></script>
 </html>

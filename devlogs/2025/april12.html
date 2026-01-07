@@ -1,172 +1,176 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>snorv games - devlogs</title>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>snorv games - devlogs</title>
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Delius' rel='stylesheet'>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-		<link href="../../css/style.css" rel="stylesheet" type="text/css" media="all">
-      <script src='../../js/collapsible.js'></script>
-	</head>
-	<body>
-		<div class="container">
-			<div id="header"></div>
-			<div class='main-body'>
-				<div id="sidebar" class="sidebar"></div>
-				<div class="gutter">
-				</div>
-				<div id="main-content" class="main-content">
-						<div class="post">
-							<div class="post-header">
-                     <h1>[GaW23 Collection] progress report</h1>
-                     <div class="subtitle">april 12, 2025</div>
-							</div>
-							<p>hi all,<br/>
-							<p>these past two weeks ive been working on a collection of the Game A Week games i made back in 2023</p>
-							<img src="media/0412-c.png" 
-								alt="first person view of a sci-fi room. stasis pods line the walls. a blue terminal lights the room. a window reveals stars and a planet." 
-								class='devlog-img modal-img'>
-                     <p>id like all the games to be in one place, with some cleaned up visuals, fixed bugs, and generally
-                        trying to improve them without changing things too much
-                     </p>
-                     <p>its been interesting to play them all again after two years. it makes me want to do another Game A 
-                        Week and hopefully get farther. maybe...
-                     </p>
-							<img src="media/0412-b.png" 
-								alt="the player stands in a room with a yellow cat. the cat says 'Oh good! You're here!'" 
-								class='devlog-img modal-img'>
-                     <p>the collection is going to have 17 games. i decided to not include the small demos that did not
-                        really cohere. here is the final list:
-                     </p>
-                     <table class="post-table">
-                        <tr><th></th><th>game</th><th>genre</th><th>progress</th></tr>
-                        <tr><td>1</td><td>Deckchairs</td>
-                           <td><span class="tag red">platformer</span></td>
-                           <td><span class="tag green">complete</span></td></tr>
-                        <tr><td>2</td><td>Smores</td>
-                           <td><span class="tag yellow">rpg</span> <span class="tag red">platformer</span></td>
-                           <td><span class="tag green">complete</span></td>
-                        </tr>
-                        <tr><td>3</td><td>In Boxes</td>
-                           <td><span class="tag green">narrative</span></td>
-                           <td><span class="tag green">complete</span></td></tr>
-                        <tr><td>4</td><td>Accounts of the Dead</td>
-                           <td><span class="tag green">narrative</span> <span class="tag red">platformer</span></td>
-                           <td><span class="tag green">complete</span></td></tr>
-                        <tr><td>5</td><td>Conjuror</td>
-                           <td><span class="tag yellow">rpg</span></td>
-                           <td><span class="tag green">complete</span></td></tr>
-                        <tr><td>6</td><td>Poppy Heart & Rose</td>
-                           <td><span class="tag blue">puzzle</span> <span class="tag red">platformer</span></td>
-                           <td><span class="tag yellow">started</span></td></tr>
-                        <tr><td>7</td><td>Your Personal Aquarium</td>
-                           <td><span class="tag aqua">aquarium</span></td>
-                           <td><span class="tag green">complete</span></td></tr>
-                        <tr><td>8</td><td>Muscle Mouse</td>
-                           <td><span class="tag red">platformer</span></td>
-                           <td><span class="tag yellow">started</span></td></tr>
-                        <tr><td>9</td><td>Photographs</td>
-                           <td><span class="tag lime">text adventure</span></td>
-                           <td><span class="tag blue">not started</span></td></tr>
-                        <tr><td>10</td><td>Conjuror Tomb</td>
-                           <td><span class="tag yellow">rpg</span> <span class="tag red">platformer</span></td>
-                           <td><span class="tag blue">not started</span></td></tr>
-                        <tr><td>11</td><td>Courier</td>
-                           <td><span class="tag green">narrative</span> <span class="tag red">platformer</span></td>
-                           <td><span class="tag green">complete</span></td></tr>
-                        <tr><td>12</td><td>Accounts of the Dead 2</td>
-                           <td><span class="tag green">narrative</span> <span class="tag red">platformer</span></td>
-                           <td><span class="tag yellow">started</span></td></tr>
-                        <tr><td>13</td><td>The Wind Sings in the Reeds</td>
-                           <td><span class="tag green">narrative</span></td>
-                           <td><span class="tag yellow">started</span></td></tr>
-                        <tr><td>14</td><td>Your Personal Community</td>
-                           <td><span class="tag green">narrative</span></td>
-                           <td><span class="tag yellow">started</span></td></tr>
-                        <tr><td>15</td><td>Courtyard Detective</td>
-                           <td><span class='tag pink'>first person</span> <span class="tag green">narrative</span></td>
-                           <td><span class="tag green">complete</span></td></tr>
-                        <tr><td>16</td><td>Nova Circuit</td>
-                           <td><span class='tag pink'>first person</span> <span class="tag blue">puzzle</span></td>
-                           <td><span class="tag yellow">started</span></td></tr>
-                        <tr><td>17</td><td>In the Red Light</td>
-                           <td><span class='tag pink'>first person</span> <span class="tag green">narrative</span></td>
-                           <td><span class="tag blue">not started</span></td></tr>
-                     </table>
-                     <p>most of the games were originally made in Unity. i am making the collection in Godot, 
-                        which means i am rebuilding a lot of things. i am happy to do this, since i am able to work a lot 
-                        faster than i could in 2023, and it gives me the opportunity to make some changes.</p>
-                     <h2>Deckchairs</h2>
-							<img src="media/0412-a.gif" 
-								alt="the player runs side to side carrying 4 chairs. a woman is fine dining." 
-								class='devlog-img modal-img'>
-                     <p>the platformer physics across all platformer games has been unified. 
-                        each platformer game originally had slightly different
-                        movement, depending on what felt right at the time. by the time i made 
-                        Accounts of the Dead 2, the players jump height had multiplied by 4. this makes the games
-                        disorienting to play in conjunction, especially if you play them out of order.
-                     </p>
-                     <p>other than a higher jump, the only changes Deckchairs got was polish. you can now carry multiple
-                        chairs, and they are animated to sway slightly with your movement
-                     </p>
-                     <h2>Smores</h2>
-							<img src="media/0412-d.png" 
-								alt="the player battles a poorly drawn deer before a fireplace" 
-								class='devlog-img modal-img'>
-                        <p>Smores was pretty buggy and very unpolished. i also did not have time to create any sort of 
-                           difficulty curve when making it. i want to avoid adding too much polish and making the game feel
-                           totally different. i would like it to feel like "what if i had a little more time but no more skill."
-                           in this case, i changed some encounters and made some new enemies, so that
-                           should be interesting.
-                     </p>
-                     <h2>Poppy Heart & Rose</h2>
-							<img src="media/0412-e.png" 
-								alt="aA yellow cat is talking to a statue. the cat is saying 'I usually just eat the dirt.'" 
-								class='devlog-img modal-img'>
-                     <p>
-                        Poppy Heart & Rose is in a unique position because the files were corrupted and i lost the code.
-                        the final result is also buggy and does not work as intended. this means that the new version of the
-                        game will be almost entirely new. fun!
-                     </p>
-                     <h2>Courtyard Detective</h2>
-							<img src="media/0412-f.png" 
-								alt="a dead tree in a smoggy courtyard" 
-								class='devlog-img modal-img'>
-                     <p>
-                        being the first 3d game i made, i ran out of time building Courtyard Detective and it 
-                        ended up with much more linear narrative than i had planned. i am taking this opportunity to 
-                        give the player more options. hopefully this will feel a little more like an investigation.
-                     </p>
-                     <h2></h2>
-							<p>those are the most major changes so far. hopefully you will be able to play it soon.</p>
-                     <p>thank you for reading, and i will be back later this month<br/>
-							- ciaran</p>
-							<img src="media/animals/0412.jpg" 
-                        alt="hilly mountainside in Hollywood. a coyote stands off-center, smiling, like 'Ay, I'm in Hollywood baybee'." 
-                        caption="image source: <a href='https://www.clawonline.org'>clawonline.org</a>" class='devlog-img modal-img'>
-							
-							<a href="#">↑ back to top ↑</a>
-						</div>
-				</div>
+   <link href="../../css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../css/old_format.css" rel="stylesheet" type="text/css" media="all">
+   <script src='../../js/collapsible.js'></script>
+</head>
+<body>
+   <div class="container">
+      <div id="header"></div>
+      <div class='main-body'>
+         <div id="sidebar" class="sidebar"></div>
+         <div class="gutter">
+         </div>
+         <div id="main-content" class="main-content">
+               <div class="post">
+                  <div class="post-header">
+                  <h1>[GaW23 Collection] progress report</h1>
+                  <div class="subtitle">april 12, 2025</div>
+                  </div>
+                  <p>hi all,<br/>
+                  <p>these past two weeks ive been working on a collection of the Game A Week games i made back in 2023</p>
+                  <img src="media/0412-c.png" 
+                     alt="first person view of a sci-fi room. stasis pods line the walls. a blue terminal lights the room. a window reveals stars and a planet." 
+                     class='devlog-img modal-img'>
+                  <p>id like all the games to be in one place, with some cleaned up visuals, fixed bugs, and generally
+                     trying to improve them without changing things too much
+                  </p>
+                  <p>its been interesting to play them all again after two years. it makes me want to do another Game A 
+                     Week and hopefully get farther. maybe...
+                  </p>
+                  <img src="media/0412-b.png" 
+                     alt="the player stands in a room with a yellow cat. the cat says 'Oh good! You're here!'" 
+                     class='devlog-img modal-img'>
+                  <p>the collection is going to have 17 games. i decided to not include the small demos that did not
+                     really cohere. here is the final list:
+                  </p>
+                  <table class="post-table">
+                     <tr><th></th><th>game</th><th>genre</th><th>progress</th></tr>
+                     <tr><td>1</td><td>Deckchairs</td>
+                        <td><span class="tag red">platformer</span></td>
+                        <td><span class="tag green">complete</span></td></tr>
+                     <tr><td>2</td><td>Smores</td>
+                        <td><span class="tag yellow">rpg</span> <span class="tag red">platformer</span></td>
+                        <td><span class="tag green">complete</span></td>
+                     </tr>
+                     <tr><td>3</td><td>In Boxes</td>
+                        <td><span class="tag green">narrative</span></td>
+                        <td><span class="tag green">complete</span></td></tr>
+                     <tr><td>4</td><td>Accounts of the Dead</td>
+                        <td><span class="tag green">narrative</span> <span class="tag red">platformer</span></td>
+                        <td><span class="tag green">complete</span></td></tr>
+                     <tr><td>5</td><td>Conjuror</td>
+                        <td><span class="tag yellow">rpg</span></td>
+                        <td><span class="tag green">complete</span></td></tr>
+                     <tr><td>6</td><td>Poppy Heart & Rose</td>
+                        <td><span class="tag blue">puzzle</span> <span class="tag red">platformer</span></td>
+                        <td><span class="tag yellow">started</span></td></tr>
+                     <tr><td>7</td><td>Your Personal Aquarium</td>
+                        <td><span class="tag aqua">aquarium</span></td>
+                        <td><span class="tag green">complete</span></td></tr>
+                     <tr><td>8</td><td>Muscle Mouse</td>
+                        <td><span class="tag red">platformer</span></td>
+                        <td><span class="tag yellow">started</span></td></tr>
+                     <tr><td>9</td><td>Photographs</td>
+                        <td><span class="tag lime">text adventure</span></td>
+                        <td><span class="tag blue">not started</span></td></tr>
+                     <tr><td>10</td><td>Conjuror Tomb</td>
+                        <td><span class="tag yellow">rpg</span> <span class="tag red">platformer</span></td>
+                        <td><span class="tag blue">not started</span></td></tr>
+                     <tr><td>11</td><td>Courier</td>
+                        <td><span class="tag green">narrative</span> <span class="tag red">platformer</span></td>
+                        <td><span class="tag green">complete</span></td></tr>
+                     <tr><td>12</td><td>Accounts of the Dead 2</td>
+                        <td><span class="tag green">narrative</span> <span class="tag red">platformer</span></td>
+                        <td><span class="tag yellow">started</span></td></tr>
+                     <tr><td>13</td><td>The Wind Sings in the Reeds</td>
+                        <td><span class="tag green">narrative</span></td>
+                        <td><span class="tag yellow">started</span></td></tr>
+                     <tr><td>14</td><td>Your Personal Community</td>
+                        <td><span class="tag green">narrative</span></td>
+                        <td><span class="tag yellow">started</span></td></tr>
+                     <tr><td>15</td><td>Courtyard Detective</td>
+                        <td><span class='tag pink'>first person</span> <span class="tag green">narrative</span></td>
+                        <td><span class="tag green">complete</span></td></tr>
+                     <tr><td>16</td><td>Nova Circuit</td>
+                        <td><span class='tag pink'>first person</span> <span class="tag blue">puzzle</span></td>
+                        <td><span class="tag yellow">started</span></td></tr>
+                     <tr><td>17</td><td>In the Red Light</td>
+                        <td><span class='tag pink'>first person</span> <span class="tag green">narrative</span></td>
+                        <td><span class="tag blue">not started</span></td></tr>
+                  </table>
+                  <p>most of the games were originally made in Unity. i am making the collection in Godot, 
+                     which means i am rebuilding a lot of things. i am happy to do this, since i am able to work a lot 
+                     faster than i could in 2023, and it gives me the opportunity to make some changes.</p>
+                  <h2>Deckchairs</h2>
+                  <img src="media/0412-a.gif" 
+                     alt="the player runs side to side carrying 4 chairs. a woman is fine dining." 
+                     class='devlog-img modal-img'>
+                  <p>the platformer physics across all platformer games has been unified. 
+                     each platformer game originally had slightly different
+                     movement, depending on what felt right at the time. by the time i made 
+                     Accounts of the Dead 2, the players jump height had multiplied by 4. this makes the games
+                     disorienting to play in conjunction, especially if you play them out of order.
+                  </p>
+                  <p>other than a higher jump, the only changes Deckchairs got was polish. you can now carry multiple
+                     chairs, and they are animated to sway slightly with your movement
+                  </p>
+                  <h2>Smores</h2>
+                  <img src="media/0412-d.png" 
+                     alt="the player battles a poorly drawn deer before a fireplace" 
+                     class='devlog-img modal-img'>
+                     <p>Smores was pretty buggy and very unpolished. i also did not have time to create any sort of 
+                        difficulty curve when making it. i want to avoid adding too much polish and making the game feel
+                        totally different. i would like it to feel like "what if i had a little more time but no more skill."
+                        in this case, i changed some encounters and made some new enemies, so that
+                        should be interesting.
+                  </p>
+                  <h2>Poppy Heart & Rose</h2>
+                  <img src="media/0412-e.png" 
+                     alt="aA yellow cat is talking to a statue. the cat is saying 'I usually just eat the dirt.'" 
+                     class='devlog-img modal-img'>
+                  <p>
+                     Poppy Heart & Rose is in a unique position because the files were corrupted and i lost the code.
+                     the final result is also buggy and does not work as intended. this means that the new version of the
+                     game will be almost entirely new. fun!
+                  </p>
+                  <h2>Courtyard Detective</h2>
+                  <img src="media/0412-f.png" 
+                     alt="a dead tree in a smoggy courtyard" 
+                     class='devlog-img modal-img'>
+                  <p>
+                     being the first 3d game i made, i ran out of time building Courtyard Detective and it 
+                     ended up with much more linear narrative than i had planned. i am taking this opportunity to 
+                     give the player more options. hopefully this will feel a little more like an investigation.
+                  </p>
+                  <h2></h2>
+                  <p>those are the most major changes so far. hopefully you will be able to play it soon.</p>
+                  <p>thank you for reading, and i will be back later this month<br/>
+                  - ciaran</p>
+                  <img src="media/animals/0412.jpg" 
+                     alt="hilly mountainside in Hollywood. a coyote stands off-center, smiling, like 'Ay, I'm in Hollywood baybee'." 
+                     caption="image source: <a href='https://www.clawonline.org'>clawonline.org</a>" class='devlog-img modal-img'>
+                  
+                  <a href="#">↑ back to top ↑</a>
+               </div>
+         </div>
 
-			</div>
-		<div id='footer'></div>
-		</div>
-	</body>
-	<script>
-      $('#header').load("../../header.html", function() {
-         $('#nav-btn-devlogs').addClass("active");
-      });
-      $('#footer').load("../../footer.html");
-      $('#sidebar').load("../devlog_sidebar.html", function() {
-         attach_collapsables()
-         $('#sidebar-2025').addClass("active");
-         $('#sidebar-2025-content').addClass("open");
-         $('#link-250412').addClass("active");
-      });
-	</script>
-	<script src='../../js/modal.js'></script>
+      </div>
+   <div id='footer'></div>
+   </div>
+</body>
+<script>
+   $('#header').load("../../header.html", function() {
+      $('#nav-btn-devlogs').addClass("active");
+   });
+   $('#footer').load("../../footer.html");
+   $('#sidebar').load("../devlog_sidebar.html", function() {
+      attach_collapsables()
+      $('#sidebar-2025').addClass("active");
+      $('#sidebar-2025-content').addClass("open");
+      $('#link-250412').addClass("active");
+   });
+</script>
+<script src='../../js/modal.js'></script>
 </html>
