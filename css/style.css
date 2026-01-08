@@ -7,23 +7,35 @@
     --black-transparent:#111c;
     --purple:#302030;
 }
+@font-face {font-family: urwdin; src: url("../fonts/urwdin.woff") format("woff");}
+/*
+@font-face {font-family: hack; src: url("/data/font/hack-regular.woff") format("woff");}
+@font-face {font-family: hack; src: url("/data/font/hack-bold.woff") format("woff"); font-weight:bold;}
+@font-face {font-family: hack; src: url("/data/font/hack-italic.woff") format("woff"); font-style: oblique;}
+@font-face {font-family: sharppc3k; src: url("/data/font/sharppc3k.woff") format("woff");}
+@font-face {font-family: ibmcga2y; src: url("/data/font/ibmcga2y.woff") format("woff");}
+@font-face {font-family: ibmvga; src: url("/data/font/FSEX300.woff") format("woff");}
+@font-face {font-family: 'urwdin'; src: url("/data/font/urwdin.woff") format("woff");}
+@font-face {font-family: 'sb'; src: url("/data/font/sb.woff") format("woff");}
+@font-face {font-family: 'oceanside'; src: url("/data/font/oceanside.woff") format("woff");}
+*/
+@font-face {font-family: "freepixel"; src: url('../fonts/FreePixel.ttf') format("truetype");}
 
-@font-face {
-    font-family: "freepixel"; 
-    src: url('../fonts/FreePixel.ttf') format("truetype");
-}
+@font-face {font-family: "delius"; src: url('../fonts/delius.ttf') format("truetype");}
+@font-face {font-family: "lexend"; src: url('../fonts/lexend.ttf') format("truetype");}
+@font-face {font-family: "inter"; src: url('../fonts/inter.ttf') format("truetype");}
 
 body {
-    font-family: 'Inter',helvetica, DejaVu Sans Mono, monospace;
+    font-family: inter,helvetica, DejaVu Sans Mono, monospace;
 }
 
 .logo-header {
-    font-family: Delius;
+    font-family: delius;
     font-weight: bold;
 }
 
 h1,h2,h3,h4,h5,#footer,.label,#navbar {
-    font-family: Delius;
+    font-family: delius;
 }
 
 .sidebar-section,.post-link {

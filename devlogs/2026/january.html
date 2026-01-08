@@ -22,33 +22,36 @@
          <div class="gutter">
          </div>
          <div id="main-content" class="main-content">
-               <div class="post">
-                  <div class="post-header">
-                  <h1>[GaW23 Collection] progress report</h1>
-                  <div class="subtitle">january 7, 2026</div>
-                  </div>
-                  <p>hi all,<br/>
-                  <p>these past two weeks ive been working on a collection of the Game A Week games i made back in 2023</p>
-                  
-                  <a href="#">↑ back to top ↑</a>
+            <div class="post">
+               <div class="post-header">
+               <h1 style="font-family: urwdin;">diorama style modeling</h1>
+               <div class="subtitle">january 7, 2026</div>
                </div>
+               <p>hi all,<br/>
+                  ive been trying a new style of 3d modeling
+                  the style is inspired by kaykit, a popular free asset library.
+               </p>
+               <p>
+                  smooth shading. matte texture
+                  where my previous style required using different textures for different parts of the mesh, this new style uses one texture for every mesh. the texture is a
+                  palette of gradients. rather than drawing details like eyes in a texture, those details are all modeled. this gives the mesh a clay-like appearance. 
+                  using the gradients, you can also create the illusion of shading which looks nice in any lighting. you can play the gradient towards the camera. gradient also looks like baked clay
+                  1. clay
+               </p>
+               <p>
+                  2. skyview
+                  a link between worlds
+                  camera is at an angle, walls are slanted
+               </p>
+               <p>
+                  3. cursor
+               </p>
+               
+               <a href="#">↑ back to top ↑</a>
+            </div>
          </div>
-
       </div>
    <div id='footer'></div>
    </div>
 </body>
-<script>
-   $('#header').load("../../header.html", function() {
-      $('#nav-btn-devlogs').addClass("active");
-   });
-   $('#footer').load("../../footer.html");
-   $('#sidebar').load("../devlog_sidebar.html", function() {
-      attach_collapsables()
-      $('#sidebar-2025').addClass("active");
-      $('#sidebar-2025-content').addClass("open");
-      $('#link-250412').addClass("active");
-   });
-</script>
-<script src='../../js/modal.js'></script>
 </html>
