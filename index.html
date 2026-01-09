@@ -136,6 +136,25 @@
         .block-25 {
 			max-width: 100%;
         }
+        .navbar {
+            display:block;
+        }
+        .flexbox {
+            display: block;
+        }
+        .nav-btn {
+            display: inline-block;
+            text-align:center;
+            padding: .375rem .75rem;
+            line-height:1.5em;
+            background-color:var(--black-transparent);
+                width:100%;
+            border-radius: 0;
+            color:var(--white);
+            margin:0;
+            font-weight:bold;
+            border-top: 2px solid var(--black-transparent);
+        }
         @media (min-width: 576px) {
             .page-content {
                 max-width: 540px;
@@ -149,10 +168,19 @@
                 display: flex;
             }
             .block-75 {
-                max-width: 73%;
+                max-width: 80%;
             }
             .block-25 {
-			    max-width: 20.5%;
+			    max-width: 13.5%;
+            }
+            .flexbox {
+                display: flex;
+            }
+            .navbar {
+                display:flex;
+            }
+            .nav-btn {
+                width: 20%;
             }
         }
         @media (min-width: 992px) {
@@ -168,22 +196,6 @@
         .logo-header {
             margin-left:.5em;
             margin-top:.5em;
-        }
-        .navbar {
-            display:flex;
-        }
-        .nav-btn {
-            display: inline-block;
-            text-align:center;
-            padding: .375rem .75rem;
-            line-height:1.5em;
-            background-color:var(--black-transparent);
-            width: 20%;
-            border-radius: 0;
-            color:var(--white);
-            margin:0;
-            font-weight:bold;
-            border-top: 2px solid var(--black-transparent);
         }
 
         .nav-btn:hover {
@@ -353,7 +365,7 @@ img {
                 <a id='nav-btn-profiles' class="nav-btn" href="profiles/index.html">characters</a>
                 <a id='nav-btn-guestbook' class="nav-btn" href="guestbook/index.html">guestbook</a>
                 <div class="nav-btn nav-dropdown">
-                    extra &#x2BC6;
+                    extra &#9660;
                     <div class="dropdown-content">
                         <a href="extra/bigboy.html">Big Boy</a>
                         <a href="extra/topster.html">favorite albums</a>
@@ -365,7 +377,7 @@ img {
         <div class='page-body'>
             <div class='block-75'>
                 <div class="divider"></div>
-                <div style="display: flex;">
+                <div class="flexbox">
                     <div> 
                         <p>hi im ciaran</p>
                         <p>i like to make games. you can play them at <a href='https://snorv.itch.io/'>snorv.itch.io</a></p>
@@ -427,6 +439,7 @@ img {
                             <div>cool critters</div>
                             <div class="critters">
                                 <a href="https://kero.gay"><img src="https://kero.gay/assets/images/banners/kerogaybanner.png" title="kero.gay" width="88" height="31" border="0"></a>
+                                <a href="https://cabl.rodeo" target="_blank"><img src="https://cabl.rodeo/imgs/cablButon.gif"></a>
                             </div>
                     </div>
                 </div>

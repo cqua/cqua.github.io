@@ -134,6 +134,22 @@
         .block-100, .block-75, .block-25 {
 			max-width: 100%;
         }
+        .navbar {
+            display:block;
+        }
+        .nav-btn {
+            display: inline-block;
+            text-align:center;
+            padding: .375rem .75rem;
+            line-height:1.5em;
+            background-color:var(--black-transparent);
+                width:100%;
+            border-radius: 0;
+            color:var(--white);
+            margin:0;
+            font-weight:bold;
+            border-top: 2px solid var(--black-transparent);
+        }
         @media (min-width: 576px) {
             .page-content {
                 max-width: 540px;
@@ -152,6 +168,12 @@
             .block-25 {
 			    max-width: 20.5%;
             }
+            .navbar {
+                display:flex;
+            }
+            .nav-btn {
+                width: 20%;
+            }
         }
         @media (min-width: 992px) {
             .page-content {
@@ -166,22 +188,6 @@
         .logo-header {
             margin-left:.5em;
             margin-top:.5em;
-        }
-        .navbar {
-            display:flex;
-        }
-        .nav-btn {
-            display: inline-block;
-            text-align:center;
-            padding: .375rem .75rem;
-            line-height:1.5em;
-            background-color:var(--black-transparent);
-            width: 20%;
-            border-radius: 0;
-            color:var(--white);
-            margin:0;
-            font-weight:bold;
-            border-top: 2px solid var(--black-transparent);
         }
 
         .nav-btn:hover {
@@ -397,7 +403,7 @@ img {
             <a id='nav-btn-profiles' class="nav-btn" href="../profiles/index.html">characters</a>
             <a id='nav-btn-guestbook' class="nav-btn" href="../guestbook/index.html">guestbook</a>
             <div class="nav-btn nav-dropdown">
-                extra &#x2BC6;
+                extra &#9660;
                 <div class="dropdown-content">
                     <a href="../extra/bigboy.html">Big Boy</a>
                     <a href="../extra/topster.html">favorite albums</a>
