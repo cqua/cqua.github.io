@@ -27,13 +27,10 @@
             font-family: inter,helvetica, DejaVu Sans Mono, monospace;
         }
 
-        .logo-header {
-            font-family: delius;
-            font-weight: bold;
-        }
-
         h1,h2,h3,h4,h5,#footer,.label,#navbar {
             font-family: delius;
+            padding:.2em;
+            margin:0;
         }
 
         .sidebar-section,.post-link {
@@ -53,10 +50,8 @@
             color:var(--blue);
         }
 
-        h2 {
-            padding-top:.2em;
-            margin-top:.8em;
-            border-top: 3px solid #bbb;
+        h1 {
+            font-size: 2.5rem;
         }
 
         h1 > a {
@@ -66,6 +61,28 @@
         h1 > a:hover {
             color:inherit;
             text-decoration:none;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+        }
+
+        h5 {
+            font-size: 1.25rem;
+        }
+
+        .logo-header {
+            font-family: delius;
+            font-weight: bold;
+            margin: .5rem;
         }
 
         p,ul,ol,li {
@@ -82,15 +99,22 @@
             max-width:100%;
         }
 
-        .banners img {
-        width: 88px;
-        height: 31px;
-        margin-top: 2px;
-        margin-bottom: 2px;
+        .centered {
+            margin: auto;
+            width: 88px;
         }
 
-        .banners img:hover {
-        filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px 1px 0 white) drop-shadow(1px -1px 0 white) drop-shadow(-1px -1px 0 white);
+        .critters img {
+        min-width: 88px;
+        min-height: 31px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+            border: #fff0 2px solid;
+            border-radius: 3px;
+        }
+
+        .critters img:hover {
+            border: #fff 2px solid;
         }
 /* layout */
         .header {
@@ -125,10 +149,10 @@
                 display: flex;
             }
             .block-75 {
-                max-width: 75%;
+                max-width: 73%;
             }
             .block-25 {
-			    max-width: 17.5%;
+			    max-width: 20.5%;
             }
         }
         @media (min-width: 992px) {
@@ -213,7 +237,7 @@
 }
 
 .card-body {
-    padding-top:.5em;
+    padding: .25rem 1rem;
 }
 
 .subtitle {
@@ -309,13 +333,19 @@ img {
     
     max-width: 100%;
 }
+.divider {
+    
+    border-top: 3px solid #bbb;
+    margin-top: .8em;
+    margin-bottom: .2em;
+}
     </style>
 </head>
 <body>
     <div class="page-content">
         <div class="header">
             <div>
-                <h1 class='logo-header'><a href='#'>snorv games<img src='images/icon_silverkey.png' alt='Silver Key'></img></a></h1>
+                <h1 class='logo-header'><a href='#'>snorv games<img src='media/icon_silverkey.png' alt='Silver Key'></img></a></h1>
                 <div class="navbar">
                 <a id='nav-btn-index' class="nav-btn active" href="#">home</a>
                 <a id='nav-btn-games' class="nav-btn" href="games/index.html">games</a>
@@ -334,11 +364,12 @@ img {
         </div>
         <div class='page-body'>
             <div class='block-75'>
+                <div class="divider"></div>
                 <div style="display: flex;">
                     <div> 
                         <p>hi im ciaran</p>
                         <p>i like to make games. you can play them at <a href='https://snorv.itch.io/'>snorv.itch.io</a></p>
-                        <p>i post devlogs every month about what im working on. you can read them if you like.</p>
+                        <p>i post devlogs every month about what im working on. <a href='devlogs/2025/april12.html'>you can read them if you like.</a></p>
                         <p>ask me anything at snorvgames@gmail.com</p>
                         <p class='no-margin'>game engines i use:</p>
                         <ul class='no-margin'>
@@ -356,8 +387,9 @@ img {
                             <li><a href='https://www.audacityteam.org/'>Audacity</a> for audio editing</li>
                         </ul>
                     </div>
-                    <img style='margin-top:.8em; width: 20rem; height: fit-content;' src="images/deeran-transparent.png" alt="a hapless deer using an unplugged computer">
+                    <img style='margin-top:.8em; width: 20rem; height: fit-content;' src="media/deeran-transparent.png" alt="a hapless deer using an unplugged computer">
                 </div>
+                <div class="divider"></div>
                 <h2>updates</h2>
                 <div class='scrollable-content' style='max-height:12em;'>
                     <p><span class='label'>january 7, 2026</span>: updated fonts for most pages. added <a href="profiles/index.html">character profile page</a>. 
@@ -374,28 +406,28 @@ img {
                     <p><span class='label'>october 22, 2024</span>: initial site made & posted. i havent done web design in a few years and ive missed it. 
                         added my 3 most presentable games, the devlogs from the past year, and a guestbook. still a lot of work to do.</p>
                 </div>
+                <div class="divider"></div>
             </div>
             <div class="block-25">
                 <div class="card sidebar-card">
-                    ADVERTISEMENT
                 <img src="extra/media/icon_bb_small.png" alt="Big Boy, looking all handsome like he does">
                     <div class="card-body">
-                        <p class="card-text">look at this cat</p>
-                        <p class="card-text"><a href='extra/bigboy.html'>Big Boy's page ==></a></p>
+                        <p class="card-text">this site is owned and managed by Big Boy</p>
+                        <p class="card-text"><a href='extra/bigboy.html'>learn more ==></a></p>
                     </div>
                 </div>
                 <div class="card sidebar-card">
                     <div class="card-body">
                         <h5 class="card-title">links</h5>
-                        <div>my button</div>
-                        <div class="banners">
-                            <a href="https://snorv.neocities.org"><img src="https://snorv.neocities.org/images/banner.png" title="snorv.neocities.org" width="88" height="31" border="0"></a>
-                        </div>
-                        <div style="height: .5em;"></div>
-                        <div>cool critters</div>
-                        <div class="banners">
-                            <a href="https://kero.gay"><img src="https://kero.gay/assets/images/banners/kerogaybanner.png" title="kero.gay" width="88" height="31" border="0"></a>
-                        </div>
+                            <div>my button</div>
+                            <div class="critters">
+                                <a href="https://snorv.neocities.org"><img src="https://snorv.neocities.org/media/button.png" title="snorv.neocities.org" width="88" height="31" border="0"></a>
+                            </div>
+                            <div style="height: .5em;"></div>
+                            <div>cool critters</div>
+                            <div class="critters">
+                                <a href="https://kero.gay"><img src="https://kero.gay/assets/images/banners/kerogaybanner.png" title="kero.gay" width="88" height="31" border="0"></a>
+                            </div>
                     </div>
                 </div>
             </div>
