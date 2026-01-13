@@ -11,26 +11,37 @@
             Individual games pages
     -->
     <style>
-        /* resources */
+        /* layout */
         :root {
             --white: #E0E8E8;
-            --black:#111;
             --yellow:#ffa;
+            --light-blue:#b0a0FF;
             --blue:#A477FF;
-            --black-transparent:#111c;
             --purple:#302030;
-        }
-        @font-face {font-family: "delius"; src: url('fonts/delius.ttf') format("truetype");}
-        @font-face {font-family: "lexend"; src: url('fonts/lexend.ttf') format("truetype");}
-        @font-face {font-family: "inter"; src: url('fonts/inter.ttf') format("truetype");}
-        body {
-            font-family: inter,helvetica, DejaVu Sans Mono, monospace;
+            --black:#111;
+            --black-transparent:#111c;
         }
 
-        h1,h2,h3,h4,h5,#footer,.label,#navbar {
+        @font-face {font-family: "delius"; src: url('fonts/delius.ttf') format("truetype");}
+        @font-face {font-family: "lexend"; src: url('fonts/lexend.ttf') format("truetype");}
+        @font-face {font-family: "urwdin"; src: url('fonts/urwdin.woff') format("woff");}
+        @font-face {font-family: "inter"; src: url('fonts/inter.ttf') format("truetype");}
+        @font-face {font-family: "fsex300"; src: url('fonts/FSEX300.woff') format("woff");}
+        @font-face {font-family: "freepixel"; src: url('fonts/freepixel.ttf') format("truetype");}
+
+        body {
+			margin: 0;
+            font-family: inter, helvetica, monospace;
+            background: url('images/bg_silverkey.png') no-repeat center top;
+            background-color: black;
+            color: var(--white);
+        }
+
+        h1,h2,h3,h4,h5,.footer,.label,.navbar {
             font-family: delius;
             padding:.2em;
             margin:0;
+            color: var(--yellow);
         }
 
         .sidebar-section,.post-link {
@@ -40,12 +51,6 @@
             font-family: Consolas,monospace;
         }
         /* general */
-		body {
-			margin: 0;
-            background: url('images/bg_silverkey.png') no-repeat center top;
-            background-color: black;
-            color: var(--yellow);
-		}
         a {
             color:var(--blue);
         }
@@ -443,6 +448,9 @@ img {
                         <a href="https://kero.gay"><img src="https://kero.gay/assets/images/banners/kerogaybanner.png" title="kero.gay"></a>
                         <a href="https://cabl.rodeo"><img src="https://cabl.rodeo/imgs/cablButon.gif" title="cabl.rodeo"></a>
                         <a href="https://msx.horse"><img src="https://msx.horse/data/buttons/msx8831.gif" title="msx.horse"></a>
+                        <a href="https://mishamallow.neocities.org" target="_blank"><img src="https://mishamallow.neocities.org/buttons/mishamallow_1.gif" title="Mishamallow"></a>
+                        <a href="https://superflatpsyche.neocities.org/" target="_blank"><img src="https://superflatpsyche.neocities.org/images/superflatpsyche-button.gif" title="superflatpsyche"></a>
+                        <a href="https://milbit.neocities.org"><img src="https://file.garden/aVkV7Lf1xG6_Dp5i/button.webp" title="milbit" /></a>
                     </div>
                 </div>
             </div>

@@ -14,11 +14,12 @@
         /* resources */
         :root {
             --white: #E0E8E8;
-            --black:#111;
             --yellow:#ffa;
+            --light-blue:#b0a0FF;
             --blue:#A477FF;
-            --black-transparent:#111c;
             --purple:#302030;
+            --black:#111;
+            --black-transparent:#111c;
         }
         @font-face {font-family: "delius"; src: url('../../fonts/delius.ttf') format("truetype");}
         @font-face {font-family: "lexend"; src: url('../../fonts/lexend.ttf') format("truetype");}
@@ -44,185 +45,188 @@
         /* general */
 		body {
 			margin: 0;
-            background: url('../../images/bg_silverkey.png') no-repeat center top;
-            background-color: black;
-            color: var(--yellow);
+         background: url('../../images/bg_silverkey.png') no-repeat center top;
+         background-color: black;
+         color: var(--yellow);
 		}
-        a {
-            color:var(--blue);
-        }
+      a {
+         color:var(--blue);
+      }
+      a:hover {
+         color:var(--light-blue);
+      }
 
-        h1 {
-            font-size: 2.5rem;
-        }
+      h1 {
+         font-size: 2.5rem;
+      }
 
-        h1 > a {
-            color:inherit;
-        }
+      h1 > a {
+         color:inherit;
+      }
 
-        h1 > a:hover {
-            color:inherit;
-            text-decoration:none;
-        }
+      h1 > a:hover {
+         color:inherit;
+         text-decoration:none;
+      }
 
-        h2 {
-            font-size: 2rem;
-        }
+      h2 {
+         font-size: 2rem;
+      }
 
-        h3 {
-            font-size: 1.75rem;
-        }
+      h3 {
+         font-size: 1.75rem;
+      }
 
-        h4 {
-            font-size: 1.5rem;
-        }
+      h4 {
+         font-size: 1.5rem;
+      }
 
-        h5 {
-            font-size: 1.25rem;
-        }
+      h5 {
+         font-size: 1.25rem;
+      }
 
-        .logo-header {
-            font-family: delius;
-            font-weight: bold;
-            margin: .5rem;
-        }
+      .logo-header {
+         font-family: delius;
+         font-weight: bold;
+         margin: .5rem;
+      }
 
-        p,ul,ol,li {
-            color:var(--white);
-            line-height:1.3em;
-            margin-bottom:1em;
-        }
+      p,ul,ol,li {
+         color:var(--white);
+         line-height:1.3em;
+         margin-bottom:1em;
+      }
 
-        p {
-            margin-top:.5em;
-        }
+      p {
+         margin-top:.5em;
+      }
 
-        iframe {
-            max-width:100%;
-        }
+      iframe {
+         max-width:100%;
+      }
 
-        .centered {
-            margin: auto;
-            width: 88px;
-        }
+      .centered {
+         margin: auto;
+         width: 88px;
+      }
 
-        .critters img {
-        min-width: 88px;
-        min-height: 31px;
-        margin-top: 2px;
-        margin-bottom: 2px;
-            border: #fff0 2px solid;
-            border-radius: 3px;
-        }
+      .critters img {
+      min-width: 88px;
+      min-height: 31px;
+      margin-top: 2px;
+      margin-bottom: 2px;
+         border: #fff0 2px solid;
+         border-radius: 3px;
+      }
 
-        .critters img:hover {
-            border: #fff 2px solid;
-        }
+      .critters img:hover {
+         border: #fff 2px solid;
+      }
 /* layout */
-        .header {
-            margin:0;
-            margin-bottom:1em;
-        }
-		.page-content {
-			max-width: 100%;
-			margin: auto;
-		}
-		.page-body {
-			display: block;
-            justify-content: space-between;
-            min-height: 50vh;
-		}
-        .block-75 {
-			max-width: 100%;
-        }
-        .block-25 {
-			max-width: 100%;
-        }
-        .navbar {
-            display:block;
-        }
-        .nav-btn {
-            display: inline-block;
-            text-align:center;
-            padding: .375rem .75rem;
-            line-height:1.5em;
-            background-color:var(--black-transparent);
-                width:100%;
-            border-radius: 0;
-            color:var(--white);
-            margin:0;
-            font-weight:bold;
-            border-top: 2px solid var(--black-transparent);
-        }
-        @media (min-width: 576px) {
-            .page-content {
-                max-width: 540px;
-            }
-        }
-        @media (min-width: 768px) {
-            .page-content {
-                max-width: 720px;
-            }
-            .page-body {
-                display: flex;
-            }
-            .block-75 {
-                max-width: 73%;
-            }
-            .block-25 {
-			    max-width: 20.5%;
-            }
-            .navbar {
-                display:flex;
-            }
-            .nav-btn {
-                width: 20%;
-            }
-        }
-        @media (min-width: 992px) {
-            .page-content {
-                max-width: 960px;
-            }
-        }
-        @media (min-width: 1200px) {
-            .page-content {
-                max-width: 1140px;
-            }
-        }
-        .logo-header {
-            margin-left:.5em;
-            margin-top:.5em;
-        }
+      .header {
+         margin:0;
+         margin-bottom:1em;
+      }
+   .page-content {
+      max-width: 100%;
+      margin: auto;
+   }
+   .page-body {
+      display: block;
+      justify-content: space-between;
+      min-height: 50vh;
+   }
+   .block-75 {
+      max-width: 100%;
+   }
+   .block-25 {
+      max-width: 100%;
+   }
+   .navbar {
+      display:block;
+   }
+   .nav-btn {
+      display: inline-block;
+      text-align:center;
+      padding: .375rem .75rem;
+      line-height:1.5em;
+      background-color:var(--black-transparent);
+      width:100%;
+      border-radius: 0;
+      color:var(--white);
+      margin:0;
+      font-weight:bold;
+      border-top: 2px solid var(--black-transparent);
+   }
+   @media (min-width: 576px) {
+      .page-content {
+            max-width: 540px;
+      }
+   }
+   @media (min-width: 768px) {
+      .page-content {
+            max-width: 720px;
+      }
+      .page-body {
+            display: flex;
+      }
+      .block-75 {
+            max-width: 73%;
+      }
+      .block-25 {
+         max-width: 20.5%;
+      }
+      .navbar {
+            display:flex;
+      }
+      .nav-btn {
+            width: 20%;
+      }
+   }
+   @media (min-width: 992px) {
+      .page-content {
+            max-width: 960px;
+      }
+   }
+   @media (min-width: 1200px) {
+      .page-content {
+            max-width: 1140px;
+      }
+   }
+   .logo-header {
+      margin-left:.5em;
+      margin-top:.5em;
+   }
 
-        .nav-btn:hover {
-            background-color:#503550;
-            border-top: 2px solid #805580;
-            color:var(--white);
-        }
+   .nav-btn:hover {
+      background-color:#503550;
+      border-top: 2px solid #805580;
+      color:var(--white);
+   }
 
-        .nav-btn.active {
-            border-top: 2px solid var(--white);
-            background-color:#333;
-            pointer-events: none;
-            cursor: default;
-        }
-		.block-75 {
-            background-color:var(--black-transparent);
-            display: block;
-            padding-top: 1em;
-            padding-bottom: 1em;
-            padding-left: 2em;
-            padding-right: 2em;
-		}
-		.block-25 {
-            background-color:var(--black-transparent);
-            display: block;
-		}
-        .footer {
-            margin-top:1em;
-            background-color:var(--black-transparent);
-            text-align:center;
-        }
+   .nav-btn.active {
+      border-top: 2px solid var(--white);
+      background-color:#333;
+      pointer-events: none;
+      cursor: default;
+   }
+   .block-75 {
+         background-color:var(--black-transparent);
+         display: block;
+         padding-top: 1em;
+         padding-bottom: 1em;
+         padding-left: 2em;
+         padding-right: 2em;
+   }
+   .block-25 {
+         background-color:var(--black-transparent);
+         display: block;
+   }
+   .footer {
+      margin-top:1em;
+      background-color:var(--black-transparent);
+      text-align:center;
+   }
         
 
 /* common */
@@ -236,7 +240,9 @@
 .btn-yellow:hover {
     background-color:#fff;
 }
-
+img {
+   max-width: 100%;
+}
 .card {
     background-color:var(--purple);
     border-radius: 0;
@@ -337,10 +343,6 @@ hr.solid {
 .pink {
     background-color: rgb(183, 0, 107)
 }
-img {
-    
-    max-width: 100%;
-}
 .divider {
     
     border-top: 3px solid #bbb;
@@ -437,22 +439,92 @@ img {
 
 .collapse-section input + div + .collapse-content {
     max-height: 0;
-    transition: max-height 0.15s linear;
+    transition: max-height 0.3s linear;
     overflow: hidden;
 }
 
 .collapse-section input:checked + div + .collapse-content {
     max-height: 1028px;
-    transition: max-height 0.15s linear;
-}
-.devlog-img {
-    max-height:15em;
-    max-width: 100%;
-    margin-top: .5em;
-    margin-right: .5em;
+    transition: max-height 0.3s linear;
 }
 h2 {
    font-size: 1.5rem;
+}
+.devlog-img {
+    max-width: 22rem;
+    margin-top: .5em;
+    margin-right: .5em;
+    display: inline-block;
+}
+.devlog-img img {
+   max-width: 100%;
+   max-height: 12rem;
+   height: fit-content;
+   transition: transform 0.3s ease;
+}
+.devlog-img .caption {
+    color:#aaa;
+    font-style:italic;
+    background-color: #252525;
+    padding: .25em;
+    margin-bottom: .5em;
+    text-align:center;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.popout-img .caption {
+    color:#aaa;
+    background-color: #252525;
+    font-style:italic;
+   font-size:18px;
+   position:fixed;
+   bottom:16px;
+   left:50%;
+   transform:translateX(-50%);
+   text-align:center;
+   padding:8px;
+    border-radius: 7px;
+}
+.devlog-img img:hover {
+    transform: scale(1.025);
+}
+.popout-img {
+   position:fixed;
+   left:0;
+   top:0;
+   bottom:0;
+   width:100%;
+   height:vh;
+   opacity:0;
+   pointer-events: none;
+   z-index:1000;
+   background-color:#000000bb;
+	transition:0.35s ease-in-out;
+}
+
+:focus + .popout-img, .popout-img:has(> img:focus) {
+   opacity:100;
+   pointer-events: auto;
+   background-color:#000000dd;
+}
+
+.popout-img img{
+   position:absolute;
+   top:300%;
+   left:50%;
+   transform:translate(-50%, -50%);
+   border:2px solid #f4f4f4;
+	box-shadow:0px 0px 32px #000000ff;
+	max-height:90%;
+	max-width:100%;
+	transition:top 3s ease-in;
+   background-color:#7f7f7f;
+	transition:top 0.7s cubic-bezier(0,1,0.1,1);
+}
+
+:focus + .popout-img img, .popout-img img:focus {
+   top:50%;
 }
     </style>
 </head>
@@ -481,10 +553,10 @@ h2 {
                   <input type="checkbox" checked>
                   <div>2026</div>
                   <div class='collapse-content'>
-                  <a class='post-link active' href='../2025/april12.html'>
-                     diorama modeling
-                     <div class='date-subtitle'>january 12, 2026</div>
-                  </a>
+                     <a class='post-link active' href='../2025/april12.html'>
+                        diorama modeling
+                        <div class='date-subtitle'>january 12, 2026</div>
+                     </a>
                   </div>
                </label>
                <label class='collapse-section'>
@@ -566,47 +638,123 @@ h2 {
                <p>
                   the style consists of low-poly, cartoony meshes designed for an overhead camera, as if the scene was a diorama of baked clay models.
                </p>
-               <div class="display:flex">
-
-                <img style='width:49%' src="media/01-kay.png">
-                <img style='width:49%' src="media/01-la.png">
+               <div class="display:flex; justify-content: space-around;">
+                  <div class="devlog-img"  tabindex="1">
+                     <img src="media/01-kay.png">
+                     <div class="caption">KayKit</div>
+                  </div>
+                  <div class="popout-img">
+                     <img loading="lazy" src="media/01-kay.png"  tabindex="1">
+                     <div class="caption">Kay Lousberg's KayKit</div>
+                  </div>
+                  <div class="devlog-img"  tabindex="1">
+                     <img src="media/01-la.png">
+                     <div class="caption">Link's Awakening</div>
+                  </div>
+                  <div class="popout-img">
+                     <img loading="lazy" src="media/01-la.png"  tabindex="1">
+                     <div class="caption">The Legend of Zelda: Link's Awakening (2019)</div>
+                  </div>
                </div>
+               <div class="divider"></div>
                <h2>meshes & texturing</h2>
                <p>
                   compared to modeling ive done prior, the biggest difference is how detailed the meshes are. 
                   my previous models would leave important details like eyes as flat planes with the details textured on. contrastly, these new models have nearly every detail
                   meshed- eyes bulge a small distance out of the head, the crease between bricks is carved into the wall.
                </p>
+               <div class="display:flex flex-direction:row">
+                  <div class="devlog-img"  tabindex="1">
+                     <img src="media/01-e.png">
+                     <div class="caption">KayKit</div>
+                  </div>
+                  <div class="popout-img">
+                     <img loading="lazy" src="media/01-e.png"  tabindex="1">
+                     <div class="caption">Kay Lousberg's KayKit</div>
+                  </div>
+                  <div class="devlog-img"  tabindex="1">
+                     <img src="media/01-f.png">
+                     <div class="caption">Link's Awakening</div>
+                  </div>
+                  <div class="popout-img">
+                     <img loading="lazy" src="media/01-f.png"  tabindex="1">
+                     <div class="caption">The Legend of Zelda: Link's Awakening (2019)</div>
+                  </div>
+               </div>
                <p>
                   inversely, textures have become much simpler, to the point that im able to use the same texture for every model. the texture is a grid of sixteen gradients
                   that can be assigned like a palette to different parts of the mesh. the gradient is aligned to match the direction of shading, so the model simulates lighting
                   in any environment.
                </p>
                <p>all of this gives the mesh the appearance of baked clay.</p>
+               <div class="divider"></div>
                <h2>the camera</h2>
                <p>
                   the less control the player has over the camera, the easier it is for a developer to play towards the camera. an extreme version of playing 
                   to the camera in this style would be The Legend of Zelda: A Link Between Worlds, where many models were slanted to face overhead.
                </p>
+               <div class="devlog-img"  tabindex="1">
+                  <img src="media/01-la.png">
+                  <div class="caption">A Link Between Worlds camera comparison</div>
+               </div>
+               <div class="popout-img">
+                  <img loading="lazy" src="media/01-la.png"  tabindex="1">
+                  <div class="caption">A Link Between Worlds camera comparison</div>
+               </div>
                <p>
                   another example comes from Animal Crossing: Wild World, in which the world is warped away from the camera as if it was on a spool.
                </p>
+               <div class="devlog-img"  tabindex="1">
+                  <img src="media/01-la.png">
+                  <div class="caption">Wild World view</div>
+               </div>
+               <div class="popout-img">
+                  <img loading="lazy" src="media/01-la.png"  tabindex="1">
+                  <div class="caption">Wild World view</div>
+               </div>
+               <div class="divider"></div>
                <h2>texture effects</h2>
                <p>
                   one feature of the models in Link's Awakening that sets it above my own models is normals. normal maps alter the way textures interact with light, creating the illusion of
                   bumps or other surface deformations. this is why the grass looks bumpy and the stone looks rough. normals add a lot of tactility.
                </p>
+               <div class="devlog-img"  tabindex="1">
+                  <img src="media/01-la.png">
+                  <div class="caption">Normal mapping</div>
+               </div>
+               <div class="popout-img">
+                  <img loading="lazy" src="media/01-la.png"  tabindex="1">
+                  <div class="caption">Normal mapping</div>
+               </div>
                <p>
                   another feature is specularity. my models are all matte, which is appropriate for clay, but using some specularity to draw things that should be shiny (wood, dewey grass,
                   metal) adds tactility and variety.
                </p>
+               <div class="devlog-img"  tabindex="1">
+                  <img src="media/01-la.png">
+                  <div class="caption">specularity</div>
+               </div>
+               <div class="popout-img">
+                  <img loading="lazy" src="media/01-la.png"  tabindex="1">
+                  <div class="caption">specularity</div>
+               </div>
                <p>all that said, i think these effects work best when underused. they have the potential to make the visuals plastic-y.</p>
+               <div class="divider"></div>
                <div style="height: 1.5rem;"></div>
+                  <img src="media/01-a.png">
                <p>discovering this style has gotten me excited to do more modeling; i feel like im making a lot of progress. to sign this off, i'll append the first character model i
                   ever modeled and rigged.
                </p>
-               <p>thank you for reading</p>
-               
+               <p>thank you for reading<br/>
+                  - ciaran</p>
+               <div>
+               <div class="devlog-img"  tabindex="1">
+                  <img src="media/01-g.png">
+               </div>
+               <div class="popout-img">
+                  <img loading="lazy" src="media/01-g.png"  tabindex="1">
+               </div>
+               </div>
                <a href="#">↑ back to top ↑</a>
             </div>
         </div>
