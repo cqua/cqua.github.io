@@ -16,13 +16,13 @@
     --black-translucent:#111c;
 }
 
-@font-face {font-family: "delius"; src: url('fonts/delius.ttf') format("truetype");}
-@font-face {font-family: "lexend"; src: url('fonts/lexend.ttf') format("truetype");}
-@font-face {font-family: "urwdin"; src: url('fonts/urwdin.woff') format("woff");}
-@font-face {font-family: "inter"; src: url('fonts/inter.ttf') format("truetype");}
-@font-face {font-family: "fsex300"; src: url('fonts/fsex300.woff') format("woff");}
-@font-face {font-family: "freepixel"; src: url('fonts/freepixel.ttf') format("truetype");}
-@font-face {font-family: "happymonkey"; src: url('fonts/happymonkey.ttf') format("truetype");}
+@font-face {font-family: "delius"; src: url('https://snorv.neocities.org/fonts/delius.ttf') format("truetype");}
+@font-face {font-family: "lexend"; src: url('https://snorv.neocities.org/fonts/lexend.ttf') format("truetype");}
+@font-face {font-family: "urwdin"; src: url('https://snorv.neocities.org/fonts/urwdin.woff') format("woff");}
+@font-face {font-family: "inter"; src: url('https://snorv.neocities.org/fonts/inter.ttf') format("truetype");}
+@font-face {font-family: "fsex300"; src: url('https://snorv.neocities.org/fonts/fsex300.woff') format("woff");}
+@font-face {font-family: "freepixel"; src: url('https://snorv.neocities.org/fonts/freepixel.ttf') format("truetype");}
+@font-face {font-family: "happymonkey"; src: url('https://snorv.neocities.org/fonts/happymonkey.ttf') format("truetype");}
 
 body { font-family: inter, helvetica, monospace; color: var(--white); }
 h1,h2,h3,h4,h5,.logo-header,.footer,.label,.navbar { font-family: 'happymonkey'; color: var(--yellow); }
@@ -31,7 +31,7 @@ h1,h2,h3,h4,h5,.logo-header,.footer,.label,.navbar { font-family: 'happymonkey';
 
 body {
     margin: 0;
-    background: url('media/bg_village_2.png') no-repeat center top;
+    background: url('https://snorv.neocities.org/media/bg_village_2.png') no-repeat center top;
     background-color: black;
 }
 
@@ -121,14 +121,11 @@ img { max-width: 100%; }
     justify-content: space-between;
     min-height: 50vh;
 }
-.block-75 {
-    width: 85%;
-    display: block;
-}
-.block-25 {
-    width: 13.5%;
-    display: block;
-}
+.block-85, .block-75, .block-25, .block-15 { display: block; }
+.block-85 { width: 84.5%; }
+.block-75 { width: 74.5%; }
+.block-25 { width: 24.5%; }
+.block-15 { width: 14.5%; }
 .flexbox { 
     width: 100%;
     display: flex; 
@@ -385,6 +382,118 @@ hr.solid {
    top:50%;
 }
 
+/* devlogs */
+
+.post-link {
+    display: block;
+    padding:.5em;
+    line-height:1em;
+    color:var(--white);
+    margin-bottom:2px;
+}
+.post-link:hover {
+    color:#fee;
+    background-color:#503550;
+}
+
+.post-link.active {
+    background-color:#555;
+}
+
+.post-link .subtitle {
+    font-size: .8em;
+    color: #C2C3C7;
+}
+.devlog-img {
+    max-width: 22rem;
+    margin-top: .5em;
+    margin-right: .5em;
+    display: inline-block;
+}
+.devlog-img img {
+   max-width: 100%;
+   max-height: 12rem;
+   height: fit-content;
+   transition: transform 0.3s ease;
+}
+.devlog-img .caption {
+    color:#aaa;
+    font-style:italic;
+    background-color: #252525;
+    padding: .25em;
+    margin-bottom: .5em;
+    text-align:center;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+.post-header {
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+    border-bottom: 3px solid #bbb;
+}
+
+.post-header > h1 {
+    margin: 0;
+    padding-left: 0;
+}
+.post-table > tbody > tr:nth-child(odd) {
+    background-color: var(--black);
+ }
+
+.post-table > tbody > tr > td:first-child {
+    background-color: var(--black);
+}
+
+.post-table > tbody > tr > td {
+    padding-left:.5em;
+    padding-right:.5em;
+    color: var(--white);
+    border-bottom: 1px solid #888;
+}
+
+.collapse-section {
+    display: block;
+  color: var(--yellow);
+    width: 100%;
+    min-height: 0;
+    border:none;
+    line-height: 0;
+    text-align: left;
+}
+
+.collapse-section input + div:hover {
+    background-color:#555;
+}
+.collapse-section input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  padding: 0;
+  line-height: 0;
+  margin: 0;
+}
+.collapse-section input + div {
+    line-height: 1.2;
+}
+.collapse-section input + div::before {
+    content: '⯈'
+}
+
+.collapse-section input:checked + div::before {
+    content: '⯆'
+}
+
+.collapse-section input + div + .collapse-content {
+    max-height: 0;
+    transition: max-height 0.3s linear;
+    overflow: hidden;
+}
+
+.collapse-section input:checked + div + .collapse-content {
+    max-height: 1028px;
+    transition: max-height 0.3s linear;
+}
+
 /* mobile */
 @media (max-width: 1200px) {
     .page-content {
@@ -398,11 +507,7 @@ hr.solid {
     .page-body {
         display: block;
     }
-    .block-75 {
-        max-width: 100%;
-        width: 100%;
-    }
-    .block-25 {
+    .block-85, .block-75, .block-25, .block-15 {
         max-width: 100%;
         width: 100%;
     }
@@ -433,56 +538,38 @@ hr.solid {
     <div class="page-content">
         <div class="header">
 <div>
-   <h1 class='logo-header'><a href='#'>snorv games<img src='media/icon_silverkey.png' alt='Silver Key'></img></a></h1>
+   <h1 class='logo-header'><a href='#'>snorv games<img src='https://snorv.neocities.org/media/icon_silverkey.png' alt='Silver Key'></img></a></h1>
    <div class="navbar">
-   <a id='nav-btn-index' class="nav-btn" href="index.html">home</a>
-   <a id='nav-btn-games' class="nav-btn" href="games/index.html">games</a>
-   <a id='nav-btn-devlogs' class="nav-btn" href="devlogs/2026/january.html">devlogs</a>
-   <a id='nav-btn-profiles' class="nav-btn" href="profiles/index.html">characters</a>
-   <a id='nav-btn-guestbook' class="nav-btn" href="guestbook/index.html">guestbook</a>
+   <a id='nav-btn-index' class="nav-btn" href="https://snorv.neocities.org/index.html">home</a>
+   <a id='nav-btn-games' class="nav-btn" href="https://snorv.neocities.org/games/index.html">games</a>
+   <a id='nav-btn-devlogs' class="nav-btn" href="https://snorv.neocities.org/devlogs/2026/january.html">devlogs</a>
+   <a id='nav-btn-profiles' class="nav-btn" href="https://snorv.neocities.org/profiles/index.html">characters</a>
+   <a id='nav-btn-guestbook' class="nav-btn" href="https://snorv.neocities.org/guestbook/index.html">guestbook</a>
    <div class="nav-btn nav-dropdown">
       extra &#9660;
       <div class="dropdown-content">
-         <a href="extra/bigboy.html">Big Boy</a>
-         <a href="extra/topster.html">favorite albums</a>
+         <a href="https://snorv.neocities.org/extra/bigboy.html">Big Boy</a>
+         <a href="https://snorv.neocities.org/extra/topster.html">favorite albums</a>
       </div>
    </div>
    </div>
 </div>
         </div>
         <div class='page-body'>
-            <div class='block-75'>
+            <div class='block-85'>
                 <div class="post">
                 <p>page not found</p>
                 </div>
             </div>
-<div class="block-25 black-translucent">
-    <img src="extra/media/icon_bb_small.png" alt="Big Boy, looking all handsome like he does">
+<div class="block-15 black-translucent">
+    <img src="https://snorv.neocities.org/extra/media/icon_bb_small.png" alt="Big Boy, looking all handsome like he does">
     <div class="padded-1">
         <p>this site is owned and managed by Big Boy</p>
         <p>but he's not responsible for whatever brought you here</p>
     </div>
-    <div class="divider"></div>
-    <div class="padded-1">
-        <h5>links</h5>
-        <div class="critters">
-        <div>my button</div>
-            <a href="https://snorv.neocities.org"><img src="https://snorv.neocities.org/media/button.png" title="snorv.neocities.org" width="88" height="31" border="0"></a>
-        </div>
-        <div style="height: .5em;"></div>
-        <div class="critters">
-        <div>cool critters</div>
-            <a href="https://kero.gay"><img src="https://kero.gay/assets/images/banners/kerogaybanner.png" title="kero.gay"></a>
-            <a href="https://cabl.rodeo"><img src="https://cabl.rodeo/imgs/cablButon.gif" title="cabl.rodeo"></a>
-            <a href="https://msx.horse"><img src="https://msx.horse/data/buttons/msx8831.gif" title="msx.horse"></a>
-            <a href="https://mishamallow.neocities.org" target="_blank"><img src="https://mishamallow.neocities.org/buttons/mishamallow_1.gif" title="Mishamallow"></a>
-            <a href="https://superflatpsyche.neocities.org/" target="_blank"><img src="https://superflatpsyche.neocities.org/images/superflatpsyche-button.gif" title="superflatpsyche"></a>
-            <a href="https://milbit.neocities.org"><img src="https://file.garden/aVkV7Lf1xG6_Dp5i/button.webp" title="milbit" /></a>
-        </div>
-    </div>
 </div>
         </div>
-        <div class='footer'><span>hosted at <a href='https://neocities.org/site/snorv'>neocities.org</a> ◆ updated january 7, 2026</span></div>
+        <div class='footer'><span>hosted at <a href='https://neocities.org/site/snorv'>neocities.org</a> ◆ updated january 14, 2026</span></div>
     </div>
 </body>
 </html>
