@@ -11,232 +11,188 @@
             Individual games pages
     -->
     <style>
-        /* layout */
-        :root {
-            --white: #E0E8E8;
-            --yellow:#ffa;
-            --light-blue:#b0a0FF;
-            --blue:#A477FF;
-            --purple:#302030;
-            --black:#111;
-            --black-transparent:#111c;
-        }
-
-        @font-face {font-family: "delius"; src: url('fonts/delius.ttf') format("truetype");}
-        @font-face {font-family: "lexend"; src: url('fonts/lexend.ttf') format("truetype");}
-        @font-face {font-family: "urwdin"; src: url('fonts/urwdin.woff') format("woff");}
-        @font-face {font-family: "inter"; src: url('fonts/inter.ttf') format("truetype");}
-        @font-face {font-family: "fsex300"; src: url('fonts/FSEX300.woff') format("woff");}
-        @font-face {font-family: "freepixel"; src: url('fonts/freepixel.ttf') format("truetype");}
-
-        body {
-			margin: 0;
-            font-family: inter, helvetica, monospace;
-            background: url('media/bg_village_2.png') no-repeat center top;
-            background-color: black;
-            color: var(--white);
-        }
-
-        h1,h2,h3,h4,h5,.footer,.label,.navbar {
-            font-family: delius;
-            margin:0;
-            color: var(--yellow);
-        }
-
-        .sidebar-section,.post-link {
-            font-family: freepixel;
-        }
-        .code-block {
-            font-family: Consolas,monospace;
-        }
-        /* general */
-        a {
-            color:var(--blue);
-        }
-
-        h1 {
-            font-size: 2.5rem;
-        }
-
-        h1 > a {
-            color:inherit;
-        }
-
-        h1 > a:hover {
-            color:inherit;
-            text-decoration:none;
-        }
-
-        h2 {
-            font-size: 2rem;
-        }
-
-        h3 {
-            font-size: 1.75rem;
-        }
-
-        h4 {
-            font-size: 1.5rem;
-        }
-
-        h5 {
-            font-size: 1.25rem;
-        }
-
-        .logo-header {
-            font-family: delius;
-            font-weight: bold;
-            padding: 2rem;
-            margin:0;
-            background-color:var(--black-transparent);
-        }
-
-        p,ul,ol,li {
-            color:var(--white);
-            line-height:1.3em;
-            margin-bottom:1em;
-        }
-
-        p {
-            margin-top:.5em;
-        }
-
-        iframe {
-            max-width:100%;
-        }
-
-        .centered {
-            margin: auto;
-            width: 88px;
-        }
-
-        .critters {
-            width: 90px;
-            margin: auto;
-        }
-
-        .critters img {
-        width: 88px;
-        height: 31px;
-        margin-top: 2px;
-        margin-bottom: 2px;
-            border: #fff0 2px solid;
-            border-radius: 3px;
-        }
-
-        .critters img:hover {
-            border: #fff 2px solid;
-        }
 /* layout */
-        .header {
-            margin:0;
-            margin-bottom:1em;
-        }
-		.page-content {
-			max-width: 100%;
-			margin: auto;
-		}
-		.page-body {
-			display: block;
-            justify-content: space-between;
-            min-height: 50vh;
-		}
-        .block-75 {
-			max-width: 100%;
-        }
-        .block-25 {
-			max-width: 100%;
-        }
-        .navbar {
-            display:block;
-        }
-        .flexbox {
-            display: block;
-        }
-        .nav-btn {
-            display: inline-block;
-            text-align:center;
-            padding: .375rem .75rem;
-            line-height:1.5em;
-            background-color:var(--black-transparent);
-                width:100%;
-            border-radius: 0;
-            color:var(--white);
-            margin:0;
-            font-weight:bold;
-            border-top: 2px solid var(--black-transparent);
-        }
-        @media (min-width: 576px) {
-            .page-content {
-                max-width: 540px;
-            }
-        }
-        @media (min-width: 768px) {
-            .page-content {
-                max-width: 720px;
-            }
-            .page-body {
-                display: flex;
-            }
-            .block-75 {
-                max-width: 80%;
-            }
-            .block-25 {
-			    max-width: 13.5%;
-            }
-            .flexbox {
-                display: flex;
-            }
-            .navbar {
-                display:flex;
-            }
-            .nav-btn {
-                width: 20%;
-            }
-        }
-        @media (min-width: 992px) {
-            .page-content {
-                max-width: 960px;
-            }
-        }
-        @media (min-width: 1200px) {
-            .page-content {
-                max-width: 1140px;
-            }
-        }
+:root {
+    --white: #E0E8E8;
+    --yellow:#fff8bc;
+    --light-blue:#b0a0FF;
+    --blue:#A477FF;
+    --purple:#302030;
+    --black:#111;
+    --black-translucent:#111c;
+}
 
-        .nav-btn:hover {
-            background-color:#503550;
-            border-top: 2px solid #805580;
-            color:var(--white);
-        }
+@font-face {font-family: "delius"; src: url('fonts/delius.ttf') format("truetype");}
+@font-face {font-family: "lexend"; src: url('fonts/lexend.ttf') format("truetype");}
+@font-face {font-family: "urwdin"; src: url('fonts/urwdin.woff') format("woff");}
+@font-face {font-family: "inter"; src: url('fonts/inter.ttf') format("truetype");}
+@font-face {font-family: "fsex300"; src: url('fonts/fsex300.woff') format("woff");}
+@font-face {font-family: "freepixel"; src: url('fonts/freepixel.ttf') format("truetype");}
+@font-face {font-family: "happymonkey"; src: url('fonts/happymonkey.ttf') format("truetype");}
 
-        .nav-btn.active {
-            border-top: 2px solid var(--white);
-            background-color:#333;
-            pointer-events: none;
-            cursor: default;
-        }
-		.block-75 {
-            background-color:var(--black-transparent);
-            display: block;
-            padding-top: 1em;
-            padding-bottom: 1em;
-            padding-left: 2em;
-            padding-right: 2em;
-		}
-		.block-25 {
-            background-color:var(--black-transparent);
-            display: block;
-		}
-        .footer {
-            margin-top:1em;
-            background-color:var(--black-transparent);
-            text-align:center;
-        }
-        
+body { font-family: inter, helvetica, monospace; color: var(--white); }
+h1,h2,h3,h4,h5,.logo-header,.footer,.label,.navbar { font-family: 'happymonkey'; color: var(--yellow); }
+.sidebar-section,.post-link { font-family: freepixel; color: var(--yellow); }
+.code-block { font-family: Consolas,monospace; color: var(--white); }
+
+body {
+    margin: 0;
+    background: url('media/bg_village_2.png') no-repeat center top;
+    background-color: black;
+}
+
+h1,h2,h3,h4,h5 { margin: 0; }
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h1 > a { color:inherit; }
+h1 > a:hover {
+    color:inherit;
+    text-decoration:none;
+}
+a { color:var(--blue); }
+p,ul,ol,li {
+    color:var(--white);
+    line-height:1.3em;
+    margin-bottom:1em;
+}
+p { margin-top:.5em; }
+iframe { max-width:100%; }
+img { max-width: 100%; }
+
+.page-content {
+    max-width: 1140px;
+    margin: auto;
+}
+
+/* header */
+.header {
+    margin:0;
+    margin-bottom:.5rem;
+}
+.logo-header {
+    font-size: 3rem;
+    padding: .2rem 2rem 1rem 2rem;
+    background-color:var(--black-translucent);
+}
+.navbar {
+    display:flex;
+}
+.nav-btn {
+    display: inline-block;
+    text-align:center;
+    padding: .375rem 0;
+    line-height:1.5em;
+    background-color:var(--black-translucent);
+    border-radius: 0;
+    color:var(--white);
+    margin:0;
+    width: 20%;
+    font-weight:bold;
+    border-top: 2px solid #0000;
+}
+.nav-btn.active {
+    border-top: 2px solid var(--white);
+    background-color:#445;
+    pointer-events: none;
+    cursor: default;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    margin: .25rem 0;
+}
+.dropdown-content a {
+    float: none;
+    background-color: #333;
+    color: var(--white);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.nav-btn:hover { border-top: 2px solid #805580; }
+.nav-btn:hover, .dropdown-content a:hover { background-color: #503550; }
+.nav-dropdown:hover .dropdown-content { display: block; }
+
+/* body */
+.page-body {
+    display: flex;
+    justify-content: space-between;
+    min-height: 50vh;
+}
+.block-85, .block-75, .block-25, .block-15 { display: block; }
+.block-85 { width: 84.5%; }
+.block-75 { width: 74.5%; }
+.block-25 { width: 24.5%; }
+.block-15 { width: 14.5%; }
+.flexbox { 
+    width: 100%;
+    display: flex; 
+    justify-content: space-around;
+}
+.post {
+    background-color:var(--black-translucent);
+    padding: 1em 2em;
+}
+.padded-1 { padding: 0 1em; }
+.divider {
+    border-top: 3px solid #bbb;
+    margin-top: .8em;
+    margin-bottom: .2em;
+}
+
+.critters {
+    width: 90px;
+    margin: auto;
+}
+
+.critters img {
+    width: 88px;
+    height: 31px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border: #fff0 2px solid;
+    border-radius: 3px;
+}
+
+.critters img:hover {
+    border: #fff 2px solid;
+}
+
+.footer {
+    margin-top:.5rem;
+    padding: 0 0 .25rem 0;
+    background-color:var(--black-translucent);
+    text-align:center;
+}
 
 /* common */
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
 .btn-yellow {
     border-radius: 0;
     background-color:var(--yellow);
@@ -252,7 +208,6 @@
     background-color:var(--purple);
     border-radius: 0;
     border: 0;
-    margin: 1em;
 }
 
 .card-body {
@@ -291,168 +246,398 @@ hr.solid {
     padding: 1em;
     background-color: #333;
 }
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    z-index: 1;
-    margin: .25rem 0;
- }
- 
- .dropdown-content a {
-    float: none;
-    background-color: #333;
-    color: var(--white);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+.game-card {
+    width: 16rem;
+}
+
+/* colors */
+ .yellow, .lime, .aqua { color: black; }
+.red { background-color: #800; }
+.green { background-color: #007836; }
+.blue { background-color: #344678; }
+.pink { background-color: #b7006b; }
+.yellow { background-color: #d8da63; }
+.lime { background-color: #48c448; }
+.aqua { background-color: #40d6de; }
+.black-translucent { background-color: var(--black-translucent); }
+
+/* profiles */
+.profile {
+    width: 100%;
+    color:var(--white);
+    margin-bottom: 1em;
+    display:flex;
+    background-color: #ffffff18;
+}
+.profile table {
     text-align: left;
- }
- 
- .dropdown-content a:hover {
-    background-color: #503550;
- }
- 
- .nav-dropdown:hover .dropdown-content {
+    font-size: .9em;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.profile table tr th {
+    padding-right: 15px;
+    width: 80px;
+    font-weight:normal;
+    border-bottom: 1px dotted var(--white);
+    color:var(--white);
+    text-align: right;
+    vertical-align: bottom;
+}
+.profile table tr td {
+    border-bottom: 1px dotted var(--white);
+    vertical-align: bottom;
+}
+.profile table tr td p {
+    color: inherit;
+}
+.profile > .art {
+    width: 200px;
+    height:fit-content;
+}
+.profile tr:last-child td {
+    border:none;
+}
+.profile table tr:first-child td {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-indent: 0%;
+}
+
+/* gallery */
+.gallery {
+    display:flex;
+}
+
+.mediacolumn {
+    width:50%;
+}
+
+.mediacolumn-item {
+    height:auto;
+    margin: .5rem .25rem;
+    box-shadow:0 0 8px 2px #000f
+}
+.mediacolumn-item img {transition: transform 0.3s ease;}
+.mediacolumn-item img:hover{transform: scale(1.025);}
+
+.mediacolumn-left > .mediacolumn-item {
+    margin-left: 0;
+}
+
+.mediacolumn-right > .mediacolumn-item {
+    margin-right: 0;
+}
+.popout-icon {
+    max-width: 22rem;
+    margin-top: .5em;
+    margin-right: .5em;
+    display: inline-block;
+}
+.popout-icon img {
+   transition: transform 0.3s ease;
+}
+.popout-icon img:hover {
+    transform: scale(1.025);
+}
+.popout-img {
+   position:fixed;
+   left:0;
+   top:0;
+   bottom:0;
+   width:100%;
+   height:vh;
+   opacity:0;
+   pointer-events: none;
+   z-index:1000;
+   background-color:#000000bb;
+	transition:0.35s ease-in-out;
+}
+.popout-img .caption {
+    color:#aaa;
+    background-color: #252525;
+    font-style:italic;
+    font-size:18px;
+    position:fixed;
+    bottom:16px;
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+    padding:8px;
+    border-radius: 7px;
+}
+:focus + .popout-img, .popout-img:has(> img:focus) {
+    opacity:100;
+    pointer-events: auto;
+    background-color:#000000dd;
+}
+.popout-img img{
+    position:absolute;
+    top:300%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    border:2px solid #f4f4f4;
+    box-shadow:0px 0px 32px #000000ff;
+    max-height:90%;
+    max-width:100%;
+    transition:top 3s ease-in;
+    background-color:#7f7f7f;
+    transition:top 0.7s cubic-bezier(0,1,0.1,1);
+}
+:focus + .popout-img img, .popout-img img:focus {
+   top:50%;
+}
+
+/* devlogs */
+
+.post-link {
     display: block;
+    padding:.5em;
+    line-height:1em;
+    color:var(--white);
+    margin-bottom:2px;
+}
+.post-link:hover {
+    color:#fee;
+    background-color:#503550;
+}
+
+.post-link.active {
+    background-color:#333;
+}
+
+.post-link .subtitle {
+    font-size: .8em;
+    color: #C2C3C7;
+}
+.devlog-img {
+    max-width: 22rem;
+    margin-top: .5em;
+    margin-right: .5em;
+    display: inline-block;
+}
+.devlog-img img {
+   max-width: 100%;
+   max-height: 12rem;
+   height: fit-content;
+   transition: transform 0.3s ease;
+}
+.devlog-img .caption {
+    color:#aaa;
+    font-style:italic;
+    background-color: #252525;
+    padding: .25em;
+    margin-bottom: .5em;
+    text-align:center;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+.post-header {
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+    border-bottom: 3px solid #bbb;
+}
+
+.post-header > h1 {
+    margin: 0;
+    padding-left: 0;
+}
+.post-table > tbody > tr:nth-child(odd) {
+    background-color: var(--black);
  }
 
-.red {
-    background-color: #800;
+.post-table > tbody > tr > td:first-child {
+    background-color: var(--black);
 }
 
-.yellow {
-    background-color: rgb(216, 218, 99);
-    color: black;
+.post-table > tbody > tr > td {
+    padding-left:.5em;
+    padding-right:.5em;
+    color: var(--white);
+    border-bottom: 1px solid #888;
 }
 
-.lime {
-    background-color: rgb(72, 196, 72);
-    color: black;
+.collapse-section {
+    display: block;
+  color: var(--yellow);
+    width: 100%;
+    min-height: 0;
+    border:none;
+    line-height: 0;
+    text-align: left;
 }
 
-.green {
-    background-color: rgb(0, 120, 54);
+.collapse-section input + div:hover {
+    background-color:#555;
+}
+.collapse-section input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  padding: 0;
+  line-height: 0;
+  margin: 0;
+}
+.collapse-section input + div {
+    line-height: 1.2;
+}
+.collapse-section input + div::before {
+    content: '⯈'
 }
 
-.aqua {
-    background-color: rgb(64, 214, 222);
-    color: black;
+.collapse-section input:checked + div::before {
+    content: '⯆'
 }
 
-.blue {
-    background-color: rgb(52, 70, 120)
+.collapse-section input + div + .collapse-content {
+    max-height: 0;
+    transition: max-height 0.3s linear;
+    overflow: hidden;
 }
 
-.pink {
-    background-color: rgb(183, 0, 107)
+.collapse-section input:checked + div + .collapse-content {
+    max-height: 1028px;
+    transition: max-height 0.3s linear;
 }
-img {
-    
-    max-width: 100%;
+
+/* mobile */
+@media (max-width: 1200px) {
+    .page-content {
+        max-width: 960px;
+    }
 }
-.divider {
-    
-    border-top: 3px solid #bbb;
-    margin-top: .8em;
-    margin-bottom: .2em;
+@media (max-width: 992px) {
+    .page-content {
+        max-width: 720px;
+    }
+    .page-body {
+        display: block;
+    }
+    .block-85, .block-75, .block-25, .block-15 {
+        max-width: 100%;
+        width: 100%;
+    }
+    .flexbox {
+        display:block;
+    }
+    .navbar {
+        display:block;
+    }
+    .nav-btn {
+        width:100%;
+    }
+}
+@media (max-width: 768px) {
+    .page-content {
+        max-width: 100%;
+        max-width: 540px;
+    }
+}
+@media (max-width: 576px) {
+    .page-content {
+        max-width: 100%;
+    }
 }
     </style>
 </head>
 <body>
     <div class="page-content">
         <div class="header">
-            <div>
-                <h1 class='logo-header'><a href='#'>snorv games<img src='media/icon_silverkey.png' alt='Silver Key'></img></a></h1>
-                <div class="navbar">
-                <a id='nav-btn-index' class="nav-btn active" href="#">home</a>
-                <a id='nav-btn-games' class="nav-btn" href="games/index.html">games</a>
-                <a id='nav-btn-devlogs' class="nav-btn" href="devlogs/2025/april12.html">devlogs</a>
-                <a id='nav-btn-profiles' class="nav-btn" href="profiles/index.html">characters</a>
-                <a id='nav-btn-guestbook' class="nav-btn" href="guestbook/index.html">guestbook</a>
-                <div class="nav-btn nav-dropdown">
-                    extra &#9660;
-                    <div class="dropdown-content">
-                        <a href="extra/bigboy.html">Big Boy</a>
-                        <a href="extra/topster.html">favorite albums</a>
-                    </div>
-                </div>
-                </div>
-            </div>
+<div>
+   <h1 class='logo-header'><a href='#'>snorv games<img src='media/icon_silverkey.png' alt='Silver Key'></img></a></h1>
+   <div class="navbar">
+   <a id='nav-btn-index' class="nav-btn active" href="#">home</a>
+   <a id='nav-btn-games' class="nav-btn" href="games/index.html">games</a>
+   <a id='nav-btn-devlogs' class="nav-btn" href="devlogs/2026/january.html">devlogs</a>
+   <a id='nav-btn-profiles' class="nav-btn" href="profiles/index.html">characters</a>
+   <a id='nav-btn-guestbook' class="nav-btn" href="guestbook/index.html">guestbook</a>
+   <div class="nav-btn nav-dropdown">
+      extra &#9660;
+      <div class="dropdown-content">
+         <a href="extra/bigboy.html">Big Boy</a>
+         <a href="extra/topster.html">favorite albums</a>
+      </div>
+   </div>
+   </div>
+</div>
         </div>
         <div class='page-body'>
-            <div class='block-75'>
-                <div class="divider"></div>
-                <div class="flexbox">
-                    <div> 
-                        <p>hi im ciaran</p>
-                        <p>i like to make games. you can play them at <a href='https://snorv.itch.io/'>snorv.itch.io</a></p>
-                        <p>i post devlogs every month about what im working on. <a href='devlogs/2025/april12.html'>you can read them if you like.</a></p>
-                        <p>ask me anything at snorvgames@gmail.com</p>
-                        <p class='no-margin'>game engines i use:</p>
-                        <ul class='no-margin'>
-                            <li><a href='https://godotengine.org/'>Godot</a></li>
-                            <li><a href='https://www.lexaloffle.com/pico-8.php'>PICO-8</a></li>
-                            <li><a href='https://twinery.org/'>Twine</a></li>
-                        </ul>
-                        <div style="height: .5em;"></div>
-                        <p class='no-margin'>other software i use:</p>
-                        <ul class='no-margin'>
-                            <li><a href='https://neovim.io/'>Neovim</a> for text editing</li>
-                            <li><a href='https://www.gimp.org/'>GIMP</a> for drawing and image editing</li>
-                            <li><a href='https://www.blender.org/'>Blender</a> for 3d modeling</li>
-                            <li><a href='https://www.bitwig.com/'>Bitwig Studio</a> for writing music</li>
-                            <li><a href='https://www.audacityteam.org/'>Audacity</a> for audio editing</li>
-                        </ul>
+            <div class='block-85'>
+                <div class="post">
+                    <div class="divider"></div>
+                    <div class="flexbox">
+                        <div> 
+                            <p>hi im ciaran</p>
+                            <p>i like to make games. you can play them at <a href='https://snorv.itch.io/'>snorv.itch.io</a></p>
+                            <p>i post devlogs every month about what im working on. <a href='devlogs/2025/april12.html'>you can read them if you like.</a></p>
+                            <p>ask me anything at snorvgames@gmail.com</p>
+                            <p class='no-margin'>game engines i use:</p>
+                            <ul class='no-margin'>
+                                <li><a href='https://godotengine.org/'>Godot</a></li>
+                                <li><a href='https://www.lexaloffle.com/pico-8.php'>PICO-8</a></li>
+                                <li><a href='https://twinery.org/'>Twine</a></li>
+                            </ul>
+                            <div style="height: .5em;"></div>
+                            <p class='no-margin'>other software i use:</p>
+                            <ul class='no-margin'>
+                                <li><a href='https://neovim.io/'>Neovim</a> for text editing</li>
+                                <li><a href='https://www.gimp.org/'>GIMP</a> for drawing and image editing</li>
+                                <li><a href='https://www.blender.org/'>Blender</a> for 3d modeling</li>
+                                <li><a href='https://www.bitwig.com/'>Bitwig Studio</a> for writing music</li>
+                                <li><a href='https://www.audacityteam.org/'>Audacity</a> for audio editing</li>
+                            </ul>
+                        </div>
+                        <img style='margin-top:.8em; width: 20rem; height: fit-content;' src="media/deeran-transparent.png" alt="a hapless deer using an unplugged computer">
                     </div>
-                    <img style='margin-top:.8em; width: 20rem; height: fit-content;' src="media/deeran-transparent.png" alt="a hapless deer using an unplugged computer">
-                </div>
-                <div class="divider"></div>
-                <h2>updates</h2>
-                <div class='scrollable-content' style='max-height:12em;'>
-                    <p><span class='label'>january 7, 2026</span>: updated fonts for most pages. added <a href="profiles/index.html">character profile page</a>. 
-                        updated <a href="extra/topster.html">topster page</a>. removed active projects section for now. made a neocities button.</p>
-                    <p><span class='label'>april 15, 2025</span>: added <a href="extra/topster.html">topster page</a>. also the devlog list is collabsible now</p>
-                    <p><span class='label'>april 13, 2025</span>: added an <span class='label'>active projects</span> section to the home page</p>
-                    <p><span class='label'>april 12, 2025</span>: new devlog - <a href="devlogs/2025/april12.html">[GaW23 Collection] progress report</a>.</p>
-                    <p><span class='label'>march 30, 2025</span>: new devlog - <a href="devlogs/2025/march.html">[CritterCatch] first look</a>.</p>
-                    <p><span class='label'>november 21, 2024</span>: new video - 
-                        <a href="devlogs/2024/november21.html"><img src='devlogs/2024/media/icon_neko.png' style='max-height:1em' alt='nekojiru mining'/></a>.</p>
-                    <p><span class='label'>november 7, 2024</span>: new devlog - <a href="devlogs/2024/november.html">experimenting with taxis</a>.</p>
-                    <p><span class='label'>october 26, 2024</span>: <a href="extra/bigboy.html">Big Boy has a page now</a>. devlog images pop out now, click on one!</p>
-                    <p><span class='label'>october 24, 2024</span>: <a href="devlogs/2024/october24.html">new devlog</a>, general formatting and cleanup, mobile support.</p>
-                    <p><span class='label'>october 22, 2024</span>: initial site made & posted. i havent done web design in a few years and ive missed it. 
-                        added my 3 most presentable games, the devlogs from the past year, and a guestbook. still a lot of work to do.</p>
-                </div>
-                <div class="divider"></div>
-            </div>
-            <div class="block-25">
-                <img src="extra/media/icon_bb_small.png" alt="Big Boy, looking all handsome like he does">
-                <div class="card-body">
-                    <p class="card-text">this site is owned and managed by Big Boy</p>
-                    <p class="card-text"><a href='extra/bigboy.html'>learn more ==></a></p>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">links</h5>
-                    <div class="critters">
-                    <div>my button</div>
-                        <a href="https://snorv.neocities.org"><img src="https://snorv.neocities.org/media/button.png" title="snorv.neocities.org" width="88" height="31" border="0"></a>
+                    <div class="divider"></div>
+                    <h1>updates</h1>
+                    <div class='scrollable-content' style='max-height:12em;'>
+                        <p><span class='label'>january 14, 2026</span>: new devlog - <a href="devlogs/2026/january.html">diorama style modeling</a>. 
+                            new background. updated all pages to be functional without javascript.</p>
+                        <p><span class='label'>january 7, 2026</span>: updated fonts for most pages. added <a href="profiles/index.html">character profile page</a>. 
+                            updated <a href="extra/topster.html">topster page</a>. removed active projects section for now. made a neocities button.</p>
+                        <p><span class='label'>april 15, 2025</span>: added <a href="extra/topster.html">topster page</a>. also the devlog list is collabsible now</p>
+                        <p><span class='label'>april 13, 2025</span>: added an <span class='label'>active projects</span> section to the home page</p>
+                        <p><span class='label'>april 12, 2025</span>: new devlog - <a href="devlogs/2025/april12.html">[GaW23 Collection] progress report</a>.</p>
+                        <p><span class='label'>march 30, 2025</span>: new devlog - <a href="devlogs/2025/march.html">[CritterCatch] first look</a>.</p>
+                        <p><span class='label'>november 21, 2024</span>: new video - 
+                            <a href="devlogs/2024/november21.html"><img src='devlogs/2024/media/icon_neko.png' style='max-height:1em' alt='nekojiru mining'/></a>.</p>
+                        <p><span class='label'>november 7, 2024</span>: new devlog - <a href="devlogs/2024/november.html">experimenting with taxis</a>.</p>
+                        <p><span class='label'>october 26, 2024</span>: <a href="extra/bigboy.html">Big Boy has a page now</a>. devlog images pop out now, click on one!</p>
+                        <p><span class='label'>october 24, 2024</span>: <a href="devlogs/2024/october24.html">new devlog</a>, general formatting and cleanup, mobile support.</p>
+                        <p><span class='label'>october 22, 2024</span>: initial site made & posted. i havent done web design in a few years and ive missed it. 
+                            added my 3 most presentable games, the devlogs from the past year, and a guestbook. still a lot of work to do.</p>
                     </div>
-                    <div style="height: .5em;"></div>
-                    <div class="critters">
-                    <div>cool critters</div>
-                        <a href="https://kero.gay"><img src="https://kero.gay/assets/images/banners/kerogaybanner.png" title="kero.gay"></a>
-                        <a href="https://cabl.rodeo"><img src="https://cabl.rodeo/imgs/cablButon.gif" title="cabl.rodeo"></a>
-                        <a href="https://msx.horse"><img src="https://msx.horse/data/buttons/msx8831.gif" title="msx.horse"></a>
-                        <a href="https://mishamallow.neocities.org" target="_blank"><img src="https://mishamallow.neocities.org/buttons/mishamallow_1.gif" title="Mishamallow"></a>
-                        <a href="https://superflatpsyche.neocities.org/" target="_blank"><img src="https://superflatpsyche.neocities.org/images/superflatpsyche-button.gif" title="superflatpsyche"></a>
-                        <a href="https://milbit.neocities.org"><img src="https://file.garden/aVkV7Lf1xG6_Dp5i/button.webp" title="milbit" /></a>
-                    </div>
+                    <div class="divider"></div>
                 </div>
             </div>
+<div class="block-15 black-translucent">
+    <img src="extra/media/icon_bb_small.png" alt="Big Boy, looking all handsome like he does">
+    <div class="padded-1">
+        <p>this site is owned and managed by Big Boy</p>
+        <p><a href='extra/bigboy.html'>learn more ==></a></p>
+    </div>
+    <div class="divider"></div>
+    <div class="padded-1">
+        <h5>links</h5>
+        <div class="critters">
+        <div>my button</div>
+            <a href="https://snorv.neocities.org"><img src="https://snorv.neocities.org/media/button.png" title="snorv.neocities.org" width="88" height="31" border="0"></a>
         </div>
-        <div class='footer'><span>hosted at <a href='https://neocities.org/site/snorv'>neocities.org</a> ◆ updated january 7, 2026</span></div>
+        <div style="height: .5em;"></div>
+        <div class="critters">
+        <div>cool critters</div>
+            <a href="https://kero.gay"><img src="https://kero.gay/assets/images/banners/kerogaybanner.png" title="kero.gay"></a>
+            <a href="https://cabl.rodeo"><img src="https://cabl.rodeo/imgs/cablButon.gif" title="cabl.rodeo"></a>
+            <a href="https://msx.horse"><img src="https://msx.horse/data/buttons/msx8831.gif" title="msx.horse"></a>
+            <a href="https://mishamallow.neocities.org" target="_blank"><img src="https://mishamallow.neocities.org/buttons/mishamallow_1.gif" title="Mishamallow"></a>
+            <a href="https://superflatpsyche.neocities.org/" target="_blank"><img src="https://superflatpsyche.neocities.org/images/superflatpsyche-button.gif" title="superflatpsyche"></a>
+            <a href="https://milbit.neocities.org"><img src="https://file.garden/aVkV7Lf1xG6_Dp5i/button.webp" title="milbit" /></a>
+        </div>
+    </div>
+</div>
+        </div>
+        <div class='footer'><span>hosted at <a href='https://neocities.org/site/snorv'>neocities.org</a> ◆ updated january 14, 2026</span></div>
     </div>
 </body>
 </html>

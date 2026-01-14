@@ -4,54 +4,670 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>snorv games - devlogs</title>
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Delius' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+/* layout */
+:root {
+    --white: #E0E8E8;
+    --yellow:#fff8bc;
+    --light-blue:#b0a0FF;
+    --blue:#A477FF;
+    --purple:#302030;
+    --black:#111;
+    --black-translucent:#111c;
+}
 
-    <link href="../../css/style.css" rel="stylesheet" type="text/css" media="all">
-    <script src='../../js/collapsible.js'></script>
+@font-face {font-family: "delius"; src: url('../../fonts/delius.ttf') format("truetype");}
+@font-face {font-family: "lexend"; src: url('../../fonts/lexend.ttf') format("truetype");}
+@font-face {font-family: "urwdin"; src: url('../../fonts/urwdin.woff') format("woff");}
+@font-face {font-family: "inter"; src: url('../../fonts/inter.ttf') format("truetype");}
+@font-face {font-family: "fsex300"; src: url('../../fonts/fsex300.woff') format("woff");}
+@font-face {font-family: "freepixel"; src: url('../../fonts/freepixel.ttf') format("truetype");}
+@font-face {font-family: "happymonkey"; src: url('../../fonts/happymonkey.ttf') format("truetype");}
+
+body { font-family: inter, helvetica, monospace; color: var(--white); }
+h1,h2,h3,h4,h5,.logo-header,.footer,.label,.navbar,.collapse-section { font-family: 'happymonkey'; color: var(--yellow); }
+.sidebar-section,.post-link { font-family: freepixel; color: var(--yellow); }
+.code-block { font-family: Consolas,monospace; color: var(--white); }
+
+body {
+    margin: 0;
+    background: url('../../media/bg_village_2.png') no-repeat center top;
+    background-color: black;
+}
+
+h1,h2,h3,h4,h5 { margin: 0; }
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h1 > a { color:inherit; }
+h1 > a:hover {
+    color:inherit;
+    text-decoration:none;
+}
+a { color:var(--blue); }
+p,ul,ol,li {
+    color:var(--white);
+    line-height:1.3em;
+    margin-bottom:1em;
+}
+p { margin-top:.5em; }
+iframe { max-width:100%; }
+img { max-width: 100%; }
+
+.page-content {
+    max-width: 1140px;
+    margin: auto;
+}
+
+/* header */
+.header {
+    margin:0;
+    margin-bottom:.5rem;
+}
+.logo-header {
+    font-size: 3rem;
+    padding: .2rem 2rem 1rem 2rem;
+    background-color:var(--black-translucent);
+}
+.navbar {
+    display:flex;
+}
+.nav-btn {
+    display: inline-block;
+    text-align:center;
+    padding: .375rem 0;
+    line-height:1.5em;
+    background-color:var(--black-translucent);
+    border-radius: 0;
+    color:var(--white);
+    margin:0;
+    width: 20%;
+    font-weight:bold;
+    border-top: 2px solid #0000;
+}
+.nav-btn.active {
+    border-top: 2px solid var(--white);
+    background-color:#445;
+    pointer-events: none;
+    cursor: default;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    margin: .25rem 0;
+}
+.dropdown-content a {
+    float: none;
+    background-color: #333;
+    color: var(--white);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.nav-btn:hover { border-top: 2px solid #805580; }
+.nav-btn:hover, .dropdown-content a:hover { background-color: #503550; }
+.nav-dropdown:hover .dropdown-content { display: block; }
+
+/* body */
+.page-body {
+    display: flex;
+    justify-content: space-between;
+    min-height: 50vh;
+}
+.block-85, .block-75, .block-25, .block-15 { display: block; }
+.block-85 { width: 84.5%; }
+.block-75 { width: 74.5%; }
+.block-25 { width: 24.5%; }
+.block-15 { width: 14.5%; }
+.flexbox { 
+    width: 100%;
+    display: flex; 
+    justify-content: space-around;
+}
+.post {
+    background-color:var(--black-translucent);
+    padding: 1em 2em;
+}
+.padded-1 { padding: 0 1em; }
+.divider {
+    border-top: 3px solid #bbb;
+    margin-top: .8em;
+    margin-bottom: .2em;
+}
+
+.critters {
+    width: 90px;
+    margin: auto;
+}
+
+.critters img {
+    width: 88px;
+    height: 31px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border: #fff0 2px solid;
+    border-radius: 3px;
+}
+
+.critters img:hover {
+    border: #fff 2px solid;
+}
+
+.footer {
+    margin-top:.5rem;
+    padding: 0 0 .25rem 0;
+    background-color:var(--black-translucent);
+    text-align:center;
+}
+
+/* common */
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-yellow {
+    border-radius: 0;
+    background-color:var(--yellow);
+    color:var(--black);
+    font-weight: bold;
+}
+
+.btn-yellow:hover {
+    background-color:#fff;
+}
+
+.card {
+    background-color:var(--purple);
+    border-radius: 0;
+    border: 0;
+}
+
+.card-body {
+    padding: .25rem 1rem;
+}
+
+.subtitle {
+    color: #C2C3C7;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+}
+
+.label {
+    font-weight: bold;
+    color: var(--yellow);
+}
+
+.no-margin {
+    margin:0;
+}
+
+.no-margin > li {
+    margin:0;
+}
+
+.scrollable-content {
+    overflow:scroll; 
+    background-color:var(--purple);
+    padding:.5em;
+}
+
+.code-block {
+    border-radius: 12px;
+    padding: 1em;
+    background-color: #333;
+}
+.game-card {
+    width: 16rem;
+}
+
+/* colors */
+ .yellow, .lime, .aqua { color: black; }
+.red { background-color: #800; }
+.green { background-color: #007836; }
+.blue { background-color: #344678; }
+.pink { background-color: #b7006b; }
+.yellow { background-color: #d8da63; }
+.lime { background-color: #48c448; }
+.aqua { background-color: #40d6de; }
+.black-translucent { background-color: var(--black-translucent); }
+
+/* profiles */
+.profile {
+    width: 100%;
+    color:var(--white);
+    margin-bottom: 1em;
+    display:flex;
+    background-color: #ffffff18;
+}
+.profile table {
+    text-align: left;
+    font-size: .9em;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.profile table tr th {
+    padding-right: 15px;
+    width: 80px;
+    font-weight:normal;
+    border-bottom: 1px dotted var(--white);
+    color:var(--white);
+    text-align: right;
+    vertical-align: bottom;
+}
+.profile table tr td {
+    border-bottom: 1px dotted var(--white);
+    vertical-align: bottom;
+}
+.profile table tr td p {
+    color: inherit;
+}
+.profile > .art {
+    width: 200px;
+    height:fit-content;
+}
+.profile tr:last-child td {
+    border:none;
+}
+.profile table tr:first-child td {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-indent: 0%;
+}
+
+/* gallery */
+.gallery {
+    display:flex;
+}
+
+.mediacolumn {
+    width:50%;
+}
+
+.mediacolumn-item {
+    height:auto;
+    margin: .5rem .25rem;
+    box-shadow:0 0 8px 2px #000f
+}
+.mediacolumn-item img {transition: transform 0.3s ease;}
+.mediacolumn-item img:hover{transform: scale(1.025);}
+
+.mediacolumn-left > .mediacolumn-item {
+    margin-left: 0;
+}
+
+.mediacolumn-right > .mediacolumn-item {
+    margin-right: 0;
+}
+.popout-icon {
+    max-width: 22rem;
+    margin-top: .5em;
+    margin-right: .5em;
+    display: inline-block;
+}
+.popout-icon img {
+   transition: transform 0.3s ease;
+}
+.popout-icon img:hover {
+    transform: scale(1.025);
+}
+.popout-img {
+   position:fixed;
+   left:0;
+   top:0;
+   bottom:0;
+   width:100%;
+   height:vh;
+   opacity:0;
+   pointer-events: none;
+   z-index:1000;
+   background-color:#000000bb;
+	transition:0.35s ease-in-out;
+}
+.popout-img .caption {
+    color:#aaa;
+    background-color: #252525;
+    font-style:italic;
+    font-size:18px;
+    position:fixed;
+    bottom:16px;
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+    padding:8px;
+    border-radius: 7px;
+}
+:focus + .popout-img, .popout-img:has(> img:focus) {
+    opacity:100;
+    pointer-events: auto;
+    background-color:#000000dd;
+}
+.popout-img img{
+    position:absolute;
+    top:300%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    border:2px solid #f4f4f4;
+    box-shadow:0px 0px 32px #000000ff;
+    max-height:90%;
+    max-width:100%;
+    transition:top 3s ease-in;
+    background-color:#7f7f7f;
+    transition:top 0.7s cubic-bezier(0,1,0.1,1);
+}
+:focus + .popout-img img, .popout-img img:focus {
+   top:50%;
+}
+
+/* devlogs */
+
+.post-link {
+    display: block;
+    padding:.5em;
+    line-height:1em;
+    color:var(--white);
+    margin-bottom:2px;
+}
+.post-link:hover {
+    color:#fee;
+    background-color:#503550;
+}
+
+.post-link.active {
+    background-color:#333;
+}
+
+.post-link .subtitle {
+    font-size: .8em;
+    color: #C2C3C7;
+}
+.devlog-img {
+    max-width: 22rem;
+    margin-top: .5em;
+    margin-right: .5em;
+    display: inline-block;
+}
+.devlog-img img {
+   max-width: 100%;
+   max-height: 12rem;
+   height: fit-content;
+   transition: transform 0.3s ease;
+}
+.devlog-img .caption {
+    color:#aaa;
+    font-style:italic;
+    background-color: #252525;
+    padding: .25em;
+    margin-bottom: .5em;
+    text-align:center;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+.post-header {
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+    border-bottom: 3px solid #bbb;
+}
+
+.post-header > h1 {
+    margin: 0;
+    padding-left: 0;
+}
+.post-table > tbody > tr:nth-child(odd) {
+    background-color: var(--black);
+ }
+
+.post-table > tbody > tr > td:first-child {
+    background-color: var(--black);
+}
+
+.post-table > tbody > tr > td {
+    padding-left:.5em;
+    padding-right:.5em;
+    color: var(--white);
+    border-bottom: 1px solid #888;
+}
+
+.collapse-section {
+    display: block;
+  color: var(--yellow);
+    width: 100%;
+    min-height: 0;
+    border:none;
+    line-height: 0;
+    text-align: left;
+}
+
+.collapse-section input + div:hover {
+    background-color:#555;
+}
+.collapse-section input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  padding: 0;
+  line-height: 0;
+  margin: 0;
+}
+.collapse-section input + div {
+    line-height: 1.2;
+}
+.collapse-section input + div::before {
+    content: '⯈'
+}
+
+.collapse-section input:checked + div::before {
+    content: '⯆'
+}
+
+.collapse-section input + div + .collapse-content {
+    max-height: 0;
+    transition: max-height 0.3s linear;
+    overflow: hidden;
+}
+
+.collapse-section input:checked + div + .collapse-content {
+    max-height: 1028px;
+    transition: max-height 0.3s linear;
+}
+.tag {
+    border-radius: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+/* mobile */
+@media (max-width: 1200px) {
+    .page-content {
+        max-width: 960px;
+    }
+}
+@media (max-width: 992px) {
+    .page-content {
+        max-width: 720px;
+    }
+    .page-body {
+        display: block;
+    }
+    .block-85, .block-75, .block-25, .block-15 {
+        max-width: 100%;
+        width: 100%;
+    }
+    .flexbox {
+        display:block;
+    }
+    .navbar {
+        display:block;
+    }
+    .nav-btn {
+        width:100%;
+    }
+}
+@media (max-width: 768px) {
+    .page-content {
+        max-width: 100%;
+        max-width: 540px;
+    }
+}
+@media (max-width: 576px) {
+    .page-content {
+        max-width: 100%;
+    }
+}
+    </style>
+    <style>
+      body {
+         background: url('../../media/bg_silverkey.png') no-repeat center top;
+         background-color: #000;
+         font-family: helvetica, DejaVu Sans Mono, monospace;
+      }
+
+      h1,h2,h3,h4,h5,.label {
+         font-family: freepixel;
+      }
+   </style>
 </head>
 <body>
-    <div class="container">
-        <div id="header"></div>
-        <div class='main-body'>
-            <div id="sidebar" class='sidebar'></div>
-            <div class="gutter">
-            </div>
-            <div id="main-content" class="main-content">
-                    <div class="post">
-                        <div class="post-header">
-                            <h1>february status</h1>
-                            <div class="subtitle">february 24, 2024</div>
-                        </div>
-                        <section>
-                        <p>hi all,<br/>
-                        i still dont have a name for this project, but I have two new videos for it</p>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dkoqnSP615I?si=vZ1p31g0-68Tch-r" title="HOODIE UP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mfwIqt4_0Y4?si=fPHCrcFgxZjSF8Zm" title="PENGUIN EFFECT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <p>- ciaran</p>
-                        <img src="media/animals/240224.jpg" caption="image source: <a href='https://www.tumblr.com/confirmedgeckos/733169587646021633/nugs-in-hats'>tumblr.com/confirmedgeckos/733169587646021633/nugs-in-hats</a>" alt="the leopard gecko Nugs wearing a traffic cone as a hat. he stands happily in a dungeon." class='devlog-img modal-img'>
-                        <a href="#">↑ back to top ↑</a>
+    <div class="page-content">
+        <div class="header">
+<div>
+   <h1 class='logo-header'><a href='#'>snorv games<img src='../../media/icon_silverkey.png' alt='Silver Key'></img></a></h1>
+   <div class="navbar">
+   <a id='nav-btn-index' class="nav-btn" href="../../index.html">home</a>
+   <a id='nav-btn-games' class="nav-btn" href="../../games/index.html">games</a>
+   <a id='nav-btn-devlogs' class="nav-btn active" href="#">devlogs</a>
+   <a id='nav-btn-profiles' class="nav-btn" href="../../profiles/index.html">characters</a>
+   <a id='nav-btn-guestbook' class="nav-btn" href="../../guestbook/index.html">guestbook</a>
+   <div class="nav-btn nav-dropdown">
+      extra &#9660;
+      <div class="dropdown-content">
+         <a href="../../extra/bigboy.html">Big Boy</a>
+         <a href="../../extra/topster.html">favorite albums</a>
+      </div>
+   </div>
+   </div>
+</div>
+        </div>
+        <div class='page-body'>
+<div class="block-25">
+   <div class="black-translucent" style="padding: .5em 1em 1em 1em;">
+      <label class='collapse-section'>
+         <input type="checkbox">
+         <div>2026</div>
+         <div class='collapse-content'>
+            <a class='post-link' href='../2026/january.html'>
+               diorama style modeling
+               <div class='subtitle'>january 14, 2026</div>
+            </a>
+         </div>
+      </label>
+      <label class='collapse-section'>
+         <input type="checkbox">
+         <div>2025</div>
+         <div class='collapse-content'>
+         <a class='post-link' href='../2025/april12.html'>
+            [GaW23 Collection] progress report
+            <div class='subtitle'>april 12, 2025</div>
+         </a>
+         <a class='post-link' href='../2025/march.html'>
+            [CritterCatch] first look
+            <div class='subtitle'>march 30, 2025</div>
+         </a>
+         </div>
+      </label>
+      <label class='collapse-section'>
+         <input type="checkbox" checked>
+         <div>2024</div>
+         <div class='collapse-content'>
+            <a class='post-link' href='../2024/november21.html'>
+               <img src='../2024/media/icon_neko.png' style='max-height:1em' alt='nekojiru mining'/>
+               <div class='subtitle'>november 21, 2024</div>
+            </a>
+            <a class='post-link' href='../2024/november.html'>
+               experimenting with taxis
+               <div class='subtitle'>november 7, 2024</div>
+            </a>
+            <a class='post-link' href='../2024/october24.html'>
+               experimenting with real time strategy
+               <div class='subtitle'>october 24, 2024</div>
+            </a>
+            <a class='post-link' href='../2024/october.html'>
+               project hopping
+               <div class='subtitle'>october 3, 2024</div>
+            </a>
+            <a class='post-link' href='../2024/september.html'>
+               Orbital Terminus
+               <div class='subtitle'>september 1, 2024</div>
+            </a>
+            <a class='post-link' href='../2024/july.html'>
+               [Silver Key] Phase II release
+               <div class='subtitle'>july 23, 2024</div>
+            </a>
+            <a class='post-link' href='../2024/june.html'>
+               [Silver Key] discrete actions
+               <div class='subtitle'>june 21, 2024</div>
+            </a>
+            <a class='post-link' href='../2024/may.html'>
+               [Silver Key] pathfinding
+               <div class='subtitle'>may 15, 2024</div>
+            </a>
+            <a class='post-link' href='../2024/april.html'>
+               [Silver Key] state machines
+               <div class='subtitle'>april 30, 2024</div>
+            </a>
+            <a class='post-link active' href='../2024/february.html'>
+               february status
+               <div class='subtitle'>february 24, 2024</div>
+            </a>
+            <a class='post-link' href='../2024/january.html'>
+               PLAY BOXIBAN
+               <div class='subtitle'>january 26, 2024</div>
+            </a>
+         </div>
+      </label>
+   </div>
+</div>
+            <div class='block-75'>
+               <div class="post">
+                    <div class="post-header">
+                        <h1>february status</h1>
+                        <div class="subtitle">february 24, 2024</div>
                     </div>
+                    <section>
+                    <p>hi all,<br/>
+                    i still dont have a name for this project, but I have two new videos for it</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dkoqnSP615I?si=vZ1p31g0-68Tch-r" title="HOODIE UP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mfwIqt4_0Y4?si=fPHCrcFgxZjSF8Zm" title="PENGUIN EFFECT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p>- ciaran</p>
+                    <div><img src="media/animals/240224.jpg" caption="image source: <a href='https://www.tumblr.com/confirmedgeckos/733169587646021633/nugs-in-hats'>tumblr.com/confirmedgeckos/733169587646021633/nugs-in-hats</a>" alt="the leopard gecko Nugs wearing a traffic cone as a hat. he stands happily in a dungeon."></div>
+                    <a href="#">↑ back to top ↑</a>
+               </div>
             </div>
         </div>
-    <div id='footer'></div>
+        <div class='footer'><span>hosted at <a href='https://neocities.org/site/snorv'>neocities.org</a> ◆ updated january 14, 2026</span></div>
     </div>
 </body>
-<script>
-    $('#header').load("../../header.html", function() {
-        $('#nav-btn-devlogs').addClass("active");
-    });
-    $('#footer').load("../../footer.html");
-    $('#sidebar').load("../devlog_sidebar.html", function() {
-        attach_collapsables()
-        $('#sidebar-2024').addClass("active");
-        $('#sidebar-2024-content').addClass("open");
-        $('#link-2402').addClass("active");
-    });
-</script>
-<script src='../../js/modal.js'></script>
 </html>
