@@ -45,7 +45,7 @@
         /* general */
 		body {
 			margin: 0;
-         background: url('../../images/bg_silverkey.png') no-repeat center top;
+         background: url('../../media/bg_village_2.png') no-repeat center top;
          background-color: black;
          color: var(--yellow);
 		}
@@ -658,29 +658,29 @@ h2 {
                </div>
                <div class="divider"></div>
                <h2>meshes & texturing</h2>
+               <div class="display:flex flex-direction:row">
+                  <div class="devlog-img"  tabindex="1">
+                     <img src="media/01-c.png">
+                     <div class="caption">Side-by-side of a<br/>character from 2024 (left)<br/>to a recent one (right)</div>
+                  </div>
+                  <div class="popout-img">
+                     <img loading="lazy" src="media/01-c.png"  tabindex="1">
+                     <div class="caption">Side-by-side of a character from 2024 (left) to a recent one (right)</div>
+                  </div>
+                  <div class="devlog-img"  tabindex="1">
+                     <img src="media/01-e.png">
+                     <div class="caption">Same side-by-side in wireframe</div>
+                  </div>
+                  <div class="popout-img">
+                     <img loading="lazy" src="media/01-e.png"  tabindex="1">
+                     <div class="caption">Same side-by-side in wireframe</div>
+                  </div>
+               </div>
                <p>
                   compared to modeling ive done prior, the biggest difference is how detailed the meshes are. 
                   my previous models would leave important details like eyes as flat planes with the details textured on. contrastly, these new models have nearly every detail
                   meshed- eyes bulge a small distance out of the head, the crease between bricks is carved into the wall.
                </p>
-               <div class="display:flex flex-direction:row">
-                  <div class="devlog-img"  tabindex="1">
-                     <img src="media/01-e.png">
-                     <div class="caption">KayKit</div>
-                  </div>
-                  <div class="popout-img">
-                     <img loading="lazy" src="media/01-e.png"  tabindex="1">
-                     <div class="caption">Kay Lousberg's KayKit</div>
-                  </div>
-                  <div class="devlog-img"  tabindex="1">
-                     <img src="media/01-f.png">
-                     <div class="caption">Link's Awakening</div>
-                  </div>
-                  <div class="popout-img">
-                     <img loading="lazy" src="media/01-f.png"  tabindex="1">
-                     <div class="caption">The Legend of Zelda: Link's Awakening (2019)</div>
-                  </div>
-               </div>
                <p>
                   inversely, textures have become much simpler, to the point that im able to use the same texture for every model. the texture is a grid of sixteen gradients
                   that can be assigned like a palette to different parts of the mesh. the gradient is aligned to match the direction of shading, so the model simulates lighting
@@ -688,60 +688,33 @@ h2 {
                </p>
                <p>all of this gives the mesh the appearance of baked clay.</p>
                <div class="divider"></div>
-               <h2>the camera</h2>
-               <p>
-                  the less control the player has over the camera, the easier it is for a developer to play towards the camera. an extreme version of playing 
-                  to the camera in this style would be The Legend of Zelda: A Link Between Worlds, where many models were slanted to face overhead.
-               </p>
-               <div class="devlog-img"  tabindex="1">
-                  <img src="media/01-la.png">
-                  <div class="caption">A Link Between Worlds camera comparison</div>
-               </div>
-               <div class="popout-img">
-                  <img loading="lazy" src="media/01-la.png"  tabindex="1">
-                  <div class="caption">A Link Between Worlds camera comparison</div>
-               </div>
-               <p>
-                  another example comes from Animal Crossing: Wild World, in which the world is warped away from the camera as if it was on a spool.
-               </p>
-               <div class="devlog-img"  tabindex="1">
-                  <img src="media/01-la.png">
-                  <div class="caption">Wild World view</div>
-               </div>
-               <div class="popout-img">
-                  <img loading="lazy" src="media/01-la.png"  tabindex="1">
-                  <div class="caption">Wild World view</div>
-               </div>
-               <div class="divider"></div>
                <h2>texture effects</h2>
                <p>
                   one feature of the models in Link's Awakening that sets it above my own models is normals. normal maps alter the way textures interact with light, creating the illusion of
                   bumps or other surface deformations. this is why the grass looks bumpy and the stone looks rough. normals add a lot of tactility.
                </p>
-               <div class="devlog-img"  tabindex="1">
-                  <img src="media/01-la.png">
-                  <div class="caption">Normal mapping</div>
-               </div>
-               <div class="popout-img">
-                  <img loading="lazy" src="media/01-la.png"  tabindex="1">
-                  <div class="caption">Normal mapping</div>
-               </div>
                <p>
                   another feature is specularity. my models are all matte, which is appropriate for clay, but using some specularity to draw things that should be shiny (wood, dewey grass,
                   metal) adds tactility and variety.
                </p>
-               <div class="devlog-img"  tabindex="1">
-                  <img src="media/01-la.png">
-                  <div class="caption">specularity</div>
-               </div>
-               <div class="popout-img">
-                  <img loading="lazy" src="media/01-la.png"  tabindex="1">
-                  <div class="caption">specularity</div>
-               </div>
+                  <img src="media/01-eff.png">
                <p>all that said, i think these effects work best when underused. they have the potential to make the visuals plastic-y.</p>
                <div class="divider"></div>
                <div style="height: 1.5rem;"></div>
+               <div class="display:flex flex-direction:row">
+                  <div class="devlog-img"  tabindex="1">
                   <img src="media/01-a.png">
+               </div>
+               <div class="popout-img">
+                  <img loading="lazy" src="media/01-a.png"  tabindex="1">
+               </div>
+               <div class="devlog-img"  tabindex="1">
+                  <img src="media/01-bug.png">
+               </div>
+               <div class="popout-img">
+                  <img loading="lazy" src="media/01-bug.png"  tabindex="1">
+               </div>
+            </div>
                <p>discovering this style has gotten me excited to do more modeling; i feel like im making a lot of progress. to sign this off, i'll append the first character model i
                   ever modeled and rigged.
                </p>
